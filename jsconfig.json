@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+    "baseUrl": ".",
+        "paths": {
+        "@/components/*": ["publipirates-react/src/components/*"],
+        "@/icons/*": ["publipirates-react/src/icons/*"],
+        "@/theme/*": ["publipirates-react/src/theme/*"]
+    }
+}
+}
