@@ -58,10 +58,10 @@ class MyDocument extends Document {
                     <meta property="og:postal-code" content={meta.og.postalCode}/>
                     <meta property="og:country-name" content={meta.og.countryName}/>
 
-                    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"/>
-                    <script src="https://connect.facebook.net/signals/config/326302681241847?v=2.9.33&amp;r=stable" async=""/>
-                    <script async="" src="https://connect.facebook.net/en_US/fbevents.js"/>
-                    <script async="" src={`https://www.googletagmanager.com/gtm.js?id=${meta.GoogleTagManagerCode}`} />
+                    {/*<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"/>*/}
+                    {/*<script src="https://connect.facebook.net/signals/config/326302681241847?v=2.9.33&amp;r=stable" async=""/>
+                    {/*<script async="" src="https://connect.facebook.net/en_US/fbevents.js"/>*/}
+                    {/*<script async="" src={`https://www.googletagmanager.com/gtm.js?id=${meta.GoogleTagManagerCode}`} />*/}
 
                     <link rel="canonical" href={meta.url} />
                     <link rel="preconnect" href="https://fonts.gstatic.com" />
