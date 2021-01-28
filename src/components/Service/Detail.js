@@ -18,7 +18,6 @@ const ServiceDetail = ({ title, description, image, index }) => {
     const isEven = index % 2 === 0;
     const isFirst = index  === 1;
 
-    console.log(isFirst, isEven);
     return (
         <Row as={Grid} row even={isEven} isFirst={isFirst}>
             <Grid item xs={12} sm={isEven ? { width: 6, push: 1 } : { width: 6 }} flex justifyContent={isFirst ? "flex-start" : "center"} flexDirection="column">

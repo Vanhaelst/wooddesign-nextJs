@@ -23,6 +23,7 @@ const Gevel = () => {
 
                         {gevel.map(item => (
                             <ServiceDetail
+                                key={indexedDB}
                                 index={item.index}
                                 title={item.title}
                                 image={item.image}

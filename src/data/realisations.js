@@ -26,7 +26,7 @@ const realisations = [
                 url: "https://www.wooddesign.be/wp-content/uploads/2019/04/IMG_8227.jpg",
             }
         ],
-        category: "Gevel"
+        category: "Gevel",
         details: {
             houtsoort: "Thermo Vuren",
             type: "Balkengevel patroon barcode",

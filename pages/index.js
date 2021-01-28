@@ -14,20 +14,34 @@ import Box from "@/components/Box";
 
 const Home = () => {
     const [sticky, setSticky] = useState(false);
+    const [nav, setNav] = useState(false);
 
-        if (typeof document !== 'undefined') {
-            const navigation = document.getElementById("nav");
+    if(!nav) {
+        setTimeout(() => {
+            if (typeof document !== 'undefined') {
+                const navigation = document.getElementById("nav");
+                setNav(true);
+            }
+        }, [500])
+    }
+
+    useEffect(() => {
+        if (nav) {
             document.addEventListener("scroll", (e) => {
-
+                const navigation = document.getElementById("nav");
                 let position = navigation.getBoundingClientRect().top;
-                console.log(position);
-                if (position <= 0) {
-                    setSticky(true);
-                } else {
-                    setSticky(false);
+
+                if (navigation) {
+                    if (position <= 0) {
+                        setSticky(true);
+                    } else {
+                        setSticky(false);
+                    }
                 }
             });
         }
+    }, [nav])
+
 
 
   return (

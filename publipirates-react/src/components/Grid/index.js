@@ -122,11 +122,26 @@ Grid.propTypes = {
     container: PropTypes.bool,
     row: PropTypes.bool,
     item: PropTypes.bool,
-    xs: PropTypes.number || PropTypes.object,
-    sm: PropTypes.number || PropTypes.object,
-    md: PropTypes.number || PropTypes.object,
-    lg: PropTypes.number || PropTypes.object,
-    xl: PropTypes.number || PropTypes.object,
+    xs: PropTypes.oneOfType([
+        PropTypes.number,
+        PropTypes.object
+    ]),
+    sm: PropTypes.oneOfType([
+        PropTypes.number,
+        PropTypes.object
+    ]),
+    md: PropTypes.oneOfType([
+        PropTypes.number,
+        PropTypes.object
+    ]),
+    lg: PropTypes.oneOfType([
+        PropTypes.number,
+        PropTypes.object
+    ]),
+    xl: PropTypes.oneOfType([
+        PropTypes.number,
+        PropTypes.object
+    ])
 }
 
 
