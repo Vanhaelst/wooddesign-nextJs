@@ -10,7 +10,11 @@ import parket from "../src/data/services/parket";
 
 const Services = () => {
     return (
-        <div>
+        <div><Head>
+            <title>Wooddesign - Diensten - Parket</title>
+            <meta property="og:title" content="Wooddesign - Diensten - Parket" key="title" />
+        </Head>
+
             <Navigation />
             <Breadcrumbs page="Parket" variant={1} />
 

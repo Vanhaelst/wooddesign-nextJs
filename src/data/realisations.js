@@ -27,6 +27,11 @@ const realisations = [
             }
         ],
         category: "Gevel"
+        details: {
+            houtsoort: "Thermo Vuren",
+            type: "Balkengevel patroon barcode",
+            totaal: "35m2"
+        }
     },
     {
         title: "Gevel padouk – Ekeren",

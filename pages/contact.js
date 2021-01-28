@@ -18,6 +18,10 @@ import ContentWrapper from "../src/components/ContentWrapper";
 const Realisations = () => {
     return (
         <div>
+            <Head>
+                <title>Wooddesign - Contact</title>
+                <meta property="og:title" content="Wooddesign - Contact" key="title" />
+            </Head>
             <Navigation />
             <Breadcrumbs page="Contact" variant={1} />
             <ContentWrapper>

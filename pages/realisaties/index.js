@@ -55,6 +55,10 @@ const Realisations = () => {
 
     return (
         <div>
+            <Head>
+                <title>Wooddesign - Realisaties</title>
+                <meta property="og:title" content="Wooddesign - Realisaties" key="title" />
+            </Head>
             <Navigation />
             <Breadcrumbs page="Realisaties" variant={1} />
             <ContentWrapper>

@@ -11,6 +11,10 @@ import wand from "../src/data/services/wand";
 const Wand = () => {
     return (
         <div>
+            <Head>
+                <title>Wooddesign - Diensten - Wand</title>
+                <meta property="og:title" content="Wooddesign - Diensten - Wand" key="title" />
+            </Head>
             <Navigation />
             <Breadcrumbs page="Wand" variant={1} />
 

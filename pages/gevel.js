@@ -10,7 +10,10 @@ import gevel from "../src/data/services/gevel";
 
 const Gevel = () => {
     return (
-        <div>
+        <div><Head>
+            <title>Wooddesign - Diensten - Gevel</title>
+            <meta property="og:title" content="Wooddesign - Diensten - Gevel" key="title" />
+        </Head>
             <Navigation />
             <Breadcrumbs page="Gevel" variant={1} />
 

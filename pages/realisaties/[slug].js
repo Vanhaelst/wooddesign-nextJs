@@ -62,6 +62,7 @@ const Realisations = () => {
             <Head>
                 <title>Wooddesign - Realisaties - {realisatie.title} </title>
                 <meta property="og:title" content="Wooddesign - Realisaties - {realisatie.title}" key="title" />
+                <meta name="keywords" content={realisatie.details.houtsoort, realisatie.details.type, meta.keywords} />
             </Head>
             <Navigation />
             <Breadcrumbs page="Realisatie" variant={1} />
@@ -76,13 +77,13 @@ const Realisations = () => {
                             <Heading level={2} mb={3}>Details</Heading>
                             <UnorderedList>
                                 <ListItem>
-                                    <Text fontWeight="bold">Houtsoort:&nbsp;</Text><Text fontFamily="secondary">Thermo Vuren</Text>
+                                    <Text fontWeight="bold">Houtsoort:&nbsp;</Text><Text fontFamily="secondary">{realisatie.details.houtsoort}</Text>
                                 </ListItem>
                                 <ListItem>
-                                    <Text fontWeight="bold">Type:&nbsp;</Text><Text fontFamily="secondary">Balkengevel patroon barcode</Text>
+                                    <Text fontWeight="bold">Type:&nbsp;</Text><Text fontFamily="secondary">{realisatie.details.type}</Text>
                                 </ListItem>
                                 <ListItem>
-                                    <Text fontWeight="bold">Totaal:&nbsp;</Text><Text fontFamily="secondary">35m2</Text>
+                                    <Text fontWeight="bold">Totaal:&nbsp;</Text><Text fontFamily="secondary">{realisatie.details.total}</Text>
                                 </ListItem>
                             </UnorderedList>
                         </Details>

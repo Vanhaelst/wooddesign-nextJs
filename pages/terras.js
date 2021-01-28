@@ -11,6 +11,10 @@ import terrassen from "../src/data/services/terrassen";
 const Terras = () => {
     return (
         <div>
+            <Head>
+                <title>Wooddesign - Diensten - Terras</title>
+                <meta property="og:title" content="Wooddesign - Diensten - Terras" key="title" />
+            </Head>
             <Navigation />
             <Breadcrumbs page="Terras" variant={1} />
             <ContentWrapper>
