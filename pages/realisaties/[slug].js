@@ -1,5 +1,6 @@
 import React  from 'react';
-import Head from 'next/head'
+import Head from 'next/head';
+import meta from "src/data/meta";
 import styled from "styled-components";
 import SimpleReactLightbox from "simple-react-lightbox";
 import { SRLWrapper } from "simple-react-lightbox";

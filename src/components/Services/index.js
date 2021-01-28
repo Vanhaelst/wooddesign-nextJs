@@ -18,7 +18,7 @@ const Service = ({ image, title, description, href, cta}) => {
                 </Box>
             </Box>
              {href && (
-                 <Box m={8} fex justifyContent="space-between">
+                 <Box m={8} flex justifyContent="space-between">
                     <Box mt={5}>
                         <Button href={href}>{cta ? cta : "Bekijk onze diensten" }</Button>
                     </Box>

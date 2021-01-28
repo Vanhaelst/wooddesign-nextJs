@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head'
+import meta from "src/data/meta";
 import Navigation from "src/components/Navigation";
 import Hero from "@/components/Hero";
 import Heading from "@/components/Heading";
@@ -8,14 +9,12 @@ import Paragraph from "@/components/Paragraph";
 import Footer from "src/components/Footer";
 import Image from "@/components/Image";
 import ContentWrapper from "src/components/ContentWrapper";
-import meta from "../src/data/meta";
 import Service from "../src/components/Services";
 import Box from "@/components/Box";
 
 const Home = () => {
     const [sticky, setSticky] = useState(false);
 
-    setTimeout(() => {
         if (typeof document !== 'undefined') {
             const navigation = document.getElementById("nav");
             document.addEventListener("scroll", (e) => {
@@ -29,7 +28,6 @@ const Home = () => {
                 }
             });
         }
-    }, [500])
 
 
   return (

@@ -50,7 +50,7 @@ Box.propTypes = {
     float: PropTypes.oneOf(['left', 'right', 'none']),
 
     /** Changes the Paragraph's color, choose one of the tokens. */
-    flex: PropTypes.string,
+    flex: PropTypes.bool,
     alignContent: PropTypes.string,
     alignItems: PropTypes.string,
     alignSelf: PropTypes.string,
