@@ -15,18 +15,22 @@ import Box from "@/components/Box";
 const Home = () => {
     const [sticky, setSticky] = useState(false);
 
-    if (typeof document !== 'undefined') {
-        const navigation = document.getElementById("nav");
-        document.addEventListener("scroll", (e) => {
+    setTimeout(() => {
+        if (typeof document !== 'undefined') {
+            const navigation = document.getElementById("nav");
+            document.addEventListener("scroll", (e) => {
 
-            let position = navigation && navigation.getBoundingClientRect().top;
-            if (position <= 0) {
-                setSticky(true);
-            } else {
-                setSticky(false);
-            }
-        });
-    }
+                let position = navigation.getBoundingClientRect().top;
+                console.log(position);
+                if (position <= 0) {
+                    setSticky(true);
+                } else {
+                    setSticky(false);
+                }
+            });
+        }
+    }, [500])
+
 
   return (
     <div>

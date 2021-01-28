@@ -9,7 +9,7 @@ const MyApp = ({ Component, pageProps }) => {
   return (
       <Fragment>
           <Head>
-              <title>{meta.title}</title>
+              <title>{meta.title} - {meta.tagline}</title>
               <meta name="viewport" content={meta.viewport} />
           </Head>
           <GlobalContextProvider>

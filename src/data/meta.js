@@ -1,5 +1,6 @@
 const meta = {
-    title: "Wooddesign - Parket, Gevels, Wanden &amp; Terrassen",
+    brand: "Wooddesign",
+    tagline: "Parket, Gevels, Wanden &amp; Terrassen",
     description: "Voor particulieren of bouwprojecten, wij brengen hout op een innovatieve manier in elk project. Aanleg parketvloeren, houten terrassen en houten gevels.",
     url: "https://www.wooddesign.be/",
     keywords: "houten vloeren, parket, laminaat vloeren, vinyl vloeren , gevelbekledingen, wandbekledingen, houten terrassen",
