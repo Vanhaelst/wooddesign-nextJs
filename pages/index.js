@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import Head from 'next/head'
 import meta from "src/data/meta";
 import Navigation from "src/components/Navigation";
@@ -14,7 +14,6 @@ import realisations from "../src/data/realisations";
 import Link from "@/components/Link";
 import styled from "styled-components";
 import Button from "@/components/Button";
-import ChevronRight from "@/icons/ChevronRight";
 
 const SubTitle = styled(Heading)`
   margin: 0;
@@ -25,23 +24,10 @@ const SubTitle = styled(Heading)`
 
 
 
-const Home = () => {
-    const [ instagram , setInstagram ] = useState(false)
-    var userSecret = 'f0fw77sgoeq444dlza1wex';
+const Home = ({ posts, ig }) => {
 
-    useEffect(() => {
-        fetch(`https://ig.instant-tokens.com/users/9e660aa2-5339-4f60-91b6-a01f08bc8001/instagram/17841404474795116/token?userSecret=${userSecret}`)
-            .then(response => response.json())
-            .then(data =>
-                fetch(`https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,username,timestamp&access_token=${data.Token}`)
-                    .then(response => response.json())
-                    .then(data => {
-                        console.log(data);
-                        const slice = data.data.slice(0, 4);
-                        setInstagram(slice);
-                    })
-            );
-    }, [])
+
+    console.log('posts', posts);
 
     const slicedRealisations = realisations.slice(0, 4);
 
@@ -161,7 +147,7 @@ const Home = () => {
                         <Paragraph>Laat je inspireren</Paragraph>
                     </Grid>
                     <Grid row>
-                        {instagram && instagram.map(item => {
+                        {posts && posts.map(item => {
                             return(
                                 <Grid item xs={6} sm={4} md={3} key={item.id} mb={6}>
                                     <Link href="https://www.instagram.com/wooddesignbvba/">
@@ -179,5 +165,26 @@ const Home = () => {
     </div>
   )
 }
+
+
+export async function getStaticProps() {
+    // Call an external API endpoint to get posts.
+    // You can use any data fetching library
+    const AuthRes = await fetch(`https://ig.instant-tokens.com/users/9e660aa2-5339-4f60-91b6-a01f08bc8001/instagram/17841404474795116/token?userSecret=${process.env.IG_USER_SECRET}`)
+    const AuthToken = await AuthRes.json()
+
+    const res = await fetch(`https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,username,timestamp&access_token=${AuthToken.Token}`)
+    const posts = await res.json()
+
+    // By returning { props: posts }, the Blog component
+    // will receive `posts` as a prop at build time
+    return {
+        props: {
+            ig: [],
+            posts: posts.data.slice(0, 4),
+        },
+    }
+}
+
 
 export default Home
