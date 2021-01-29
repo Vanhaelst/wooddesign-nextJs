@@ -13,7 +13,6 @@ import size from "../../utils/size";
 import getMargin from "../../utils/margin";
 import getPadding from "../../utils/padding";
 import show from "@/utils/show";
-import hide from "@/utils/hide";
 
 const Text = styled.span`
     position: relative;
