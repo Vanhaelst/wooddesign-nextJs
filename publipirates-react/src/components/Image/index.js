@@ -5,10 +5,22 @@ import PropTypes from 'prop-types';
 const Img = styled.img`
     overflow: hidden;
     max-width: 100%;
-    
+    &:hover{
+        transition: all 0.5s;
+        ${props => props.hover}
+    }
     ${props => props.objectFit && `
         width: 100%;
-        height: ${props.height};
+        
+        height: calc(${props.height} / 2 );
+        @media screen and (min-width: ${props.theme.grid.breakpointSmall}px){
+            height: calc(${props.height} / 1.5 );
+        }
+        @media screen and (min-width: ${props.theme.grid.breakpointMedium}px){
+            height: ${props.height};
+        }
+        
+        
         object-fit: cover;
         margin-bottom: 24px;
         &:hover{

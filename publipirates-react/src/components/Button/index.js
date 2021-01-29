@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 import PropTypes from "prop-types";
 import Text from "@/components/Text";
+import theme from "src/theme";
 
 const style = {
     paddingX: "6px",
@@ -20,6 +21,9 @@ const StyledButton = styled.a`
     -webkit-box-pack: center;
     justify-content: center;
     font-size: ${style.fontSize};
+        color: #FFFFFF;
+    font-family: ${props => props.theme.font.family.secondary};
+    font-weight: 200;
     line-height: calc(${style.fontSize} + ${style.paddingX} + ${style.paddingX});
     padding-bottom: ${style.paddingX};
     padding-left: ${style.paddingY};
@@ -37,7 +41,7 @@ const StyledButton = styled.a`
     
     background-color: ${props => props.theme.colors.primary.main};
     border-color: ${props => props.theme.colors.primary.main};
-    color: ${props =>props.theme.colors.primary.text};
+    color: ${props => props.theme.colors.primary.text};
     &:hover{
         background-color: ${props => props.theme.colors.primary.dark};
         border-color: ${props => props.theme.colors.primary.dark};
@@ -63,6 +67,13 @@ const StyledButton = styled.a`
     ${props => props.outline && `
         background-color: transparent;
         border-style: solid;
+        border-color: ${props.theme.colors.grey[50]};
+        color: ${props.theme.colors.grey[50]};
+        &:hover{
+            border-color: ${props.theme.colors.primary.main};
+            background-color: transparent;
+            color: ${props.theme.colors.primary.main};
+        }
         ${props.appearance === "primary" && `
             border-color: ${props.theme.colors.primary.main};
             color: ${props.theme.colors.primary.main};
@@ -71,17 +82,20 @@ const StyledButton = styled.a`
 
 `;
 
-const Button = ({ appearance, children, display, href, outline, rounded }) => (
-    <StyledButton
-        href={href}
-        appearance={appearance}
-        display={display}
-        rounded={rounded}
-        outline={outline}
-    >
-        <Text color="white" fontFamily="secondary">{children}</Text>
-    </StyledButton>
-)
+const Button = ({ appearance, children, display, href, outline, rounded, color }) => {
+    const textColor = color ? color : appearance === 'primary' ? theme.colors.white : theme.colors.grey[50];
+    return(
+        <StyledButton
+            href={href}
+            appearance={appearance}
+            display={display}
+            rounded={rounded}
+            outline={outline}
+        >
+            {children}
+        </StyledButton>
+    )
+}
 
 
 Button.propTypes = {
@@ -92,7 +106,7 @@ Button.propTypes = {
 }
 
 Button.defaultProps = {
-    display: 'inline'
+    display: 'inline-block'
 }
 
 

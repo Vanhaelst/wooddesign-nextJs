@@ -121,7 +121,7 @@ const Realisations = () => {
                                 </Grid>
                                 <Grid row>
                                     <Grid item xs={12} style={{ display: "flex", justifyContent: "flex-end"}}>
-                                        <Button type="submit">Verzenden</Button>
+                                        <Button type="submit" appearance="primary">Verzenden</Button>
                                     </Grid>
                                 </Grid>
                             </form>

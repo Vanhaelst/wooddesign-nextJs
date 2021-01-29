@@ -12,9 +12,12 @@ import level from "../../utils/level";
 import size from "../../utils/size";
 import getMargin from "../../utils/margin";
 import getPadding from "../../utils/padding";
+import show from "@/utils/show";
+import hide from "@/utils/hide";
 
 const Text = styled.span`
     position: relative;
+    ${props => props.display && `display: ${props.display};`}
     ${color}
     ${fontFamily}
     ${fontStyle}
@@ -27,6 +30,7 @@ const Text = styled.span`
     ${getMargin}
     ${getPadding}
     line-height: 150%;
+    ${show}
     `;
 
 
@@ -45,6 +49,9 @@ Text.propTypes = {
 
     /** Changes the Caption's text-decoration. */
     decoration: PropTypes.oneOf(['inherit', 'none', 'underline', 'line-through']),
+
+    /** display setting for element. */
+    display: PropTypes.string,
 
     /** FontFamily of font-system */
     fontFamily: PropTypes.oneOf(['inherit', 'primary', 'secondary', 'system']),

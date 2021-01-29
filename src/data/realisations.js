@@ -30,7 +30,7 @@ const realisations = [
         details: {
             houtsoort: "Thermo Vuren",
             type: "Balkengevel patroon barcode",
-            totaal: "35m2"
+            total: "35m2"
         }
     },
     {
@@ -88,7 +88,41 @@ const realisations = [
             }
         ],
         category: "Terras"
-    }
+    },
+    {
+        title: "Balkengevel – Hofstade",
+        slug: "balkengevel–hofstade",
+        description: "Balkengevel thermowood barcode patroon. De balken werden blind bevestigd op een dubbel achterliggende regelstructuur. Het wisselend patroon zorgt ervoor dat je het barcode effect krijgt. Het plafond van de carport werd in één lijn doorgetrokken, en de wanden met zwarte Trespa Meteon gevelplaten verlijmd op houten regelwerk",
+        images: [
+            {
+                url: "https://www.wooddesign.be/wp-content/uploads/2019/04/IMG_8222.jpg",
+            },
+            {
+                url: "https://www.wooddesign.be/wp-content/uploads/2019/04/IMG_8230.jpg",
+            },
+            {
+                url: "https://www.wooddesign.be/wp-content/uploads/2019/04/IMG_8233.jpg",
+            },
+            {
+                url: "https://www.wooddesign.be/wp-content/uploads/2019/04/IMG_8234.jpg",
+            },
+            {
+                url: "https://www.wooddesign.be/wp-content/uploads/2019/04/IMG_8256.jpg",
+            },
+            {
+                url: "https://www.wooddesign.be/wp-content/uploads/2019/04/IMG_8262.jpg",
+            },
+            {
+                url: "https://www.wooddesign.be/wp-content/uploads/2019/04/IMG_8227.jpg",
+            }
+        ],
+        category: "Gevel",
+        details: {
+            houtsoort: "Thermo Vuren",
+            type: "Balkengevel patroon barcode",
+            totaal: "35m2"
+        }
+    },
 ];
 
 export default realisations;

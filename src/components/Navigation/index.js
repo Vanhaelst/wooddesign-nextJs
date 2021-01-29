@@ -5,13 +5,13 @@ import { isMobile } from 'react-device-detect';
 
 
 
-const Nav = ({ shown }) => {
+const Nav = () => {
     const Navigation = dynamic(() => (isMobile ? import("./Navigation.mobile") : import("./Navigation.desktop")),
         { ssr: false })
 
 
     return (
-        <Navigation shown={shown} />
+        <Navigation />
     )
 }
 

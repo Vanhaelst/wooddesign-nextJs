@@ -14,7 +14,7 @@ class MyDocument extends Document {
                 <Head>
                     <meta name="description" content={meta.description} />
                     <meta name="keywords" content={meta.keywords} />
-                    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+                    <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
                     <meta name="p:domain_verify" content={meta.domain_verify_code} />
                     <meta name="robots" content="index, follow" />
 

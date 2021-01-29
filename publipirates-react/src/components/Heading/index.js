@@ -1,15 +1,20 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import Text from '../Text';
+import show from "@/utils/show";
 
-const Heading = ({ as, level, className, ...rest }) => (
-    <Text
-        className={className}
-        as={as || `h${level}`}
-        {...rest}
-        size={`Heading${level}`}
-    />
-)
+const Heading = ({ as, level, className, display, show, ...rest }) => {
+    return(
+        <Text
+            className={className}
+            as={as || `h${level}`}
+            size={`Heading${level}`}
+            display={display}
+            show={show}
+            {...rest}
+        />
+    )
+}
 
 Heading.propTypes = {
     /** Change the rendered HTML tag e.g. span, p, h1 */

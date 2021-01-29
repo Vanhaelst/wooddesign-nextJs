@@ -13,17 +13,17 @@ import Facebook from "@/icons/Facebook";
 import Pinterest from "@/icons/Pinterest";
 import Instagram from "@/icons/Instagram";
 
-const Wrapper = styled(Grid)`
+const Wrapper = styled.div`
     width: 100%;
     display: block;
 `
 
-const Navbar = styled(Grid)`
-margin: 8px 0;
+const Navbar = styled.div`
+    margin-top: 8px;
     width: 100%;
     display: flex;
     justify-content: space-between;
-        align-items: center;
+    align-items: center;
     ${props => !props.isOpen && `
         // box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 4px;
     `}
@@ -123,9 +123,9 @@ const Navigation = () => {
         setIsOpen(!isOpen)
     }
     return (
-        <Wrapper>
-            <Navbar isMobile={true} container isOpen={isOpen}>
-                <Logo height="35px" style={{ marginTop: "10px" }} />
+        <Wrapper as={Grid}>
+            <Navbar as={Grid} isMobile={true} container isOpen={isOpen}>
+                <Logo height="35px" style={{ marginTop: "10px" }} fill="#464646" />
                 <div onClick={handleClick}>
                     <MenuIcon size="24px" />
                 </div>

@@ -19,8 +19,8 @@ import Text from "@/components/Text";
 
 const Details = styled.div`
     margin-top: 24px;
-    @media screen adn (min-width: ${props => props.theme.grid.breakpointSmall}px){
-        border-left: "1px solid rgba(0,0,0,0.2)";
+    @media screen and (min-width: ${props => props.theme.grid.breakpointSmall}px){
+        border-left: 1px solid rgba(0,0,0,0.2);
         margin-top: 0;
     }
 `;
@@ -62,20 +62,20 @@ const Realisations = () => {
         <div>
             <Head>
                 <title>Wooddesign - Realisaties - {realisatie.title} </title>
-                <meta property="og:title" content="Wooddesign - Realisaties - {realisatie.title}" key="title" />
-                <meta name="keywords" content={realisatie.details.houtsoort, realisatie.details.type, meta.keywords} />
+                <meta property="og:title" content={`Wooddesign - Realisaties - ${realisatie.title}`} key="title" />
+                <meta name="keywords" content={`${realisatie.details.houtsoort} - ${realisatie.details.type} - ${meta.keywords}`} />
             </Head>
             <Navigation />
             <Breadcrumbs page="Realisatie" variant={1} />
             <ContentWrapper>
                 <Grid container>
                     <Grid row mb={10}>
-                        <Grid item xs={12} sm={7}>
-                            <Heading level={1} mb={3}>{realisatie.title}</Heading>
+                        <Grid item xs={12} sm={8} md={7}>
+                            <Heading level={2} mb={3}>{realisatie.title}</Heading>
                             <Paragraph>{realisatie.description}</Paragraph>
                         </Grid>
-                        <Details as={Grid} item xs={12} sm={{ width: 3, push: 2}}>
-                            <Heading level={2} mb={3}>Details</Heading>
+                        <Details as={Grid} item xs={12} sm={{ width: 4}} md={{ width: 3, push: 2}}>
+                            <Heading level={3} mb={3}>Details</Heading>
                             <UnorderedList>
                                 <ListItem>
                                     <Text fontWeight="bold">Houtsoort:&nbsp;</Text><Text fontFamily="secondary">{realisatie.details.houtsoort}</Text>

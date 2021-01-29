@@ -33,7 +33,6 @@ const Grid = styled.div`
     `}
 
     ${props => props.container && `
-        padding: 0 ${props.theme.grid.gutter};
         margin: 0 auto;
         max-width: ${props.theme.grid.wrapFluid};
         @media screen and (min-width: ${props.theme.grid.breakpointMedium}px){

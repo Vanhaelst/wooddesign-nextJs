@@ -14,6 +14,7 @@ const Link = styled.a`
     &:hover {
         color: ${props => props.theme.colors.link.dark};
         background-color: transparent;
+        cursor: pointer;
     }
    
     
