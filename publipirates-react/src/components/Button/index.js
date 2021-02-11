@@ -58,6 +58,19 @@ const StyledButton = styled.a`
             color: ${props.theme.colors.primary.text};
         }
     `}
+    
+    
+    ${props => props.appearance === "link" && `
+        background-color: transparent;
+        border-color: transparent;
+        color: ${props.theme.colors.primary.main};
+        &:hover{
+            background-color: transparent;
+            border-color: transparent;
+            color: ${props.theme.colors.primary.main};
+            text-decoration: underline;
+        }
+    `}
    
    
     ${props => props.rounded && `
@@ -82,7 +95,7 @@ const StyledButton = styled.a`
 
 `;
 
-const Button = ({ appearance, children, display, href, outline, rounded, color }) => {
+const Button = ({ appearance, children, display, href, outline, rounded, color, onClick }) => {
     const textColor = color ? color : appearance === 'primary' ? theme.colors.white : theme.colors.grey[50];
     return(
         <StyledButton
@@ -91,6 +104,7 @@ const Button = ({ appearance, children, display, href, outline, rounded, color }
             display={display}
             rounded={rounded}
             outline={outline}
+            onClick={onClick}
         >
             {children}
         </StyledButton>

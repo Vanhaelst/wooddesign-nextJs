@@ -1,6 +1,6 @@
 const colors = {
-    black: "#000000",
-    white: "#FFFFFF",
+    black: "#191919",
+    white: "#FAFAFA",
     grey: {
         10: "rgb(243, 244, 244)",
         20: "rgb(237, 237, 237)",
@@ -23,6 +23,7 @@ const colors = {
         main: "#0280c6",
         dark: "#2da2e3",
     },
+    error: "#F84F31",
 }
 
 export default colors;

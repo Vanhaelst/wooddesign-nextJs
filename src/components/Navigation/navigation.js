@@ -27,6 +27,11 @@ const navigation = [
         title: "Contact",
         href: "/contact"
     },
+    {
+        title: "Shop",
+        href: "http://shop.wooddesign.be",
+        target: "_blank"
+    },
 ]
 
 

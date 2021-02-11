@@ -144,7 +144,7 @@ const Navigation = () => {
                     <Paragraph color="#676b6d" >
                         Wooddesign bvba<br />
                         <Text size="Caption2" fontWeight="bold" color="primary">
-                            <Link href="+32477208484" type="hidden">
+                            <Link href="tel:+32477208484" type="hidden">
                                 +32 (0)477 20 84 84
                             </Link>
                         </Text>

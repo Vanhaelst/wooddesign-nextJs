@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import Label from "@/components/form/Label";
+import TextInput from "@/components/form/input/TextInput";
+import {ErrorMessage} from "next/dist/build/webpack/plugins/webpack-conformance-plugin/checks/react-sync-scripts-conformance-check";
+import Text from "@/components/Text";
+import theme from "../../../../../src/theme";
 
 
 const FormInput = styled.input`
@@ -9,7 +13,6 @@ const FormInput = styled.input`
     width: 100%;
     border: 1px solid rgba(0, 0, 0, 0.2);
     outline: none;
-    margin-bottom: 24px;
     border-radius: 4px;
     font-size: 16px;
     padding: 12px 16px;
@@ -34,13 +37,32 @@ const FormInput = styled.input`
             border-bottom-color: ${props.theme.colors.primary.main};
         }
     `}
+    
+    ${props => !props.error && `
+        margin-bottom: 24px;
+    `}
+    
+    ${props => props.error && `
+        border-color: ${theme.colors.error} !important;
+    `}
 `;
 
-const InputField = ({ label, variant, placeholder }, props) => (
-    <div>
-        <Label>{label}</Label>
-        <FormInput  {...props} variant={variant} placeholder={placeholder} />
-    </div>
-)
+const InputField = ({ label, variant, placeholder, onChange, name, error, value, optional }, props) => {
+    return(
+        <div>
+            <Label>{label} {variant !== 'light' && (<sup>*</sup>)}</Label>
+            <FormInput
+                variant={variant}
+                placeholder={placeholder}
+                onChange={onChange}
+                name={name}
+                error={error}
+                value={value}
+                {...props}
+            />
+            {error && (<Text fontFamily="secondary" size="Caption2" color={theme.colors.error}>{error}</Text>)}
+        </div>
+    )
+}
 
 export default InputField;

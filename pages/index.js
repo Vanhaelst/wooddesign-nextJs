@@ -14,6 +14,7 @@ import realisations from "../src/data/realisations";
 import Link from "@/components/Link";
 import styled from "styled-components";
 import Button from "@/components/Button";
+import CookieBanner from "@/components/Card";
 
 const SubTitle = styled(Heading)`
   margin: 0;
@@ -68,6 +69,10 @@ const Home = ({ posts, ig }) => {
         <Hero backgroundImage="https://www.belgiqa.be/images/home/_homeSplashImage/belgiqa-homepage-banner2-1.jpg" />
         <Navigation />
         <ContentWrapper>
+
+
+        <CookieBanner />
+
 
             {/* Intro */}
             <Box mb={11}>
@@ -150,7 +155,7 @@ const Home = ({ posts, ig }) => {
                         {posts && posts.map(item => {
                             return(
                                 <Grid item xs={6} sm={4} md={3} key={item.id} mb={6}>
-                                    <Link href="https://www.instagram.com/wooddesignbvba/">
+                                    <Link href="https://www.instagram.com/wooddesignbvba/" target="_blank">
                                         <Image src={item.media_url} alt={`Instagram feed ${item.username} - ${item.id}`} hover="transform: scale(1.05)" />
                                     </Link>
                                 </Grid>

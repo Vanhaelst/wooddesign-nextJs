@@ -17,7 +17,7 @@ const DesktopNavigation = ({ id, shown, sticky }) => {
                 {navigation.map(item => {
                     const active = router.pathname === item.href;
                     return (
-                        <MenuItem key={item.href} href={item.href} active={active}>{item.title}</MenuItem>
+                        <MenuItem key={item.href} href={item.href} active={active} target={item.target || "_self"}>{item.title}</MenuItem>
                     )
                 })}
             </Menu>

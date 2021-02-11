@@ -6,6 +6,11 @@ import Grid from "@/components/Grid";
 import Link from "@/components/Link";
 import Text from "@/components/Text";
 import InputField from "@/components/form/InputField";
+import Instagram from "@/icons/Instagram";
+import Facebook from "@/icons/Facebook";
+import Pinterest from "@/icons/Pinterest";
+import Box from "@/components/Box";
+import companyData from "../../data/companyData";
 
 const Wrapper = styled(Grid)`
     background-image: url('https://www.woodstoxx.be/style/theme/images/bgfooter.jpg');
@@ -39,8 +44,8 @@ const Footer = () => {
                         <Grid item xs={12} sm={4}>
                             <Heading level={4} color="white">CONTACT</Heading>
                             <Paragraph color="white">
-                                <Link href="tel:+32 56 51 79 60" color="white" type="branded">+32 56 51 79 60</Link><br />
-                                <Link href="mailto:info@wooddesign.be" color="white" type="branded">info@wooddesign.be</Link>
+                                <Link href="tel:+32 56 51 79 60" color="white" type="hidden">+32 56 51 79 60</Link><br />
+                                <Link href="mailto:info@wooddesign.be" color="white" type="hidden">info@wooddesign.be</Link>
                             </Paragraph>
                         </Grid>
 
@@ -50,9 +55,23 @@ const Footer = () => {
                                 Schrijf je in voor de nieuwsbrief
                             </Paragraph>
                             <InputField placeholder="Uw emailadres" variant="light" />
-                            <Paragraph color="white">
-                                SOCIAL MEDIA
-                            </Paragraph>
+                            <Box flexDirection="row">
+                                <Box mr={5}>
+                                    <Link href={companyData.social.instagram} als="Instagram">
+                                        <Instagram size="22px" fill="white"/>
+                                    </Link>
+                                </Box>
+                                <Box mr={5}>
+                                    <Link href={companyData.social.facebook} als="Facebook">
+                                        <Facebook size="22px" fill="white"/>
+                                    </Link>
+                                </Box>
+                                <Box mr={5}>
+                                    <Link href={companyData.social.pinterest} als="Pinterest">
+                                        <Pinterest size="22px" fill="white"/>
+                                    </Link>
+                                </Box>
+                            </Box>
                         </Grid>
                     </Grid>
                 </Grid>
@@ -61,22 +80,22 @@ const Footer = () => {
                 <Grid container>
                     <Grid row>
                         <Grid item xs={12} sm={6}>
-                            <Text color="white" size="Caption2">
-                                <Link href="" color="white" type="branded">
+                            <Text color="white" size="Caption2" fontFamily="secondary">
+                                <Link href="" color="white" type="hidden">
                                     Sitemap
                                 </Link>
                                 &nbsp;-&nbsp;
-                                <Link href="" color="white" type="branded">
+                                <Link href="" color="white" type="hidden">
                                     Cookieverklaring
                                 </Link>
                                 &nbsp;-&nbsp;
-                                <Link href="" color="white" type="branded">
+                                <Link href="" color="white" type="hidden">
                                     Algemene voorwaarden
                                 </Link>
                             </Text>
                         </Grid>
                         <Grid item xs={12} sm={6} style={{ textAlign: "right" }}>
-                            <Text size="Caption2" color="white">Site by <Link href="http://www.publipirates.be" color="white" type="branded">PubliPirates</Link></Text>
+                            <Text size="Caption2" color="white" fontFamily="secondary">Site by <Link href="http://www.publipirates.be" color="white" type="hidden">PubliPirates</Link></Text>
                         </Grid>
                     </Grid>
                 </Grid>

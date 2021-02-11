@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head'
 import meta from "src/data/meta";
 import Navigation from "src/components/Navigation";
@@ -6,17 +6,93 @@ import Heading from "@/components/Heading";
 import Grid from "@/components/Grid";
 import Paragraph from "@/components/Paragraph";
 import Footer from "../src/components/Footer";
-import Input from "@/components/form/input";
-import Button from "@/components/Button";
 import Breadcrumbs from "../src/components/Breadcrumbs";
-import TextArea from "@/components/form/TextField";
 import UnorderedList from "@/components/List/UnorderedList";
 import ListItem from "@/components/List/ListItem";
 import Text from "@/components/Text";
 import Link from "@/components/Link";
 import ContentWrapper from "../src/components/ContentWrapper";
+import ValidateForm from "../src/utils/ValidateForm";
+import {sendContactMail} from "../src/utils/senMail-contact";
+import ContactForm from "../src/components/ContactForm";
 
 const Realisations = () => {
+    const [mailState, setMailState] = useState(undefined);
+    const [data, setData] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        street: "",
+        city: "",
+        postalCode: "",
+        extra: ""
+    });
+
+    const [errors, setErrors] = useState({
+        hasError: true,
+        firstName: "",
+        lastName: "",
+        email: false,
+        phone: false,
+        street: false,
+        city: false,
+        postalCode: false,
+        extra: false
+    });
+
+
+
+    /* =========================
+    *
+    * Form Functions
+    *  - Validation: async func
+    *  - HandleSend: func
+    *  - HandleDataChange: func
+    *
+    ========================= */
+    async function validate() {
+        const validation = await ValidateForm({ setErrors, data }); // wait until the promise resolves (*)
+        return validation;
+    }
+    const handleSend = () => {
+        validate().then(response => {
+            if(!response.hasError) {
+                sendContactMail({
+                    data,
+                    onSuccess: () => setMailState("success")
+                }).catch(() => setMailState("error"));
+            }
+        }).catch(() => setMailState("error"));
+    };
+    const handleChangeData = event => {
+        setErrors({ ...errors, [event.target.name]: "" });
+        setData({
+            ...data,
+            [event.target.name]: event.target.value
+        });
+    };
+
+
+
+    useEffect(() => {
+        if (mailState === 'success'){
+            setTimeout(() => {
+                setMailState(undefined);
+                setData({
+                    firstName: "",
+                    lastName: "",
+                    email: "",
+                    phone: "",
+                    street: "",
+                    city: "",
+                    postalCode: "",
+                    extra: ""
+                })
+            }, [5000])
+        }
+    }, [mailState])
+
     return (
         <div>
             <Head>
@@ -31,11 +107,7 @@ const Realisations = () => {
                         <Grid item xs={12} md={6}>
                                 <Grid row mb={6}>
                                     <Grid item xs={12} md={10}>
-                                        <Heading level={2}>Contacteer ons</Heading>
-                                        <Paragraph>
-                                            We onderscheiden ons van velen door het gebruik van kwaliteitsvolle producten, gecombineerd met een hoge afwerkingsgraad en professionele dienstverlening, ook na de plaatsing!
-                                            We werken voor zowel particuliere als professionele klanten (aannemers, architecten, bouwpromotors)
-                                        </Paragraph>
+                                        <Heading level={2}>Contactgegevens en openingsuren</Heading>
                                     </Grid>
                                 </Grid>
                                 <Grid row>
@@ -61,28 +133,30 @@ const Realisations = () => {
                                             <ListItem>
                                                 <Text fontWeight="bold" style={{ display: "block" }}>Openingsuren:</Text>
                                                 <table>
-                                                    <tr>
-                                                        <td style={{ padding: "10px 10px 5px 0"}}>
-                                                            <Text fontFamily="secondary">Ma - Vrij</Text>
-                                                        </td>
-                                                        <td style={{ padding: "10px 10px 5px 0"}}>
-                                                            <Text fontFamily="secondary">15u - 18u</Text>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td style={{ padding: "5px 10px 10px 0"}}>
-                                                            <Text fontFamily="secondary">Za</Text>
-                                                        </td>
-                                                        <td style={{ padding: "5px 10px 10px 0"}}>
-                                                            <Text fontFamily="secondary">11u - 15u30</Text>
-                                                        </td>
-                                                    </tr>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style={{ padding: "10px 10px 5px 0"}}>
+                                                                <Text fontFamily="secondary">Ma - Vrij</Text>
+                                                            </td>
+                                                            <td style={{ padding: "10px 10px 5px 0"}}>
+                                                                <Text fontFamily="secondary">15u - 18u</Text>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style={{ padding: "5px 10px 10px 0"}}>
+                                                                <Text fontFamily="secondary">Za</Text>
+                                                            </td>
+                                                            <td style={{ padding: "5px 10px 10px 0"}}>
+                                                                <Text fontFamily="secondary">11u - 15u30</Text>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
                                                 </table>
                                             </ListItem>
                                             <ListItem>
                                                 <Text fontWeight="bold" style={{ display: "block" }}>Belangrijk: </Text>
                                                 <Text fontFamily="secondary">
-                                                    Graag steeds vooraf even contacteren voor afwijkende openingsuren of afspraken op andere tijdstippen via bovenstaande gegevens.
+                                                    Graag steeds vooraf even contacteren voor afwijkende openingsuren of afspraken op andere tijdstippen.
                                                 </Text>
                                             </ListItem>
                                         </UnorderedList>
@@ -91,40 +165,13 @@ const Realisations = () => {
                                 </Grid>
                         </Grid>
                         <Grid item xs={12} md={6}>
-                            <Heading level={2}>Formulier</Heading>
-                            <form>
-                                <Grid row>
-                                    <Grid item xs={12} sm={6}>
-                                        <Input variant="text" label="Voornaam" />
-                                    </Grid>
-                                    <Grid item xs={12} sm={6}>
-                                        <Input variant="text" label="Achternaam" />
-                                    </Grid>
-                                </Grid>
-                                <Grid row>
-                                    <Grid item xs={12} sm={6}>
-                                        <Input variant="mail" label="Email" />
-                                    </Grid>
-                                    <Grid item xs={12} sm={6}>
-                                        <Input variant="phone" label="Tel / GSM" />
-                                    </Grid>
-                                </Grid>
-                                <Grid row>
-                                    <Grid item xs={12}>
-                                        <Input variant="address" label="Adres" />
-                                    </Grid>
-                                </Grid>
-                                <Grid row>
-                                    <Grid item xs={12}>
-                                        <TextArea label="Uw vraag / opmerking" />
-                                    </Grid>
-                                </Grid>
-                                <Grid row>
-                                    <Grid item xs={12} style={{ display: "flex", justifyContent: "flex-end"}}>
-                                        <Button type="submit" appearance="primary">Verzenden</Button>
-                                    </Grid>
-                                </Grid>
-                            </form>
+                            <ContactForm
+                                mailState={mailState}
+                                errors={errors}
+                                data={data}
+                                handleChangeData={handleChangeData}
+                                handleSend={handleSend}
+                            />
                         </Grid>
                     </Grid>
                 </Grid>
