@@ -1,0 +1,31 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "prettier": "prettier --write ."
+  },
+  "dependencies": {
+    "@mailchimp/mailchimp_marketing": "^3.0.28",
+    "axios": "^0.21.1",
+    "imagesloaded": "^4.1.4",
+    "lodash.isempty": "^4.4.0",
+    "next": "10.0.5",
+    "nextjs-sitemap-generator": "^1.3.0",
+    "prettier": "^2.2.1",
+    "prop-types": "^15.7.2",
+    "react": "17.0.1",
+    "react-device-detect": "^1.15.0",
+    "react-dom": "17.0.1",
+    "react-elastic-carousel": "^0.11.0",
+    "react-masonry-css": "^1.0.14",
+    "simple-react-lightbox": "^3.5.5",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "latest"
+  }
+}

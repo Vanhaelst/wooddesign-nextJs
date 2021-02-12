@@ -1,0 +1,12 @@
+# Ignore artifacts:
+.next
+.node_modules
+
+publipirates-react
+
+# Ignore files:
+
+.babelrc
+jsconfig.json
+package-lock.json
+package.json
