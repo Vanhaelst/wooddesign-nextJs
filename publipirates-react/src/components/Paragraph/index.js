@@ -1,10 +1,9 @@
 import React from "react";
-import styled from "styled-components";
 import PropTypes from "prop-types";
 import Text from "../Text";
 
-const Paragraph = ({ as, className, ...rest }) => (
-  <Text className={className} as={as || "p"} {...rest} />
+const Paragraph = ({ as, className, children, ...rest }) => (
+    <Text className={className} as={as || "p"} {...rest} >{children}</Text>
 );
 
 Paragraph.propTypes = {

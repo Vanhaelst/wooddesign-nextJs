@@ -1,23 +1,7 @@
 import React from "react";
-import { Transition } from 'react-transition-group';
 import Form from "./ContactForm";
 import Success from "./Success";
 import Error from "./Error";
-
-const duration = 300;
-
-const defaultStyle = {
-  transition: `opacity ${duration}ms ease-in-out`,
-  opacity: 0,
-}
-
-const transitionStyles = {
-  entering: { opacity: 1 },
-  entered:  { opacity: 1 },
-  exiting:  { opacity: 0 },
-  exited:  { opacity: 0 },
-};
-
 
 const ContactForm = ({
   mailState,

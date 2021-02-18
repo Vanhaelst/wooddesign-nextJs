@@ -1,9 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Text from "../Text";
-import show from "@/utils/show";
 
-const Heading = ({ as, level, className, display, show, ...rest }) => {
+const Heading = ({ as, level, className, display, show, children, ...rest }) => {
   return (
     <Text
       className={className}
@@ -12,7 +11,9 @@ const Heading = ({ as, level, className, display, show, ...rest }) => {
       display={display}
       show={show}
       {...rest}
-    />
+    >
+      {children}
+    </Text>
   );
 };
 

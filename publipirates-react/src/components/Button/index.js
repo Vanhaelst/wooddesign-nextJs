@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import Text from "@/components/Text";
-import theme from "src/theme";
 
 const style = {
   paddingX: "6px",
@@ -112,15 +110,9 @@ const Button = ({
   href,
   outline,
   rounded,
-  color,
   onClick,
   target
 }) => {
-  const textColor = color
-    ? color
-    : appearance === "primary"
-    ? theme.colors.white
-    : theme.colors.grey[50];
   return (
     <StyledButton
       href={href}

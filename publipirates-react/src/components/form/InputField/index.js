@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Label from "@/components/form/Label";
-import TextInput from "@/components/form/input/TextInput";
-import { ErrorMessage } from "next/dist/build/webpack/plugins/webpack-conformance-plugin/checks/react-sync-scripts-conformance-check";
 import Text from "@/components/Text";
 import theme from "../../../../../src/theme";
 

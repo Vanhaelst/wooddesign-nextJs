@@ -4,12 +4,6 @@ import Masonry from "react-masonry-css";
 import Link from "@/components/Link";
 import Heading from "@/components/Heading";
 
-const Title = styled(Heading)`
-  margin: 0;
-  transition: all 0.2s ease;
-  display: block;
-`;
-
 const SubTitle = styled(Heading)`
   margin: 0;
   letter-spacing: 2px;

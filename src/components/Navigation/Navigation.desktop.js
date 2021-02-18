@@ -2,9 +2,11 @@ import React, { Fragment, useState } from "react";
 import DesktopNavigation from "./default";
 
 const Navigation = ({ shown }) => {
+  {/*
   const [sticky, setSticky] = useState(false);
 
-  {/*
+
+
   if (typeof document !== "undefined") {
     const navigation = document.getElementById("nav");
     document.addEventListener("scroll", (e) => {

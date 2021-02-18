@@ -56,7 +56,7 @@ const Realisations = ({ realisation }) => {
       thumbnailsSize: ["100px", "80px"],
     },
   };
-  const router = useRouter()
+
   return (
     <div>
       <Head>

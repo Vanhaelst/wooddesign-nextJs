@@ -5,7 +5,6 @@ import Paragraph from "@/components/Paragraph";
 import Grid from "@/components/Grid";
 import Link from "@/components/Link";
 import Text from "@/components/Text";
-import InputField from "@/components/form/InputField";
 import Instagram from "@/icons/Instagram";
 import Facebook from "@/icons/Facebook";
 import Pinterest from "@/icons/Pinterest";
@@ -26,7 +25,6 @@ const BottomBar = styled(Grid)`
 
 
 const Footer = () => {
-  const [email, setEmail] = useState("");
   return (
     <div>
 

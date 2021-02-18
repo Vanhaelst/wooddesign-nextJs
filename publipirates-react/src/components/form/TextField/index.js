@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Label from "@/components/form/Label";
-import TextInput from "@/components/form/input/TextInput";
 import Text from "@/components/Text";
 import theme from "../../../../../src/theme";
 

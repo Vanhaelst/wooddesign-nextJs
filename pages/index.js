@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Head from "next/head";
 import meta from "src/data/meta";
 import Navigation from "src/components/Navigation";

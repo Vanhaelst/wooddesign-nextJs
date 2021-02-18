@@ -1,5 +1,4 @@
 import { css } from "styled-components";
-import PropTypes from "prop-types";
 import getFirstMatchingValue from "./getFirstMatchingValue";
 
 const possibleProps = [
