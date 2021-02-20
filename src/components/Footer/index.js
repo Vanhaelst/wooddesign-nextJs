@@ -11,6 +11,7 @@ import Pinterest from "@/icons/Pinterest";
 import Box from "@/components/Box";
 import companyData from "../../data/companyData";
 import SignupForm from "../Mailchimp/signupForm";
+import useGlobalContext from "../../context/hooks/useGlobalContext";
 
 const Wrapper = styled(Grid)`
   background-image: url("https://www.woodstoxx.be/style/theme/images/bgfooter.jpg");
@@ -25,13 +26,15 @@ const BottomBar = styled(Grid)`
 
 
 const Footer = () => {
+  const { isMobile } = useGlobalContext();
+
   return (
     <div>
 
       <Wrapper pt={11} pb={8}>
         <Grid container>
-          <Grid row pb={8}>
-            <Grid item xs={12} sm={4}>
+          <Grid row>
+            <Grid item xs={12} sm={4} pb={8}>
               <Heading level={4} color="white">
                 WOODDESIGN BVBA
               </Heading>
@@ -49,7 +52,7 @@ const Footer = () => {
               </Paragraph>
             </Grid>
 
-            <Grid item xs={12} sm={4}>
+            <Grid item xs={12} sm={4} pb={8}>
               <Heading level={4} color="white">
                 CONTACT
               </Heading>
@@ -76,7 +79,7 @@ const Footer = () => {
               <SignupForm />
 
 
-              <Box flexDirection="row">
+              <Box flexDirection="row" pt={4}>
                 <Box mr={5}>
                   <Link href={companyData.social.instagram} als="Instagram">
                     <Instagram size="22px" fill="white" />
@@ -111,7 +114,7 @@ const Footer = () => {
                 &nbsp;-&nbsp;{companyData.btw}
               </Text>
             </Grid>
-            <Grid item xs={12} sm={6} style={{ textAlign: "right" }}>
+            <Grid item xs={12} sm={6} style={isMobile ? {} : { textAlign: "right" }}>
               <Text size="Caption2" color="white" fontFamily="secondary">
                 Site by{" "}
                 <Link

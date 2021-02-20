@@ -101,6 +101,11 @@ const StyledButton = styled.a`
         `
         }
     `};
+     ${(props) =>
+    props.block &&
+    `
+      width: 100%;
+    `};
 `;
 
 const Button = ({
@@ -111,7 +116,8 @@ const Button = ({
   outline,
   rounded,
   onClick,
-  target
+  target,
+  block
 }) => {
   return (
     <StyledButton
@@ -122,6 +128,7 @@ const Button = ({
       outline={outline}
       onClick={onClick}
       target={target}
+      block={block}
     >
       {children}
     </StyledButton>
@@ -133,6 +140,7 @@ Button.propTypes = {
   display: PropTypes.oneOf(["inline", "block", "inline-block"]),
   rounded: PropTypes.bool,
   outline: PropTypes.bool,
+  block: PropTypes.bool,
 };
 
 Button.defaultProps = {

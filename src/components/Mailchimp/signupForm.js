@@ -1,14 +1,28 @@
 import InputField from "@/components/form/InputField";
 import React, {useState} from "react";
 import styled from "styled-components";
+import ChevronRight from "@/icons/ChevronRight";
+import Box from "@/components/Box";
 
-const SubmitButton = styled.input`
+const SubmitButton = styled.button`
   position: absolute;
   top: -50px;
   right: 0;
   background-color: transparent;
   border: none;
   color: white;
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  svg{
+    fill: white;
+  }
+  &:hover{
+    color: ${props => props.theme.colors.primary.main};
+      svg{
+        fill: ${props => props.theme.colors.primary.main};
+      }
+  }   
 `;
 
 
@@ -128,11 +142,15 @@ const SignupForm = () => {
                 <div className="clear">
                     <SubmitButton
                         type="submit"
-                        value="Subscribe"
                         name="subscribe"
                         id="mc-embedded-subscribe"
                         className="button"
-                    />
+                    >
+                        <Box mr={3}>
+                            Inschrijven
+                        </Box>
+                        <ChevronRight size="12px" />
+                    </SubmitButton>
                 </div>
             </div>
         </form>

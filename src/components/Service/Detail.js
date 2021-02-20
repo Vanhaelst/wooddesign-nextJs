@@ -28,7 +28,7 @@ const ServiceDetail = ({ title, description, image, index }) => {
         item
         xs={12}
         sm={6}
-        md={isEven ? { width: 6, push: 1 } : { width: 6 }}
+        lg={isEven ? { width: 6, push: 1 } : { width: 6 }}
         flex
         justifyContent={isFirst ? "flex-start" : "center"}
         flexDirection="column"
@@ -44,7 +44,7 @@ const ServiceDetail = ({ title, description, image, index }) => {
         item
         xs={12}
         sm={6}
-        md={isEven ? { width: 5 } : { width: 5, push: 1 }}
+        lg={isEven ? { width: 5 } : { width: 5, push: 1 }}
       >
         <Image src={image} objectFit height="600px" />
       </Grid>

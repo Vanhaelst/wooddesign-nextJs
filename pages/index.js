@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import meta from "src/data/meta";
 import Navigation from "src/components/Navigation";
@@ -19,6 +19,8 @@ import { services } from '../src/data/services/overview';
 import Carousel, { consts } from 'react-elastic-carousel';
 import ChevronLeft from "@/icons/ChevronLeft";
 import ChevronRight from "@/icons/ChevronRight";
+import useGlobalContext from "../src/context/hooks/useGlobalContext";
+import theme from "@/theme/index";
 
 const SubTitle = styled(Heading)`
   margin: 0;
@@ -91,8 +93,16 @@ const myArrow = ({ type, onClick, isEdge }) => {
 
 
 
-const Home = ({ posts }) => {
-  const slicedRealisations = realisations.slice(0, 4);
+const Home = ({ instagramPosts }) => {
+  const { isMobile } = useGlobalContext();
+  const [ slicedRealisations, setSlicedRealisations ] = useState(realisations);
+
+  useEffect(() => {
+    const realisationLength = isMobile ? 2 : 4
+    setSlicedRealisations(realisations.slice(0, realisationLength))
+  }, [isMobile])
+
+
 
   return (
     <div>
@@ -113,7 +123,7 @@ const Home = ({ posts }) => {
                 item
                 xs={12}
                 sm={6}
-                md={4}
+                lg={4}
                 flex
                 justifyContent="flex-start"
                 flexDirection="column"
@@ -132,7 +142,7 @@ const Home = ({ posts }) => {
                   gecombineerd met een hoge afwerkingsgraad en professionele dienstverlening, ook na plaatsing!
                 </Paragraph>
               </Grid>
-              <Grid item xs={12} sm={6} md={{ width: 7, push: 1 }}>
+              <Grid item xs={12} sm={6} lg={{ width: 7, push: 1 }}>
                 <Heading
                   level={2}
                   textTransform="uppercase"
@@ -149,7 +159,7 @@ const Home = ({ posts }) => {
             </RowOdd>
 
             <RowEven as={Grid} row>
-              <Grid item xs={12} sm={6} md={{ width: 5 }}>
+              <Grid item xs={12} sm={6} lg={{ width: 5 }}>
                 <Heading
                   level={2}
                   textTransform="uppercase"
@@ -167,7 +177,7 @@ const Home = ({ posts }) => {
                 item
                 xs={12}
                 sm={6}
-                md={{ width: 4, push: 1 }}
+                lg={{ width: 5, push: 1 }}
                 flex
                 justifyContent="center"
                 flexDirection="column"
@@ -235,7 +245,7 @@ const Home = ({ posts }) => {
                   item
                   xs={12}
                   sm={6}
-                  md={4}
+                  lg={4}
                   flex
                   justifyContent="center"
                   flexDirection="column"
@@ -251,11 +261,11 @@ const Home = ({ posts }) => {
                   Het onderhouden van uw parket vloer, gevelbekleding of terras is uitermate belagrijk.
                   Daarom richten wij in 2018 onze eigen webshop op, met anne onderhoudsmateriaal die u nodig heeft om uw product in perfecte conditie te houden.
                 </Paragraph>
-                <Button outline as={Link} href="http://shop.wooddesign.be" target="_blank">
+                <Button outline as={Link} href="http://shop.wooddesign.be" target="_blank" block={isMobile}>
                   Bekijk onderhoudsprodcten
                 </Button>
               </Grid>
-              <Grid item xs={12} sm={6} md={{ width: 7, push: 1 }}>
+              <Grid item xs={12} sm={6} lg={{ width: 7, push: 1 }}>
                 <Heading
                     level={2}
                     textTransform="uppercase"
@@ -319,7 +329,7 @@ const Home = ({ posts }) => {
             </Grid>
             <Grid row>
               <Grid item xs={12} flex justifyContent="flex-end">
-                <Button outline as={Link} href="/realisaties">
+                <Button outline as={Link} href="/realisaties" block={isMobile}>
                   Bekijk alle realisaties
                 </Button>
               </Grid>
@@ -352,8 +362,8 @@ const Home = ({ posts }) => {
               <Paragraph>Laat je inspireren</Paragraph>
             </Grid>
             <Grid row>
-              {posts &&
-                posts.map((item) => {
+              {instagramPosts &&
+                instagramPosts.map((item) => {
                   return (
                     <Grid item xs={6} sm={4} md={3} key={item.id} mb={6}>
                       <Link
@@ -391,14 +401,13 @@ export async function getStaticProps() {
   const res = await fetch(
     `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,username,timestamp&access_token=${AuthToken.Token}`
   );
-  const posts = await res.json();
+  const instagramPosts = await res.json();
 
   // By returning { props: posts }, the Blog component
   // will receive `posts` as a prop at build time
   return {
     props: {
-      ig: [],
-      posts: posts?.data?.slice(0, 4) || [],
+      instagramPosts: instagramPosts?.data?.slice(0, 4) || [],
     },
   };
 }

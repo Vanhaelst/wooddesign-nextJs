@@ -106,7 +106,7 @@ const Realisations = () => {
       <ContentWrapper>
         <Grid container>
           <Grid row>
-            <Grid item xs={12} md={6}>
+            <Grid item xs={12} lg={6}>
               <Grid row mb={6}>
                 <Grid item xs={12} md={10}>
                   <Heading level={2}>Contactgegevens en openingsuren</Heading>
@@ -190,7 +190,7 @@ const Realisations = () => {
                 </Grid>
               </Grid>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid item xs={12} lg={6}>
               <ContactForm
                 mailState={mailState}
                 errors={errors}

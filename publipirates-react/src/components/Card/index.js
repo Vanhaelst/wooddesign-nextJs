@@ -7,23 +7,49 @@ import Link from "next/link";
 
 const Card = styled.div`
   position: fixed !important;
-  right: 48px;
-  bottom: 48px;
-  borderradius: 10px;
   padding: 48px;
   z-index: 99999;
   border-radius: 10px;
   box-shadow: rgb(0 0 0 / 40%) 0px 0px 20px;
-  transition: right 0.5s;
+  transition: all 0.5s;
   transition-timing-function: ease-in-out;
+  max-width: 100%;
 
-  right: -500px;
+  
+ 
+  padding: 24px;
+  bottom: -500px;
+
+  @media screen and (max-width: ${props => props.theme.grid.breakpointSmall}px){
+    border-bottom-right-radius 0px;
+    border-bottom-left-radius 0px;
+  }
+  
+  @media screen and (min-width: ${props => props.theme.grid.breakpointSmall}px){
+    right: -500px;
+    bottom: 24px;
+    padding: 48px;
+  }
+  @media screen and (min-width: ${props => props.theme.grid.breakpointMedium}px){
+    bottom: 48px;
+    padding: 48px;
+  }
+
+  
   ${(props) =>
     props.show &&
     `
+      bottom: 0px;
+      @media screen and (min-width: ${props.theme.grid.breakpointSmall}px){
+        right: 0;
+        right: 24px;
+      }
+      @media screen and (min-width: ${props.theme.grid.breakpointLarge}px){
         right: 48px;
+      }
     `}
 `;
+
 
 const CookieBanner = ({ children }) => {
   const [show, setShow] = useState(false);
@@ -52,7 +78,7 @@ const CookieBanner = ({ children }) => {
       </Text>
       <Box flexDirection="row" alignItems="center">
         <Box mr={3}>
-          <Button onClick={handleClick}>Aanvaard cookies</Button>
+          <Button onClick={handleClick}>Aanvaarden</Button>
         </Box>
         <Box>
           <Link href="/cookie-verklaring">
