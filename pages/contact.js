@@ -52,6 +52,7 @@ const Realisations = () => {
     const validation = await ValidateForm({ setErrors, data }); // wait until the promise resolves (*)
     return validation;
   }
+
   const handleSend = () => {
     setTimeout(() => {
       setMailState(undefined);
