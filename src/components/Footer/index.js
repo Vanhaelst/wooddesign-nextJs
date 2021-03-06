@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
@@ -39,16 +39,14 @@ const Footer = () => {
                 WOODDESIGN BVBA
               </Heading>
               <Paragraph color="white">
-                Prins Boudewijnlaan 21T,
+                {companyData.address.street} {companyData.address.number}{companyData.address.bus},
                 <br />
-                2550 Kontich, België
+                {companyData.address.zip} {companyData.address.city}.
                 <br />
               </Paragraph>
               <Paragraph color="white">
-                Car-Wash XL oprijden
-                <br />
-                Signalisatie KMO-Park XL volgen
-                <br />
+                {companyData.address.extra}<br />
+                {companyData.address.extra2}
               </Paragraph>
             </Grid>
 
@@ -57,16 +55,16 @@ const Footer = () => {
                 CONTACT
               </Heading>
               <Paragraph color="white">
-                <Link href="tel:+32 56 51 79 60" color="white" type="hidden">
-                  +32 56 51 79 60
+                <Link href={`tel:${companyData.phone.unformatted}`} color="white" type="hidden">
+                  {companyData.phone.formatted}
                 </Link>
                 <br />
                 <Link
-                  href="mailto:info@wooddesign.be"
+                    href={`mailto:${companyData.email}`}
                   color="white"
                   type="hidden"
                 >
-                  info@wooddesign.be
+                  {companyData.email}
                 </Link>
               </Paragraph>
             </Grid>
@@ -81,17 +79,17 @@ const Footer = () => {
 
               <Box flexDirection="row" pt={4}>
                 <Box mr={5}>
-                  <Link href={companyData.social.instagram} als="Instagram">
+                  <Link href={companyData.social.instagram} als="Instagram" target="_blank">
                     <Instagram size="22px" fill="white" />
                   </Link>
                 </Box>
                 <Box mr={5}>
-                  <Link href={companyData.social.facebook} als="Facebook">
+                  <Link href={companyData.social.facebook} als="Facebook" target="_blank">
                     <Facebook size="22px" fill="white" />
                   </Link>
                 </Box>
                 <Box mr={5}>
-                  <Link href={companyData.social.pinterest} als="Pinterest">
+                  <Link href={companyData.social.pinterest} als="Pinterest" target="_blank">
                     <Pinterest size="22px" fill="white" />
                   </Link>
                 </Box>
@@ -111,7 +109,12 @@ const Footer = () => {
                 <Link href="/cookie-verklaring" color="white" type="hidden">
                   Cookieverklaring
                 </Link>
-                &nbsp;-&nbsp;{companyData.btw}
+                &nbsp;-&nbsp;
+                <Link href="/verkoops-voorwaarden" color="white" type="hidden">
+                  Verkoopsvoorwaarden
+                </Link>
+                &nbsp;-&nbsp;
+                {companyData.btw}
               </Text>
             </Grid>
             <Grid item xs={12} sm={6} style={isMobile ? {} : { textAlign: "right" }}>

@@ -20,7 +20,6 @@ import Carousel, { consts } from 'react-elastic-carousel';
 import ChevronLeft from "@/icons/ChevronLeft";
 import ChevronRight from "@/icons/ChevronRight";
 import useGlobalContext from "../src/context/hooks/useGlobalContext";
-import theme from "@/theme/index";
 
 const SubTitle = styled(Heading)`
   margin: 0;
@@ -136,10 +135,14 @@ const Home = ({ instagramPosts }) => {
                 >
                   Over Wooddesign
                 </Heading>
+                <Paragraph mb={2}>
+                  Na een jaartje in het bedrijf van m'n vader te hebben gewerkt, ben ik in 1997 een eenmanszaak begonnen in het leveren en plaatsen van parketvloeren, toen nog traditioneel geplaatste parketvloeren.
+                </Paragraph>
+                <Paragraph mb={2}>
+                  Vanaf 1999 zijn we ook gestart met het plaatsen van gevelbekleding, wat al snel een goede zet bleek te zijn.
+                </Paragraph>
                 <Paragraph>
-                  Ondertussen meer dan 20 jaar en duizenden vierkante meters verder, onderscheiden we ons van velen.
-                  Niet alleen door onze jarenlange ervaring, maar eveneens door het gebruik van kwaliteitsvolle producten,
-                  gecombineerd met een hoge afwerkingsgraad en professionele dienstverlening, ook na plaatsing!
+                  Eind 2005 ben ik overgeschakeld van een eenmanszaak naar een BVBA, en kort nadien mijn eerste vaste werknemer aangenomen, wat er al snel 4 werden.
                 </Paragraph>
               </Grid>
               <Grid item xs={12} sm={6} lg={{ width: 7, push: 1 }}>
@@ -160,13 +163,6 @@ const Home = ({ instagramPosts }) => {
 
             <RowEven as={Grid} row>
               <Grid item xs={12} sm={6} lg={{ width: 5 }}>
-                <Heading
-                  level={2}
-                  textTransform="uppercase"
-                  show={{ xs: true, sm: false }}
-                >
-                  Onze geschiedenis
-                </Heading>
                 <Image
                   src="https://www.belgiqa.be/images/home/_homeCraftImage2/1.-M_WSTXX_020519-127.jpg"
                   objectFit
@@ -182,23 +178,15 @@ const Home = ({ instagramPosts }) => {
                 justifyContent="center"
                 flexDirection="column"
               >
-                <Heading
-                  level={2}
-                  textTransform="uppercase"
-                  show={{ xs: false, sm: true }}
-                >
-                  Onze geschiedenis
-                </Heading>
                 <Paragraph mb={2}>
-                  Na een jaartje in het bedrijf van m'n vader te hebben gewerkt, ben ik in 1997 een eenmanszaak begonnen in het leveren en plaatsen van parketvloeren, toen nog traditioneel geplaatste parketvloeren.
+                  Ondertussen meer dan 20 jaar en duizenden vierkante meters verder, onderscheiden we ons van velen.
                 </Paragraph>
                 <Paragraph mb={2}>
-                  Vanaf 1999 zijn we ook gestart met het plaatsen van gevelbekleding, wat al snel een goede zet bleek te zijn.
+                  Niet alleen door onze jarenlange ervaring, maar eveneens door het gebruik van kwaliteitsvolle producten,
+                  gecombineerd met een hoge afwerkingsgraad en professionele dienstverlening, ook na plaatsing!
                 </Paragraph>
                 <Paragraph>
-                  Eind 2005 ben ik overgeschakeld van een eenmanszaak naar een BVBA, en kort nadien mijn eerste vaste werknemer aangenomen, wat er al snel 4 werden.
-                  We zitten nu meer dan 10 jaar op het bedrijvenpark KMO-Park XL te Kontich, waar ons magazijn en toonzaal gevestigd is.
-                  In 2020 hebben we onze webshop gestart als extra service naar zowel bestaande als nieuwe klanten.
+                  Hiervoor hebben we begin 2020 onze webshop gestart als extra service naar zowel bestaande als nieuwe klanten.
                 </Paragraph>
               </Grid>
             </RowEven>

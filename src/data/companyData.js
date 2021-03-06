@@ -7,15 +7,20 @@ const companyData = {
     zip: "2550",
     city: "Kontich",
     country: "België",
+    extra: "Car-Wash XL oprijden",
+    extra2: "signalisatie KMO-Park XL volgen."
   },
   email: "info@wooddesign.be",
-  phone: "+32 56 51 79 60",
+  phone: {
+    formatted: "+32(0) 477.20.84.84",
+    unformatted: "+32477208484",
+  },
   btw: "BE0878408541",
   iban: "",
   social: {
-    instagram: "http://www.google.com",
-    facebook: "http://www.google.com",
-    pinterest: "http://www.google.com",
+    instagram: "https://www.instagram.com/wooddesignbvba/",
+    facebook: "https://www.facebook.com/wooddesignbvba",
+    pinterest: "https://www.pinterest.com/wooddesignbvba/",
   },
 };
 

@@ -14,6 +14,7 @@ import ContentWrapper from "../src/components/ContentWrapper";
 import ValidateForm from "../src/utils/ValidateForm";
 import { sendContactMail } from "../src/utils/senMail-contact";
 import ContactForm from "../src/components/ContactForm";
+import companyData from "../src/data/companyData";
 
 const Realisations = () => {
   const [mailState, setMailState] = useState(undefined);
@@ -121,11 +122,11 @@ const Realisations = () => {
                         Telefoon:
                       </Text>
                       <Link
-                        href="tel:+32477208484"
+                          href={`tel:${companyData.phone.unformatted}`}
                         fontFamily="secondary"
                         type="hidden"
                       >
-                        +32(0) 477.20.84.84
+                        {companyData.phone.formatted}
                       </Link>
                     </ListItem>
                     <ListItem>
@@ -133,11 +134,11 @@ const Realisations = () => {
                         E-mail:
                       </Text>
                       <Link
-                        href="mailto:info@wooddesign.be"
+                        href={`mailto:${companyData.email}`}
                         fontFamily="secondary"
                         type="hidden"
                       >
-                        info@wooddesign.be
+                        {companyData.email}
                       </Link>
                     </ListItem>
                     <ListItem>
@@ -148,9 +149,10 @@ const Realisations = () => {
                         </Text>
                       </Text>
                       <Text fontFamily="secondary">
-                        Prins Boudewijnlaan 21T, 2550 Kontich.
+                        {companyData.address.street} {companyData.address.number}{companyData.address.bus},
+                      {companyData.address.zip} {companyData.address.city}.
                         <br />
-                        Car-Wash XL oprijden – signalisatie KMO-Park XL volgen.
+                        {companyData.address.extra} - {companyData.address.extra2}
                       </Text>
                     </ListItem>
                     <ListItem>
@@ -161,7 +163,7 @@ const Realisations = () => {
                         <tbody>
                           <tr>
                             <td style={{ padding: "10px 10px 5px 0" }}>
-                              <Text fontFamily="secondary">Ma - Vrij</Text>
+                              <Text fontFamily="secondary">Ma - Vrij:</Text>
                             </td>
                             <td style={{ padding: "10px 10px 5px 0" }}>
                               <Text fontFamily="secondary">15u - 18u</Text>
@@ -169,10 +171,18 @@ const Realisations = () => {
                           </tr>
                           <tr>
                             <td style={{ padding: "5px 10px 10px 0" }}>
-                              <Text fontFamily="secondary">Za</Text>
+                              <Text fontFamily="secondary">Zaterdag:</Text>
                             </td>
                             <td style={{ padding: "5px 10px 10px 0" }}>
                               <Text fontFamily="secondary">11u - 15u30</Text>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style={{ padding: "5px 10px 10px 0" }}>
+                              <Text fontFamily="secondary">Zondag:</Text>
+                            </td>
+                            <td style={{ padding: "5px 10px 10px 0" }}>
+                              <Text fontFamily="secondary">Gesloten</Text>
                             </td>
                           </tr>
                         </tbody>
@@ -180,7 +190,7 @@ const Realisations = () => {
                     </ListItem>
                     <ListItem>
                       <Text fontWeight="bold" style={{ display: "block" }}>
-                        Belangrijk:{" "}
+                        Belangrijk:
                       </Text>
                       <Text fontFamily="secondary">
                         Graag steeds vooraf even contacteren voor afwijkende
