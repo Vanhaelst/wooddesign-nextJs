@@ -11,17 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd7d19aa-e2de-4f89-acc1-1972311b0af8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/images/hero.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Organism/home.intro.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contact.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Button/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Button/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Card/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Card/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/theme/grid.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/theme/grid.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ContactForm/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactForm/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Mailchimp/signupForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Mailchimp/signupForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Service/Detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Service/Detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/GlobalContextProvider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/GlobalContextProvider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/services/parket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/services/parket.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +54,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTML" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pages" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -70,23 +65,25 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pages" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/studio" />
       <recent name="$PROJECT_DIR$/publipirates-react/src/icons" />
       <recent name="$PROJECT_DIR$/src/data/services" />
-      <recent name="$PROJECT_DIR$/pages" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/web" />
       <recent name="$PROJECT_DIR$/src/components/Navigation" />
       <recent name="$PROJECT_DIR$/public/images/theme/app-icons" />
-      <recent name="$PROJECT_DIR$/src/components/Navigation/desktop" />
     </key>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -102,7 +99,20 @@
       <workItem from="1613135858390" duration="9425000" />
       <workItem from="1613148957663" duration="11435000" />
       <workItem from="1613662165404" duration="10147000" />
-      <workItem from="1613813135391" duration="4115000" />
+      <workItem from="1613813135391" duration="4814000" />
+      <workItem from="1614170226325" duration="1764000" />
+      <workItem from="1614284656369" duration="219000" />
+      <workItem from="1614515765764" duration="3209000" />
+      <workItem from="1614525094848" duration="1169000" />
+      <workItem from="1614778240030" duration="430000" />
+      <workItem from="1614789388143" duration="929000" />
+      <workItem from="1614878945601" duration="8000" />
+      <workItem from="1614954529832" duration="2391000" />
+      <workItem from="1615022812172" duration="598000" />
+      <workItem from="1615122960582" duration="759000" />
+      <workItem from="1615480198549" duration="3605000" />
+      <workItem from="1615559962851" duration="8000" />
+      <workItem from="1615802188072" duration="1046000" />
     </task>
     <task id="LOCAL-00001" summary="Wooddesign website">
       <created>1611829161813</created>
@@ -146,11 +156,32 @@
       <option name="project" value="LOCAL" />
       <updated>1613678543637</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="- Add isMobile and isTablet in context&#10;- use context for responsiveness">
+      <created>1613817599316</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1613817599316</updated>
+    </task>
+    <task id="LOCAL-00008" summary="prettify">
+      <created>1614245813198</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1614245813198</updated>
+    </task>
+    <task id="LOCAL-00009" summary="- Fix and use data from companyData.js&#10;- Change intro text&#10;- Add sales conditions page">
+      <created>1615023400827</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1615023400827</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -171,7 +202,10 @@
     <MESSAGE value="- Add Sanity &#10;- Fix cookies&#10;- Fix Mailchimp" />
     <MESSAGE value="- Remove sanity &#10;- Add graphCms&#10;- Fix form validation&#10;- Add services and shop on homepage&#10;- Add cookie banner" />
     <MESSAGE value="Cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleanup" />
+    <MESSAGE value="- Add isMobile and isTablet in context&#10;- use context for responsiveness" />
+    <MESSAGE value="prettify" />
+    <MESSAGE value="- Fix and use data from companyData.js&#10;- Change intro text&#10;- Add sales conditions page" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Fix and use data from companyData.js&#10;- Change intro text&#10;- Add sales conditions page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1164" y="628" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1613221048211">
@@ -191,16 +225,17 @@
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
     <state x="789" y="368" key="SettingsEditor/0.25.2560.1415@0.25.2560.1415" timestamp="1613038014696" />
-    <state width="500" height="439" key="SwitcherDM" timestamp="1613816219674">
-      <screen x="0" y="25" width="2880" height="1595" />
+    <state width="500" height="400" key="SwitcherDM" timestamp="1615559969071">
+      <screen x="0" y="25" width="2560" height="1415" />
     </state>
-    <state width="500" height="400" key="SwitcherDM/0.25.2560.1415@0.25.2560.1415" timestamp="1613141213250" />
+    <state width="500" height="400" key="SwitcherDM/0.25.2560.1415@0.25.2560.1415" timestamp="1615559969071" />
     <state width="500" height="445" key="SwitcherDM/2880.0.1920.1080/0.0.2880.1620@0.0.2880.1620" timestamp="1611737437396" />
-    <state width="500" height="439" key="SwitcherDM/2880.25.1920.1055/0.25.2880.1595@0.25.2880.1595" timestamp="1613816219674" />
-    <state x="1040" y="555" key="Vcs.Push.Dialog.v2" timestamp="1613678546464">
-      <screen x="0" y="25" width="2880" height="1595" />
+    <state width="500" height="439" key="SwitcherDM/2880.25.1920.1055/0.25.2880.1595@0.25.2880.1595" timestamp="1614284826100" />
+    <state x="924" y="495" key="Vcs.Push.Dialog.v2" timestamp="1615023403995">
+      <screen x="0" y="25" width="2560" height="1415" />
     </state>
-    <state x="1040" y="555" key="Vcs.Push.Dialog.v2/2880.25.1920.1055/0.25.2880.1595@0.25.2880.1595" timestamp="1613678546464" />
+    <state x="924" y="495" key="Vcs.Push.Dialog.v2/0.25.2560.1415@0.25.2560.1415" timestamp="1615023403995" />
+    <state x="1040" y="555" key="Vcs.Push.Dialog.v2/2880.25.1920.1055/0.25.2880.1595@0.25.2880.1595" timestamp="1613817601946" />
     <state x="1059" y="437" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1611755255238">
       <screen x="0" y="25" width="2880" height="1595" />
     </state>
@@ -214,10 +249,10 @@
     </state>
     <state width="600" height="440" key="javadoc.popup/2880.0.1920.1080/0.0.2880.1620@0.0.2880.1620" timestamp="1611651964523" />
     <state width="600" height="440" key="javadoc.popup/2880.25.1920.1055/0.0.2880.1620@0.0.2880.1620" timestamp="1611583052595" />
-    <state x="1105" y="490" width="670" height="666" key="search.everywhere.popup" timestamp="1613813787108">
-      <screen x="0" y="25" width="2880" height="1595" />
+    <state x="982" y="438" width="670" height="591" key="search.everywhere.popup" timestamp="1615490269018">
+      <screen x="0" y="25" width="2560" height="1415" />
     </state>
-    <state x="982" y="438" width="670" height="591" key="search.everywhere.popup/0.25.2560.1415@0.25.2560.1415" timestamp="1613135928122" />
+    <state x="982" y="438" width="670" height="591" key="search.everywhere.popup/0.25.2560.1415@0.25.2560.1415" timestamp="1615490269018" />
     <state x="1105" y="472" width="670" height="676" key="search.everywhere.popup/2880.0.1920.1080/0.0.2880.1620@0.0.2880.1620" timestamp="1611589211768" />
     <state x="1105" y="490" width="670" height="666" key="search.everywhere.popup/2880.25.1920.1055/0.25.2880.1595@0.25.2880.1595" timestamp="1613813787108" />
   </component>

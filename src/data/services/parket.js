@@ -1,4 +1,5 @@
 import React from "react";
+import Paragraph from "@/components/Paragraph";
 
 const parket = [
   {
@@ -6,8 +7,20 @@ const parket = [
     title: "Massief parket",
     image:
       "https://www.wooddesign.be/wp-content/uploads/2016/06/16819188_1247654351938737_8040962893899610627_o.jpg",
-    description:
-      "Massief parket bestaat uit massief hout en beschikbaar in verschillende vormen en afmetingen. Dit wordt traditioneel op een eiken mozaiek ondervloer gelijmd en genageld, maar kan afhankelijk vd dikte en breedte ook rechtstreeks op chape verlijmd worden. Sommige types afgewerkt in de fabriek voor plaatsing.",
+    description: () => (
+        <>
+          <Paragraph mb={3}>
+            Een massieve parketvloer is er in verschillende vormen en afmetingen zoals plankenvloer, visgraat, mozaïek, lamel op kant, hongaarse punt, engels verband,….<br />
+          </Paragraph>
+          <Paragraph mb={3}>
+            Traditioneel wordt dit op een eiken mozaïek ondervloer gelijmd en genageld, maar kan afhankelijk vd dikte en breedte ook rechtstreeks op chape verlijmd worden.
+          </Paragraph>
+          <Paragraph mb={3}>
+            Dit type vloer wordt meestal na de plaatsing geschuurd en afgewerkt met olie, vernis of wax. Afhankelijk van de gekozen kleur kan deze eerst nog ingekleurd worden met beits.
+          </Paragraph>
+        </>
+    )
+
   },
   {
     index: 2,

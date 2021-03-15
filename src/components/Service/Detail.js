@@ -35,10 +35,12 @@ const ServiceDetail = ({ title, description, image, index }) => {
         mb={isFirst && 10}
         my={isFirst ? 0 : 10}
       >
-        <Heading level={3} textTransform="uppercase">
+        <Heading level={3} textTransform="uppercase" mb={5}>
           {title}
         </Heading>
-        <Paragraph>{description}</Paragraph>
+          {console.log(typeof description)}
+          {(typeof description === 'function' ? description() : <Paragraph>{description}</Paragraph> )}
+
       </Grid>
       <Grid
         item
