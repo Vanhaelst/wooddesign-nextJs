@@ -6,7 +6,7 @@ import Grid from "@/components/Grid";
 import Footer from "../src/components/Footer";
 import Breadcrumbs from "../src/components/Breadcrumbs";
 import ContentWrapper from "../src/components/ContentWrapper";
-import ServiceDetail from "../src/components/Service/Detail";
+import { ServiceDetail } from "../src/components/Service/Detail";
 import parket from "../src/data/services/parket";
 
 const Services = () => {

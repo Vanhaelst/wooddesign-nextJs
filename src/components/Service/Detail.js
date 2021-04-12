@@ -1,9 +1,11 @@
 import React from "react";
+import { handleViewport } from "react-in-viewport";
 import styled from "styled-components";
 import Grid from "@/components/Grid";
 import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
 import Image from "@/components/Image";
+import { TransitionSlide } from "../../transitions";
 
 const Row = styled.div`
   @media screen and (min-width: ${(props) =>
@@ -18,7 +20,14 @@ const Row = styled.div`
   }
 `;
 
-const ServiceDetail = ({ title, description, image, index }) => {
+const Block = ({
+  title,
+  description,
+  image,
+  index,
+  enterCount,
+  forwardedRef,
+}) => {
   const isEven = index % 2 === 0;
   const isFirst = index === 1;
 
@@ -30,17 +39,26 @@ const ServiceDetail = ({ title, description, image, index }) => {
         sm={6}
         lg={isEven ? { width: 6, push: 1 } : { width: 6 }}
         flex
-        justifyContent={isFirst ? "flex-start" : "center"}
+        justifyContent={isFirst ? "center" : "center"}
         flexDirection="column"
         mb={isFirst && 10}
         my={isFirst ? 0 : 10}
       >
-        <Heading level={3} textTransform="uppercase" mb={5}>
-          {title}
-        </Heading>
-          {console.log(typeof description)}
-          {(typeof description === 'function' ? description() : <Paragraph>{description}</Paragraph> )}
-
+        <TransitionSlide
+          transition={enterCount}
+          ref={forwardedRef}
+          slideTo={isEven ? "right" : "left"}
+          fade
+        >
+          <Heading level={3} textTransform="uppercase" mb={5}>
+            {title}
+          </Heading>
+          {typeof description === "function" ? (
+            description()
+          ) : (
+            <Paragraph>{description}</Paragraph>
+          )}
+        </TransitionSlide>
       </Grid>
       <Grid
         item
@@ -48,9 +66,26 @@ const ServiceDetail = ({ title, description, image, index }) => {
         sm={6}
         lg={isEven ? { width: 5 } : { width: 5, push: 1 }}
       >
-        <Image src={image} objectFit height="600px" />
+        <TransitionSlide
+          transition={enterCount}
+          ref={forwardedRef}
+          slideTo={isEven ? "left" : "right"}
+          fade
+        >
+          <Image src={image} objectFit height="600px" />
+        </TransitionSlide>
       </Grid>
     </Row>
   );
 };
-export default ServiceDetail;
+
+const ViewportBlock = handleViewport(Block /** options: {}, config: {} **/);
+
+export const ServiceDetail = ({ title, description, image, index }) => (
+  <ViewportBlock
+    index={index}
+    title={title}
+    image={image}
+    description={description}
+  />
+);

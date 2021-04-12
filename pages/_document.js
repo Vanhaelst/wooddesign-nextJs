@@ -40,54 +40,47 @@ export default class MyDocument extends Document {
           <meta name="p:domain_verify" content={meta.domain_verify_code} />
           <meta name="robots" content="index, follow" />
           {/* CSS STYLES */}
+          {/*
           <link
             rel="apple-touch-icon"
             sizes="57x57"
             href="/images/theme/app-icons/apple-icon-57x57.png"
           />{" "}
-          {/* TODO */}
           <link
             rel="apple-touch-icon"
             sizes="60x60"
             href="/images/theme/app-icons/apple-icon-60x60.png"
           />{" "}
-          {/* TODO */}
           <link
             rel="apple-touch-icon"
             sizes="72x72"
             href="/images/theme/app-icons/apple-icon-72x72.png"
           />{" "}
-          {/* TODO */}
           <link
             rel="apple-touch-icon"
             sizes="76x76"
             href="/images/theme/app-icons/apple-icon-76x76.png"
           />{" "}
-          {/* TODO */}
           <link
             rel="apple-touch-icon"
             sizes="114x114"
             href="/images/theme/app-icons/apple-icon-114x114.png"
           />{" "}
-          {/* TODO */}
           <link
             rel="apple-touch-icon"
             sizes="120x120"
             href="/images/theme/app-icons/apple-icon-120x120.png"
           />{" "}
-          {/* TODO */}
           <link
             rel="apple-touch-icon"
             sizes="144x144"
             href="/images/theme/app-icons/apple-icon-144x144.png"
           />{" "}
-          {/* TODO */}
           <link
             rel="apple-touch-icon"
             sizes="152x152"
             href="/images/theme/app-icons/apple-icon-152x152.png"
-          />{" "}
-          {/* TODO */}
+          />
           <link
             rel="apple-touch-icon"
             sizes="180x180"
@@ -105,6 +98,7 @@ export default class MyDocument extends Document {
             sizes="512x512"
             href="/images/theme/app-icons/android-chrome-512x512.png"
           />
+          */}
           <link
             rel="icon"
             type="image/png"
@@ -123,7 +117,6 @@ export default class MyDocument extends Document {
             sizes="96x96"
             href="/images/theme/app-icons/favicon-96x96.png"
           />{" "}
-          {/* TODO */}
           <link
             rel="shortcut icon"
             href="/style/theme/favicon.ico"

@@ -11,12 +11,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd7d19aa-e2de-4f89-acc1-1972311b0af8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/hero.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Organism/home.intro.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_document.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_document.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/gevel.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/gevel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/parket.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/parket.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/realisaties/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/realisaties/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/terras.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/terras.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/wand.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/wand.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Masonry/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Masonry/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Service/Detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Service/Detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/services/parket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/services/parket.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +59,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTML" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -63,17 +68,18 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.NodeInterpreter" value="$USER_HOME$/.nvm/versions/node/v10.15.3/bin/node" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/pages" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/studio" />
       <recent name="$PROJECT_DIR$/publipirates-react/src/icons" />
-      <recent name="$PROJECT_DIR$/src/data/services" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/images" />
@@ -112,7 +118,15 @@
       <workItem from="1615122960582" duration="759000" />
       <workItem from="1615480198549" duration="3605000" />
       <workItem from="1615559962851" duration="8000" />
-      <workItem from="1615802188072" duration="1046000" />
+      <workItem from="1615802188072" duration="1337000" />
+      <workItem from="1615908041673" duration="1035000" />
+      <workItem from="1616149469806" duration="6000" />
+      <workItem from="1616149522216" duration="21000" />
+      <workItem from="1616149561259" duration="16000" />
+      <workItem from="1616674748710" duration="3634000" />
+      <workItem from="1617632693229" duration="169000" />
+      <workItem from="1617809716751" duration="429000" />
+      <workItem from="1618229310049" duration="3670000" />
     </task>
     <task id="LOCAL-00001" summary="Wooddesign website">
       <created>1611829161813</created>
@@ -177,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615023400827</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Feedback copy&#10;- Add new test 'Massief parket'&#10;- add hero image">
+      <created>1615803389392</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1615803389393</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,55 +226,7 @@
     <MESSAGE value="- Add isMobile and isTablet in context&#10;- use context for responsiveness" />
     <MESSAGE value="prettify" />
     <MESSAGE value="- Fix and use data from companyData.js&#10;- Change intro text&#10;- Add sales conditions page" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Fix and use data from companyData.js&#10;- Change intro text&#10;- Add sales conditions page" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="1164" y="628" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1613221048211">
-      <screen x="0" y="25" width="2880" height="1595" />
-    </state>
-    <state x="1164" y="612" key="#com.intellij.fileTypes.FileTypeChooser/2880.0.1920.1080/0.0.2880.1620@0.0.2880.1620" timestamp="1611578516523" />
-    <state x="1164" y="628" key="#com.intellij.fileTypes.FileTypeChooser/2880.25.1920.1055/0.25.2880.1595@0.25.2880.1595" timestamp="1613221048211" />
-    <state x="1178" y="561" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1611321974120">
-      <screen x="0" y="0" width="2880" height="1620" />
-    </state>
-    <state x="1178" y="561" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/2880.0.1920.1080/0.0.2880.1620@0.0.2880.1620" timestamp="1611321974120" />
-    <state x="1144" y="355" key="RollbackChangesDialog" timestamp="1613037926470">
-      <screen x="0" y="25" width="2560" height="1415" />
-    </state>
-    <state x="1144" y="355" key="RollbackChangesDialog/0.25.2560.1415@0.25.2560.1415" timestamp="1613037926470" />
-    <state x="789" y="368" key="SettingsEditor" timestamp="1613038014696">
-      <screen x="0" y="25" width="2560" height="1415" />
-    </state>
-    <state x="789" y="368" key="SettingsEditor/0.25.2560.1415@0.25.2560.1415" timestamp="1613038014696" />
-    <state width="500" height="400" key="SwitcherDM" timestamp="1615559969071">
-      <screen x="0" y="25" width="2560" height="1415" />
-    </state>
-    <state width="500" height="400" key="SwitcherDM/0.25.2560.1415@0.25.2560.1415" timestamp="1615559969071" />
-    <state width="500" height="445" key="SwitcherDM/2880.0.1920.1080/0.0.2880.1620@0.0.2880.1620" timestamp="1611737437396" />
-    <state width="500" height="439" key="SwitcherDM/2880.25.1920.1055/0.25.2880.1595@0.25.2880.1595" timestamp="1614284826100" />
-    <state x="924" y="495" key="Vcs.Push.Dialog.v2" timestamp="1615023403995">
-      <screen x="0" y="25" width="2560" height="1415" />
-    </state>
-    <state x="924" y="495" key="Vcs.Push.Dialog.v2/0.25.2560.1415@0.25.2560.1415" timestamp="1615023403995" />
-    <state x="1040" y="555" key="Vcs.Push.Dialog.v2/2880.25.1920.1055/0.25.2880.1595@0.25.2880.1595" timestamp="1613817601946" />
-    <state x="1059" y="437" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1611755255238">
-      <screen x="0" y="25" width="2880" height="1595" />
-    </state>
-    <state x="1059" y="437" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/2880.25.1920.1055/0.25.2880.1595@0.25.2880.1595" timestamp="1611755255238" />
-    <state x="1141" y="525" width="597" height="570" key="find.popup" timestamp="1611565042878">
-      <screen x="0" y="0" width="2880" height="1620" />
-    </state>
-    <state x="1141" y="525" width="597" height="570" key="find.popup/2880.0.1920.1080/0.0.2880.1620@0.0.2880.1620" timestamp="1611565042878" />
-    <state width="600" height="440" key="javadoc.popup" timestamp="1611651964523">
-      <screen x="0" y="0" width="2880" height="1620" />
-    </state>
-    <state width="600" height="440" key="javadoc.popup/2880.0.1920.1080/0.0.2880.1620@0.0.2880.1620" timestamp="1611651964523" />
-    <state width="600" height="440" key="javadoc.popup/2880.25.1920.1055/0.0.2880.1620@0.0.2880.1620" timestamp="1611583052595" />
-    <state x="982" y="438" width="670" height="591" key="search.everywhere.popup" timestamp="1615490269018">
-      <screen x="0" y="25" width="2560" height="1415" />
-    </state>
-    <state x="982" y="438" width="670" height="591" key="search.everywhere.popup/0.25.2560.1415@0.25.2560.1415" timestamp="1615490269018" />
-    <state x="1105" y="472" width="670" height="676" key="search.everywhere.popup/2880.0.1920.1080/0.0.2880.1620@0.0.2880.1620" timestamp="1611589211768" />
-    <state x="1105" y="490" width="670" height="666" key="search.everywhere.popup/2880.25.1920.1055/0.25.2880.1595@0.25.2880.1595" timestamp="1613813787108" />
+    <MESSAGE value="Feedback copy&#10;- Add new test 'Massief parket'&#10;- add hero image" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feedback copy&#10;- Add new test 'Massief parket'&#10;- add hero image" />
   </component>
 </project>
