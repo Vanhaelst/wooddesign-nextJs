@@ -16,7 +16,11 @@ export const Transition = styled.div`
 `;
 
 export const TransitionSlide = styled.div`
-  transition: all 1s;
+  transition: all 0.5s;
+  @media screen and (min-width: ${(props) =>
+      props.theme.grid.breakpointLarge}px) {
+    transition: all 1s;
+  }
   transition-delay: ${(props) => props.transitionDelay || "0.25s"};
 
   ${(props) =>
@@ -50,12 +54,15 @@ export const TransitionSlide = styled.div`
     ${(props) =>
     props.slideTo === "up" &&
     `
-        top: 300px;
+        top: 100px;
+        @media screen and (min-width: ${props.theme.grid.breakpointLarge}px){
+            top: 300px;
+        }
         opacity: ${props.fade ? 0 : 1};
         ${
           props.transition &&
           `
-            top: 0;
+            top: 0 !important;
             opacity: 1;
         `
         }
