@@ -52,7 +52,7 @@ const MasonryGrid = ({ items }) => {
                   type="hidden"
                 >
                   <img
-                    src={item.images[0].url}
+                    src={item.images[0]?.url}
                     alt={item.title}
                     style={{ maxWidth: "100%" }}
                   />
@@ -64,11 +64,11 @@ const MasonryGrid = ({ items }) => {
                       color="#b3b3b3"
                     >
                       {item.categories.map((category, index) => {
-                        const isLast = index === item.categories.length - 1
+                        const isLast = index === item.categories.length - 1;
                         if (isLast) {
-                          return category
+                          return category;
                         }
-                        return `${category} - `
+                        return `${category} - `;
                       })}
                     </SubTitle>
                   )}
