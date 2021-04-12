@@ -10,18 +10,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd7d19aa-e2de-4f89-acc1-1972311b0af8" name="Default Changelist" comment="">
+    <list default="true" id="dd7d19aa-e2de-4f89-acc1-1972311b0af8" name="Default Changelist" comment="Get realisations from CMS">
+      <change afterPath="$PROJECT_DIR$/src/components/Masonry/MasonryItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_document.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_document.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/gevel.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/gevel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/parket.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/parket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/realisaties/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/realisaties/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/terras.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/terras.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/wand.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/wand.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Masonry/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Masonry/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Service/Detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Service/Detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transitions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/transitions/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +119,7 @@
       <workItem from="1616674748710" duration="3634000" />
       <workItem from="1617632693229" duration="169000" />
       <workItem from="1617809716751" duration="429000" />
-      <workItem from="1618229310049" duration="3670000" />
+      <workItem from="1618229310049" duration="4137000" />
     </task>
     <task id="LOCAL-00001" summary="Wooddesign website">
       <created>1611829161813</created>
@@ -198,7 +191,21 @@
       <option name="project" value="LOCAL" />
       <updated>1615803389393</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Update">
+      <created>1618236519909</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1618236519909</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Get realisations from CMS">
+      <created>1618236581532</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1618236581532</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,6 +234,8 @@
     <MESSAGE value="prettify" />
     <MESSAGE value="- Fix and use data from companyData.js&#10;- Change intro text&#10;- Add sales conditions page" />
     <MESSAGE value="Feedback copy&#10;- Add new test 'Massief parket'&#10;- add hero image" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feedback copy&#10;- Add new test 'Massief parket'&#10;- add hero image" />
+    <MESSAGE value="Update" />
+    <MESSAGE value="Get realisations from CMS" />
+    <option name="LAST_COMMIT_MESSAGE" value="Get realisations from CMS" />
   </component>
 </project>

@@ -46,4 +46,18 @@ export const TransitionSlide = styled.div`
         `
         }
     `}
+    
+    ${(props) =>
+    props.slideTo === "up" &&
+    `
+        top: 300px;
+        opacity: ${props.fade ? 0 : 1};
+        ${
+          props.transition &&
+          `
+            top: 0;
+            opacity: 1;
+        `
+        }
+    `}
 `;
