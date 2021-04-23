@@ -66,7 +66,7 @@ const Grid = styled.div`
         padding: 0 ${props.theme.grid.gutter};
         margin: 0;
         width: 100%;
-        max-width: ${props.theme.grid.wrapStatic}px;
+        max-width: 100%;
     `}
     
     ${(props) =>

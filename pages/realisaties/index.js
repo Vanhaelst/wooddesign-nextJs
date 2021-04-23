@@ -30,6 +30,7 @@ const Realisations = ({ realisations, __type }) => {
                    title
                    slug
                    categories
+                   customer
                     images{
                       url
                     }
@@ -60,7 +61,7 @@ const Realisations = ({ realisations, __type }) => {
       <Navigation />
       <Breadcrumbs page="Realisaties" variant={1} />
       <ContentWrapper>
-        <Grid container>
+        <Grid container fluid>
           <Grid row mb={5}>
             {/*
             <Grid item xs={12}>
@@ -97,6 +98,7 @@ export async function getServerSideProps() {
         title
         slug
         categories
+        customer
         images{
           url
         }
