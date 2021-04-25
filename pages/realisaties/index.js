@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Head from "next/head";
 import { GraphQLClient } from "graphql-request";
 import meta from "src/data/meta";
+import { API_SLUG } from "src/data/api";
 import Navigation from "src/components/Navigation";
 import Grid from "@/components/Grid";
 import Masonry from "../../src/components/Masonry";
@@ -9,38 +10,72 @@ import Footer from "../../src/components/Footer";
 import Breadcrumbs from "../../src/components/Breadcrumbs";
 import ContentWrapper from "../../src/components/ContentWrapper";
 import Button from "@/components/Button";
+import Link from "@/components/Link";
+import Box from "@/components/Box";
 
-const count = 9;
-const graphcms = new GraphQLClient(
-  "https://api-eu-central-1.graphcms.com/v2/ckl3m5wq24osf01z8ch6h9vwq/master"
-);
+const graphcms = new GraphQLClient(API_SLUG);
+const enums = {
+  INITAL_AMOUNT: 9,
+  EXTRA_AMOUNT: 6,
+  ALL: "all",
+};
 
 const Realisations = ({ realisations, __type }) => {
-  console.log("categories", __type);
   const [dynamicRealisations, setDynamicRealisations] = useState(realisations);
   const [category, setCategory] = useState(false);
 
-  const handleCategoryChange = () => {};
+  const handleCategoryChange = (value) => {
+    if (value === enums.ALL) {
+      setCategory(false);
+    } else {
+      setCategory(value);
+    }
+    getCategoryData(value);
+  };
+
+  const getCategoryData = (value) => {
+    const data = graphcms.request(`{
+      realisations(
+        first: ${enums.INITAL_AMOUNT} 
+        ${
+          value !== enums.ALL
+            ? `, where: { categories_contains_all: [${value}] }`
+            : ""
+        }
+      ) {
+        title
+        slug
+        categories
+        customer
+        images{
+          url
+        }
+      }
+    }`);
+
+    data.then((data) => {
+      setDynamicRealisations([...data.realisations]);
+    });
+  };
 
   const handleLoadMore = () => {
-    const clickData = graphcms.request(
-      `
-            {
-               realisations(first: 10, skip: ${count}) {
-                   title
-                   slug
-                   categories
-                   customer
-                    images{
-                      url
-                    }
-              }
-          }          
-        `
-    );
+    const data = graphcms.request(`{
+      realisations(
+        first: ${enums.EXTRA_AMOUNT}, 
+        skip: ${dynamicRealisations.length} 
+        ${category ? `, where: { categories_contains_all: [${category}] }` : ""}
+      ) {
+        title
+        slug
+        categories
+        customer
+        images{
+          url
+        }
+      }
+    }`);
 
-    clickData.then((data) => {
-      console.log("realisations", data, typeof data);
+    data.then((data) => {
       setDynamicRealisations((prevState) => [
         ...prevState,
         ...data.realisations,
@@ -61,20 +96,34 @@ const Realisations = ({ realisations, __type }) => {
       <Navigation />
       <Breadcrumbs page="Realisaties" variant={1} />
       <ContentWrapper>
-        <Grid container fluid>
+        <Grid container>
           <Grid row mb={5}>
-            {/*
-            <Grid item xs={12}>
-              <Button
-                appearance="primary"
-                outline
-                onClick={handleCategoryChange}
-                pr={5}
-              >
-                Alle
-              </Button>
+            <Grid item flex mb={9}>
+              <Box pr={5}>
+                <Link
+                  type={category ? "hidden" : "branded"}
+                  fontFamily="secondary"
+                  onClick={() => handleCategoryChange(enums.ALL)}
+                >
+                  Alle
+                </Link>
+              </Box>
+
+              {__type?.enumValues?.map(({ name }) => {
+                return (
+                  <Box pr={5}>
+                    <Link
+                      type={category === name ? "branded" : "hidden"}
+                      fontFamily="secondary"
+                      onClick={() => handleCategoryChange(name)}
+                    >
+                      {name}
+                    </Link>
+                  </Box>
+                );
+              })}
             </Grid>
-            */}
+
             <Grid item xs={12}>
               <Masonry items={dynamicRealisations} />
             </Grid>
@@ -94,7 +143,7 @@ const Realisations = ({ realisations, __type }) => {
 export async function getServerSideProps() {
   let { realisations, __type } = await graphcms.request(
     `{
-      realisations(first: 9) {
+      realisations(first: ${enums.INITAL_AMOUNT}) {
         title
         slug
         categories

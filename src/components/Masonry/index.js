@@ -18,6 +18,10 @@ const MyMasonry = styled(Masonry)`
   .my-masonry-grid_column > div {
     margin-bottom: 30px;
   }
+
+  .my-masonry-grid_column:nth-child(2) {
+    margin-top: 100px;
+  }
 `;
 
 const breakpointColumnsObj = {

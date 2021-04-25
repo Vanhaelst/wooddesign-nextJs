@@ -5,7 +5,6 @@ import Link from "@/components/Link";
 import Heading from "@/components/Heading";
 import { TransitionSlide } from "../../transitions";
 import { Paragraph } from "../../../publipirates-react";
-import textDecoration from "@/utils/textDecoration";
 
 const SubTitle = styled(Heading)`
   margin: 0;
@@ -41,8 +40,6 @@ const ImageOverlay = styled.div`
 `;
 
 const Block = ({ item, enterCount, forwardedRef }) => {
-  console.log(item);
-
   return (
     <TransitionSlide
       transition={enterCount}
