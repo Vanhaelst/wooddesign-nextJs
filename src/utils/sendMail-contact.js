@@ -1,5 +1,6 @@
 import apiCall from "./apiCall";
 
+const EMAIL_FROM = "info@wooddesign.be";
 const NAME_TO = "wooddesign.be";
 
 export const sendContactMail = ({
@@ -18,7 +19,7 @@ export const sendContactMail = ({
     },
     data: {
       sender: {
-        email: data.email,
+        email: EMAIL_FROM,
         name: `${data.firstName} ${data.lastName}`,
       },
       to: [
@@ -37,6 +38,11 @@ export const sendContactMail = ({
         name: `${data.firstName} ${data.lastName}`,
         firstName: data.firstName,
         lastName: data.lastName,
+        address: {
+          street: data.street,
+          city: data.city,
+          postalCode: data.postalCode
+        },
         phone: data.phone,
         extra: data.extra,
       },

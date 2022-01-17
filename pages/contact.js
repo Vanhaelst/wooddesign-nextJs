@@ -55,10 +55,6 @@ const Contact = ({ SENDINBLUE_API_KEY, SENDINBLUE_EMAIL_TO }) => {
   }
 
   const handleSend = () => {
-    setTimeout(() => {
-      setMailState(undefined);
-    }, [3500]);
-
     validate()
       .then((response) => {
         if (!response.hasError) {
@@ -66,7 +62,19 @@ const Contact = ({ SENDINBLUE_API_KEY, SENDINBLUE_EMAIL_TO }) => {
             SENDINBLUE_API_KEY,
             SENDINBLUE_EMAIL_TO,
             data,
-            onSuccess: () => setMailState("success"),
+            onSuccess: () => {
+              setMailState("success");
+              setData({
+                firstName: "",
+                lastName: "",
+                email: "",
+                phone: "",
+                street: "",
+                city: "",
+                postalCode: "",
+                extra: "",
+              });
+            },
           }).catch(() => setMailState("error"));
         }
       })
@@ -79,24 +87,6 @@ const Contact = ({ SENDINBLUE_API_KEY, SENDINBLUE_EMAIL_TO }) => {
       [event.target.name]: event.target.value,
     });
   };
-
-  useEffect(() => {
-    if (mailState === "success") {
-      setTimeout(() => {
-        setMailState(undefined);
-        setData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          phone: "",
-          street: "",
-          city: "",
-          postalCode: "",
-          extra: "",
-        });
-      }, [5000]);
-    }
-  }, [mailState]);
 
   return (
     <div>
