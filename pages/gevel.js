@@ -21,7 +21,7 @@ const Gevel = () => {
         />
       </Head>
       <Navigation />
-      <Breadcrumbs page="Gevel" variant={1} />
+      <Breadcrumbs page="Gevel" variant={1} image={"images/gevel/hero.jpg"} />
 
       <ContentWrapper>
         <Grid container>

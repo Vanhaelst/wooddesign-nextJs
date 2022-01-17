@@ -3,8 +3,7 @@ import Head from "next/head";
 import { GraphQLClient } from 'graphql-request';
 import meta from "src/data/meta";
 import styled from "styled-components";
-import SimpleReactLightbox from "simple-react-lightbox";
-import { SRLWrapper } from "simple-react-lightbox";
+import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox";
 import Navigation from "src/components/Navigation";
 import Heading from "@/components/Heading";
 import Grid from "@/components/Grid";
@@ -71,7 +70,7 @@ const Realisations = ({ realisation }) => {
         />
       </Head>
       <Navigation />
-      <Breadcrumbs page="Realisatie" variant={1} />
+      <Breadcrumbs page="Realisatie" variant={1} image={realisation?.images[0]?.url} />
       <ContentWrapper>
         <Grid container>
           <Grid row mb={10}>

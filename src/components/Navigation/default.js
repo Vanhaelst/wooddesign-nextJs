@@ -4,7 +4,7 @@ import Menu from "@/components/Navigation/Menu";
 import MenuItem from "@/components/Navigation/MenuItem";
 import NavBar from "@/components/Navigation/NavBar";
 import navigation from "./navigation";
-import LetterMark from "src/theme/logo/LetterMark";
+import Logo from "src/theme/logo/Logo";
 import theme from "src/theme";
 
 const DesktopNavigation = ({ id, shown, sticky }) => {
@@ -12,7 +12,7 @@ const DesktopNavigation = ({ id, shown, sticky }) => {
 
   return (
     <NavBar id={id} shown={shown} sticky={sticky}>
-      <LetterMark fill={theme.colors.primary.main} width="65px" />
+      <Logo fill={theme.colors.primary.main} height="40px" />
       <Menu>
         {navigation.map((item) => {
           const active = router.pathname === item.href;

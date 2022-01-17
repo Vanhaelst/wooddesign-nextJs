@@ -4,7 +4,7 @@ const terrassen = [
   {
     index: 1,
     title: "Houten terrassen",
-    image: "https://www.wooddesign.be/wp-content/uploads/2016/05/ekeren.jpg",
+    image: "images/terras/terras.jpg",
     description: (
       <Fragment>
         Een houten terras is een absolute meerwaarde voor uw woning. De

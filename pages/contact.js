@@ -12,7 +12,7 @@ import Text from "@/components/Text";
 import Link from "@/components/Link";
 import ContentWrapper from "../src/components/ContentWrapper";
 import ValidateForm from "../src/utils/ValidateForm";
-import { sendContactMail } from "../src/utils/senMail-contact";
+import { sendContactMail } from "../src/utils/sendMail-contact";
 import ContactForm from "../src/components/ContactForm";
 import companyData from "../src/data/companyData";
 
@@ -57,7 +57,7 @@ const Realisations = () => {
   const handleSend = () => {
     setTimeout(() => {
       setMailState(undefined);
-    }, [3500])
+    }, [3500]);
 
     validate()
       .then((response) => {
@@ -69,7 +69,6 @@ const Realisations = () => {
         }
       })
       .catch(() => setMailState("error"));
-
   };
   const handleChangeData = (event) => {
     setErrors({ ...errors, [event.target.name]: "" });
@@ -77,6 +76,23 @@ const Realisations = () => {
       ...data,
       [event.target.name]: event.target.value,
     });
+  };
+
+  const sendMail = async () => {
+    try {
+      console.log("data", data);
+
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      // if sucess do whatever you like, i.e toast notification
+      // setTimeout(() => reset(), 2000);
+    } catch (error) {
+      // toast error message. whatever you wish
+    }
   };
 
   useEffect(() => {
@@ -104,14 +120,18 @@ const Realisations = () => {
         <meta property="og:title" content="Wooddesign - Contact" key="title" />
       </Head>
       <Navigation />
-      <Breadcrumbs page="Contact" variant={1} />
+      <Breadcrumbs
+        page="Contact"
+        variant={1}
+        image={"images/hero-contact.jpeg"}
+      />
       <ContentWrapper>
         <Grid container>
           <Grid row>
             <Grid item xs={12} lg={6}>
               <Grid row mb={6}>
                 <Grid item xs={12} md={10}>
-                  <Heading level={2}>Contactgegevens en openingsuren</Heading>
+                  <Heading level={2}>Contact</Heading>
                 </Grid>
               </Grid>
               <Grid row>
@@ -122,7 +142,7 @@ const Realisations = () => {
                         Telefoon:
                       </Text>
                       <Link
-                          href={`tel:${companyData.phone.unformatted}`}
+                        href={`tel:${companyData.phone.unformatted}`}
                         fontFamily="secondary"
                         type="hidden"
                       >
@@ -143,57 +163,30 @@ const Realisations = () => {
                     </ListItem>
                     <ListItem>
                       <Text fontWeight="bold" style={{ display: "block" }}>
-                        Toonzaal:{" "}
-                        <Text fontWeight="light" size="Caption2">
-                          (steeds op afspraak)
-                        </Text>
+                        Adres:
                       </Text>
                       <Text fontFamily="secondary">
-                        {companyData.address.street} {companyData.address.number}{companyData.address.bus},
-                      {companyData.address.zip} {companyData.address.city}.
+                        {companyData.address.street}{" "}
+                        {companyData.address.number}
+                        {companyData.address.bus}, {companyData.address.zip}{" "}
+                        {companyData.address.city}.
                         <br />
-                        {companyData.address.extra} - {companyData.address.extra2}
+                        {companyData.address.extra} -{" "}
+                        {companyData.address.extra2}
                       </Text>
                     </ListItem>
                     <ListItem>
                       <Text fontWeight="bold" style={{ display: "block" }}>
-                        Openingsuren:
-                      </Text>
-                      <table>
-                        <tbody>
-                          <tr>
-                            <td style={{ padding: "10px 10px 5px 0" }}>
-                              <Text fontFamily="secondary">Ma - Vrij:</Text>
-                            </td>
-                            <td style={{ padding: "10px 10px 5px 0" }}>
-                              <Text fontFamily="secondary">15u - 18u</Text>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td style={{ padding: "5px 10px 10px 0" }}>
-                              <Text fontFamily="secondary">Zaterdag:</Text>
-                            </td>
-                            <td style={{ padding: "5px 10px 10px 0" }}>
-                              <Text fontFamily="secondary">11u - 15u30</Text>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td style={{ padding: "5px 10px 10px 0" }}>
-                              <Text fontFamily="secondary">Zondag:</Text>
-                            </td>
-                            <td style={{ padding: "5px 10px 10px 0" }}>
-                              <Text fontFamily="secondary">Gesloten</Text>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </ListItem>
-                    <ListItem>
-                      <Text fontWeight="bold" style={{ display: "block" }}>
-                        Belangrijk:
+                        Toonzaal / magazijn:
                       </Text>
                       <Text fontFamily="secondary">
-                        Graag steeds vooraf even contacteren voor afwijkende
+                        Op afspraak te bezoeken van dinsdag tem zaterdag van 11u
+                        tot 16u.
+                      </Text>
+                    </ListItem>
+                    <ListItem>
+                      <Text fontFamily="secondary">
+                        Gelieve steeds vooraf te contacteren voor afwijkende
                         openingsuren of afspraken op andere tijdstippen.
                       </Text>
                     </ListItem>

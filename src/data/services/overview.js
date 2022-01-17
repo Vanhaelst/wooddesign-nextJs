@@ -17,10 +17,12 @@ export const services = [
         image: 'https://www.wooddesign.be/wp-content/uploads/2016/06/terrassen.jpg',
         slug: ''
     },
+    /*
     {
         title: 'Wand',
         description: 'We plaatsen zowel buiten- als binnenwanden uit hout. Belangrijkste reden is uit esthetisch standpunt, maar voor de binnenwanden bied dit nog tal van voordelen. Luidruchtige buren!! Wij plaatsen een akoestische voorzetwand',
         image: 'https://www.wooddesign.be/wp-content/uploads/2016/06/wand.jpg',
         slug: ''
     },
+     */
 ]

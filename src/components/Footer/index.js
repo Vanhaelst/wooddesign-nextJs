@@ -10,11 +10,10 @@ import Facebook from "@/icons/Facebook";
 import Pinterest from "@/icons/Pinterest";
 import Box from "@/components/Box";
 import companyData from "../../data/companyData";
-import SignupForm from "../Mailchimp/signupForm";
 import useGlobalContext from "../../context/hooks/useGlobalContext";
 
 const Wrapper = styled(Grid)`
-  background-image: url("https://www.woodstoxx.be/style/theme/images/bgfooter.jpg");
+  background-image: url("images/footer.png");
   background-size: cover;
   background-position: center center;
 `;
@@ -24,28 +23,28 @@ const BottomBar = styled(Grid)`
   padding: 15px 0;
 `;
 
-
 const Footer = () => {
   const { isMobile } = useGlobalContext();
 
   return (
     <div>
-
       <Wrapper pt={11} pb={8}>
         <Grid container>
           <Grid row>
             <Grid item xs={12} sm={4} pb={8}>
               <Heading level={4} color="white">
-                WOODDESIGN BVBA
+                WOODDESIGN BV
               </Heading>
               <Paragraph color="white">
-                {companyData.address.street} {companyData.address.number}{companyData.address.bus},
+                {companyData.address.street} {companyData.address.number}
+                {companyData.address.bus},
                 <br />
                 {companyData.address.zip} {companyData.address.city}.
                 <br />
               </Paragraph>
               <Paragraph color="white">
-                {companyData.address.extra}<br />
+                {companyData.address.extra}
+                <br />
                 {companyData.address.extra2}
               </Paragraph>
             </Grid>
@@ -55,12 +54,16 @@ const Footer = () => {
                 CONTACT
               </Heading>
               <Paragraph color="white">
-                <Link href={`tel:${companyData.phone.unformatted}`} color="white" type="hidden">
+                <Link
+                  href={`tel:${companyData.phone.unformatted}`}
+                  color="white"
+                  type="hidden"
+                >
                   {companyData.phone.formatted}
                 </Link>
                 <br />
                 <Link
-                    href={`mailto:${companyData.email}`}
+                  href={`mailto:${companyData.email}`}
                   color="white"
                   type="hidden"
                 >
@@ -71,25 +74,36 @@ const Footer = () => {
 
             <Grid item xs={12} sm={4}>
               <Heading level={4} color="white">
-                HOUD ME OP DE HOOGTE
+                GET SOCIAL
               </Heading>
 
-              <SignupForm />
-
+              {/*<SignupForm />*/}
 
               <Box flexDirection="row" pt={4}>
                 <Box mr={5}>
-                  <Link href={companyData.social.instagram} als="Instagram" target="_blank">
+                  <Link
+                    href={companyData.social.instagram}
+                    als="Instagram"
+                    target="_blank"
+                  >
                     <Instagram size="22px" fill="white" />
                   </Link>
                 </Box>
                 <Box mr={5}>
-                  <Link href={companyData.social.facebook} als="Facebook" target="_blank">
+                  <Link
+                    href={companyData.social.facebook}
+                    als="Facebook"
+                    target="_blank"
+                  >
                     <Facebook size="22px" fill="white" />
                   </Link>
                 </Box>
                 <Box mr={5}>
-                  <Link href={companyData.social.pinterest} als="Pinterest" target="_blank">
+                  <Link
+                    href={companyData.social.pinterest}
+                    als="Pinterest"
+                    target="_blank"
+                  >
                     <Pinterest size="22px" fill="white" />
                   </Link>
                 </Box>
@@ -98,8 +112,6 @@ const Footer = () => {
           </Grid>
         </Grid>
       </Wrapper>
-
-
 
       <BottomBar>
         <Grid container>
@@ -117,7 +129,12 @@ const Footer = () => {
                 {companyData.btw}
               </Text>
             </Grid>
-            <Grid item xs={12} sm={6} style={isMobile ? {} : { textAlign: "right" }}>
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              style={isMobile ? {} : { textAlign: "right" }}
+            >
               <Text size="Caption2" color="white" fontFamily="secondary">
                 Site by{" "}
                 <Link

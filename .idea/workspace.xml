@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -10,11 +13,48 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd7d19aa-e2de-4f89-acc1-1972311b0af8" name="Default Changelist" comment="fix transition speed on mobile">
+    <list default="true" id="dd7d19aa-e2de-4f89-acc1-1972311b0af8" name="Default Changelist" comment="Feedback website">
+      <change afterPath="$PROJECT_DIR$/email/signature.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/contact.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/process.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/footer.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/footer.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/footer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/gevel/gevels.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/gevel/hero.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/gevel/plaatgevel.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/hero-contact.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/hero-realisaties.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/intro2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/parket/fineer-parket.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/parket/hero.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/parket/massief-parket.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/parket/meerlaags-parket.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/terras/hero.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/terras/terras.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/toonzaal.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/webshop.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/gevel.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/gevel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/parket.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/parket.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/realisaties/[slug].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/realisaties/[slug].js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/realisaties/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/realisaties/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Grid/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Grid/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Masonry/MasonryItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Masonry/MasonryItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/terras.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/terras.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Breadcrumbs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Breadcrumbs/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/default.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/default.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/services/gevel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/services/gevel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/services/overview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/services/overview.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/services/parket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/services/parket.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/services/terrassen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/services/terrassen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/logo/Logo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/logo/Logo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/senMail-contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/sendMail-contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,17 +68,29 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
     <exe-path />
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="1nQHubchhN28qg0ABIvtXOpiMX2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -48,11 +100,13 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTML" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/utils" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -68,11 +122,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/utils" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/pages" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/studio" />
-      <recent name="$PROJECT_DIR$/publipirates-react/src/icons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/images" />
@@ -81,6 +135,19 @@
       <recent name="$PROJECT_DIR$/src/components/Navigation" />
       <recent name="$PROJECT_DIR$/public/images/theme/app-icons" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -122,6 +189,19 @@
       <workItem from="1618229310049" duration="4971000" />
       <workItem from="1618738471667" duration="1108000" />
       <workItem from="1619012805564" duration="3779000" />
+      <workItem from="1623419380372" duration="739000" />
+      <workItem from="1624285330109" duration="21000" />
+      <workItem from="1624458927830" duration="111000" />
+      <workItem from="1629455487075" duration="18000" />
+      <workItem from="1633521708651" duration="897000" />
+      <workItem from="1636632934650" duration="2204000" />
+      <workItem from="1636963607765" duration="1188000" />
+      <workItem from="1641461557311" duration="9766000" />
+      <workItem from="1641820878328" duration="753000" />
+      <workItem from="1642058002708" duration="326000" />
+      <workItem from="1642063511215" duration="3000" />
+      <workItem from="1642147212761" duration="554000" />
+      <workItem from="1642422619311" duration="648000" />
     </task>
     <task id="LOCAL-00001" summary="Wooddesign website">
       <created>1611829161813</created>
@@ -237,7 +317,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Wooddesign website" />
@@ -254,6 +333,7 @@
     <MESSAGE value="Get realisations from CMS" />
     <MESSAGE value="Transition on realisations and load-more" />
     <MESSAGE value="fix transition speed on mobile" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix transition speed on mobile" />
+    <MESSAGE value="Feedback website" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feedback website" />
   </component>
 </project>

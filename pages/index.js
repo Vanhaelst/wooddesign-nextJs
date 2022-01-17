@@ -15,8 +15,8 @@ import Link from "@/components/Link";
 import styled from "styled-components";
 import Button from "@/components/Button";
 import CookieBanner from "@/components/Card";
-import { services } from '../src/data/services/overview';
-import Carousel, { consts } from 'react-elastic-carousel';
+import { services } from "../src/data/services/overview";
+import Carousel, { consts } from "react-elastic-carousel";
 import ChevronLeft from "@/icons/ChevronLeft";
 import ChevronRight from "@/icons/ChevronRight";
 import useGlobalContext from "../src/context/hooks/useGlobalContext";
@@ -29,79 +29,78 @@ const SubTitle = styled(Heading)`
 `;
 
 const RowOdd = styled.div`
-    flex-direction: column-reverse;
-    margin-bottom: 32px;
+  flex-direction: column-reverse;
+  margin-bottom: 32px;
+  img {
+    margin-bottom: 24px;
+  }
+  @media screen and (min-width: ${(props) =>
+      props.theme.grid.breakpointSmall}px) {
+    flex-direction: row;
     img {
-      margin-bottom: 24px;
+      margin-bottom: 0;
     }
-    @media screen and (min-width: ${(props) =>
-    props.theme.grid.breakpointSmall}px) {
-      flex-direction: row;
-      img {
-        margin-bottom: 0;
-      }
-    }
-  `;
+  }
+`;
 
 const RowEven = styled.div`
-    flex-direction: column;
+  flex-direction: column;
+  img {
+    margin-bottom: 24px;
+  }
+  @media screen and (min-width: ${(props) =>
+      props.theme.grid.breakpointSmall}px) {
+    margin-top: -125px;
+    margin-top: -125px;
+    flex-direction: row;
     img {
-      margin-bottom: 24px;
+      margin-bottom: 0;
     }
-    @media screen and (min-width: ${(props) =>
-    props.theme.grid.breakpointSmall}px) {
-      margin-top: -50px;
-      flex-direction: row;
-      img {
-        margin-bottom: 0;
-      }
-    }
-  `;
-
-
+  }
+`;
 
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
   { width: 550, itemsToShow: 2, itemsToScroll: 2 },
   { width: 768, itemsToShow: 3 },
-  { width: 1200, itemsToShow: 4 }
+  { width: 1200, itemsToShow: 4 },
 ];
 
 const Section = styled.div`
-    padding-top: 48px;
-    padding-bottom: 48px;
-    @media screen and (min-width: 768px){
-      padding-top: 96px;
-      padding-bottom: 96px;
-    }
-`
-
+  padding-top: 48px;
+  padding-bottom: 48px;
+  @media screen and (min-width: 768px) {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+`;
 
 const Sliderbutton = styled.div`
   display: flex;
-`
+`;
 
 const myArrow = ({ type, onClick, isEdge }) => {
-  const pointer = type === consts.PREV ? <ChevronLeft size="16px" /> : <ChevronRight size="16px" />
+  const pointer =
+    type === consts.PREV ? (
+      <ChevronLeft size="16px" />
+    ) : (
+      <ChevronRight size="16px" />
+    );
   return (
-      <Sliderbutton onClick={onClick} disabled={isEdge}>
-        {pointer}
-      </Sliderbutton>
-  )
-}
-
-
+    <Sliderbutton onClick={onClick} disabled={isEdge}>
+      {pointer}
+    </Sliderbutton>
+  );
+};
 
 const Home = ({ instagramPosts }) => {
   const { isMobile } = useGlobalContext();
-  const [ slicedRealisations, setSlicedRealisations ] = useState(realisations);
+  const [slicedRealisations, setSlicedRealisations] = useState(realisations);
 
   useEffect(() => {
-    const realisationLength = isMobile ? 2 : 4
-    setSlicedRealisations(realisations.slice(0, realisationLength))
-  }, [isMobile])
-
-
+    const realisationLength = isMobile ? 2 : 4;
+    setSlicedRealisations(realisations.slice(0, realisationLength));
+  }, [isMobile]);
 
   return (
     <div>
@@ -122,7 +121,7 @@ const Home = ({ instagramPosts }) => {
                 item
                 xs={12}
                 sm={6}
-                lg={4}
+                lg={5}
                 flex
                 justifyContent="flex-start"
                 flexDirection="column"
@@ -136,14 +135,143 @@ const Home = ({ instagramPosts }) => {
                   Over Wooddesign
                 </Heading>
                 <Paragraph mb={2}>
-                  Na een jaartje in het bedrijf van m'n vader te hebben gewerkt, ben ik in 1997 een eenmanszaak begonnen in het leveren en plaatsen van parketvloeren, toen nog traditioneel geplaatste parketvloeren.
+                  Na een jaartje in het bedrijf van m'n vader te hebben gewerkt,
+                  ben ik in 1997 een eenmanszaak begonnen in het leveren en
+                  plaatsen van traditionele parketvloeren.
                 </Paragraph>
                 <Paragraph mb={2}>
-                  Vanaf 1999 zijn we ook gestart met het plaatsen van gevelbekleding, wat al snel een goede zet bleek te zijn.
+                  Vanaf 1999 ben ik, naast parketvloeren, ook gestart met het
+                  plaatsen van houten gevelbekleding en terrassen, en dit bleek
+                  al snel een meerwaarde te zijn voor de groei van het bedrijf.
                 </Paragraph>
                 <Paragraph>
-                  Eind 2005 ben ik overgeschakeld van een eenmanszaak naar een BVBA, en kort nadien mijn eerste vaste werknemer aangenomen, wat er al snel 4 werden.
+                  Eind 2005 ben ik overgeschakeld van eenmanszaak naar een bvba
+                  en heb ik 4 vaste werknemers in dienst.
                 </Paragraph>
+              </Grid>
+              <Grid item xs={12} sm={6} lg={{ width: 5, push: 2 }}>
+                <Heading
+                  level={2}
+                  textTransform="uppercase"
+                  show={{ xs: true, sm: false }}
+                >
+                  Over Wooddesign
+                </Heading>
+                <Image src="images/intro2.jpeg" objectFit height="550px" />
+              </Grid>
+            </RowOdd>
+
+            <RowEven as={Grid} row>
+              <Grid item xs={12} sm={6} lg={{ width: 7 }}>
+                <Image src="images/toonzaal.jpeg" objectFit height="500px" />
+              </Grid>
+              <Grid
+                item
+                xs={12}
+                sm={6}
+                lg={{ width: 4, push: 1 }}
+                flex
+                justifyContent="flex-end"
+                flexDirection="column"
+              >
+                <Paragraph mb={2}>
+                  Ondertussen meer dan{" "}
+                  <strong style={{ fontWeight: 500 }}>20 jaar</strong> en{" "}
+                  <strong style={{ fontWeight: 500 }}>
+                    duizenden vierkante meters{" "}
+                  </strong>
+                  verder, onderscheiden we ons van velen.
+                </Paragraph>
+                <Paragraph mb={5}>
+                  Niet alleen door onze{" "}
+                  <strong style={{ fontWeight: 500 }}>
+                    jarenlange ervaring
+                  </strong>{" "}
+                  en materialenkennis, maar eveneens door het gebruik van
+                  kwaliteitsvolle producten gecombineerd met een hoge
+                  afwerkingsgraad en professionele dienstverlening , ook na de
+                  plaatsing!
+                </Paragraph>
+                <Paragraph mb={5}>
+                  In onze <strong style={{ fontWeight: 500 }}>toonzaal</strong>{" "}
+                  te Kontich vind je een uitgebreid gamma aan parketvloeren,
+                  houten terrassen en verschillende soorten gevelbekledingen,
+                  gaande van hout en aluminium tot plaatmaterialen zoals Trespa,
+                  Eternit, Rockpanel...
+                </Paragraph>
+              </Grid>
+            </RowEven>
+          </Grid>
+        </Section>
+
+        {/* Diensten */}
+        <Section as={Box} backgroundColor="#f5f5f5">
+          <Grid container style={{ overflow: "hidden" }}>
+            <Grid row mb={8} flex flexDirection="column" alignItems="center">
+              <Heading level={2}>Onze diensten</Heading>
+              <Paragraph>Wat kunnen wij voor u doen</Paragraph>
+            </Grid>
+
+            <Carousel
+              breakPoints={breakPoints}
+              renderArrow={myArrow}
+              renderPagination={() => <></>}
+              itemPadding={[0, 10]}
+            >
+              {services.map((service) => (
+                <div key={service.title}>
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    objectFit
+                    height="250px"
+                  />
+                  <Heading level={3} color="#464646">
+                    {service.title}
+                  </Heading>
+                  <Paragraph>{service.description}</Paragraph>
+                </div>
+              ))}
+            </Carousel>
+          </Grid>
+        </Section>
+
+        {/* WEBSHOP */}
+        <Section as={Box}>
+          <Grid container>
+            <RowOdd as={Grid} row>
+              <Grid
+                item
+                xs={12}
+                sm={6}
+                lg={4}
+                flex
+                justifyContent="center"
+                flexDirection="column"
+              >
+                <Heading
+                  level={2}
+                  textTransform="uppercase"
+                  show={{ xs: false, sm: true }}
+                >
+                  Webshop
+                </Heading>
+                <Paragraph mb={6}>
+                  Begin 2020 hebben we een webshop opgestart als extra service
+                  naar zowel bestaande als nieuwe klanten. Hier vind je diverse{" "}
+                  <strong style={{ fontWeight: 500 }}>merkproducten</strong>{" "}
+                  voor zowel plaatsing als het onderhoud van parket, gevel en
+                  terras.
+                </Paragraph>
+                <Button
+                  outline
+                  as={Link}
+                  href="http://shop.wooddesign.be"
+                  target="_blank"
+                  block={isMobile}
+                >
+                  Bekijk onze webshop
+                </Button>
               </Grid>
               <Grid item xs={12} sm={6} lg={{ width: 7, push: 1 }}>
                 <Heading
@@ -154,128 +282,19 @@ const Home = ({ instagramPosts }) => {
                   Het bedrijf
                 </Heading>
                 <Image
-                  src="https://www.belgiqa.be/images/home/_homeCraftImage1/M_WSTXX_020519-77.jpg"
+                    src="images/webshop.png"
                   objectFit
                   height="450px"
                 />
               </Grid>
             </RowOdd>
-
-            <RowEven as={Grid} row>
-              <Grid item xs={12} sm={6} lg={{ width: 5 }}>
-                <Image
-                  src="https://www.belgiqa.be/images/home/_homeCraftImage2/1.-M_WSTXX_020519-127.jpg"
-                  objectFit
-                  height="720px"
-                />
-              </Grid>
-              <Grid
-                item
-                xs={12}
-                sm={6}
-                lg={{ width: 5, push: 1 }}
-                flex
-                justifyContent="center"
-                flexDirection="column"
-              >
-                <Paragraph mb={2}>
-                  Ondertussen meer dan 20 jaar en duizenden vierkante meters verder, onderscheiden we ons van velen.
-                </Paragraph>
-                <Paragraph mb={2}>
-                  Niet alleen door onze jarenlange ervaring, maar eveneens door het gebruik van kwaliteitsvolle producten,
-                  gecombineerd met een hoge afwerkingsgraad en professionele dienstverlening, ook na plaatsing!
-                </Paragraph>
-                <Paragraph>
-                  Hiervoor hebben we begin 2020 onze webshop gestart als extra service naar zowel bestaande als nieuwe klanten.
-                </Paragraph>
-              </Grid>
-            </RowEven>
           </Grid>
         </Section>
-
-        {/* Diensten */}
-        <Section as={Box} backgroundColor="#f5f5f5">
-          <Grid container style={{ overflow: 'hidden'}}>
-            <Grid row mb={8} flex flexDirection="column" alignItems="center">
-              <Heading level={2}>Onze diensten</Heading>
-              <Paragraph>Wat kunnen wij voor u doen</Paragraph>
-            </Grid>
-
-            <Carousel
-                breakPoints={breakPoints}
-                renderArrow={myArrow}
-                renderPagination={() => <></>}
-                itemPadding={[0, 10]}
-            >
-              {services.map(service => (
-                  <div key={service.title}>
-                    <Image
-                        src={service.image}
-                        alt={service.title}
-                        objectFit
-                        height="250px"
-                    />
-                    <Heading level={3} color="#464646">{service.title}</Heading>
-                    <Paragraph>{service.description}</Paragraph>
-                  </div>
-              ))}
-            </Carousel>
-
-          </Grid>
-        </Section>
-
-
-        {/* WEBSHOP */}
-        <Section as={Box}>
-          <Grid container>
-            <RowOdd as={Grid} row>
-              <Grid
-                  item
-                  xs={12}
-                  sm={6}
-                  lg={4}
-                  flex
-                  justifyContent="center"
-                  flexDirection="column"
-              >
-                <Heading
-                    level={2}
-                    textTransform="uppercase"
-                    show={{ xs: false, sm: true }}
-                >
-                  Onderhoud
-                </Heading>
-                <Paragraph mb={6}>
-                  Het onderhouden van uw parket vloer, gevelbekleding of terras is uitermate belagrijk.
-                  Daarom richten wij in 2018 onze eigen webshop op, met anne onderhoudsmateriaal die u nodig heeft om uw product in perfecte conditie te houden.
-                </Paragraph>
-                <Button outline as={Link} href="http://shop.wooddesign.be" target="_blank" block={isMobile}>
-                  Bekijk onderhoudsprodcten
-                </Button>
-              </Grid>
-              <Grid item xs={12} sm={6} lg={{ width: 7, push: 1 }}>
-                <Heading
-                    level={2}
-                    textTransform="uppercase"
-                    show={{ xs: true, sm: false }}
-                >
-                  Het bedrijf
-                </Heading>
-                <Image
-                    src="https://www.belgiqa.be/images/home/_homeCraftImage1/M_WSTXX_020519-77.jpg"
-                    objectFit
-                    height="450px"
-                />
-              </Grid>
-            </RowOdd>
-          </Grid>
-        </Section>
-
 
         {/* REALISATIES */}
         <Section as={Box} backgroundColor="#f5f5f5">
           <Grid container>
-            <Grid row  mb={8} flex flexDirection="column" alignItems="center">
+            <Grid row mb={8} flex flexDirection="column" alignItems="center">
               <Heading level={2}>Onze realisaties</Heading>
               <Paragraph>Lorem ipsum dolor sit amet</Paragraph>
             </Grid>
@@ -326,32 +345,32 @@ const Home = ({ instagramPosts }) => {
         </Section>
 
         {/* INSTAGRAM */}
-        <Box py={11}>
-          <Box
-            backgroundColor="#f5f5f5"
-            height="300px"
-            style={{
-              position: "absolute",
-              top: 0,
-              width: "100%",
-              height: "65%",
-            }}
-          />
-          <Grid container>
-            <Grid row mb={8} flex flexDirection="column" alignItems="center">
-              <Heading level={2}>
-                <Link
-                  type="hidden"
-                  href="https://www.instagram.com/wooddesignbvba/"
-                >
-                  Instagram
-                </Link>
-              </Heading>
-              <Paragraph>Laat je inspireren</Paragraph>
-            </Grid>
-            <Grid row>
-              {instagramPosts &&
-                instagramPosts.map((item) => {
+        {instagramPosts && (
+          <Box py={11}>
+            <Box
+              backgroundColor="#f5f5f5"
+              height="300px"
+              style={{
+                position: "absolute",
+                top: 0,
+                width: "100%",
+                height: "65%",
+              }}
+            />
+            <Grid container>
+              <Grid row mb={8} flex flexDirection="column" alignItems="center">
+                <Heading level={2}>
+                  <Link
+                    type="hidden"
+                    href="https://www.instagram.com/wooddesignbvba/"
+                  >
+                    Instagram
+                  </Link>
+                </Heading>
+                <Paragraph>Laat je inspireren</Paragraph>
+              </Grid>
+              <Grid row>
+                {instagramPosts.map((item) => {
                   return (
                     <Grid item xs={6} sm={4} md={3} key={item.id} mb={6}>
                       <Link
@@ -367,9 +386,10 @@ const Home = ({ instagramPosts }) => {
                     </Grid>
                   );
                 })}
+              </Grid>
             </Grid>
-          </Grid>
-        </Box>
+          </Box>
+        )}
       </ContentWrapper>
       <Footer />
     </div>
@@ -380,22 +400,21 @@ export async function getStaticProps() {
   // Call an external API endpoint to get posts.
   // You can use any data fetching library
   const AuthRes = await fetch(
-    `https://ig.instant-tokens.com/users/9e660aa2-5339-4f60-91b6-a01f08bc8001/instagram/17841404474795116/token?userSecret=${
-      process.env.IG_USER_SECRET
-    }`
+    `https://ig.instant-tokens.com/users/9e660aa2-5339-4f60-91b6-a01f08bc8001/instagram/17841404474795116/token?userSecret=${process.env.IG_USER_SECRET}`
   );
-  const AuthToken = await AuthRes.json();
+  const AuthToken = { Token: "amhzdjcnb69nd60zih6z2c" };
 
   const res = await fetch(
-    `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,username,timestamp&access_token=${AuthToken.Token}`
+    `https://graph.facebook.com/me/media?fields=id,caption,media_type,media_url,username,timestamp&access_token=${AuthToken.Token}`
   );
-  const instagramPosts = await res.json();
+  console.log("res", res);
+  // const instagramPosts = await res.json();
 
   // By returning { props: posts }, the Blog component
   // will receive `posts` as a prop at build time
   return {
     props: {
-      instagramPosts: instagramPosts?.data?.slice(0, 4) || [],
+      // instagramPosts: instagramPosts?.data?.slice(0, 4) || [],
     },
   };
 }

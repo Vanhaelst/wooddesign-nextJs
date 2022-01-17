@@ -73,9 +73,11 @@ const Image = styled.div`
       props.theme.grid.breakpointMedium}px) {
     width: 100%;
   }
-  background-image: url("https://www.belgiqa.be/images/home/_homeSplashImage/belgiqa-homepage-banner2-1.jpg");
+  background-image: url("${(props) =>
+    props.image ||
+    "https://www.belgiqa.be/images/home/_homeSplashImage/belgiqa-homepage-banner2-1.jpg"}");
   background-size: cover;
-  background-position: top center;
+  background-position: center center;
 
   height: 200px;
   @media screen and (min-width: ${(props) =>
@@ -84,7 +86,7 @@ const Image = styled.div`
   }
 `;
 
-const Breadcrumbs = ({ page, variant }) => {
+const Breadcrumbs = ({ page, variant, image }) => {
   return (
     <Wrapper variant={variant}>
       <Breadcrumb variant={variant}>
@@ -93,7 +95,7 @@ const Breadcrumbs = ({ page, variant }) => {
           <Point />
         </Heading>
       </Breadcrumb>
-      <Image />
+      <Image image={image} />
     </Wrapper>
   );
 };

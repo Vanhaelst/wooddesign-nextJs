@@ -21,7 +21,11 @@ const Terras = () => {
         />
       </Head>
       <Navigation />
-      <Breadcrumbs page="Terras" variant={1} />
+      <Breadcrumbs
+        page="Terras"
+        variant={1}
+        image={"images/terras/hero.jpg"}
+      />
       <ContentWrapper>
         <Grid container>
           {terrassen.map((item) => (

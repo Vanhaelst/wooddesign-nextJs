@@ -16,10 +16,6 @@ const navigation = [
     href: "/terras",
   },
   {
-    title: "Wand",
-    href: "/wand",
-  },
-  {
     title: "Realisaties",
     href: "/realisaties",
   },

@@ -22,7 +22,7 @@ const Services = () => {
       </Head>
 
       <Navigation />
-      <Breadcrumbs page="Parket" variant={1} />
+      <Breadcrumbs page="Parket" variant={1} image={"images/parket/hero.jpg"}/>
 
       <ContentWrapper>
         <Grid container>

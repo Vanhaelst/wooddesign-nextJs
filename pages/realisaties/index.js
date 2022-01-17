@@ -94,7 +94,11 @@ const Realisations = ({ realisations, __type }) => {
         />
       </Head>
       <Navigation />
-      <Breadcrumbs page="Realisaties" variant={1} />
+      <Breadcrumbs
+        page="Realisaties"
+        variant={1}
+        image={"images/hero-realisaties.jpeg"}
+      />
       <ContentWrapper>
         <Grid container>
           <Grid row mb={5}>
