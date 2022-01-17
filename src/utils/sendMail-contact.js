@@ -1,15 +1,20 @@
 import apiCall from "./apiCall";
 
-const EMAIL_TO = process.env.SENDINBLUE_EMAIL_TO;
 const NAME_TO = "wooddesign.be";
 
-export const sendContactMail = ({ onSuccess, onError, data = {} }) =>
+export const sendContactMail = ({
+  SENDINBLUE_API_KEY,
+  SENDINBLUE_EMAIL_TO,
+  onSuccess,
+  onError,
+  data = {},
+}) =>
   apiCall("https://api.sendinblue.com/v3/smtp/email", {
     method: "POST",
     headers: {
       accept: "application/json",
       "content-type": "application/json",
-      "api-key": process.env.SENDINBLUE_API_KEY
+      "api-key": SENDINBLUE_API_KEY,
     },
     data: {
       sender: {
@@ -18,7 +23,7 @@ export const sendContactMail = ({ onSuccess, onError, data = {} }) =>
       },
       to: [
         {
-          email: EMAIL_TO,
+          email: SENDINBLUE_EMAIL_TO,
           name: NAME_TO,
         },
       ],

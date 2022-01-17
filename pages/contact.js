@@ -16,7 +16,7 @@ import { sendContactMail } from "../src/utils/sendMail-contact";
 import ContactForm from "../src/components/ContactForm";
 import companyData from "../src/data/companyData";
 
-const Realisations = () => {
+const Contact = ({ SENDINBLUE_API_KEY, SENDINBLUE_EMAIL_TO }) => {
   const [mailState, setMailState] = useState(undefined);
   const [data, setData] = useState({
     firstName: "",
@@ -63,6 +63,8 @@ const Realisations = () => {
       .then((response) => {
         if (!response.hasError) {
           sendContactMail({
+            SENDINBLUE_API_KEY,
+            SENDINBLUE_EMAIL_TO,
             data,
             onSuccess: () => setMailState("success"),
           }).catch(() => setMailState("error"));
@@ -205,4 +207,15 @@ const Realisations = () => {
   );
 };
 
-export default Realisations;
+export default Contact;
+
+export const getServerSideProps = async () => {
+  return {
+    props: {
+      // Returning value of Environment
+      // variable as prop
+      SENDINBLUE_API_KEY: process.env.SENDINBLUE_API_KEY,
+      SENDINBLUE_EMAIL_TO: process.env.SENDINBLUE_EMAIL_TO,
+    },
+  };
+};
