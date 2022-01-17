@@ -1,6 +1,6 @@
 import apiCall from "./apiCall";
 
-const EMAIL_TO = "info@publipirates.be";
+const EMAIL_TO = process.env.SENDINBLUE_EMAIL_TO;
 const NAME_TO = "wooddesign.be";
 
 export const sendContactMail = ({ onSuccess, onError, data = {} }) =>
@@ -9,8 +9,7 @@ export const sendContactMail = ({ onSuccess, onError, data = {} }) =>
     headers: {
       accept: "application/json",
       "content-type": "application/json",
-      "api-key":
-        "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",
+      "api-key": process.env.SENDINBLUE_API_KEY
     },
     data: {
       sender: {
