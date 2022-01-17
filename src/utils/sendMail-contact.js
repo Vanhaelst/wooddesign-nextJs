@@ -10,7 +10,7 @@ export const sendContactMail = ({ onSuccess, onError, data = {} }) =>
       accept: "application/json",
       "content-type": "application/json",
       "api-key":
-        "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",
+        "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",
     },
     data: {
       sender: {
