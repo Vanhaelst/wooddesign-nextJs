@@ -1,7 +1,7 @@
 import apiCall from "./apiCall";
 
-const EMAIL_TO = "info@noorderheide.be";
-const NAME_TO = "Klus- en renovatiewerken - Noorderheide";
+const EMAIL_TO = "info@publipirates.be";
+const NAME_TO = "wooddesign.be";
 
 export const sendContactMail = ({ onSuccess, onError, data = {} }) =>
   apiCall("https://api.sendinblue.com/v3/smtp/email", {
