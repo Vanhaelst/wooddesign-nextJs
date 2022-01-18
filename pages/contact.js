@@ -91,8 +91,11 @@ const Contact = ({ SENDINBLUE_API_KEY, SENDINBLUE_EMAIL_TO }) => {
   return (
     <div>
       <Head>
-        <title>Wooddesign - Contact</title>
-        <meta property="og:title" content="Wooddesign - Contact" key="title" />
+        <title>{companyData.companyName} - Contact</title>
+        <meta
+            name="description"
+            content={`${companyData.companyName} - Contact`}
+        />
       </Head>
       <Navigation />
       <Breadcrumbs

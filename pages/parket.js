@@ -8,12 +8,17 @@ import Breadcrumbs from "../src/components/Breadcrumbs";
 import ContentWrapper from "../src/components/ContentWrapper";
 import { ServiceDetail } from "../src/components/Service/Detail";
 import parket from "../src/data/services/parket";
+import companyData from "../src/data/companyData";
 
 const Services = () => {
   return (
     <div>
       <Head>
-        <title>{meta.title} - Diensten - Parket</title>
+        <title>{companyData.companyName} - Parket</title>
+        <meta
+          name="description"
+          content={`${companyData.companyName} - Parket`}
+        />
         <meta
           property="og:title"
           content="Wooddesign - Diensten - Parket"
@@ -22,7 +27,7 @@ const Services = () => {
       </Head>
 
       <Navigation />
-      <Breadcrumbs page="Parket" variant={1} image={"images/parket/hero.jpg"}/>
+      <Breadcrumbs page="Parket" variant={1} image={"images/parket/hero.jpg"} />
 
       <ContentWrapper>
         <Grid container>

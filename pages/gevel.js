@@ -8,12 +8,17 @@ import Breadcrumbs from "../src/components/Breadcrumbs";
 import ContentWrapper from "../src/components/ContentWrapper";
 import { ServiceDetail } from "../src/components/Service/Detail";
 import gevel from "../src/data/services/gevel";
+import companyData from "../src/data/companyData";
 
 const Gevel = () => {
   return (
     <div>
       <Head>
-        <title>Wooddesign - Diensten - Gevel</title>
+          <title>{companyData.companyName} - Gevel</title>
+          <meta
+              name="description"
+              content={`${companyData.companyName} - Gevel`}
+          />
         <meta
           property="og:title"
           content="Wooddesign - Diensten - Gevel"

@@ -16,7 +16,7 @@
     "graphql-request": "^1.8.2",
     "imagesloaded": "^4.1.4",
     "lodash.isempty": "^4.4.0",
-    "next": "10.0.5",
+    "next": "11.1.2",
     "prettier": "^2.2.1",
     "prop-types": "^15.7.2",
     "react": "17.0.1",

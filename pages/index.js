@@ -10,16 +10,16 @@ import Footer from "src/components/Footer";
 import Image from "@/components/Image";
 import ContentWrapper from "src/components/ContentWrapper";
 import Box from "@/components/Box";
-import realisations from "../src/data/realisations";
 import Link from "@/components/Link";
 import styled from "styled-components";
 import Button from "@/components/Button";
 import CookieBanner from "@/components/Card";
 import { services } from "../src/data/services/overview";
-import Carousel, { consts } from "react-elastic-carousel";
+import Carousel  from "react-elastic-carousel";
 import ChevronLeft from "@/icons/ChevronLeft";
 import ChevronRight from "@/icons/ChevronRight";
 import useGlobalContext from "../src/context/hooks/useGlobalContext";
+import companyData from "../src/data/companyData";
 
 const SubTitle = styled(Heading)`
   margin: 0;
@@ -80,12 +80,18 @@ const Sliderbutton = styled.div`
 `;
 
 const myArrow = ({ type, onClick, isEdge }) => {
+  console.log({ type, onClick, isEdge });
   const pointer =
-    type === consts.PREV ? (
+    type === "PREV" ? (
       <ChevronLeft size="16px" />
     ) : (
       <ChevronRight size="16px" />
     );
+
+  if (isEdge) {
+    return <></>;
+  }
+
   return (
     <Sliderbutton onClick={onClick} disabled={isEdge}>
       {pointer}
@@ -93,7 +99,7 @@ const myArrow = ({ type, onClick, isEdge }) => {
   );
 };
 
-const Home = ({ instagramPosts }) => {
+const Home = ({ instagramPosts, realisations }) => {
   const { isMobile } = useGlobalContext();
   const [slicedRealisations, setSlicedRealisations] = useState(realisations);
 
@@ -105,7 +111,11 @@ const Home = ({ instagramPosts }) => {
   return (
     <div>
       <Head>
-        <title>{meta.title}</title>
+        <title>{companyData.companyName} - Home</title>
+        <meta
+          name="description"
+          content={`${companyData.companyName} - Parket vloeren, plaatsing en onderhoud`}
+        />
         <meta name="viewport" content={meta.viewport} />
       </Head>
       <Hero backgroundImage="images/hero.jpg" />
@@ -281,11 +291,7 @@ const Home = ({ instagramPosts }) => {
                 >
                   Het bedrijf
                 </Heading>
-                <Image
-                    src="images/webshop.png"
-                  objectFit
-                  height="450px"
-                />
+                <Image src="images/webshop.png" objectFit height="450px" />
               </Grid>
             </RowOdd>
           </Grid>
@@ -410,13 +416,31 @@ export async function getStaticProps() {
   console.log("res", res);
   // const instagramPosts = await res.json();
 
+  let { realisations } = await graphcms.request(
+      `{
+      realisations(first: 4) {
+        title
+        slug
+        categories
+        customer
+        images{
+          url
+        }
+      }
+    }`
+  );
+
   // By returning { props: posts }, the Blog component
   // will receive `posts` as a prop at build time
   return {
     props: {
+      realisations: realisations || "No realisations",
       // instagramPosts: instagramPosts?.data?.slice(0, 4) || [],
     },
   };
 }
 
 export default Home;
+
+
+

@@ -8,12 +8,17 @@ import Breadcrumbs from "../src/components/Breadcrumbs";
 import ContentWrapper from "../src/components/ContentWrapper";
 import { ServiceDetail } from "../src/components/Service/Detail";
 import wand from "../src/data/services/wand";
+import companyData from "../src/data/companyData";
 
 const Wand = () => {
   return (
     <div>
       <Head>
-        <title>Wooddesign - Diensten - Wand</title>
+          <title>{companyData.companyName} - Wand</title>
+          <meta
+              name="description"
+              content={`${companyData.companyName} - Wand`}
+          />
         <meta
           property="og:title"
           content="Wooddesign - Diensten - Wand"
