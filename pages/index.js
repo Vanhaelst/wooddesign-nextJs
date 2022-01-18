@@ -1,25 +1,30 @@
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
-import meta from "src/data/meta";
-import Navigation from "src/components/Navigation";
+import { GraphQLClient } from "graphql-request";
+import styled from "styled-components";
+import Carousel from "react-elastic-carousel";
 import Hero from "@/components/Hero";
 import Heading from "@/components/Heading";
 import Grid from "@/components/Grid";
 import Paragraph from "@/components/Paragraph";
 import Footer from "src/components/Footer";
 import Image from "@/components/Image";
-import ContentWrapper from "src/components/ContentWrapper";
 import Box from "@/components/Box";
 import Link from "@/components/Link";
-import styled from "styled-components";
 import Button from "@/components/Button";
 import CookieBanner from "@/components/Card";
-import { services } from "../src/data/services/overview";
-import Carousel  from "react-elastic-carousel";
 import ChevronLeft from "@/icons/ChevronLeft";
 import ChevronRight from "@/icons/ChevronRight";
+import meta from "src/data/meta";
+import Navigation from "src/components/Navigation";
+import ContentWrapper from "src/components/ContentWrapper";
+import { services } from "../src/data/services/overview";
 import useGlobalContext from "../src/context/hooks/useGlobalContext";
 import companyData from "../src/data/companyData";
+
+import { API_SLUG } from "../src/data/api";
+
+const graphcms = new GraphQLClient(API_SLUG);
 
 const SubTitle = styled(Heading)`
   margin: 0;
@@ -417,7 +422,7 @@ export async function getStaticProps() {
   // const instagramPosts = await res.json();
 
   let { realisations } = await graphcms.request(
-      `{
+    `{
       realisations(first: 4) {
         title
         slug
@@ -441,6 +446,3 @@ export async function getStaticProps() {
 }
 
 export default Home;
-
-
-
