@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
-import { GraphQLClient } from 'graphql-request';
+import { useRouter } from "next/router";
+import { GraphQLClient } from "graphql-request";
 import meta from "src/data/meta";
 import styled from "styled-components";
 import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox";
@@ -15,6 +16,8 @@ import ContentWrapper from "../../src/components/ContentWrapper";
 import UnorderedList from "@/components/List/UnorderedList";
 import ListItem from "@/components/List/ListItem";
 import Text from "@/components/Text";
+import Link from "@/components/Link";
+import ChevronLeft from "@/icons/ChevronLeft";
 
 const Details = styled.div`
   margin-top: 24px;
@@ -55,6 +58,8 @@ const Realisations = ({ realisation }) => {
     },
   };
 
+  const router = useRouter();
+
   return (
     <div>
       <Head>
@@ -70,7 +75,34 @@ const Realisations = ({ realisation }) => {
         />
       </Head>
       <Navigation />
-      <Breadcrumbs page="Realisatie" variant={1} image={realisation?.images[0]?.url} />
+      <Breadcrumbs
+        page="Realisatie"
+        variant={1}
+        image={realisation?.images[0]?.url}
+      />
+
+      <ContentWrapper>
+        <Grid container>
+          <Grid row>
+            <Grid item xs={12}>
+              <Paragraph>
+                <Link
+                  type="hidden"
+                  textDecoration="none"
+                  onClick={() => router.back()}
+                >
+                  <ChevronLeft
+                    size="10px"
+                    fill="black"
+                    style={{ marginRight: "4px", verticalAlign: "baseline" }}
+                  />{" "}
+                  Terug naar overzicht
+                </Link>
+              </Paragraph>
+            </Grid>
+          </Grid>
+        </Grid>
+      </ContentWrapper>
       <ContentWrapper>
         <Grid container>
           <Grid row mb={10}>
@@ -78,11 +110,10 @@ const Realisations = ({ realisation }) => {
               <Heading level={2} mb={3}>
                 {realisation?.title}
               </Heading>
-              {realisation?.description?.map(descr => (
+              {realisation?.description?.map((descr) => (
                 <Paragraph>{descr.text}</Paragraph>
               ))}
             </Grid>
-
 
             <Details
               as={Grid}
@@ -98,9 +129,7 @@ const Realisations = ({ realisation }) => {
                 {realisation?.wood && (
                   <ListItem>
                     <Text fontWeight="bold">Houtsoort:&nbsp;</Text>
-                    <Text fontFamily="secondary">
-                      {realisation?.wood}
-                    </Text>
+                    <Text fontFamily="secondary">{realisation?.wood}</Text>
                   </ListItem>
                 )}
                 {realisation?.type && (
@@ -123,9 +152,7 @@ const Realisations = ({ realisation }) => {
                 )}
               </UnorderedList>
             </Details>
-
           </Grid>
-
 
           <SimpleReactLightbox>
             <SRLWrapper options={options}>
@@ -147,7 +174,6 @@ const Realisations = ({ realisation }) => {
               </Grid>
             </SRLWrapper>
           </SimpleReactLightbox>
-
         </Grid>
       </ContentWrapper>
       <Footer />
@@ -156,10 +182,12 @@ const Realisations = ({ realisation }) => {
 };
 
 export async function getServerSideProps(context) {
-  const graphcms = new GraphQLClient('https://api-eu-central-1.graphcms.com/v2/ckl3m5wq24osf01z8ch6h9vwq/master');
+  const graphcms = new GraphQLClient(
+    "https://api-eu-central-1.graphcms.com/v2/ckl3m5wq24osf01z8ch6h9vwq/master"
+  );
 
   let { realisation } = await graphcms.request(
-      `
+    `
             {
               realisation(where: {slug: "${context.params.slug}"}) {
                 title
@@ -180,7 +208,7 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
-      realisation: realisation || 'No realisations'
+      realisation: realisation || "No realisations",
     },
   };
 }
