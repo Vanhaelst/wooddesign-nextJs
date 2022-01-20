@@ -32,6 +32,8 @@ export default class MyDocument extends Document {
   }
 
   render() {
+    const GOOGLE_ANALYTICS = "UA-69842182-2";
+
     return (
       <Html>
         <Head>
@@ -40,21 +42,20 @@ export default class MyDocument extends Document {
           <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
           <meta name="p:domain_verify" content={meta.domain_verify_code} />
           <meta name="robots" content="index, follow" />
-          <Script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=UA-69842182-2"
+          <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS}`}
           />
-          <Script
-            dangerouslySetInnerHTML={{
-              __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-69842182-2', {
-              page_path: window.location.pathname,
-            });
+          <script
+              dangerouslySetInnerHTML={{
+                __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            
+              gtag('config', '${GOOGLE_ANALYTICS}');
           `,
-            }}
+              }}
           />
           <link
             rel="icon"
