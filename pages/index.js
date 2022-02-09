@@ -307,7 +307,6 @@ const Home = ({ instagramPosts, realisations }) => {
           <Grid container>
             <Grid row mb={8} flex flexDirection="column" alignItems="center">
               <Heading level={2}>Onze realisaties</Heading>
-              <Paragraph>Lorem ipsum dolor sit amet</Paragraph>
             </Grid>
             <Grid row>
               {slicedRealisations &&
