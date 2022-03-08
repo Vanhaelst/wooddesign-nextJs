@@ -50,20 +50,55 @@ const Card = styled.div`
     `}
 `;
 
+const GOOGLE_ANALYTICS = "UA-69842182-2";
+const setCookies = () => {
+  const googleTagManager = document.createElement("script");
+  googleTagManager.type = "text/javascript";
+  googleTagManager.async = true;
+  googleTagManager.src = `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS}`;
+  const foo = document.getElementsByTagName("script")[0];
+  foo.parentNode.insertBefore(googleTagManager, foo);
 
-const CookieBanner = ({ children }) => {
+  const dataLayer = document.createElement("script");
+  dataLayer.text = `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            
+              gtag('config', '${GOOGLE_ANALYTICS}');
+          `;
+  const bar = document.getElementsByTagName("script")[1];
+  bar.parentNode.insertBefore(dataLayer, bar);
+
+  // you can add facebook-pixel and other cookies here
+};
+
+
+const CookieBanner = () => {
   const [show, setShow] = useState(false);
+  const [isCookieSet, setIsCookieSet] = useState(false);
 
   useEffect(() => {
     const acceptedCookies = localStorage.getItem("acceptedCookies");
-    console.log("acceptedCookies", acceptedCookies);
 
     if (!acceptedCookies) {
       setTimeout(() => {
         setShow(true);
-      }, [2500]);
+      }, 2500);
     }
-  }, []);
+
+  }, [show]);
+
+  useEffect(() => {
+    if (!isCookieSet){
+      const acceptedCookies = localStorage.getItem("acceptedCookies");
+      if (acceptedCookies){
+        setCookies()
+        setIsCookieSet(true)
+
+      }
+    }
+  }, [show])
 
   const handleClick = () => {
     localStorage.setItem("acceptedCookies", "true");
