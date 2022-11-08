@@ -30,10 +30,10 @@ const Gevel = () => {
 
       <ContentWrapper>
         <Grid container>
-          {gevel.map((item) => (
+          {gevel.map((item, index) => (
             <ServiceDetail
               key={item.index}
-              index={item.index}
+              index={index}
               title={item.title}
               image={item.image}
               description={item.description}

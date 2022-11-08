@@ -1,307 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd7d19aa-e2de-4f89-acc1-1972311b0af8" name="Default Changelist" comment="Feedback website">
-      <change afterPath="$PROJECT_DIR$/email/signature.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/api/contact.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/process.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/footer.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/footer.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/footer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/gevel/gevels.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/gevel/hero.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/gevel/plaatgevel.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/hero-contact.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/hero-realisaties.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/intro2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/parket/fineer-parket.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/parket/hero.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/parket/massief-parket.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/parket/meerlaags-parket.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/terras/hero.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/terras/terras.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/toonzaal.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/webshop.png" afterDir="false" />
+    <list default="true" id="e60b890b-4f27-4856-9b6a-d695cbaf5a90" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contact.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/gevel.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/gevel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/parket.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/parket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/realisaties/[slug].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/realisaties/[slug].js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/realisaties/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/realisaties/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/terras.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/terras.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Breadcrumbs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Breadcrumbs/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/default.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/default.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Service/Detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Service/Detail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/services/gevel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/services/gevel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/services/overview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/services/overview.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/services/parket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/services/parket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/services/terrassen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/services/terrassen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme/logo/Logo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/logo/Logo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/senMail-contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/sendMail-contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
-    <execution />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
-        <option value="HTML File" />
+        <option value="package.json" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
-  </component>
-  <component name="JsFlowSettings">
-    <service-enabled>true</service-enabled>
-    <exe-path />
-    <other-services-enabled>true</other-services-enabled>
-    <auto-save>true</auto-save>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="1nQHubchhN28qg0ABIvtXOpiMX2" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2CU4tVPQzowE40kt3OudGMpt4vH" />
   <component name="ProjectViewState">
-    <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTML" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/utils" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="prettierjs.PrettierConfiguration.NodeInterpreter" value="$USER_HOME$/.nvm/versions/node/v10.15.3/bin/node" />
-    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/utils" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/pages" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/studio" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/images" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/web" />
-      <recent name="$PROJECT_DIR$/src/components/Navigation" />
-      <recent name="$PROJECT_DIR$/public/images/theme/app-icons" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/indyvanhaelst/sites/studio94/wooddesign-nextJs&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;
+  }
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="dd7d19aa-e2de-4f89-acc1-1972311b0af8" name="Default Changelist" comment="" />
-      <created>1611315622181</created>
+      <changelist id="e60b890b-4f27-4856-9b6a-d695cbaf5a90" name="Changes" comment="" />
+      <created>1658844043540</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1611315622181</updated>
-      <workItem from="1611315641707" duration="66869000" />
-      <workItem from="1613037950701" duration="11168000" />
-      <workItem from="1613135858390" duration="9425000" />
-      <workItem from="1613148957663" duration="11435000" />
-      <workItem from="1613662165404" duration="10147000" />
-      <workItem from="1613813135391" duration="4814000" />
-      <workItem from="1614170226325" duration="1764000" />
-      <workItem from="1614284656369" duration="219000" />
-      <workItem from="1614515765764" duration="3209000" />
-      <workItem from="1614525094848" duration="1169000" />
-      <workItem from="1614778240030" duration="430000" />
-      <workItem from="1614789388143" duration="929000" />
-      <workItem from="1614878945601" duration="8000" />
-      <workItem from="1614954529832" duration="2391000" />
-      <workItem from="1615022812172" duration="598000" />
-      <workItem from="1615122960582" duration="759000" />
-      <workItem from="1615480198549" duration="3605000" />
-      <workItem from="1615559962851" duration="8000" />
-      <workItem from="1615802188072" duration="1337000" />
-      <workItem from="1615908041673" duration="1035000" />
-      <workItem from="1616149469806" duration="6000" />
-      <workItem from="1616149522216" duration="21000" />
-      <workItem from="1616149561259" duration="16000" />
-      <workItem from="1616674748710" duration="3634000" />
-      <workItem from="1617632693229" duration="169000" />
-      <workItem from="1617809716751" duration="429000" />
-      <workItem from="1618229310049" duration="4971000" />
-      <workItem from="1618738471667" duration="1108000" />
-      <workItem from="1619012805564" duration="3779000" />
-      <workItem from="1623419380372" duration="739000" />
-      <workItem from="1624285330109" duration="21000" />
-      <workItem from="1624458927830" duration="111000" />
-      <workItem from="1629455487075" duration="18000" />
-      <workItem from="1633521708651" duration="897000" />
-      <workItem from="1636632934650" duration="2204000" />
-      <workItem from="1636963607765" duration="1188000" />
-      <workItem from="1641461557311" duration="9766000" />
-      <workItem from="1641820878328" duration="753000" />
-      <workItem from="1642058002708" duration="326000" />
-      <workItem from="1642063511215" duration="3000" />
-      <workItem from="1642147212761" duration="554000" />
-      <workItem from="1642422619311" duration="648000" />
+      <updated>1658844043540</updated>
+      <workItem from="1658844044811" duration="1143000" />
+      <workItem from="1659700400881" duration="1959000" />
+      <workItem from="1663156956660" duration="2877000" />
+      <workItem from="1664553129597" duration="978000" />
     </task>
-    <task id="LOCAL-00001" summary="Wooddesign website">
-      <created>1611829161813</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1611829161813</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Add Icons">
-      <created>1611829176004</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1611829176004</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Rename folder">
-      <created>1611829224146</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1611829224146</updated>
-    </task>
-    <task id="LOCAL-00004" summary="- Add Sanity &#10;- Fix cookies&#10;- Fix Mailchimp">
-      <created>1613149242625</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1613149242626</updated>
-    </task>
-    <task id="LOCAL-00005" summary="- Remove sanity &#10;- Add graphCms&#10;- Fix form validation&#10;- Add services and shop on homepage&#10;- Add cookie banner">
-      <created>1613678345599</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1613678345599</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Cleanup">
-      <created>1613678543637</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1613678543637</updated>
-    </task>
-    <task id="LOCAL-00007" summary="- Add isMobile and isTablet in context&#10;- use context for responsiveness">
-      <created>1613817599316</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1613817599316</updated>
-    </task>
-    <task id="LOCAL-00008" summary="prettify">
-      <created>1614245813198</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1614245813198</updated>
-    </task>
-    <task id="LOCAL-00009" summary="- Fix and use data from companyData.js&#10;- Change intro text&#10;- Add sales conditions page">
-      <created>1615023400827</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1615023400827</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Feedback copy&#10;- Add new test 'Massief parket'&#10;- add hero image">
-      <created>1615803389392</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1615803389393</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Update">
-      <created>1618236519909</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1618236519909</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Get realisations from CMS">
-      <created>1618236581532</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1618236581532</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Transition on realisations and load-more">
-      <created>1618236970044</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1618236970044</updated>
-    </task>
-    <task id="LOCAL-00014" summary="fix transition speed on mobile">
-      <created>1618237461339</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1618237461339</updated>
-    </task>
-    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,23 +67,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Wooddesign website" />
-    <MESSAGE value="Add Icons" />
-    <MESSAGE value="Rename folder" />
-    <MESSAGE value="- Add Sanity &#10;- Fix cookies&#10;- Fix Mailchimp" />
-    <MESSAGE value="- Remove sanity &#10;- Add graphCms&#10;- Fix form validation&#10;- Add services and shop on homepage&#10;- Add cookie banner" />
-    <MESSAGE value="Cleanup" />
-    <MESSAGE value="- Add isMobile and isTablet in context&#10;- use context for responsiveness" />
-    <MESSAGE value="prettify" />
-    <MESSAGE value="- Fix and use data from companyData.js&#10;- Change intro text&#10;- Add sales conditions page" />
-    <MESSAGE value="Feedback copy&#10;- Add new test 'Massief parket'&#10;- add hero image" />
-    <MESSAGE value="Update" />
-    <MESSAGE value="Get realisations from CMS" />
-    <MESSAGE value="Transition on realisations and load-more" />
-    <MESSAGE value="fix transition speed on mobile" />
-    <MESSAGE value="Feedback website" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feedback website" />
   </component>
 </project>

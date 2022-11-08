@@ -29,7 +29,7 @@ const Block = ({
   forwardedRef,
 }) => {
   const isEven = index % 2 === 0;
-  const isFirst = index === 1;
+  const isFirst = index === 0;
 
   return (
     <Row as={Grid} row even={isEven} isFirst={isFirst}>
