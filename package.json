@@ -9,10 +9,15 @@
     "prettier": "prettier --write ."
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.0.12",
+    "@chakra-ui/react": "^2.4.1",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "@mailchimp/mailchimp_marketing": "^3.0.28",
     "@sendgrid/mail": "^7.6.0",
     "@types/node": "^17.0.9",
     "axios": "^0.21.1",
+    "framer-motion": "^7.6.7",
     "graphql-request": "^1.8.2",
     "imagesloaded": "^4.1.4",
     "lodash.isempty": "^4.4.0",

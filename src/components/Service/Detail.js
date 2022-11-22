@@ -10,13 +10,11 @@ import { TransitionSlide } from "../../transitions";
 const Row = styled.div`
   @media screen and (min-width: ${(props) =>
       props.theme.grid.breakpointSmall}px) {
-    ${(props) => !props.isFirst && ` margin-top: -40px;`}
     flex-direction: ${(props) => (props.even ? "row-reverse" : "row")};
   }
 
   @media screen and (min-width: ${(props) =>
       props.theme.grid.breakpointMedium}px) {
-    ${(props) => !props.isFirst && ` margin-top: -75px;`}
   }
 `;
 

@@ -16,6 +16,10 @@ const navigation = [
     href: "/terras",
   },
   {
+    title: "Vinylvloer",
+    href: "/vinylvloer",
+  },
+  {
     title: "Realisaties",
     href: "/realisaties",
   },
