@@ -44,6 +44,9 @@ const gevel = [
           <br />
           <br />
           Bovenstaande merken genieten onze voorkeur maar andere types/merken zijn ook mogelijk
+          <br />
+          <br />
+          <img src={"images/gevel/approved-Mato-installer.png"} alt={"approved Mato installer"} style={{ width: "200px"}} />
       </Fragment>
     ),
   },
