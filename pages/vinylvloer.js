@@ -27,7 +27,7 @@ const Services = () => {
       </Head>
 
       <Navigation />
-      <Breadcrumbs page="Parket" variant={1} image={"images/vinylvloer/hero.jpg"} />
+      <Breadcrumbs page="Vinylvloer" variant={1} image={"images/vinylvloer/hero.jpg"} />
 
       <ContentWrapper>
         <Grid container>
