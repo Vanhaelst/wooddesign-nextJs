@@ -31,9 +31,9 @@ const Services = () => {
 
       <ContentWrapper>
         <Grid container>
-          {vinylvloer.map((item) => (
+          {vinylvloer.map((item, index) => (
             <ServiceDetail
-              index={item.index}
+              index={index}
               title={item.title}
               image={item.image}
               description={item.description}

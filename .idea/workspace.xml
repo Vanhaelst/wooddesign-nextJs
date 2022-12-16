@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e60b890b-4f27-4856-9b6a-d695cbaf5a90" name="Changes" comment="update react version">
+    <list default="true" id="e60b890b-4f27-4856-9b6a-d695cbaf5a90" name="Changes" comment="update react dom version">
+      <change afterPath="$PROJECT_DIR$/.env.local" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contact.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/vinylvloer.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/vinylvloer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process.env" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/services/vinylvloer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/services/vinylvloer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +66,8 @@
       <workItem from="1667918039923" duration="247000" />
       <workItem from="1669104059138" duration="1213000" />
       <workItem from="1669907182261" duration="554000" />
-      <workItem from="1669983160796" duration="1537000" />
+      <workItem from="1669983160796" duration="2219000" />
+      <workItem from="1671186842924" duration="739000" />
     </task>
     <task id="LOCAL-00001" summary="add alu gevels">
       <created>1667918235049</created>
@@ -94,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669983540317</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update react dom version">
+      <created>1670007997952</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670007997952</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,6 +126,7 @@
     <MESSAGE value="Add vinyl floors" />
     <MESSAGE value="add mato installer logo" />
     <MESSAGE value="update react version" />
-    <option name="LAST_COMMIT_MESSAGE" value="update react version" />
+    <MESSAGE value="update react dom version" />
+    <option name="LAST_COMMIT_MESSAGE" value="update react dom version" />
   </component>
 </project>

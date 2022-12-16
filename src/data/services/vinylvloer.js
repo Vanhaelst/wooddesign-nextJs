@@ -5,7 +5,6 @@ import Paragraph from "@/components/Paragraph";
 
 const vinylvloer = [
     {
-        index: 1,
         title: "Vinylvloer",
         image:
             "images/vinylvloer/vinylvloer.jpg",

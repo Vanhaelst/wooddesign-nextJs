@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import meta from "src/data/meta";
 import Navigation from "src/components/Navigation";
@@ -88,6 +88,11 @@ const Contact = ({ SENDINBLUE_API_KEY, SENDINBLUE_EMAIL_TO }) => {
     });
   };
 
+  const today = new Date();
+  const endDate = new Date("2023-01-09");
+
+  const showHolidayOpenings = today < endDate;
+
   return (
     <div>
       <Head>
@@ -115,6 +120,12 @@ const Contact = ({ SENDINBLUE_API_KEY, SENDINBLUE_EMAIL_TO }) => {
               <Grid row>
                 <Grid item xs={12} md={10}>
                   <UnorderedList>
+                    {showHolidayOpenings && <ListItem>
+                      <Text fontWeight="bold" style={{ display: "block" }}>
+                        Openingstijden eindejaarsperiode:
+                      </Text>
+                      Tijdens de eindejaarsvakantie zijn wij gesloten van 24/12 t.e.m. 8/01/2023. Alle contactaanvragen worden behandeld vanaf 9/01/2023.
+                    </ListItem>}
                     <ListItem>
                       <Text fontWeight="bold" style={{ display: "block" }}>
                         Telefoon:
