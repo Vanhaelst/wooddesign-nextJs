@@ -85,7 +85,6 @@ const Sliderbutton = styled.div`
 `;
 
 const myArrow = ({ type, onClick, isEdge }) => {
-  console.log({ type, onClick, isEdge });
   const pointer =
     type === "PREV" ? (
       <ChevronLeft size="16px" />
@@ -123,7 +122,7 @@ const Home = ({ instagramPosts, realisations }) => {
         />
         <meta name="viewport" content={meta.viewport} />
       </Head>
-      <Hero backgroundImage="images/hero.jpg" />
+      <Hero backgroundImage="images/hero-kerst.jpeg" title="Vrolijk kerstfeest" subtitle="en een gelukkig nieuw jaar" />
       <Navigation />
       <ContentWrapper>
         <CookieBanner />
@@ -407,19 +406,6 @@ const Home = ({ instagramPosts, realisations }) => {
 };
 
 export async function getStaticProps() {
-  // Call an external API endpoint to get posts.
-  // You can use any data fetching library
-  const AuthRes = await fetch(
-    `https://ig.instant-tokens.com/users/9e660aa2-5339-4f60-91b6-a01f08bc8001/instagram/17841404474795116/token?userSecret=${process.env.IG_USER_SECRET}`
-  );
-  const AuthToken = { Token: "amhzdjcnb69nd60zih6z2c" };
-
-  const res = await fetch(
-    `https://graph.facebook.com/me/media?fields=id,caption,media_type,media_url,username,timestamp&access_token=${AuthToken.Token}`
-  );
-  console.log("res", res);
-  // const instagramPosts = await res.json();
-
   let { realisations } = await graphcms.request(
     `{
       realisations(first: 4) {
@@ -434,12 +420,9 @@ export async function getStaticProps() {
     }`
   );
 
-  // By returning { props: posts }, the Blog component
-  // will receive `posts` as a prop at build time
   return {
     props: {
       realisations: realisations || "No realisations",
-      // instagramPosts: instagramPosts?.data?.slice(0, 4) || [],
     },
   };
 }
