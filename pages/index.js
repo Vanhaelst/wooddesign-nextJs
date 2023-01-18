@@ -122,7 +122,7 @@ const Home = ({ instagramPosts, realisations }) => {
         />
         <meta name="viewport" content={meta.viewport} />
       </Head>
-      <Hero backgroundImage="images/hero-kerst.jpeg" title="Vrolijk kerstfeest" subtitle="en een gelukkig nieuw jaar" />
+      <Hero backgroundImage="images/hero.jpg" />
       <Navigation />
       <ContentWrapper>
         <CookieBanner />
