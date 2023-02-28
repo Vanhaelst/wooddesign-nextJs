@@ -37,6 +37,7 @@ const Realisations = ({ realisations, __type }) => {
     const data = graphcms.request(`{
       realisations(
         first: ${enums.INITAL_AMOUNT} 
+        orderBy: createdAt_DESC
         ${
           value !== enums.ALL
             ? `, where: { categories_contains_all: [${value}] }`
@@ -147,7 +148,7 @@ const Realisations = ({ realisations, __type }) => {
 export async function getServerSideProps() {
   let { realisations, __type } = await graphcms.request(
     `{
-      realisations(first: ${enums.INITAL_AMOUNT}) {
+      realisations(first: ${enums.INITAL_AMOUNT}, orderBy: createdAt_DESC) {
         title
         slug
         categories
