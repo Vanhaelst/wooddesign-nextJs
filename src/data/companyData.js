@@ -18,7 +18,7 @@ const companyData = {
   btw: "BE0878408541",
   iban: "",
   social: {
-    instagram: "https://www.instagram.com/wooddesignbvba/",
+    instagram: "https://www.instagram.com/wooddesignbv/",
     facebook: "https://www.facebook.com/wooddesignbvba",
     pinterest: "https://www.pinterest.com/wooddesignbvba/",
   },
