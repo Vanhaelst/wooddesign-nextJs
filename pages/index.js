@@ -408,7 +408,7 @@ const Home = ({ instagramPosts, realisations }) => {
 export async function getStaticProps() {
   let { realisations } = await graphcms.request(
     `{
-      realisations(first: 4) {
+      realisations(orderBy: createdAt_DESC, first: 4) {
         title
         slug
         categories
