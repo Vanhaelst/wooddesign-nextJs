@@ -3,11 +3,9 @@ import styled from "styled-components";
 import Box from "@/components/Box";
 import Text from "@/components/Text";
 import Button from "@/components/Button";
-import Link from "next/link";
 
 const Card = styled.div`
   position: fixed !important;
-  padding: 48px;
   z-index: 99999;
   border-radius: 10px;
   box-shadow: rgb(0 0 0 / 40%) 0px 0px 20px;
@@ -21,8 +19,8 @@ const Card = styled.div`
   bottom: -500px;
 
   @media screen and (max-width: ${props => props.theme.grid.breakpointSmall}px){
-    border-bottom-right-radius 0px;
-    border-bottom-left-radius 0px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
   }
   
   @media screen and (min-width: ${props => props.theme.grid.breakpointSmall}px){

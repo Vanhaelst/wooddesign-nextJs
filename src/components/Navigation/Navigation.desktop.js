@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import DesktopNavigation from "./default";
 
-const Navigation = ({ shown }) => {
+const Navigation = () => {
   {/*
   const [sticky, setSticky] = useState(false);
 

@@ -36,8 +36,6 @@ const Title = styled(Heading)`
   background-color: rgba(0,0,0, 0.75);
     line-height: 100%;
     padding: 8px 24px;
-}
-  
 `;
 
 const SubTitle = styled(Heading)`

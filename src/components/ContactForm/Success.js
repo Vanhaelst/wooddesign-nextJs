@@ -53,7 +53,7 @@ const Foo = styled.div.withConfig({
     stroke-width: 4;
     stroke: ${(props) => props.theme.colors.primary.main};
     stroke-miterlimit: 10;
-    box-shadow: inset 0px 0px 0px #7ac142;
+    box-shadow: inset 0 0 0 #7ac142;
     transition: 1s all ease;
   }
 
