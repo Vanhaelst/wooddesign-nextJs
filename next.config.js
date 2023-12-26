@@ -1,6 +1,11 @@
-module.exports = {
-    compiler: {
-        // see https://styled-components.com/docs/tooling#babel-plugin for more info on the options.
-        styledComponents: true
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+    images: {
+        dangerouslyAllowSVG: true,
+        contentDispositionType: "attachment",
+        contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+        domains: ["media.graphassets.com"],
     },
-}
+};
+
+module.exports = nextConfig;

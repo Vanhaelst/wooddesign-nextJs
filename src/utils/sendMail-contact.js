@@ -1,6 +1,5 @@
 import apiCall from "./apiCall";
 
-const EMAIL_TO = "info@wooddesign.be";
 const NAME_TO = "wooddesign.be";
 
 export const sendContactMail = ({
@@ -22,7 +21,7 @@ export const sendContactMail = ({
       },
       to: [
         {
-          email: EMAIL_TO,
+          email: process.env.NEXT_PUBLIC_SENDINBLUE_EMAIL_TO,
           name: NAME_TO,
         },
       ],
@@ -30,7 +29,7 @@ export const sendContactMail = ({
         email: data.email,
         name: `${data.firstName} ${data.lastName}`,
       },
-      templateId: 1,
+      templateId: 8,
       params: {
         email: data.email,
         name: `${data.firstName} ${data.lastName}`,

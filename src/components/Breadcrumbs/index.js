@@ -4,7 +4,10 @@ import Heading from "@/components/Heading";
 
 const breadcrumbWidth = 400;
 
-const Wrapper = styled.div`
+const Wrapper = styled.div.withConfig({
+    shouldForwardProp: (prop) =>
+        ['children'].includes(prop),
+})`
   background-color: #333;
   display: flex;
 
@@ -36,7 +39,10 @@ const Point = styled.div.withConfig({
   right: -8px;
 `;
 
-const Breadcrumb = styled.div`
+const Breadcrumb = styled.div.withConfig({
+    shouldForwardProp: (prop) =>
+        ['children'].includes(prop),
+})`
   padding: 25px;
   @media screen and (min-width: ${(props) =>
       props.theme.grid.breakpointSmall}px) {
@@ -66,7 +72,10 @@ const Breadcrumb = styled.div`
     `}
 `;
 
-const Image = styled.div`
+const Image = styled.div.withConfig({
+    shouldForwardProp: (prop) =>
+        [''].includes(prop),
+})`
   width: 100%;
   @media screen and (min-width: ${(props) =>
       props.theme.grid.breakpointSmall}px) {
