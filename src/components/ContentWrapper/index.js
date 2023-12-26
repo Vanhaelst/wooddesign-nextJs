@@ -2,7 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import Box from "@/components/Box";
 
-const ContentWrapper = styled(Box)`
+const ContentWrapper = styled(Box).withConfig({
+    shouldForwardProp: (prop) =>
+        ['children'].includes(prop),
+})`
   margin-top: 48px;
   margin-bottom: 48px;
   @media screen and (min-width: ${(props) => props.theme.grid.breakpointSmall}) {

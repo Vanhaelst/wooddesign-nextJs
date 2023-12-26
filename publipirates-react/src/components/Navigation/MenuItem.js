@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const MenuItem = styled('a').withConfig({
     shouldForwardProp: (prop) =>
-        ['children', 'href'].includes(prop),
+        ['children', 'href', "target"].includes(prop),
 })`
   margin: 0 24px;
   font-size: 16px;

@@ -25,7 +25,10 @@ const pull = (pull) => {
   return `-${foo}%`;
 };
 
-const Grid = styled.div`
+const Grid = styled.div.withConfig({
+    shouldForwardProp: (prop) =>
+        ['children'].includes(prop),
+})`
   ${(props) =>
     props.backgroundColor &&
     `
