@@ -116,7 +116,7 @@ const Realisations = ({ realisations, __type }) => {
 
               {__type?.enumValues?.map(({ name }) => {
                 return (
-                  <Box pr={5}>
+                  <Box pr={5} key={name}>
                     <Link
                       type={category === name ? "branded" : "hidden"}
                       fontFamily="secondary"

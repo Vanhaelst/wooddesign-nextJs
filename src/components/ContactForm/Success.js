@@ -2,7 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import Text from "@/components/Text";
 
-const Foo = styled.div`
+const Foo = styled.div.withConfig({
+  shouldForwardProp: (prop) =>
+      ['children'].includes(prop),
+})`
   height: 100%;
   display: flex;
   align-items: center;

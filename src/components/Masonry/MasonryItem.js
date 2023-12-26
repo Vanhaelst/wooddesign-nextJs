@@ -13,7 +13,10 @@ const SubTitle = styled(Heading)`
   font-size: 12px;
 `;
 
-const Image = styled.div`
+const Image = styled.div.withConfig({
+  shouldForwardProp: (prop) =>
+      ['src', 'alt', 'children'].includes(prop),
+})`
   background-image: url("${(props) => props.src}");
   background-size: cover;
   width: 100%;
@@ -49,7 +52,7 @@ const Block = ({ item, enterCount, forwardedRef }) => {
     >
       <div className="item" key={item.title}>
         <div className="content">
-          <div style={{ padding: "25pox" }}>
+          <div>
             <Image src={item.images[0]?.url} alt={item.title}>
               <ImageOverlay>
                 <Line>

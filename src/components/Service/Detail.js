@@ -29,6 +29,8 @@ const Block = ({
   const isEven = index % 2 === 0;
   const isFirst = index === 0;
 
+
+  console.log(typeof description)
   return (
     <Row as={Grid} row even={isEven} isFirst={isFirst}>
       <Grid

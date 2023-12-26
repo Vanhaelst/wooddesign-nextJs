@@ -10,7 +10,7 @@ const MyApp = ({ Component, pageProps }) => {
     <Fragment>
       <Head>
         <title>
-          {meta.title} - {meta.tagline}
+          {meta.og.title} - {meta.tagline}
         </title>
         <meta name="viewport" content={meta.viewport} />
       </Head>

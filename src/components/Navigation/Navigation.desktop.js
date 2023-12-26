@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment } from "react";
 import DesktopNavigation from "./default";
 
 const Navigation = ({ shown }) => {
@@ -26,7 +26,7 @@ const Navigation = ({ shown }) => {
 
   return (
     <Fragment>
-      <DesktopNavigation sticky shown={shown} />
+        {/* <DesktopNavigation sticky shown={shown} />*/}
       <DesktopNavigation id="nav" />
     </Fragment>
   );

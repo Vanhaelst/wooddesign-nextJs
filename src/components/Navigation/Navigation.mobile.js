@@ -13,12 +13,18 @@ import Facebook from "@/icons/Facebook";
 import Pinterest from "@/icons/Pinterest";
 import Instagram from "@/icons/Instagram";
 
-const Wrapper = styled.div`
+const Wrapper = styled('div').withConfig({
+  shouldForwardProp: (prop) =>
+      ['children'].includes(prop),
+})`
   width: 100%;
   display: block;
 `;
 
-const Navbar = styled.div`
+const Navbar = styled('div').withConfig({
+  shouldForwardProp: (prop) =>
+      ['children'].includes(prop),
+})`
   margin-top: 8px;
   display: flex;
   justify-content: space-between;
@@ -33,7 +39,10 @@ const Navbar = styled.div`
   position: relative;
 `;
 
-const Menu = styled.div`
+const Menu = styled('div').withConfig({
+  shouldForwardProp: (prop) =>
+      ['children'].includes(prop),
+})`
   position: fixed;
   top: 0;
   right: 0;
@@ -50,7 +59,7 @@ const Menu = styled.div`
       props.theme.grid.breakpointSmall}px) {
     width: 350px;
   }
-  &:after: {
+  &:after {
     content: "";
     display: block;
     background-color: rgba(0, 0, 0, 0.5);

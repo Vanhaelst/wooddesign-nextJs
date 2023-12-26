@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useEffect } from "react";
 import theme from "../theme";
 
-const GlobalContext = React.createContext();
+const GlobalContext = React.createContext({});
 
 const GlobalContextProvider = ({ children }) => {
   const [globalState, setState] = useState({

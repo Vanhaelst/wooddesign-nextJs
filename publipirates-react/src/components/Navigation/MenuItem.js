@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-const MenuItem = styled.a`
+const MenuItem = styled('a').withConfig({
+    shouldForwardProp: (prop) =>
+        ['children', 'href'].includes(prop),
+})`
   margin: 0 24px;
   font-size: 16px;
   font-weight: 300;

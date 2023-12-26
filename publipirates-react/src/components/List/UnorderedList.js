@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-const Ul = styled.ul`
+const Ul = styled.ul.withConfig({
+  shouldForwardProp: (prop) =>
+      ['children'].includes(prop),
+})`
   list-style-type: ${(props) => props.listStyleType};
   padding-left: 24px;
   ${(props) =>

@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-const HeroImage = styled.div`
+
+const HeroImage = styled('div').withConfig({
+  shouldForwardProp: (prop) =>
+      [''].includes(prop),
+})`
   @media screen and (min-width: 997px){
     background-image: url("${(props) => props.backgroundImage}");
   }

@@ -22,7 +22,10 @@ const Wrapper = styled.div`
   }
 `;
 
-const Point = styled.div`
+const Point = styled.div.withConfig({
+    shouldForwardProp: (prop) =>
+        [''].includes(prop),
+})`
   width: 4px;
   height: 4px;
   background-color: ${(props) => props.theme.colors.primary.main};

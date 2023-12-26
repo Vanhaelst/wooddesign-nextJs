@@ -2,7 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const Img = styled.img`
+const Img = styled.img.withConfig({
+    shouldForwardProp: (prop) =>
+        ['src', 'alt'].includes(prop),
+})`
   overflow: hidden;
   max-width: 100%;
   &:hover {

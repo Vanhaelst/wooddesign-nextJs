@@ -56,7 +56,6 @@ const RowEven = styled.div`
   @media screen and (min-width: ${(props) =>
       props.theme.grid.breakpointSmall}px) {
     margin-top: -125px;
-    margin-top: -125px;
     flex-direction: row;
     img {
       margin-bottom: 0;

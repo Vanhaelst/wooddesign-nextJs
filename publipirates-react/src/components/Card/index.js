@@ -116,9 +116,7 @@ const CookieBanner = () => {
           <Button onClick={handleClick}>Aanvaarden</Button>
         </Box>
         <Box>
-          <Link href="/cookie-verklaring">
-            <Button appearance="link">Meer informatie</Button>
-          </Link>
+            <Button appearance="link" href="/cookie-verklaring">Meer informatie</Button>
         </Box>
       </Box>
     </Card>

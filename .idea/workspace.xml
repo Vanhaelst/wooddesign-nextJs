@@ -4,8 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e60b890b-4f27-4856-9b6a-d695cbaf5a90" name="Changes" comment="update chakra - emotion - prettier - masonery">
+    <list default="true" id="e60b890b-4f27-4856-9b6a-d695cbaf5a90" name="Changes" comment="update lightbox">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_document.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_document.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/contact.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/realisaties/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/realisaties/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Card/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Card/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Hero/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Hero/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Image/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Image/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/List/UnorderedList.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/List/UnorderedList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Navigation/MenuItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Navigation/MenuItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Text/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Text/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publipirates-react/src/utils/fontFamily.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/utils/fontFamily.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Breadcrumbs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Breadcrumbs/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContactForm/Success.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactForm/Success.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Masonry/MasonryItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Masonry/MasonryItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Navigation.desktop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.desktop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Navigation.mobile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.mobile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Service/Detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Service/Detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/GlobalContextProvider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/GlobalContextProvider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/services/vinylvloer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/services/vinylvloer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transitions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/transitions/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/sendMail-contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/sendMail-contact.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,6 +74,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
+    "ts.external.directory.path": "/Users/indyvanhaelst/Library/Application Support/JetBrains/Toolbox/apps/IDEA-U/ch-0/232.10203.10/IntelliJ IDEA.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -90,7 +116,7 @@
       <workItem from="1682502855135" duration="100000" />
       <workItem from="1684078568421" duration="35000" />
       <workItem from="1694783252225" duration="797000" />
-      <workItem from="1703587855492" duration="679000" />
+      <workItem from="1703587855492" duration="5112000" />
     </task>
     <task id="LOCAL-00001" summary="add alu gevels">
       <created>1667918235049</created>
@@ -163,7 +189,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703588440667</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="update lightbox">
+      <option name="closed" value="true" />
+      <created>1703588552319</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1703588552319</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,7 +225,8 @@
     <MESSAGE value="update instagram page link" />
     <MESSAGE value="update order realisations" />
     <MESSAGE value="update chakra - emotion - prettier - masonery" />
-    <option name="LAST_COMMIT_MESSAGE" value="update chakra - emotion - prettier - masonery" />
+    <MESSAGE value="update lightbox" />
+    <option name="LAST_COMMIT_MESSAGE" value="update lightbox" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

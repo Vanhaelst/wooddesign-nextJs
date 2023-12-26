@@ -17,8 +17,9 @@ const vinylvloer = [
                 <Paragraph mb={3}>
                     Door de uitgekiende structuur vallen deze vloeren nauwelijks te onderscheiden van écht parket of een keramische tegel.
                     Budgetvriendelijke vloeren beschikbaar in planken, visgraat en tegels in verschillende afmetingen en types.
+                </Paragraph>
                 <Paragraph mb={3}>
-                    Dankzij hun eigenschappen zoals comfort, duurzaamheid en waterdichtheid, zijn deze vinylvloeren geschikt voor gebruik in de badkamer, keuken, woonkamer, kantoor, wasruimte, slaapkamer, kinderkamer enz….</Paragraph>
+                    Dankzij hun eigenschappen zoals comfort, duurzaamheid en waterdichtheid, zijn deze vinylvloeren geschikt voor gebruik in de badkamer, keuken, woonkamer, kantoor, wasruimte, slaapkamer, kinderkamer enz….
                 </Paragraph>
 
                 <Paragraph mb={3}>

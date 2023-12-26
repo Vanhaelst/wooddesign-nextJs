@@ -1,11 +1,9 @@
 import apiCall from "./apiCall";
 
-const EMAIL_FROM = "info@wooddesign.be";
+const EMAIL_TO = "info@wooddesign.be";
 const NAME_TO = "wooddesign.be";
 
 export const sendContactMail = ({
-  SENDINBLUE_API_KEY,
-  SENDINBLUE_EMAIL_TO,
   onSuccess,
   onError,
   data = {},
@@ -15,16 +13,16 @@ export const sendContactMail = ({
     headers: {
       accept: "application/json",
       "content-type": "application/json",
-      "api-key": SENDINBLUE_API_KEY,
+      "api-key": process.env.NEXT_PUBLIC_SENDINBLUE_API_KEY || "xkeysib-",
     },
     data: {
       sender: {
-        email: EMAIL_FROM,
+        email: data.email,
         name: `${data.firstName} ${data.lastName}`,
       },
       to: [
         {
-          email: SENDINBLUE_EMAIL_TO,
+          email: EMAIL_TO,
           name: NAME_TO,
         },
       ],

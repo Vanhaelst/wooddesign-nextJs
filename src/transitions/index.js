@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-export const Transition = styled.div`
+export const Transition = styled('div').withConfig({
+    shouldForwardProp: (prop) =>
+        ['children'].includes(prop),
+})`
   transition: all 1s;
   transition-delay: ${(props) => props.transitionDelay || ".5s"};
   top: 100px;
@@ -15,7 +18,10 @@ export const Transition = styled.div`
     `}
 `;
 
-export const TransitionSlide = styled.div`
+export const TransitionSlide = styled('div').withConfig({
+    shouldForwardProp: (prop) =>
+        ['children'].includes(prop),
+})`
   transition: all 0.5s;
   @media screen and (min-width: ${(props) =>
       props.theme.grid.breakpointLarge}px) {

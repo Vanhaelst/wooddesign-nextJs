@@ -14,21 +14,24 @@ import getMargin from "../../utils/margin";
 import getPadding from "../../utils/padding";
 import show from "@/utils/show";
 
-const Text = styled.span`
+const Text = styled('span').withConfig({
+  shouldForwardProp: (prop) =>
+      ['children'].includes(prop),
+})`
   position: relative;
   ${(props) => props.display && `display: ${props.display};`}
   ${color}
-    ${fontFamily}
-    ${fontStyle}
-    ${fontWeight}
-    ${level}
-    ${size}
-    ${textAlign}
-    ${textDecoration}
-    ${textTransform}
-    ${getMargin}
-    ${getPadding}
-    line-height: 150%;
+  ${fontFamily}
+  ${fontStyle}
+  ${fontWeight}
+  ${level}
+  ${size}
+  ${textAlign}
+  ${textDecoration}
+  ${textTransform}
+  ${getMargin}
+  ${getPadding}
+  line-height: 150%;
   ${show}
 `;
 
