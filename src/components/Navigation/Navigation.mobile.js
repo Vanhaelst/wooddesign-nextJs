@@ -37,6 +37,26 @@ const Navbar = styled('div').withConfig({
   background-color: white;
   z-index: 500;
   position: relative;
+  padding: 8px 24px;
+`;
+
+const Backdrop = styled('div').withConfig({
+  shouldForwardProp: (prop) =>
+      ['children'].includes(prop),
+})`
+
+  ${(props) =>
+      props.isOpen
+          ? `display: block;`
+          : `display: none;`
+  }
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 500;
 `;
 
 const Menu = styled('div').withConfig({
@@ -55,30 +75,20 @@ const Menu = styled('div').withConfig({
   flex-direction: column;
   transition: all 0.5s;
   padding: 64px 16px 32px 16px;
+ 
   @media screen and (min-width: ${(props) =>
       props.theme.grid.breakpointSmall}px) {
     width: 350px;
   }
-  &:after {
-    content: "";
-    display: block;
-    background-color: rgba(0, 0, 0, 0.5);
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 500;
-  }
+ 
   ${(props) =>
     props.isOpen
-      ? `
-       right: 0;
-    `
-      : `
-       right: -110vw;
-    `}
+      ? `right: 0;`
+      : ` right: -110vw;`
+  }
 `;
+
+
 
 const MenuItem = styled.a`
   font-family: ${(props) => props.theme.font.family.secondary};
@@ -139,11 +149,12 @@ const Navigation = () => {
   return (
     <Wrapper as={Grid}>
       <Navbar as={Grid} isMobile={true} container isOpen={isOpen}>
-        <Logo height="35px" style={{ marginTop: "10px" }} fill="#464646" />
+        <Logo height="24px" fill="#464646" />
         <div onClick={handleClick}>
           <MenuIcon size="24px" />
         </div>
       </Navbar>
+      <Backdrop isOpen={isOpen} />
       <Menu isMobile={true} isOpen={isOpen}>
         <CloseWrapper onClick={handleClick}>
           <CloseIcon size="20px" />
