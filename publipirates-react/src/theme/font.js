@@ -10,7 +10,7 @@ const font = {
     light: 200,
     regular: 400,
     medium: 500,
-    bold: 700,
+    bold: 500,
   },
   heading1: {
     size: "28px",

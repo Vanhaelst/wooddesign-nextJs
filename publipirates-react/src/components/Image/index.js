@@ -50,6 +50,7 @@ Image.propTypes = {
   objectFit: PropTypes.bool,
   height: PropTypes.string,
   hover: PropTypes.string,
+    className: PropTypes.string,
 };
 
 export default Image;

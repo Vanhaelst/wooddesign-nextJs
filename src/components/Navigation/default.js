@@ -3,12 +3,12 @@ import { useRouter } from "next/router";
 import Menu from "@/components/Navigation/Menu";
 import MenuItem from "@/components/Navigation/MenuItem";
 import NavBar from "@/components/Navigation/NavBar";
-import { navigation, topbar } from "./navigation";
+import { navigation } from "./navigation";
 import Logo from "src/theme/logo/Logo";
 import theme from "src/theme";
 import Link from "next/link";
-import Pin from "@/icons/pin";
-import { PhoneIcon, EmailIcon, WarningIcon } from "@chakra-ui/icons";
+import { PhoneIcon, EmailIcon } from "@chakra-ui/icons";
+import Cart from "@/icons/cart";
 
 const DesktopNavigation = ({ id, shown, sticky }) => {
   const router = useRouter();
@@ -16,6 +16,7 @@ const DesktopNavigation = ({ id, shown, sticky }) => {
   return (
     <>
       <div className="bg-[#8dc63f] px-[44px] py-2 flex justify-end">
+        {/*
         <div className="flex items-center">
           <Pin size="18px" fill="white" />
           <Link
@@ -27,7 +28,7 @@ const DesktopNavigation = ({ id, shown, sticky }) => {
         </div>
 
         <div className="border-r-[1px] border-solid border-white mx-[12px]" />
-
+*/}
         <div className="flex items-center mx-[12px]">
           <EmailIcon color={"white"} />
           <Link
@@ -53,11 +54,12 @@ const DesktopNavigation = ({ id, shown, sticky }) => {
         <div className="border-r-[1px] border-solid border-white mx-[12px]" />
 
         <div className="flex items-center mx-[12px]">
+          <Cart className="h-5 w-5" />
           <Link
-            href="+32477208484"
-            className="text-s text-white text-[14px] font-thin hover:underline"
+            target="_blank"
+            href="https://shop.wooddesign.be"
+            className="text-s text-white text-[14px] ml-[8px] font-thin hover:underline"
           >
-            {" "}
             Shop online
           </Link>
         </div>
