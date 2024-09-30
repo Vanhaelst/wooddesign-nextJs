@@ -20,7 +20,6 @@ const cookieStatement = () => {
         <title>{meta.title}</title>
         <meta name="viewport" content={meta.viewport} />
       </Head>
-      <Hero backgroundImage="https://www.belgiqa.be/images/home/_homeSplashImage/belgiqa-homepage-banner2-1.jpg" />
       <Navigation />
       <ContentWrapper>
         <CookieBanner />

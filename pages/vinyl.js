@@ -5,25 +5,25 @@ import meta from "src/data/meta";
 import Navigation from "src/components/Navigation";
 import Grid from "@/components/Grid";
 import Footer from "../src/components/Footer";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 import Breadcrumbs from "../src/components/Breadcrumbs";
 import ContentWrapper from "../src/components/ContentWrapper";
-import { ServiceDetail } from "../src/components/Service/Detail";
-import terrassen from "../src/data/services/terrassen";
 import companyData from "../src/data/companyData";
-import { API_SLUG } from "../src/data/api";
+import { Paragraph } from "../publipirates-react";
+import { Link } from "@chakra-ui/react";
 import Masonry from "../src/components/Masonry";
 import Button from "@/components/Button";
-import { Paragraph } from "../publipirates-react";
+import { API_SLUG } from "../src/data/api";
 
 const graphcms = new GraphQLClient(API_SLUG);
-const category = ["Terras"];
+const category = ["vinyl"];
 const enums = {
   INITAL_AMOUNT: 9,
   EXTRA_AMOUNT: 6,
   ALL: "all",
 };
 
-const Terras = ({ realisations, pagination }) => {
+const Services = ({ realisations, pagination }) => {
   const [paginatedRealisations, setPaginatedRealisations] =
     useState(realisations);
   const [hasNextPage, setNextPage] = useState(pagination.hasNextPage);
@@ -67,30 +67,49 @@ const Terras = ({ realisations, pagination }) => {
   return (
     <div>
       <Head>
-        <title>{companyData.companyName} - Terras</title>
+        <title>{companyData.companyName} - Parket</title>
         <meta
           name="description"
-          content={`${companyData.companyName} - Terras`}
+          content={`${companyData.companyName} - Vinylvloer`}
         />
         <meta
           property="og:title"
-          content="Wooddesign - Diensten - Terras"
+          content="Wooddesign - Diensten - Vinylvloer"
           key="title"
         />
       </Head>
+
       <Navigation />
-      <Breadcrumbs title="Terras">
+      <Breadcrumbs title="Vinyl">
+        <Paragraph mb={4}>
+          Bij Wooddesign bieden we hoogwaardige vinylvloeren die stijl,
+          duurzaamheid en comfort combineren. Vinyl is een veelzijdige keuze die
+          bestand is tegen vocht en slijtage, waardoor het ideaal is voor elke
+          ruimte in huis. Of je nu op zoek bent naar een vloer met een houtlook
+          of een moderne, strakke uitstraling, wij hebben een breed gamma om uit
+          te kiezen. Ons team begeleidt je van advies tot plaatsing, met oog
+          voor detail en een perfecte afwerking. Ontdek hoe vinyl jouw interieur
+          kan verrijken!
+        </Paragraph>
         <Paragraph>
-          Bij Wooddesign creëren we duurzame en stijlvolle houten terrassen die
-          perfect aansluiten bij jouw buitenruimte. Of het nu gaat om een tuin,
-          dakterras of patio, we bieden maatwerkoplossingen met hoogwaardige
-          houtsoorten en een afwerking die lang meegaat. Ons vakbekwame team
-          begeleidt je door het hele proces, van het ontwerp tot de installatie,
-          met oog voor detail en kwaliteit. Een houten terras voegt niet alleen
-          waarde toe aan je woning, maar biedt ook een warme en natuurlijke
-          uitstraling. Neem contact met ons op voor jouw ideale terras!
+          <Link
+            href="https://coretecfloors.com/nl-nl"
+            isExternal
+            color={"#000000"}
+          >
+            Coretec Floors <ExternalLinkIcon mx="2px" />
+          </Link>
+          <span className="mx-4">|</span>
+          <Link
+            href="https://parquetvinyl.be/nl/vinylvloeren"
+            isExternal
+            color={"#000000"}
+          >
+            Parquetvinyl <ExternalLinkIcon mx="2px" />
+          </Link>
         </Paragraph>
       </Breadcrumbs>
+
       <ContentWrapper>
         <Grid container>
           <Grid row mb={5}>
@@ -152,4 +171,4 @@ export async function getServerSideProps() {
   };
 }
 
-export default Terras;
+export default Services;

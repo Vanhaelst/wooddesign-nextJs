@@ -30,6 +30,13 @@ const Grid = styled.div.withConfig({
         ['children'].includes(prop),
 })`
   ${(props) =>
+    props.align &&
+    `
+        text-align: ${props.align};
+    `}
+
+  
+  ${(props) =>
     props.backgroundColor &&
     `
         background-color: ${props.backgroundColor};

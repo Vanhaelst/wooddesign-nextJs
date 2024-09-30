@@ -75,46 +75,29 @@ const Realisations = ({ realisation }) => {
         />
       </Head>
       <Navigation />
-      <Breadcrumbs
-        page="Realisatie"
-        variant={1}
-        image={realisation?.images[0]?.url}
-      />
+      <Breadcrumbs title={realisation?.title}>
+        {realisation?.description?.map((descr) => (
+          <Paragraph>{descr.text}</Paragraph>
+        ))}
+      </Breadcrumbs>
 
-      <ContentWrapper>
-        <Grid container>
-          <Grid row>
-            <Grid item xs={12}>
-              <Paragraph>
-                <Link
-                  type="hidden"
-                  textDecoration="none"
-                  onClick={() => router.back()}
-                >
-                  <ChevronLeft
-                    size="10px"
-                    fill="black"
-                    style={{ marginRight: "4px", verticalAlign: "baseline" }}
-                  />{" "}
-                  Terug naar overzicht
-                </Link>
-              </Paragraph>
-            </Grid>
-          </Grid>
-        </Grid>
-      </ContentWrapper>
       <ContentWrapper>
         <Grid container>
           <Grid row mb={10}>
-            <Grid item xs={12} sm={8} md={7}>
+            {/*<Grid item xs={12} sm={8} md={7}>
+
               <Heading level={2} mb={3}>
                 {realisation?.title}
               </Heading>
+
               {realisation?.description?.map((descr) => (
                 <Paragraph>{descr.text}</Paragraph>
               ))}
-            </Grid>
 
+            </Grid>
+             */}
+
+            {/*
             <Details
               as={Grid}
               item
@@ -152,6 +135,7 @@ const Realisations = ({ realisation }) => {
                 )}
               </UnorderedList>
             </Details>
+            */}
           </Grid>
 
           <SimpleReactLightbox>
@@ -176,6 +160,34 @@ const Realisations = ({ realisation }) => {
           </SimpleReactLightbox>
         </Grid>
       </ContentWrapper>
+
+      <ContentWrapper>
+        <Grid container>
+          <Grid row>
+            <Grid item xs={12}>
+              <span>
+                <Link
+                  type="hidden"
+                  textDecoration="none"
+                  onClick={() => router.back()}
+                >
+                  <ChevronLeft
+                    size="10px"
+                    fill="black"
+                    style={{
+                      marginRight: "4px",
+                      verticalAlign: "baseline",
+                      display: "inline",
+                    }}
+                  />{" "}
+                  Terug naar overzicht
+                </Link>
+              </span>
+            </Grid>
+          </Grid>
+        </Grid>
+      </ContentWrapper>
+
       <Footer />
     </div>
   );
@@ -183,7 +195,7 @@ const Realisations = ({ realisation }) => {
 
 export async function getServerSideProps(context) {
   const graphcms = new GraphQLClient(
-    "https://api-eu-central-1.graphcms.com/v2/ckl3m5wq24osf01z8ch6h9vwq/master"
+    "https://api-eu-central-1.graphcms.com/v2/ckl3m5wq24osf01z8ch6h9vwq/master",
   );
 
   let { realisation } = await graphcms.request(
@@ -203,7 +215,7 @@ export async function getServerSideProps(context) {
                 customer
               }
             } 
-        `
+        `,
   );
 
   return {

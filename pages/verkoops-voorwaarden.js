@@ -2,7 +2,6 @@ import React from "react";
 import Head from "next/head";
 import meta from "src/data/meta";
 import Navigation from "src/components/Navigation";
-import Hero from "@/components/Hero";
 import Heading from "@/components/Heading";
 import Grid from "@/components/Grid";
 import Paragraph from "@/components/Paragraph";
@@ -20,7 +19,6 @@ const cookieStatement = () => {
         <title>{meta.title}</title>
         <meta name="viewport" content={meta.viewport} />
       </Head>
-      <Hero backgroundImage="https://www.belgiqa.be/images/home/_homeSplashImage/belgiqa-homepage-banner2-1.jpg" />
       <Navigation />
       <ContentWrapper>
         <CookieBanner />

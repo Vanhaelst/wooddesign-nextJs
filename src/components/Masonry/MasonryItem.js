@@ -14,8 +14,7 @@ const SubTitle = styled(Heading)`
 `;
 
 const Image = styled.div.withConfig({
-  shouldForwardProp: (prop) =>
-      ['src', 'alt', 'children'].includes(prop),
+  shouldForwardProp: (prop) => ["src", "alt", "children"].includes(prop),
 })`
   background-image: url("${(props) => props.src}");
   background-size: cover;
@@ -53,68 +52,60 @@ const Block = ({ item, enterCount, forwardedRef }) => {
       <div className="item" key={item.title}>
         <div className="content">
           <div>
-            <Image src={item.images[0]?.url} alt={item.title}>
-              <ImageOverlay>
-                <Line>
-                  {item.title && (
-                    <Heading level={2} color="#ffffff">
-                      {item.title}
-                    </Heading>
-                  )}
-                  <SubTitle
-                    level={4}
-                    fontFamily="secondary"
-                    fontWeight="regular"
-                    color="#ffffff"
-                    pb={7}
-                  >
-                    {item.categories.map((category, index) => {
-                      const isLast = index === item.categories.length - 1;
-                      if (isLast) {
-                        return category;
-                      }
-                      return `${category} - `;
-                    })}
-                  </SubTitle>
-
-                  {item.customer && (
-                    <>
-                      <Heading
-                        level={4}
-                        fontFamily="secondary"
-                        fontWeight="regular"
-                        color="#ffffff"
-                      >
-                        Klant
+            <Link
+              href={`/realisaties/${encodeURIComponent(item.slug)}`}
+              type="hidden"
+            >
+              <Image src={item.images[0]?.url} alt={item.title}>
+                <ImageOverlay>
+                  <Line>
+                    {item.title && (
+                      <Heading level={3} color="#ffffff">
+                        {item.title}
                       </Heading>
-                      <SubTitle
-                        level={4}
-                        fontFamily="secondary"
-                        fontWeight="light"
-                        color="#ffffff"
-                        pb={7}
-                      >
-                        {item.customer}
-                      </SubTitle>
-                    </>
-                  )}
-
-                  <Paragraph
-                    color="#ffffff"
-                    fontFamily="secondary"
-                    fontWeight="light"
-                  >
-                    <Link
-                      href={`/realisaties/${encodeURIComponent(item.slug)}`}
-                      type="hidden"
-                      textDecoration="underline"
+                    )}
+                    {/*
+                    <SubTitle
+                      level={4}
+                      fontFamily="secondary"
+                      fontWeight="regular"
+                      color="#ffffff"
                     >
-                      Bekijk realisatie
-                    </Link>
-                  </Paragraph>
-                </Line>
-              </ImageOverlay>
-            </Image>
+                      {item.categories.map((category, index) => {
+                        const isLast = index === item.categories.length - 1;
+                        if (isLast) {
+                          return category;
+                        }
+                        return `${category} - `;
+                      })}
+                    </SubTitle>
+                    */}
+
+                    {item.customer && (
+                      <>
+                        <Heading
+                          level={4}
+                          fontFamily="secondary"
+                          fontWeight="regular"
+                          color="#ffffff"
+                          pt={7}
+                        >
+                          Klant
+                        </Heading>
+                        <SubTitle
+                          level={4}
+                          fontFamily="secondary"
+                          fontWeight="light"
+                          color="#ffffff"
+                        >
+                          {item.customer}
+                        </SubTitle>
+                      </>
+                    )}
+                  </Line>
+                </ImageOverlay>
+              </Image>
+            </Link>
           </div>
         </div>
       </div>
