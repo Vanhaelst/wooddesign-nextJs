@@ -4,6 +4,7 @@ import DefaultPage from "src/components/DefaultPage";
 import { GlobalContextProvider } from "src/context/GlobalContextProvider";
 import Head from "next/head";
 import meta from "../src/data/meta";
+import "./globals.css";
 
 const MyApp = ({ Component, pageProps }) => {
   return (

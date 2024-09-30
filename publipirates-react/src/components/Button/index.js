@@ -102,10 +102,7 @@ const StyledButton = styled.a`
         }
     `};
      ${(props) =>
-    props.block &&
-    `
-      width: 100%;
-    `};
+    props.block ? `width: 100%;` : `width: fit-content;`};
 `;
 
 const Button = ({
