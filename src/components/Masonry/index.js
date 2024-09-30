@@ -9,6 +9,7 @@ const MyMasonry = styled(Masonry)`
   display: flex;
   margin-left: -30px; /* gutter size offset */
   width: auto;
+  transition: all 1s;
 
   .my-masonry-grid_column {
     padding-left: 30px; /* gutter size */
@@ -17,10 +18,6 @@ const MyMasonry = styled(Masonry)`
 
   .my-masonry-grid_column > div {
     margin-bottom: 30px;
-  }
-
-  .my-masonry-grid_column:nth-child(2) {
-    margin-top: 100px;
   }
 `;
 

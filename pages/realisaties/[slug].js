@@ -76,46 +76,29 @@ const Realisations = ({ realisation }) => {
         />
       </Head>
       <Navigation />
-      <Breadcrumbs
-        page="Realisatie"
-        variant={1}
-        image={realisation?.images[0]?.url}
-      />
+      <Breadcrumbs title={realisation?.title}>
+        {realisation?.description?.map((descr) => (
+          <Paragraph>{descr.text}</Paragraph>
+        ))}
+      </Breadcrumbs>
 
-      <ContentWrapper>
-        <Grid container>
-          <Grid row>
-            <Grid item xs={12}>
-              <Paragraph>
-                <Link
-                  type="hidden"
-                  textDecoration="none"
-                  onClick={() => router.back()}
-                >
-                  <ChevronLeft
-                    size="10px"
-                    fill="black"
-                    style={{ marginRight: "4px", verticalAlign: "baseline" }}
-                  />{" "}
-                  Terug naar overzicht
-                </Link>
-              </Paragraph>
-            </Grid>
-          </Grid>
-        </Grid>
-      </ContentWrapper>
       <ContentWrapper>
         <Grid container>
           <Grid row mb={10}>
-            <Grid item xs={12} sm={8} md={7}>
+            {/*<Grid item xs={12} sm={8} md={7}>
+
               <Heading level={2} mb={3}>
                 {realisation?.title}
               </Heading>
+
               {realisation?.description?.map((descr) => (
                 <RichText content={descr?.raw} />
               ))}
-            </Grid>
 
+            </Grid>
+             */}
+
+            {/*
             <Details
               as={Grid}
               item
@@ -153,6 +136,7 @@ const Realisations = ({ realisation }) => {
                 )}
               </UnorderedList>
             </Details>
+            */}
           </Grid>
 
           <SimpleReactLightbox>
@@ -177,6 +161,34 @@ const Realisations = ({ realisation }) => {
           </SimpleReactLightbox>
         </Grid>
       </ContentWrapper>
+
+      <ContentWrapper>
+        <Grid container>
+          <Grid row>
+            <Grid item xs={12}>
+              <span>
+                <Link
+                  type="hidden"
+                  textDecoration="none"
+                  onClick={() => router.back()}
+                >
+                  <ChevronLeft
+                    size="10px"
+                    fill="black"
+                    style={{
+                      marginRight: "4px",
+                      verticalAlign: "baseline",
+                      display: "inline",
+                    }}
+                  />{" "}
+                  Terug naar overzicht
+                </Link>
+              </span>
+            </Grid>
+          </Grid>
+        </Grid>
+      </ContentWrapper>
+
       <Footer />
     </div>
   );

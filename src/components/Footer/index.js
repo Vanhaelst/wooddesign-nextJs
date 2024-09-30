@@ -13,9 +13,7 @@ import companyData from "../../data/companyData";
 import useGlobalContext from "../../context/hooks/useGlobalContext";
 
 const Wrapper = styled(Grid)`
-  background-image: url("images/footer.png");
-  background-size: cover;
-  background-position: center center;
+  background-color: #1a1a1a;
 `;
 
 const BottomBar = styled(Grid)`
@@ -32,7 +30,7 @@ const Footer = () => {
         <Grid container>
           <Grid row>
             <Grid item xs={12} sm={4} pb={8}>
-              <Heading level={4} color="white">
+              <Heading mb={6} level={4} color="white">
                 WOODDESIGN BV
               </Heading>
               <Paragraph color="white">
@@ -50,7 +48,7 @@ const Footer = () => {
             </Grid>
 
             <Grid item xs={12} sm={4} pb={8}>
-              <Heading level={4} color="white">
+              <Heading mb={6} level={4} color="white">
                 CONTACT
               </Heading>
               <Paragraph color="white">
@@ -73,7 +71,7 @@ const Footer = () => {
             </Grid>
 
             <Grid item xs={12} sm={4}>
-              <Heading level={4} color="white">
+              <Heading mb={6} level={4} color="white">
                 GET SOCIAL
               </Heading>
 
@@ -129,20 +127,11 @@ const Footer = () => {
                 {companyData.btw}
               </Text>
             </Grid>
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              style={isMobile ? {} : { textAlign: "right" }}
-            >
+            <Grid item xs={12} sm={6} align={"right"}>
               <Text size="Caption2" color="white" fontFamily="secondary">
                 Site by{" "}
-                <Link
-                  href="http://www.publipirates.be"
-                  color="white"
-                  type="hidden"
-                >
-                  PubliPirates
+                <Link href="http://www.studio94.be" color="white" type="hidden">
+                  Studio94
                 </Link>
               </Text>
             </Grid>

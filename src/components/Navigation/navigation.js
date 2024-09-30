@@ -24,8 +24,8 @@ export const navigation = [
     href: "/terras",
   },
   {
-    title: "Vinylvloer",
-    href: "/vinylvloer",
+    title: "Vinyl",
+    href: "/vinyl",
   },
 
   {
