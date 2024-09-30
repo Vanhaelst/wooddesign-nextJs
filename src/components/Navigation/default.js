@@ -7,6 +7,8 @@ import { navigation, topbar } from "./navigation";
 import Logo from "src/theme/logo/Logo";
 import theme from "src/theme";
 import Link from "next/link";
+import Pin from "@/icons/pin";
+import { PhoneIcon, EmailIcon, WarningIcon } from "@chakra-ui/icons";
 
 const DesktopNavigation = ({ id, shown, sticky }) => {
   const router = useRouter();
@@ -14,18 +16,51 @@ const DesktopNavigation = ({ id, shown, sticky }) => {
   return (
     <>
       <div className="bg-[#8dc63f] px-[44px] py-2 flex justify-end">
-        {topbar.map((item) => {
-          return (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="text-s hover:underline text-white mx-[12px]"
-              target={item.target || "_self"}
-            >
-              {item.title}
-            </Link>
-          );
-        })}
+        <div className="flex items-center">
+          <Pin size="18px" fill="white" />
+          <Link
+            href="#"
+            className="text-s text-white ml-[8px] text-[14px] font-thin hover:underline"
+          >
+            Prins Boudewijnlaan 21T, 2550 Kontich.
+          </Link>
+        </div>
+
+        <div className="border-r-[1px] border-solid border-white mx-[12px]" />
+
+        <div className="flex items-center mx-[12px]">
+          <EmailIcon color={"white"} />
+          <Link
+            href="mailto:info@wooddesign.be"
+            className="text-s text-white ml-[8px] text-[14px] font-thin hover:underline"
+          >
+            info@wooddesign.be
+          </Link>
+        </div>
+
+        <div className="border-r-[1px] border-solid border-white mx-[12px]" />
+
+        <div className="flex items-center mx-[12px]">
+          <PhoneIcon color={"white"} />
+          <Link
+            href="tel:+32477208484"
+            className="text-s text-white ml-[8px] text-[14px] font-thin hover:underline"
+          >
+            +32(0) 477.20.84.84
+          </Link>
+        </div>
+
+        <div className="border-r-[1px] border-solid border-white mx-[12px]" />
+
+        <div className="flex items-center mx-[12px]">
+          <Link
+            href="+32477208484"
+            className="text-s text-white text-[14px] font-thin hover:underline"
+          >
+            {" "}
+            Shop online
+          </Link>
+        </div>
       </div>
       <NavBar id={id} shown={shown} sticky={sticky}>
         <Link href="/">

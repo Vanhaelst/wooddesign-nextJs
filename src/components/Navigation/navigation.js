@@ -27,7 +27,11 @@ export const navigation = [
     title: "Vinyl",
     href: "/vinyl",
   },
-
+  {
+    title: "Shop",
+    href: "http://shop.wooddesign.be",
+    target: "_blank",
+  },
   {
     title: "Contact",
     href: "/contact",
