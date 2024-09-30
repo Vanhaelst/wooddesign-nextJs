@@ -4,9 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e60b890b-4f27-4856-9b6a-d695cbaf5a90" name="Changes" comment="update text">
+    <list default="true" id="e60b890b-4f27-4856-9b6a-d695cbaf5a90" name="Changes" comment="fix backdrop bug">
+      <change afterPath="$PROJECT_DIR$/pages/globals.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Row/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Button/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Button/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Slider/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Navigation.mobile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.mobile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/default.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/default.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/services/overview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/services/overview.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,19 +55,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/indyvanhaelst/sites/studio94/wooddesign-nextJs&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/indyvanhaelst/Library/Application Support/JetBrains/Toolbox/apps/IDEA-U/ch-0/232.10203.10/IntelliJ IDEA.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/indyvanhaelst/sites/studio94/wooddesign-nextJs",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "prettierjs.PrettierConfiguration.Package": "/Users/indyvanhaelst/sites/studio94/wooddesign-nextJs/node_modules/prettier",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "ts.external.directory.path": "/Users/indyvanhaelst/Library/Application Support/JetBrains/Toolbox/apps/IDEA-U/ch-0/232.10203.10/IntelliJ IDEA.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
 }</component>
   <component name="RecentsManager">
@@ -69,6 +84,14 @@
       <recent name="$PROJECT_DIR$/public/images/gevel" />
       <recent name="$PROJECT_DIR$/public/images/vinylvloer" />
     </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17890.1" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17890.1" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -98,7 +121,10 @@
       <workItem from="1682502855135" duration="100000" />
       <workItem from="1684078568421" duration="35000" />
       <workItem from="1694783252225" duration="797000" />
-      <workItem from="1703587855492" duration="9132000" />
+      <workItem from="1703587855492" duration="9905000" />
+      <workItem from="1712736679254" duration="1131000" />
+      <workItem from="1715863259031" duration="867000" />
+      <workItem from="1727685746589" duration="8043000" />
     </task>
     <task id="LOCAL-00001" summary="add alu gevels">
       <created>1667918235049</created>
@@ -203,7 +229,23 @@
       <option name="project" value="LOCAL" />
       <updated>1703593664833</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="update email">
+      <option name="closed" value="true" />
+      <created>1703597022504</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1703597022504</updated>
+    </task>
+    <task id="LOCAL-00016" summary="fix backdrop bug">
+      <option name="closed" value="true" />
+      <created>1715864116849</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1715864116849</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,7 +276,9 @@
     <MESSAGE value="update lightbox" />
     <MESSAGE value="update styled-components" />
     <MESSAGE value="remove props from DOM" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove props from DOM" />
+    <MESSAGE value="update email" />
+    <MESSAGE value="fix backdrop bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix backdrop bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

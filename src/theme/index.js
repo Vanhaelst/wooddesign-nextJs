@@ -14,7 +14,8 @@ const theme = {
   font: {
     ...defaultTheme.font,
     family: {
-      primary: "'Source Serif Pro', 'Times New Roman', Times, serif",
+      primary:
+        "'Open Sans',-apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
       secondary:
         "'Open Sans',-apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
       system:
