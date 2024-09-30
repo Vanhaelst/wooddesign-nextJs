@@ -4,22 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e60b890b-4f27-4856-9b6a-d695cbaf5a90" name="Changes" comment="install tailwind&#10;update home">
-      <change afterPath="$PROJECT_DIR$/pages/vinyl.js" afterDir="false" />
+    <list default="true" id="e60b890b-4f27-4856-9b6a-d695cbaf5a90" name="Changes" comment="update pages and realisation detail">
+      <change afterPath="$PROJECT_DIR$/publipirates-react/src/icons/pin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/cookie-verklaring.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cookie-verklaring.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/gevel.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/gevel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/parket.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/parket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/realisaties/[slug].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/realisaties/[slug].js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/terras.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/terras.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/verkoops-voorwaarden.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/verkoops-voorwaarden.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/vinylvloer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Grid/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Grid/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Breadcrumbs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Breadcrumbs/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Masonry/MasonryItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Masonry/MasonryItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Masonry/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Masonry/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Navigation.desktop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.desktop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/default.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/default.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navigation/navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/navigation.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +115,7 @@
       <workItem from="1703587855492" duration="9905000" />
       <workItem from="1712736679254" duration="1131000" />
       <workItem from="1715863259031" duration="867000" />
-      <workItem from="1727685746589" duration="12192000" />
+      <workItem from="1727685746589" duration="13507000" />
     </task>
     <task id="LOCAL-00001" summary="add alu gevels">
       <created>1667918235049</created>
@@ -263,7 +252,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727698222775</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="update pages and realisation detail">
+      <option name="closed" value="true" />
+      <created>1727702360071</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1727702360071</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,6 +294,7 @@
     <MESSAGE value="update email" />
     <MESSAGE value="fix backdrop bug" />
     <MESSAGE value="install tailwind&#10;update home" />
-    <option name="LAST_COMMIT_MESSAGE" value="install tailwind&#10;update home" />
+    <MESSAGE value="update pages and realisation detail" />
+    <option name="LAST_COMMIT_MESSAGE" value="update pages and realisation detail" />
   </component>
 </project>
