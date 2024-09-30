@@ -11,8 +11,6 @@ import Box from "@/components/Box";
 import Link from "@/components/Link";
 import Button from "@/components/Button";
 import CookieBanner from "@/components/Card";
-import ChevronLeft from "@/icons/ChevronLeft";
-import ChevronRight from "@/icons/ChevronRight";
 import meta from "src/data/meta";
 import Navigation from "src/components/Navigation";
 import ContentWrapper from "src/components/ContentWrapper";
@@ -22,45 +20,9 @@ import companyData from "../src/data/companyData";
 
 import { API_SLUG } from "../src/data/api";
 import { Row } from "../src/components/Row";
+import { CallToAction } from "../src/components/CallToAction";
 
 const graphcms = new GraphQLClient(API_SLUG);
-
-const RowOdd = styled.div`
-  margin-bottom: 32px;
-  align-items: center;
-  img {
-    margin-bottom: 24px;
-  }
-  @media screen and (min-width: ${(props) =>
-      props.theme.grid.breakpointSmall}px) {
-    flex-direction: row;
-    img {
-      margin-bottom: 0;
-    }
-  }
-`;
-
-const RowEven = styled.div`
-  align-items: center;
-  flex-direction: column-reverse;
-  img {
-    margin-bottom: 24px;
-  }
-  @media screen and (min-width: ${(props) =>
-      props.theme.grid.breakpointSmall}px) {
-    flex-direction: row;
-    img {
-      margin-bottom: 0;
-    }
-  }
-`;
-
-const breakPoints = [
-  { width: 1, itemsToShow: 1 },
-  { width: 550, itemsToShow: 2, itemsToScroll: 2 },
-  { width: 768, itemsToShow: 3 },
-  { width: 1200, itemsToShow: 4 },
-];
 
 const Section = styled.div`
   padding-top: 48px;
@@ -69,30 +31,13 @@ const Section = styled.div`
     padding-top: 96px;
     padding-bottom: 96px;
   }
+
+  ${(props) =>
+    props.backgroundColor &&
+    `
+        background-color: ${props.backgroundColor};
+    `}
 `;
-
-const Sliderbutton = styled.div`
-  display: flex;
-`;
-
-const myArrow = ({ type, onClick, isEdge }) => {
-  const pointer =
-    type === "PREV" ? (
-      <ChevronLeft size="16px" />
-    ) : (
-      <ChevronRight size="16px" />
-    );
-
-  if (isEdge) {
-    return <></>;
-  }
-
-  return (
-    <Sliderbutton onClick={onClick} disabled={isEdge}>
-      {pointer}
-    </Sliderbutton>
-  );
-};
 
 const Home = () => {
   const { isMobile } = useGlobalContext();
@@ -112,12 +57,12 @@ const Home = () => {
       <ContentWrapper>
         <CookieBanner />
 
+        {/* Intro */}
         <Section as={Box}>
-          {/* Intro */}
           <Grid container>
             <Row isEven={false} image="images/intro2.jpeg">
               <Heading level={2} textTransform="uppercase" mb={4}>
-                Welkom bij WoodDesign BVBA
+                WoodDesign BVBA
               </Heading>
               <Paragraph mb={2}>
                 Al meer dan 20 jaar is WoodDesign BVBA een toonaangevend bedrijf
@@ -147,8 +92,12 @@ const Home = () => {
                 Maak een afspraak
               </Button>
             </Row>
+          </Grid>
+        </Section>
 
-            {/* Diensten */}
+        {/* Diensten */}
+        <Section as={Box} backgroundColor="#fafafa">
+          <Grid container>
             {services.map((service, index) => (
               <Row isEven={index % 2 !== 0} image={service.image}>
                 <Heading level={3} color="#464646">
@@ -160,12 +109,16 @@ const Home = () => {
                 </Button>
               </Row>
             ))}
+          </Grid>
+        </Section>
 
-            {/* WEBSHOP */}
+        {/* WEBSHOP */}
+        <Section as={Box}>
+          <Grid container>
             <Row isEven={true} image="images/webshop.png">
               <Heading
-                level={2}
-                textTransform="uppercase"
+                level={3}
+                textTransform=""
                 show={{ xs: false, sm: true }}
               >
                 Webshop
@@ -188,6 +141,12 @@ const Home = () => {
             </Row>
           </Grid>
         </Section>
+
+        <CallToAction
+          title="Ontdek onze webshop."
+          description="Bezoek onze webshop voor een breed assortiment aan producten en materialen voor parketvloeren, gevelbekleding en terrassen. Kies voor kwalitatieve materialen en maak jouw project tot een succes!"
+          button={{ cta: "Bekijk onze webshop", href: "shop.wooddesign.be" }}
+        />
       </ContentWrapper>
       <Footer />
     </div>

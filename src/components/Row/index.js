@@ -40,7 +40,7 @@ export const Row = ({ image, isEven, children }) => {
     return (
       <RowEven as={Grid} row>
         <Grid item xs={12} sm={6} lg={{ width: 6 }}>
-          <Image src={image} objectFit height="100%" />
+          <Image src={image} objectFit height="100%" className="rounded-3xl" />
         </Grid>
         <Grid
           item

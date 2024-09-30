@@ -101,11 +101,7 @@ const Contact = () => {
         />
       </Head>
       <Navigation />
-      <Breadcrumbs
-        page="Contact"
-        variant={1}
-        image={"images/hero-contact.jpeg"}
-      />
+
       <ContentWrapper>
         <Grid container>
           <Grid row>

@@ -12,6 +12,7 @@ import { Paragraph } from "../publipirates-react";
 import Masonry from "../src/components/Masonry";
 import Button from "@/components/Button";
 import { API_SLUG } from "../src/data/api";
+import { CallToAction } from "../src/components/CallToAction";
 
 const graphcms = new GraphQLClient(API_SLUG);
 const category = ["Parket"];
@@ -106,6 +107,12 @@ const Services = ({ realisations, pagination }) => {
           </Grid>
         </Grid>
       </ContentWrapper>
+
+      <CallToAction
+        title="Graag een offerte?"
+        description="Benieuwd naar de mogelijkheden voor jouw project? Vraag vandaag nog een vrijblijvende offerte aan en ontdek hoe wij jou kunnen helpen."
+        button={{ cta: "Ik wil een offerte", href: "/contact" }}
+      />
 
       <Footer />
     </div>
