@@ -18,6 +18,7 @@ import ListItem from "@/components/List/ListItem";
 import Text from "@/components/Text";
 import Link from "@/components/Link";
 import ChevronLeft from "@/icons/ChevronLeft";
+import { RichText } from "../../src/components/richtext/richtext.organism";
 
 const Details = styled.div`
   margin-top: 24px;
@@ -111,7 +112,7 @@ const Realisations = ({ realisation }) => {
                 {realisation?.title}
               </Heading>
               {realisation?.description?.map((descr) => (
-                <Paragraph>{descr.text}</Paragraph>
+                <RichText content={descr?.raw} />
               ))}
             </Grid>
 
@@ -183,7 +184,7 @@ const Realisations = ({ realisation }) => {
 
 export async function getServerSideProps(context) {
   const graphcms = new GraphQLClient(
-    "https://api-eu-central-1.graphcms.com/v2/ckl3m5wq24osf01z8ch6h9vwq/master"
+    "https://api-eu-central-1.graphcms.com/v2/ckl3m5wq24osf01z8ch6h9vwq/master",
   );
 
   let { realisation } = await graphcms.request(
@@ -192,7 +193,7 @@ export async function getServerSideProps(context) {
               realisation(where: {slug: "${context.params.slug}"}) {
                 title
                 description{
-                  text
+                  raw
                 }
                 images{
                   url
@@ -203,7 +204,7 @@ export async function getServerSideProps(context) {
                 customer
               }
             } 
-        `
+        `,
   );
 
   return {

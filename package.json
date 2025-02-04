@@ -13,6 +13,7 @@
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
+    "@graphcms/rich-text-react-renderer": "^0.6.2",
     "@mailchimp/mailchimp_marketing": "^3.0.80",
     "@types/node": "^20.10.5",
     "axios": "^1.6.2",
