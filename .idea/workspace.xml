@@ -4,18 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e60b890b-4f27-4856-9b6a-d695cbaf5a90" name="Changes" comment="Update topbar">
-      <change afterPath="$PROJECT_DIR$/publipirates-react/src/icons/cart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CallToAction/index.js" afterDir="false" />
+    <list default="true" id="e60b890b-4f27-4856-9b6a-d695cbaf5a90" name="Changes" comment="Update topbar - shop">
+      <change afterPath="$PROJECT_DIR$/src/components/richtext/richtext.organism.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/gevel.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/gevel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/parket.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/parket.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/realisaties/[slug].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/realisaties/[slug].js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/terras.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/terras.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/vinyl.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/vinyl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/wand.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/wand.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Image/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Image/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/theme/font.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/theme/font.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/default.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/default.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/navigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Row/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Row/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Breadcrumbs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Breadcrumbs/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Masonry/MasonryItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Masonry/MasonryItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Masonry/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Masonry/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +64,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/indyvanhaelst/sites/studio94/wooddesign-nextJs",
+    "last_opened_file_path": "/Users/indyvanhaelst/sites/studio94/wooddesign-nextJs/src/components",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -72,6 +78,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/pages" />
     </key>
@@ -121,7 +128,9 @@
       <workItem from="1703587855492" duration="9905000" />
       <workItem from="1712736679254" duration="1131000" />
       <workItem from="1715863259031" duration="867000" />
-      <workItem from="1727685746589" duration="16628000" />
+      <workItem from="1727685746589" duration="17310000" />
+      <workItem from="1738585868162" duration="1454000" />
+      <workItem from="1738597627142" duration="7053000" />
     </task>
     <task id="LOCAL-00001" summary="add alu gevels">
       <created>1667918235049</created>
@@ -274,7 +283,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727703809508</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Update topbar - shop">
+      <option name="closed" value="true" />
+      <created>1727707012774</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1727707012774</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,6 +327,19 @@
     <MESSAGE value="install tailwind&#10;update home" />
     <MESSAGE value="update pages and realisation detail" />
     <MESSAGE value="Update topbar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update topbar" />
+    <MESSAGE value="Update topbar - shop" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update topbar - shop" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/pages/realisaties/[slug].js</url>
+          <line>70</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -6,16 +6,12 @@ import meta from "src/data/meta";
 import styled from "styled-components";
 import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox";
 import Navigation from "src/components/Navigation";
-import Heading from "@/components/Heading";
 import Grid from "@/components/Grid";
 import Paragraph from "@/components/Paragraph";
 import Image from "@/components/Image";
 import Footer from "../../src/components/Footer";
 import Breadcrumbs from "../../src/components/Breadcrumbs";
 import ContentWrapper from "../../src/components/ContentWrapper";
-import UnorderedList from "@/components/List/UnorderedList";
-import ListItem from "@/components/List/ListItem";
-import Text from "@/components/Text";
 import Link from "@/components/Link";
 import ChevronLeft from "@/icons/ChevronLeft";
 import { RichText } from "../../src/components/richtext/richtext.organism";
@@ -61,6 +57,7 @@ const Realisations = ({ realisation }) => {
 
   const router = useRouter();
 
+  console.log("description", realisation?.description);
   return (
     <div>
       <Head>
@@ -78,7 +75,7 @@ const Realisations = ({ realisation }) => {
       <Navigation />
       <Breadcrumbs title={realisation?.title}>
         {realisation?.description?.map((descr) => (
-          <Paragraph>{descr.text}</Paragraph>
+          <RichText content={descr?.raw} />
         ))}
       </Breadcrumbs>
 
@@ -204,7 +201,7 @@ export async function getServerSideProps(context) {
             {
               realisation(where: {slug: "${context.params.slug}"}) {
                 title
-                description{
+                description {
                   raw
                 }
                 images{

@@ -97,7 +97,7 @@ const Image = styled.div.withConfig({
 const Breadcrumbs = ({ title, children }) => {
   return (
     <div className="container max-w-5xl mx-auto px-4 text-center py-10">
-      <Heading level={3} textTransform="uppercase" mb={5}>
+      <Heading level={3} textTransform="uppercase">
         {title}
       </Heading>
       <div className="border-b-2 my-4 border-solid border-gray-300" />

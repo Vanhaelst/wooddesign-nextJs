@@ -62,31 +62,32 @@ const Home = () => {
           <Grid container>
             <Row isEven={false} image="images/intro2.jpeg">
               <Heading level={2} textTransform="uppercase" mb={4}>
-                WoodDesign BVBA
+                Wooddesign
               </Heading>
               <Paragraph mb={2}>
-                Al meer dan 20 jaar is WoodDesign BVBA een toonaangevend bedrijf
-                in de levering en plaatsing van traditionele parketvloeren,
-                houten gevelbekleding en terrassen. Wat begon als een
-                eenmanszaak in 1997, is uitgegroeid tot een bloeiend
-                familiebedrijf met een team van ervaren vakmensen.
+                Al meer dan 25 jaar is Wooddesign een toonaangevend bedrijf in
+                de levering en plaatsing van parketvloeren, gevelbekleding en
+                terrassen. Wat begon als een eenmanszaak in 1997, is uitgegroeid
+                tot een bloeiend bedrijf met een team van ervaren vakmensen.
               </Paragraph>
               <Paragraph mb={6}>
                 Onze kracht ligt in de combinatie van jarenlange expertise,
-                diepgaande materiaalkennis en het gebruik van alleen de beste
+                diepgaande materiaalkennis en het gebruik van
                 kwaliteitsproducten. Of het nu gaat om een stijlvolle
-                parketvloer, duurzame houten gevelbekleding of een prachtig
-                terras, wij staan garant voor een hoog afwerkingsniveau en een
-                service die verder reikt dan de plaatsing.
+                parketvloer, duurzame gevelbekleding of een prachtig terras, wij
+                staan garant voor een hoog afwerkingsniveau en een service die
+                verder reikt dan de plaatsing.
               </Paragraph>
             </Row>
             <Row isEven={true} image="images/toonzaal.jpeg">
               <Paragraph mb={6}>
-                Breng een bezoek aan onze toonzaal in Kontich en ontdek ons
-                uitgebreide assortiment, van natuurlijke houtsoorten tot moderne
-                materialen zoals Trespa, Eternit en Rockpanel. Bij WoodDesign
-                BVBA werken we samen met u om uw project tot in de perfectie te
-                realiseren.
+                Breng een bezoek aan onze toonzaal en ontdek ons uitgebreide
+                assortiment van&nbsp;natuurlijke houtsoorten tot moderne
+                materialen zoals Aluminium, Bamboe, Trespa, Equitone, Rockpanel,
+                ...
+              </Paragraph>
+              <Paragraph mb={6}>
+                Bij Wooddesign werken we samen om uw project te realiseren.
               </Paragraph>
               <Button outline as={Link} href="/contact" block={isMobile}>
                 Maak een afspraak

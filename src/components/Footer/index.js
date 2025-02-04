@@ -25,7 +25,7 @@ const Footer = () => {
   const { isMobile } = useGlobalContext();
 
   return (
-    <div>
+    <div className="bg-[#1a1a1a]">
       <Wrapper pt={11} pb={8}>
         <Grid container>
           <Grid row>

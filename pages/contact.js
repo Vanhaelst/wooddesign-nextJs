@@ -5,7 +5,6 @@ import Navigation from "src/components/Navigation";
 import Heading from "@/components/Heading";
 import Grid from "@/components/Grid";
 import Footer from "../src/components/Footer";
-import Breadcrumbs from "../src/components/Breadcrumbs";
 import UnorderedList from "@/components/List/UnorderedList";
 import ListItem from "@/components/List/ListItem";
 import Text from "@/components/Text";

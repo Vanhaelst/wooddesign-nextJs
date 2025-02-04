@@ -64,23 +64,6 @@ const Block = ({ item, enterCount, forwardedRef }) => {
                         {item.title}
                       </Heading>
                     )}
-                    {/*
-                    <SubTitle
-                      level={4}
-                      fontFamily="secondary"
-                      fontWeight="regular"
-                      color="#ffffff"
-                    >
-                      {item.categories.map((category, index) => {
-                        const isLast = index === item.categories.length - 1;
-                        if (isLast) {
-                          return category;
-                        }
-                        return `${category} - `;
-                      })}
-                    </SubTitle>
-                    */}
-
                     {item.customer && (
                       <>
                         <Heading

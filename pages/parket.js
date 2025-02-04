@@ -80,14 +80,22 @@ const Services = ({ realisations, pagination }) => {
 
       <Navigation />
       <Breadcrumbs title="Parket">
+        <Paragraph className="mb-3">
+          Bij ons vindt u een uitgebreide selectie van hoogwaardige
+          parketvloeren die uw interieur een tijdloze en warme uitstraling
+          geven. Of u nu op zoek bent naar een klassieke eiken vloer, een
+          moderne visgraatvloer of een unieke houtsoort, wij bieden de perfecte
+          oplossing voor iedere smaak en ruimte. Met jarenlange ervaring in de
+          vloerenbranche staan wij garant voor vakmanschap, duurzaamheid en
+          persoonlijk advies.
+        </Paragraph>
+        <Paragraph className="mb-3">
+          Verken onze collectie, ontdek de mogelijkheden voor uw woning of
+          project, en laat u inspireren door de schoonheid van parketvloeren.
+        </Paragraph>
         <Paragraph>
-          Bij Wooddesign bieden we een uitgebreid assortiment aan hoogwaardige
-          parketvloeren. Of je nu kiest voor een klassieke houten vloer of een
-          moderne variant, wij zorgen ervoor dat je parketvloer duurzaam,
-          elegant en tijdloos is. Ons ervaren team begeleidt je van keuze tot
-          plaatsing, met aandacht voor detail en een perfecte afwerking. Ontdek
-          hoe we jouw interieur kunnen transformeren met een parketvloer die
-          warmte en stijl uitstraalt. Neem contact op voor advies op maat!
+          Wij helpen u graag verder bij het maken van de juiste keuze in onze
+          toonzaal te Kontich
         </Paragraph>
       </Breadcrumbs>
 

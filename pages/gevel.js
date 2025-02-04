@@ -78,19 +78,25 @@ const Gevel = ({ realisations, pagination }) => {
       </Head>
       <Navigation />
       <Breadcrumbs title="Gevel">
-        <Paragraph mb={4}>
-          Bij Wooddesign zorgen we ervoor dat we steeds de nieuwste materialen
-          en technieken voor gevelbekleding aanbieden, waaronder hout,
-          aluminium, Trespa, en spuitkurk. We werken nauw samen met onze klanten
-          om de beste oplossing voor hun gevel te vinden, afgestemd op hun
-          wensen en omgeving.
+        <Paragraph className="mb-3">
+          Bij ons vindt u de perfecte oplossing om de buitenkant van uw woning
+          of project te verfraaien en te beschermen. Gevelbekleding speelt niet
+          alleen een cruciale rol in de uitstraling van uw gebouw, maar biedt
+          ook bescherming tegen weersinvloeden en bevordert de
+          energie-efficiëntie. Of u nu kiest voor houten, aluminium, zinken,
+          kunststof of innovatieve gevelsystemen, wij bieden een breed scala aan
+          materialen en stijlen die aansluiten bij uw wensen en het karakter van
+          uw woning.
         </Paragraph>
-        <Paragraph>
-          Van het eerste ontwerp tot de uiteindelijke plaatsing, garandeert ons
-          ervaren team vakmanschap en een hoogwaardige afwerking. Bij Wooddesign
-          vertalen we jouw ideeën naar een duurzaam en visueel aantrekkelijk
-          resultaat. Neem contact met ons op en ontdek wat we voor jouw
-          gevelproject kunnen betekenen.
+        <Paragraph className="mb-3">
+          Met onze jarenlange ervaring in gevelbekleding staan wij voor
+          kwaliteit, duurzaamheid en maatwerk. Wij adviseren u graag over de
+          beste keuze voor uw gevel, zodat deze zowel esthetisch als functioneel
+          optimaal presteert.
+        </Paragraph>
+        <Paragraph className="mb-3">
+          Ontdek de diverse mogelijkheden in onze toonzaal te Kontich en geef uw
+          gevel de uitstraling die het verdient!
         </Paragraph>
       </Breadcrumbs>
 

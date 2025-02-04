@@ -80,15 +80,24 @@ const Terras = ({ realisations, pagination }) => {
       </Head>
       <Navigation />
       <Breadcrumbs title="Terras">
-        <Paragraph>
-          Bij Wooddesign creëren we duurzame en stijlvolle houten terrassen die
-          perfect aansluiten bij jouw buitenruimte. Of het nu gaat om een tuin,
-          dakterras of patio, we bieden maatwerkoplossingen met hoogwaardige
-          houtsoorten en een afwerking die lang meegaat. Ons vakbekwame team
-          begeleidt je door het hele proces, van het ontwerp tot de installatie,
-          met oog voor detail en kwaliteit. Een houten terras voegt niet alleen
-          waarde toe aan je woning, maar biedt ook een warme en natuurlijke
-          uitstraling. Neem contact met ons op voor jouw ideale terras!
+        <Paragraph className="mb-3">
+          Of u nu een gezellige zithoek, een stijlvolle loungeplek of een
+          functionele buitenruimte wilt creëren, wij bieden de ideale
+          oplossingen voor uw terras. Met een breed assortiment aan houten
+          planken, bamboe , composiet materialen en andere hoogwaardige
+          afwerkingen, helpen wij u de perfecte basis te leggen voor uw
+          buitenbeleving.
+        </Paragraph>
+        <Paragraph className="mb-3">
+          Een goed terras is meer dan alleen een vloer; het is de plek waar u
+          ontspant, geniet van het buitenleven en samenkomt met vrienden en
+          familie. Wij adviseren u graag over de materialen die het beste bij uw
+          wensen en de specifieke eisen van uw buitenruimte passen.
+        </Paragraph>
+        <Paragraph className="mb-3">
+          Laat u inspireren door onze stijlvolle en duurzame terrasopties in
+          onze toonzaal te Kontich en geef uw buitenruimte de uitstraling die
+          het verdient!
         </Paragraph>
       </Breadcrumbs>
       <ContentWrapper>

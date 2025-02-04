@@ -5,12 +5,10 @@ import meta from "src/data/meta";
 import Navigation from "src/components/Navigation";
 import Grid from "@/components/Grid";
 import Footer from "../src/components/Footer";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
 import Breadcrumbs from "../src/components/Breadcrumbs";
 import ContentWrapper from "../src/components/ContentWrapper";
 import companyData from "../src/data/companyData";
 import { Paragraph } from "../publipirates-react";
-import { Link } from "@chakra-ui/react";
 import Masonry from "../src/components/Masonry";
 import Button from "@/components/Button";
 import { API_SLUG } from "../src/data/api";
@@ -81,16 +79,28 @@ const Services = ({ realisations, pagination }) => {
 
       <Navigation />
       <Breadcrumbs title="Vinyl">
-        <Paragraph mb={4}>
-          Bij Wooddesign bieden we hoogwaardige vinylvloeren die stijl,
-          duurzaamheid en comfort combineren. Vinyl is een veelzijdige keuze die
-          bestand is tegen vocht en slijtage, waardoor het ideaal is voor elke
-          ruimte in huis. Of je nu op zoek bent naar een vloer met een houtlook
-          of een moderne, strakke uitstraling, wij hebben een breed gamma om uit
-          te kiezen. Ons team begeleidt je van advies tot plaatsing, met oog
-          voor detail en een perfecte afwerking. Ontdek hoe vinyl jouw interieur
-          kan verrijken!
+        <Paragraph className="mb-3">
+          Op zoek naar een vloer die zowel stijlvol als praktisch is?
+          Vinylvloeren bieden de perfecte combinatie van esthetiek en
+          functionaliteit voor elke ruimte. Of u nu een moderne,
+          onderhoudsvriendelijke vloer zoekt voor uw woonkamer, keuken of
+          badkamer, onze vinylvloeren zijn de ideale keuze. Ze zijn verkrijgbaar
+          in verschillende stijlen, kleuren en patronen, van hout- en
+          steeneffecten tot strakke, moderne designs.
         </Paragraph>
+        <Paragraph className="mb-3">
+          Met de voordelen van waterbestendigheid, eenvoudige installatie en
+          langdurige duurzaamheid, bieden onze vinylvloeren een uitstekende
+          oplossing voor iedere woning of commercieel project. Ontdek onze
+          uitgebreide collectie, laat u inspireren door talloze mogelijkheden en
+          vind de vinylvloer die perfect past bij uw interieur. Wij staan klaar
+          om u te helpen met advies, levering en installatie.
+        </Paragraph>
+        <Paragraph className="mb-3">
+          Geef uw vloer een nieuwe look met de veelzijdigheid van vinyl!
+        </Paragraph>
+
+        {/*
         <Paragraph>
           <Link
             href="https://coretecfloors.com/nl-nl"
@@ -108,6 +118,7 @@ const Services = ({ realisations, pagination }) => {
             Parquetvinyl <ExternalLinkIcon mx="2px" />
           </Link>
         </Paragraph>
+       */}
       </Breadcrumbs>
 
       <ContentWrapper>
