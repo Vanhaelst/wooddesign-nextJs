@@ -139,27 +139,23 @@ const Home = ({ instagramPosts, realisations }) => {
                 justifyContent="flex-start"
                 flexDirection="column"
               >
-                <Heading
-                  level={2}
-                  textTransform="uppercase"
-                  show={{ xs: false, sm: true }}
-                  mb={4}
-                >
-                  Over Wooddesign
+                <Heading level={2} textTransform="uppercase" mb={4}>
+                  Wooddesign
                 </Heading>
                 <Paragraph mb={2}>
-                  Na een jaartje in het bedrijf van m'n vader te hebben gewerkt,
-                  ben ik in 1997 een eenmanszaak begonnen in het leveren en
-                  plaatsen van traditionele parketvloeren.
+                  Al meer dan 25 jaar is Wooddesign een toonaangevend bedrijf in
+                  de levering en plaatsing van parketvloeren, gevelbekleding en
+                  terrassen. Wat begon als een eenmanszaak in 1997, is
+                  uitgegroeid tot een bloeiend bedrijf met een team van ervaren
+                  vakmensen.
                 </Paragraph>
-                <Paragraph mb={2}>
-                  Vanaf 1999 ben ik, naast parketvloeren, ook gestart met het
-                  plaatsen van houten gevelbekleding en terrassen, en dit bleek
-                  al snel een meerwaarde te zijn voor de groei van het bedrijf.
-                </Paragraph>
-                <Paragraph>
-                  Eind 2005 ben ik overgeschakeld van eenmanszaak naar een bvba
-                  en heb ik 4 vaste werknemers in dienst.
+                <Paragraph mb={6}>
+                  Onze kracht ligt in de combinatie van jarenlange expertise,
+                  diepgaande materiaalkennis en het gebruik van
+                  kwaliteitsproducten. Of het nu gaat om een stijlvolle
+                  parketvloer, duurzame gevelbekleding of een prachtig terras,
+                  wij staan garant voor een hoog afwerkingsniveau en een service
+                  die verder reikt dan de plaatsing.
                 </Paragraph>
               </Grid>
               <Grid item xs={12} sm={6} lg={{ width: 5, push: 2 }}>
@@ -187,31 +183,18 @@ const Home = ({ instagramPosts, realisations }) => {
                 justifyContent="flex-end"
                 flexDirection="column"
               >
-                <Paragraph mb={2}>
-                  Ondertussen meer dan{" "}
-                  <strong style={{ fontWeight: 500 }}>20 jaar</strong> en{" "}
-                  <strong style={{ fontWeight: 500 }}>
-                    duizenden vierkante meters{" "}
-                  </strong>
-                  verder, onderscheiden we ons van velen.
+                <Paragraph mb={6}>
+                  Breng een bezoek aan onze toonzaal en ontdek ons uitgebreide
+                  assortiment van&nbsp;natuurlijke houtsoorten tot moderne
+                  materialen zoals Aluminium, Bamboe, Trespa, Equitone,
+                  Rockpanel, ...
                 </Paragraph>
-                <Paragraph mb={5}>
-                  Niet alleen door onze{" "}
-                  <strong style={{ fontWeight: 500 }}>
-                    jarenlange ervaring
-                  </strong>{" "}
-                  en materialenkennis, maar eveneens door het gebruik van
-                  kwaliteitsvolle producten gecombineerd met een hoge
-                  afwerkingsgraad en professionele dienstverlening , ook na de
-                  plaatsing!
+                <Paragraph mb={6}>
+                  Bij Wooddesign werken we samen om uw project te realiseren.
                 </Paragraph>
-                <Paragraph mb={5}>
-                  In onze <strong style={{ fontWeight: 500 }}>toonzaal</strong>{" "}
-                  te Kontich vind je een uitgebreid gamma aan parketvloeren,
-                  houten terrassen en verschillende soorten gevelbekledingen,
-                  gaande van hout en aluminium tot plaatmaterialen zoals Trespa,
-                  Eternit, Rockpanel...
-                </Paragraph>
+                <Button outline as={Link} href="/contact" block={isMobile}>
+                  Maak een afspraak
+                </Button>
               </Grid>
             </RowEven>
           </Grid>
@@ -416,7 +399,7 @@ export async function getStaticProps() {
           url
         }
       }
-    }`
+    }`,
   );
 
   return {
