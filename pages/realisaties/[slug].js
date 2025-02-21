@@ -3,11 +3,9 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { GraphQLClient } from "graphql-request";
 import meta from "src/data/meta";
-import styled from "styled-components";
 import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox";
 import Navigation from "src/components/Navigation";
 import Grid from "@/components/Grid";
-import Paragraph from "@/components/Paragraph";
 import Image from "@/components/Image";
 import Footer from "../../src/components/Footer";
 import Breadcrumbs from "../../src/components/Breadcrumbs";
@@ -15,15 +13,8 @@ import ContentWrapper from "../../src/components/ContentWrapper";
 import Link from "@/components/Link";
 import ChevronLeft from "@/icons/ChevronLeft";
 import { RichText } from "../../src/components/richtext/richtext.organism";
-
-const Details = styled.div`
-  margin-top: 24px;
-  @media screen and (min-width: ${(props) =>
-      props.theme.grid.breakpointSmall}px) {
-    border-left: 1px solid rgba(0, 0, 0, 0.2);
-    margin-top: 0;
-  }
-`;
+import ListItem from "@/components/List/ListItem";
+import Text from "@/components/Text";
 
 const Realisations = ({ realisation }) => {
   const options = {
@@ -77,65 +68,41 @@ const Realisations = ({ realisation }) => {
         {realisation?.description?.map((descr) => (
           <RichText content={descr?.raw} />
         ))}
+        <ul className="w-full flex justify-center space-x-4 divide-x mt-4">
+          <Text fontFamily="secondary">|</Text>
+          {realisation?.wood && (
+            <ListItem>
+              <Text fontWeight="bold">Houtsoort:&nbsp;</Text>
+              <Text fontFamily="secondary">{realisation?.wood}</Text>
+            </ListItem>
+          )}
+          {realisation?.wood && <Text fontFamily="secondary">|</Text>}
+          {realisation?.type && (
+            <ListItem>
+              <Text fontWeight="bold">Type:&nbsp;</Text>
+              <Text fontFamily="secondary">{realisation?.type}</Text>
+            </ListItem>
+          )}
+          {realisation?.type && <Text fontFamily="secondary">|</Text>}
+          {realisation?.total && (
+            <ListItem>
+              <Text fontWeight="bold">Totaal:&nbsp;</Text>
+              <Text fontFamily="secondary">{realisation?.total}</Text>
+            </ListItem>
+          )}{" "}
+          {realisation?.total && <Text fontFamily="secondary">|</Text>}
+          {realisation?.customer && (
+            <ListItem>
+              <Text fontWeight="bold">Klant:&nbsp;</Text>
+              <Text fontFamily="secondary">{realisation?.customer}</Text>
+            </ListItem>
+          )}{" "}
+          {realisation?.customer && <Text fontFamily="secondary">|</Text>}
+        </ul>
       </Breadcrumbs>
 
       <ContentWrapper>
         <Grid container>
-          <Grid row mb={10}>
-            {/*<Grid item xs={12} sm={8} md={7}>
-
-              <Heading level={2} mb={3}>
-                {realisation?.title}
-              </Heading>
-
-              {realisation?.description?.map((descr) => (
-                <RichText content={descr?.raw} />
-              ))}
-
-            </Grid>
-             */}
-
-            {/*
-            <Details
-              as={Grid}
-              item
-              xs={12}
-              sm={{ width: 4 }}
-              md={{ width: 3, push: 2 }}
-            >
-              <Heading level={3} mb={3}>
-                Details
-              </Heading>
-              <UnorderedList>
-                {realisation?.wood && (
-                  <ListItem>
-                    <Text fontWeight="bold">Houtsoort:&nbsp;</Text>
-                    <Text fontFamily="secondary">{realisation?.wood}</Text>
-                  </ListItem>
-                )}
-                {realisation?.type && (
-                  <ListItem>
-                    <Text fontWeight="bold">Type:&nbsp;</Text>
-                    <Text fontFamily="secondary">{realisation?.type}</Text>
-                  </ListItem>
-                )}
-                {realisation?.total && (
-                  <ListItem>
-                    <Text fontWeight="bold">Totaal:&nbsp;</Text>
-                    <Text fontFamily="secondary">{realisation?.total}</Text>
-                  </ListItem>
-                )}
-                {realisation?.customer && (
-                  <ListItem>
-                    <Text fontWeight="bold">Klant:&nbsp;</Text>
-                    <Text fontFamily="secondary">{realisation?.customer}</Text>
-                  </ListItem>
-                )}
-              </UnorderedList>
-            </Details>
-            */}
-          </Grid>
-
           <SimpleReactLightbox>
             <SRLWrapper options={options}>
               <Grid row>

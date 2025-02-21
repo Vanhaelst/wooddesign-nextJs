@@ -11,11 +11,6 @@ const MyMasonry = styled(Masonry)`
   width: auto;
   transition: all 1s;
 
-  .my-masonry-grid_column {
-    padding-left: 30px; /* gutter size */
-    background-clip: padding-box;
-  }
-
   .my-masonry-grid_column > div {
     margin-bottom: 30px;
   }
@@ -28,17 +23,27 @@ const breakpointColumnsObj = {
   500: 1,
 };
 
-const MasonryGrid = ({ items }) => {
+const MasonryGrid = ({ items, type = "grid" }) => {
+  if (type === "masonry") {
+    return (
+      <MyMasonry
+        breakpointCols={breakpointColumnsObj}
+        className="my-masonry-grid"
+        columnClassName="my-masonry-grid_column"
+      >
+        {items.map((item) => (
+          <MasonryItem item={item} />
+        ))}
+      </MyMasonry>
+    );
+  }
+
   return (
-    <MyMasonry
-      breakpointCols={breakpointColumnsObj}
-      className="my-masonry-grid"
-      columnClassName="my-masonry-grid_column"
-    >
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
       {items.map((item) => (
         <MasonryItem item={item} />
       ))}
-    </MyMasonry>
+    </div>
   );
 };
 

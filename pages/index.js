@@ -146,7 +146,10 @@ const Home = () => {
         <CallToAction
           title="Ontdek onze webshop."
           description="Bezoek onze webshop voor een breed assortiment aan producten en materialen voor parketvloeren, gevelbekleding en terrassen. Kies voor kwalitatieve materialen en maak jouw project tot een succes!"
-          button={{ cta: "Bekijk onze webshop", href: "shop.wooddesign.be" }}
+          button={{
+            cta: "Bekijk onze webshop",
+            href: "https://shop.wooddesign.be",
+          }}
         />
       </ContentWrapper>
       <Footer />
