@@ -3,31 +3,18 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { GraphQLClient } from "graphql-request";
 import meta from "src/data/meta";
-import styled from "styled-components";
 import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox";
 import Navigation from "src/components/Navigation";
-import Heading from "@/components/Heading";
 import Grid from "@/components/Grid";
-import Paragraph from "@/components/Paragraph";
 import Image from "@/components/Image";
 import Footer from "../../src/components/Footer";
 import Breadcrumbs from "../../src/components/Breadcrumbs";
 import ContentWrapper from "../../src/components/ContentWrapper";
-import UnorderedList from "@/components/List/UnorderedList";
-import ListItem from "@/components/List/ListItem";
-import Text from "@/components/Text";
 import Link from "@/components/Link";
 import ChevronLeft from "@/icons/ChevronLeft";
 import { RichText } from "../../src/components/richtext/richtext.organism";
-
-const Details = styled.div`
-  margin-top: 24px;
-  @media screen and (min-width: ${(props) =>
-      props.theme.grid.breakpointSmall}px) {
-    border-left: 1px solid rgba(0, 0, 0, 0.2);
-    margin-top: 0;
-  }
-`;
+import ListItem from "@/components/List/ListItem";
+import Text from "@/components/Text";
 
 const Realisations = ({ realisation }) => {
   const options = {
@@ -61,6 +48,7 @@ const Realisations = ({ realisation }) => {
 
   const router = useRouter();
 
+  console.log("description", realisation?.description);
   return (
     <div>
       <Head>
@@ -76,85 +64,45 @@ const Realisations = ({ realisation }) => {
         />
       </Head>
       <Navigation />
-      <Breadcrumbs
-        page="Realisatie"
-        variant={1}
-        image={realisation?.images[0]?.url}
-      />
+      <Breadcrumbs title={realisation?.title}>
+        {realisation?.description?.map((descr) => (
+          <RichText content={descr?.raw} />
+        ))}
+        <ul className="w-full flex justify-center space-x-4 divide-x mt-4">
+          <Text fontFamily="secondary">|</Text>
+          {realisation?.wood && (
+            <ListItem>
+              <Text fontWeight="bold">Houtsoort:&nbsp;</Text>
+              <Text fontFamily="secondary">{realisation?.wood}</Text>
+            </ListItem>
+          )}
+          {realisation?.wood && <Text fontFamily="secondary">|</Text>}
+          {realisation?.type && (
+            <ListItem>
+              <Text fontWeight="bold">Type:&nbsp;</Text>
+              <Text fontFamily="secondary">{realisation?.type}</Text>
+            </ListItem>
+          )}
+          {realisation?.type && <Text fontFamily="secondary">|</Text>}
+          {realisation?.total && (
+            <ListItem>
+              <Text fontWeight="bold">Totaal:&nbsp;</Text>
+              <Text fontFamily="secondary">{realisation?.total}</Text>
+            </ListItem>
+          )}{" "}
+          {realisation?.total && <Text fontFamily="secondary">|</Text>}
+          {realisation?.customer && (
+            <ListItem>
+              <Text fontWeight="bold">Klant:&nbsp;</Text>
+              <Text fontFamily="secondary">{realisation?.customer}</Text>
+            </ListItem>
+          )}{" "}
+          {realisation?.customer && <Text fontFamily="secondary">|</Text>}
+        </ul>
+      </Breadcrumbs>
 
       <ContentWrapper>
         <Grid container>
-          <Grid row>
-            <Grid item xs={12}>
-              <Paragraph>
-                <Link
-                  type="hidden"
-                  textDecoration="none"
-                  onClick={() => router.back()}
-                >
-                  <ChevronLeft
-                    size="10px"
-                    fill="black"
-                    style={{ marginRight: "4px", verticalAlign: "baseline" }}
-                  />{" "}
-                  Terug naar overzicht
-                </Link>
-              </Paragraph>
-            </Grid>
-          </Grid>
-        </Grid>
-      </ContentWrapper>
-      <ContentWrapper>
-        <Grid container>
-          <Grid row mb={10}>
-            <Grid item xs={12} sm={8} md={7}>
-              <Heading level={2} mb={3}>
-                {realisation?.title}
-              </Heading>
-              {realisation?.description?.map((descr) => (
-                <RichText content={descr?.raw} />
-              ))}
-            </Grid>
-
-            <Details
-              as={Grid}
-              item
-              xs={12}
-              sm={{ width: 4 }}
-              md={{ width: 3, push: 2 }}
-            >
-              <Heading level={3} mb={3}>
-                Details
-              </Heading>
-              <UnorderedList>
-                {realisation?.wood && (
-                  <ListItem>
-                    <Text fontWeight="bold">Houtsoort:&nbsp;</Text>
-                    <Text fontFamily="secondary">{realisation?.wood}</Text>
-                  </ListItem>
-                )}
-                {realisation?.type && (
-                  <ListItem>
-                    <Text fontWeight="bold">Type:&nbsp;</Text>
-                    <Text fontFamily="secondary">{realisation?.type}</Text>
-                  </ListItem>
-                )}
-                {realisation?.total && (
-                  <ListItem>
-                    <Text fontWeight="bold">Totaal:&nbsp;</Text>
-                    <Text fontFamily="secondary">{realisation?.total}</Text>
-                  </ListItem>
-                )}
-                {realisation?.customer && (
-                  <ListItem>
-                    <Text fontWeight="bold">Klant:&nbsp;</Text>
-                    <Text fontFamily="secondary">{realisation?.customer}</Text>
-                  </ListItem>
-                )}
-              </UnorderedList>
-            </Details>
-          </Grid>
-
           <SimpleReactLightbox>
             <SRLWrapper options={options}>
               <Grid row>
@@ -177,6 +125,34 @@ const Realisations = ({ realisation }) => {
           </SimpleReactLightbox>
         </Grid>
       </ContentWrapper>
+
+      <ContentWrapper>
+        <Grid container>
+          <Grid row>
+            <Grid item xs={12}>
+              <span>
+                <Link
+                  type="hidden"
+                  textDecoration="none"
+                  onClick={() => router.back()}
+                >
+                  <ChevronLeft
+                    size="10px"
+                    fill="black"
+                    style={{
+                      marginRight: "4px",
+                      verticalAlign: "baseline",
+                      display: "inline",
+                    }}
+                  />{" "}
+                  Terug naar overzicht
+                </Link>
+              </span>
+            </Grid>
+          </Grid>
+        </Grid>
+      </ContentWrapper>
+
       <Footer />
     </div>
   );
@@ -192,7 +168,7 @@ export async function getServerSideProps(context) {
             {
               realisation(where: {slug: "${context.params.slug}"}) {
                 title
-                description{
+                description {
                   raw
                 }
                 images{

@@ -5,7 +5,6 @@ import Navigation from "src/components/Navigation";
 import Heading from "@/components/Heading";
 import Grid from "@/components/Grid";
 import Footer from "../src/components/Footer";
-import Breadcrumbs from "../src/components/Breadcrumbs";
 import UnorderedList from "@/components/List/UnorderedList";
 import ListItem from "@/components/List/ListItem";
 import Text from "@/components/Text";
@@ -96,16 +95,12 @@ const Contact = () => {
       <Head>
         <title>{companyData.companyName} - Contact</title>
         <meta
-            name="description"
-            content={`${companyData.companyName} - Contact`}
+          name="description"
+          content={`${companyData.companyName} - Contact`}
         />
       </Head>
       <Navigation />
-      <Breadcrumbs
-        page="Contact"
-        variant={1}
-        image={"images/hero-contact.jpeg"}
-      />
+
       <ContentWrapper>
         <Grid container>
           <Grid row>
@@ -118,14 +113,22 @@ const Contact = () => {
               <Grid row>
                 <Grid item xs={12} md={10}>
                   <UnorderedList>
-                    {showHolidayOpenings && <ListItem>
-                      <Text fontWeight="bold" style={{ display: "block" }}>
-                        Openingstijden eindejaarsperiode:
-                      </Text>
-                      Tijdens de eindejaarsvakantie zijn wij gesloten van 24/12 t.e.m. 8/01/2023. Alle contactaanvragen worden behandeld vanaf 9/01/2023.
-                    </ListItem>}
+                    {showHolidayOpenings && (
+                      <ListItem>
+                        <Text fontWeight="bold" style={{ display: "block" }}>
+                          Openingstijden eindejaarsperiode:
+                        </Text>
+                        Tijdens de eindejaarsvakantie zijn wij gesloten van
+                        24/12 t.e.m. 8/01/2023. Alle contactaanvragen worden
+                        behandeld vanaf 9/01/2023.
+                      </ListItem>
+                    )}
                     <ListItem>
-                      <Text fontWeight="bold" style={{ display: "block" }}>
+                      <Text
+                        as="p"
+                        fontWeight="bold"
+                        style={{ display: "block" }}
+                      >
                         Telefoon:
                       </Text>
                       <Link
@@ -137,7 +140,11 @@ const Contact = () => {
                       </Link>
                     </ListItem>
                     <ListItem>
-                      <Text fontWeight="bold" style={{ display: "block" }}>
+                      <Text
+                        as="p"
+                        fontWeight="bold"
+                        style={{ display: "block" }}
+                      >
                         E-mail:
                       </Text>
                       <Link
@@ -149,8 +156,12 @@ const Contact = () => {
                       </Link>
                     </ListItem>
                     <ListItem>
-                      <Text fontWeight="bold" style={{ display: "block" }}>
-                        Adres:
+                      <Text
+                        as="p"
+                        fontWeight="bold"
+                        style={{ display: "block" }}
+                      >
+                        Adres:&nbsp;
                       </Text>
                       <Text fontFamily="secondary">
                         {companyData.address.street}{" "}
@@ -163,12 +174,18 @@ const Contact = () => {
                       </Text>
                     </ListItem>
                     <ListItem>
-                      <Text fontWeight="bold" style={{ display: "block" }}>
+                      <Text
+                        as="p"
+                        fontWeight="bold"
+                        style={{ display: "block" }}
+                      >
                         Toonzaal / magazijn:
                       </Text>
-                      <Text fontFamily="secondary">
-                        Op afspraak te bezoeken van dinsdag tem zaterdag van 11u
-                        tot 16u.
+                      <Text as="p" fontFamily="secondary">
+                        Op afspraak te bezoeken.
+                      </Text>
+                      <Text as="p" fontFamily="secondary">
+                        Dinsdag tem zaterdag van 11u tot 16u.
                       </Text>
                     </ListItem>
                     <ListItem>

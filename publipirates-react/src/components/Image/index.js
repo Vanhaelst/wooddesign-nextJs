@@ -17,7 +17,7 @@ const Img = styled.img.withConfig({
     `
         width: 100%;
         
-        height: calc(${props.height} / 2 );
+        height: calc(${props.height});
         @media screen and (min-width: ${props.theme.grid.breakpointSmall}px){
             height: calc(${props.height} / 1.5 );
         }
@@ -50,6 +50,7 @@ Image.propTypes = {
   objectFit: PropTypes.bool,
   height: PropTypes.string,
   hover: PropTypes.string,
+    className: PropTypes.string,
 };
 
 export default Image;

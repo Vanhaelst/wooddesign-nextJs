@@ -5,8 +5,7 @@ import Heading from "@/components/Heading";
 const breadcrumbWidth = 400;
 
 const Wrapper = styled.div.withConfig({
-    shouldForwardProp: (prop) =>
-        ['children'].includes(prop),
+  shouldForwardProp: (prop) => ["children"].includes(prop),
 })`
   background-color: #333;
   display: flex;
@@ -26,8 +25,7 @@ const Wrapper = styled.div.withConfig({
 `;
 
 const Point = styled.div.withConfig({
-    shouldForwardProp: (prop) =>
-        [''].includes(prop),
+  shouldForwardProp: (prop) => [""].includes(prop),
 })`
   width: 4px;
   height: 4px;
@@ -40,8 +38,7 @@ const Point = styled.div.withConfig({
 `;
 
 const Breadcrumb = styled.div.withConfig({
-    shouldForwardProp: (prop) =>
-        ['children'].includes(prop),
+  shouldForwardProp: (prop) => ["children"].includes(prop),
 })`
   padding: 25px;
   @media screen and (min-width: ${(props) =>
@@ -73,8 +70,7 @@ const Breadcrumb = styled.div.withConfig({
 `;
 
 const Image = styled.div.withConfig({
-    shouldForwardProp: (prop) =>
-        [''].includes(prop),
+  shouldForwardProp: (prop) => [""].includes(prop),
 })`
   width: 100%;
   @media screen and (min-width: ${(props) =>
@@ -98,17 +94,15 @@ const Image = styled.div.withConfig({
   }
 `;
 
-const Breadcrumbs = ({ page, variant, image }) => {
+const Breadcrumbs = ({ title, children }) => {
   return (
-    <Wrapper variant={variant}>
-      <Breadcrumb variant={variant}>
-        <Heading level={2} color="white">
-          {page}
-          <Point />
-        </Heading>
-      </Breadcrumb>
-      <Image image={image} />
-    </Wrapper>
+    <div className="container max-w-5xl mx-auto px-4 text-center py-10">
+      <Heading level={3} textTransform="uppercase">
+        {title}
+      </Heading>
+      <div className="border-b-2 my-4 border-solid border-gray-300" />
+      {children}
+    </div>
   );
 };
 

@@ -9,38 +9,41 @@ const MyMasonry = styled(Masonry)`
   display: flex;
   margin-left: -30px; /* gutter size offset */
   width: auto;
-
-  .my-masonry-grid_column {
-    padding-left: 30px; /* gutter size */
-    background-clip: padding-box;
-  }
+  transition: all 1s;
 
   .my-masonry-grid_column > div {
     margin-bottom: 30px;
-  }
-
-  .my-masonry-grid_column:nth-child(2) {
-    margin-top: 100px;
   }
 `;
 
 const breakpointColumnsObj = {
   default: 3,
+  1100: 3,
   700: 2,
   500: 1,
 };
 
-const MasonryGrid = ({ items }) => {
+const MasonryGrid = ({ items, type = "grid" }) => {
+  if (type === "masonry") {
+    return (
+      <MyMasonry
+        breakpointCols={breakpointColumnsObj}
+        className="my-masonry-grid"
+        columnClassName="my-masonry-grid_column"
+      >
+        {items.map((item) => (
+          <MasonryItem item={item} />
+        ))}
+      </MyMasonry>
+    );
+  }
+
   return (
-    <MyMasonry
-      breakpointCols={breakpointColumnsObj}
-      className="my-masonry-grid"
-      columnClassName="my-masonry-grid_column"
-    >
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
       {items.map((item) => (
         <MasonryItem item={item} />
       ))}
-    </MyMasonry>
+    </div>
   );
 };
 

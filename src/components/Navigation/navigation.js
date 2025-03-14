@@ -1,8 +1,16 @@
-const navigation = [
+export const topbar = [
   {
-    title: "Home",
-    href: "/",
+    title: "Shop",
+    href: "http://shop.wooddesign.be",
+    target: "_blank",
   },
+  {
+    title: "Afspraak",
+    href: "/contact",
+  },
+];
+
+export const navigation = [
   {
     title: "Parket",
     href: "/parket",
@@ -16,22 +24,21 @@ const navigation = [
     href: "/terras",
   },
   {
-    title: "Vinylvloer",
-    href: "/vinylvloer",
-  },
-  {
-    title: "Realisaties",
-    href: "/realisaties",
+    title: "Vinyl",
+    href: "/vinyl",
   },
   {
     title: "Contact",
     href: "/contact",
   },
+  /*
+  {
+    title: "Realisaties",
+    href: "/realisaties",
+  },
   {
     title: "Shop",
     href: "http://shop.wooddesign.be",
     target: "_blank",
-  },
+  },*/
 ];
-
-export default navigation;

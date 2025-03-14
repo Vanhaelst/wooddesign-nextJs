@@ -1,29 +1,27 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Grid from "@/components/Grid";
-import navigation from "./navigation";
+import { navigation, topbar } from "./navigation";
 import { useRouter } from "next/router";
 import Paragraph from "@/components/Paragraph";
 import Text from "@/components/Text";
-import Link from "@/components/Link";
 import CloseIcon from "@/icons/Close";
 import MenuIcon from "@/icons/Menu";
 import Logo from "../../theme/logo/Logo";
 import Facebook from "@/icons/Facebook";
 import Pinterest from "@/icons/Pinterest";
 import Instagram from "@/icons/Instagram";
+import Link from "next/link";
 
-const Wrapper = styled('div').withConfig({
-  shouldForwardProp: (prop) =>
-      ['children'].includes(prop),
+const Wrapper = styled("div").withConfig({
+  shouldForwardProp: (prop) => ["children"].includes(prop),
 })`
   width: 100%;
   display: block;
 `;
 
-const Navbar = styled('div').withConfig({
-  shouldForwardProp: (prop) =>
-      ['children'].includes(prop),
+const Navbar = styled("div").withConfig({
+  shouldForwardProp: (prop) => ["children"].includes(prop),
 })`
   margin-top: 8px;
   display: flex;
@@ -40,16 +38,10 @@ const Navbar = styled('div').withConfig({
   padding: 8px 24px;
 `;
 
-const Backdrop = styled('div').withConfig({
-  shouldForwardProp: (prop) =>
-      ['children'].includes(prop),
+const Backdrop = styled("div").withConfig({
+  shouldForwardProp: (prop) => ["children"].includes(prop),
 })`
-
-  ${(props) =>
-      props.isOpen
-          ? `display: block;`
-          : `display: none;`
-  }
+  ${(props) => (props.isOpen ? `display: block;` : `display: none;`)}
   background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
   width: 100%;
@@ -59,9 +51,8 @@ const Backdrop = styled('div').withConfig({
   z-index: 500;
 `;
 
-const Menu = styled('div').withConfig({
-  shouldForwardProp: (prop) =>
-      ['children'].includes(prop),
+const Menu = styled("div").withConfig({
+  shouldForwardProp: (prop) => ["children"].includes(prop),
 })`
   position: fixed;
   top: 0;
@@ -75,20 +66,14 @@ const Menu = styled('div').withConfig({
   flex-direction: column;
   transition: all 0.5s;
   padding: 64px 16px 32px 16px;
- 
+
   @media screen and (min-width: ${(props) =>
       props.theme.grid.breakpointSmall}px) {
     width: 350px;
   }
- 
-  ${(props) =>
-    props.isOpen
-      ? `right: 0;`
-      : ` right: -110vw;`
-  }
+
+  ${(props) => (props.isOpen ? `right: 0;` : ` right: -110vw;`)}
 `;
-
-
 
 const MenuItem = styled.a`
   font-family: ${(props) => props.theme.font.family.secondary};
@@ -149,7 +134,9 @@ const Navigation = () => {
   return (
     <Wrapper as={Grid}>
       <Navbar as={Grid} isMobile={true} container isOpen={isOpen}>
-        <Logo height="24px" fill="#464646" />
+        <Link href="/">
+          <Logo height="24px" fill="#464646" />
+        </Link>
         <div onClick={handleClick}>
           <MenuIcon size="24px" />
         </div>
@@ -168,15 +155,33 @@ const Navigation = () => {
           );
         })}
         <Line />
-        <Paragraph color="#676b6d">
-          Wooddesign bvba
-          <br />
-          <Text size="Caption2" fontWeight="bold" color="primary">
-            <Link href="tel:+32477208484" type="hidden">
-              +32 (0)477 20 84 84
-            </Link>
-          </Text>
-        </Paragraph>
+        <Link
+          href="http://shop.wooddesign.be"
+          className="text-s hover:underline text-[#676b6d] mx-[12px] my-[10px] font-[200] uppercase"
+          target="_blank"
+        >
+          Shop
+        </Link>
+        <Line />
+        <div className="mx-[12px]">
+          {" "}
+          <Paragraph color="#676b6d">
+            Wooddesign bvba
+            <br />
+            <Text size="Caption2" fontWeight="bold" color="primary">
+              <Link href="mailto:info@wooddesign.be" type="hidden">
+                info@wooddesign.be
+              </Link>
+            </Text>
+            <br />
+            <Text size="Caption2" fontWeight="bold" color="primary">
+              <Link href="tel:+32477208484" type="hidden">
+                +32 (0)477 20 84 84
+              </Link>
+            </Text>
+          </Paragraph>
+        </div>
+
         <SocialWrapper>
           <Facebook size="20px" />
           <Instagram size="20px" />
