@@ -6,7 +6,7 @@ const Nav = () => {
   const Navigation = dynamic(
     () =>
       isMobile ? import("./Navigation.mobile") : import("./Navigation.desktop"),
-    { ssr: false }
+    { ssr: false },
   );
 
   return <Navigation />;

@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e60b890b-4f27-4856-9b6a-d695cbaf5a90" name="Changes" comment="Update text">
+    <list default="true" id="e60b890b-4f27-4856-9b6a-d695cbaf5a90" name="Changes" comment="Update hero">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Navigation/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Navigation/NavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/default.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/default.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Hero/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Hero/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Breadcrumbs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Breadcrumbs/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/meta.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/meta.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +123,7 @@
       <workItem from="1738585868162" duration="1454000" />
       <workItem from="1738597627142" duration="7053000" />
       <workItem from="1740154278896" duration="1080000" />
-      <workItem from="1742225859660" duration="519000" />
+      <workItem from="1742225859660" duration="2981000" />
     </task>
     <task id="LOCAL-00001" summary="add alu gevels">
       <created>1667918235049</created>
@@ -279,7 +284,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727707012774</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Update navigation">
+      <option name="closed" value="true" />
+      <created>1742226431779</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1742226431779</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,6 +330,8 @@
     <MESSAGE value="Update topbar" />
     <MESSAGE value="Update topbar - shop" />
     <MESSAGE value="fix rebase" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix rebase" />
+    <MESSAGE value="Update navigation" />
+    <MESSAGE value="Update hero" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update hero" />
   </component>
 </project>

@@ -2,7 +2,6 @@ import React from "react";
 import Head from "next/head";
 import { GraphQLClient } from "graphql-request";
 import styled from "styled-components";
-import Hero from "@/components/Hero";
 import Heading from "@/components/Heading";
 import Grid from "@/components/Grid";
 import Paragraph from "@/components/Paragraph";
@@ -53,7 +52,15 @@ const Home = () => {
         <meta name="viewport" content={meta.viewport} />
       </Head>
       <Navigation />
-      <Hero backgroundImage="images/hero.jpg" />
+
+      <div
+        className="w-full h-[75vh] bg-cover bg-no-repeat bg-center flex justify-center items-center flex-col"
+        style={{ backgroundImage: `url('images/hero.jpg')` }}
+      >
+        <span className="text-xl uppercase text-white">Welkom bij </span>
+        <h1 className="text-7xl uppercase text-white">Wooddesign </h1>
+      </div>
+
       <ContentWrapper>
         <CookieBanner />
 

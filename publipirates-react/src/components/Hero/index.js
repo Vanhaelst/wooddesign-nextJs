@@ -1,25 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-const HeroImage = styled('div').withConfig({
-  shouldForwardProp: (prop) =>
-      [''].includes(prop),
-})`
-  @media screen and (min-width: 997px){
-    background-image: url("${(props) => props.backgroundImage}");
-  }
-  background-image: url("${(props) => props.mobileBackgroundImage}");
-  height: ${(props) => props.height};
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-`;
-
 import { Heading } from "../../../index";
 
 const Title = styled(Heading)`
@@ -55,17 +36,16 @@ const SubTitle = styled(Heading)`
 const Hero = ({
   children,
   backgroundImage = "/images/placeholder-image.webp",
-  mobileBackgroundImage,
   title,
   subtitle,
-  height = "75vh",
 }) => {
   return (
-    <HeroImage backgroundImage={backgroundImage} mobileBackgroundImage={mobileBackgroundImage || backgroundImage} height={height}>
+    <div className="w-full bg-cover
+ bg-no-repeat bg-center flex justify-center items-center flex-col" style={{ backgroundImage: `url('${backgroundImage}')`, height: "75vh"}}>`
       {children}
       {title && <Title level={1}>{title}</Title>}
       {subtitle && <SubTitle level={2}>{subtitle}</SubTitle>}
-    </HeroImage>
+    </div>
   );
 };
 

@@ -5,6 +5,13 @@ import { GlobalContextProvider } from "src/context/GlobalContextProvider";
 import Head from "next/head";
 import meta from "../src/data/meta";
 import "./globals.css";
+import { Cabin } from "next/font/google";
+
+const cabin = Cabin({
+  subsets: ["latin"],
+  variable: "--font-cabin",
+  display: "swap",
+});
 
 const MyApp = ({ Component, pageProps }) => {
   return (
@@ -16,9 +23,11 @@ const MyApp = ({ Component, pageProps }) => {
         <meta name="viewport" content={meta.viewport} />
       </Head>
       <GlobalContextProvider>
-        <DefaultPage>
-          <Component {...pageProps} />
-        </DefaultPage>
+        <main className={cabin.variable}>
+          <DefaultPage>
+            <Component {...pageProps} />
+          </DefaultPage>
+        </main>
       </GlobalContextProvider>
     </Fragment>
   );
