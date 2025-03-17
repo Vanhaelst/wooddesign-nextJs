@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Menu from "@/components/Navigation/Menu";
 import MenuItem from "@/components/Navigation/MenuItem";
@@ -10,25 +10,28 @@ import Link from "next/link";
 import { PhoneIcon, EmailIcon } from "@chakra-ui/icons";
 import Cart from "@/icons/cart";
 
-const DesktopNavigation = ({ id, shown, sticky }) => {
+const DesktopNavigation = () => {
   const router = useRouter();
+
+  const [shown, setShown] = useState(false);
+
+  const onScroll = () => {
+    const someDiv = document.getElementById("top")?.getBoundingClientRect().top;
+    if (someDiv <= -200) {
+      setShown(true);
+    } else {
+      setShown(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <>
+      <div id="top" />
       <div className="bg-[#8dc63f] px-[44px] py-2 flex justify-end">
-        {/*
-        <div className="flex items-center">
-          <Pin size="18px" fill="white" />
-          <Link
-            href="#"
-            className="text-s text-white ml-[8px] text-[14px] font-thin hover:underline"
-          >
-            Prins Boudewijnlaan 21T, 2550 Kontich.
-          </Link>
-        </div>
-
-        <div className="border-r-[1px] border-solid border-white mx-[12px]" />
-*/}
         <div className="flex items-center mx-[12px]">
           <EmailIcon color={"white"} />
           <Link
@@ -64,9 +67,30 @@ const DesktopNavigation = ({ id, shown, sticky }) => {
           </Link>
         </div>
       </div>
-      <NavBar id={id} shown={shown} sticky={sticky}>
+      <NavBar>
         <Link href="/">
           <Logo fill={theme.colors.primary.main} height="40px" />
+        </Link>
+        <Menu>
+          {navigation.map((item) => {
+            const active = router.pathname === item.href;
+            return (
+              <MenuItem
+                key={item.href}
+                href={item.href}
+                active={active}
+                target={item.target || "_self"}
+              >
+                {item.title}
+              </MenuItem>
+            );
+          })}
+        </Menu>
+      </NavBar>
+
+      <NavBar shown={shown} sticky={true}>
+        <Link href="/">
+          <Logo fill={theme.colors.primary.main} height="32px" />
         </Link>
         <Menu>
           {navigation.map((item) => {

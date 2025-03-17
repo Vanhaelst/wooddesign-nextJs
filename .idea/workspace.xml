@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e60b890b-4f27-4856-9b6a-d695cbaf5a90" name="Changes" comment="Update text">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/realisaties/[slug].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/realisaties/[slug].js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CallToAction/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CallToAction/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Masonry/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Masonry/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Navigation/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Navigation/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/default.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/default.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,6 +118,7 @@
       <workItem from="1738585868162" duration="1454000" />
       <workItem from="1738597627142" duration="7053000" />
       <workItem from="1740154278896" duration="1080000" />
+      <workItem from="1742225859660" duration="519000" />
     </task>
     <task id="LOCAL-00001" summary="add alu gevels">
       <created>1667918235049</created>
@@ -317,17 +316,7 @@
     <MESSAGE value="update pages and realisation detail" />
     <MESSAGE value="Update topbar" />
     <MESSAGE value="Update topbar - shop" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update topbar - shop" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/pages/realisaties/[slug].js</url>
-          <line>73</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="fix rebase" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix rebase" />
   </component>
 </project>
