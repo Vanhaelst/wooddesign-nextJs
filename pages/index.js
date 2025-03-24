@@ -54,9 +54,10 @@ const Home = () => {
       <Navigation />
 
       <div
-        className="w-full h-[75vh] bg-cover bg-no-repeat bg-center flex justify-center items-center flex-col"
+        className="relative w-full h-[75vh] bg-cover bg-no-repeat bg-center flex justify-center items-center flex-col"
         style={{ backgroundImage: `url('images/hero.jpg')` }}
       >
+        <div className="absolute top-90 left-0 w-full h-full bg-black/50" />
         <span className="text-xl uppercase text-white">Welkom bij </span>
         <h1 className="text-7xl uppercase text-white">Wooddesign </h1>
       </div>

@@ -5,10 +5,7 @@ import MenuItem from "@/components/Navigation/MenuItem";
 import NavBar from "@/components/Navigation/NavBar";
 import { navigation } from "./navigation";
 import Logo from "src/theme/logo/Logo";
-import theme from "src/theme";
 import Link from "next/link";
-import { PhoneIcon, EmailIcon } from "@chakra-ui/icons";
-import Cart from "@/icons/cart";
 
 const DesktopNavigation = () => {
   const router = useRouter();
@@ -31,6 +28,7 @@ const DesktopNavigation = () => {
   return (
     <>
       <div id="top" />
+      {/*
       <div className="bg-[#8dc63f] px-[44px] py-2 flex justify-end">
         <div className="flex items-center mx-[12px]">
           <EmailIcon color={"white"} />
@@ -67,9 +65,10 @@ const DesktopNavigation = () => {
           </Link>
         </div>
       </div>
+      */}
       <NavBar>
         <Link href="/">
-          <Logo fill={theme.colors.primary.main} height="40px" />
+          <Logo fill={"white"} height="40px" />
         </Link>
         <Menu>
           {navigation.map((item) => {
@@ -90,7 +89,7 @@ const DesktopNavigation = () => {
 
       <NavBar shown={shown} sticky={true}>
         <Link href="/">
-          <Logo fill={theme.colors.primary.main} height="32px" />
+          <Logo fill={"black"} height="32px" />
         </Link>
         <Menu>
           {navigation.map((item) => {
@@ -101,6 +100,7 @@ const DesktopNavigation = () => {
                 href={item.href}
                 active={active}
                 target={item.target || "_self"}
+                sticky={true}
               >
                 {item.title}
               </MenuItem>

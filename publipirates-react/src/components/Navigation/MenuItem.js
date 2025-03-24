@@ -7,16 +7,22 @@ const MenuItem = styled('a').withConfig({
   margin: 0 24px;
   font-size: 16px;
   font-weight: 300;
-  color: #141c3a;
+  color: white;
   font-family: ${(props) => props.theme.font.family.secondary};
   text-decoration: none;
   &:hover {
     color: ${(props) => props.theme.colors.primary.main};
   }
   ${(props) =>
+    props.sticky &&
+    `
+      color: black;
+   `}
+  
+  ${(props) =>
     props.active &&
     `
-      color: color: ${props.theme.colors.primary.main} !important;
+      color: ${props.theme.colors.primary.main} !important;
    `}
 `;
 
