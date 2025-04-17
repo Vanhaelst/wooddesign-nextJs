@@ -7,7 +7,7 @@ const MenuItem = styled('a').withConfig({
   margin: 0 24px;
   font-size: 16px;
   font-weight: 300;
-  color: white;
+  color: black;
   font-family: ${(props) => props.theme.font.family.secondary};
   text-decoration: none;
   &:hover {
@@ -17,6 +17,12 @@ const MenuItem = styled('a').withConfig({
     props.sticky &&
     `
       color: black;
+   `}
+  
+  ${(props) =>
+    props.color === "white" &&
+    `
+      color: white;
    `}
   
   ${(props) =>

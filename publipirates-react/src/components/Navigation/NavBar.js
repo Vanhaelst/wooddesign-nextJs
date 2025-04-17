@@ -13,12 +13,17 @@ const Navbar = styled(Grid)`
     transition: all;
     transition-duration: 300ms;
     
-    position: absolute;
+    position: relative;
     top: 37px;
     z-index: 10000;
     width: 100%;
 
   ${(props) =>
+    props.position === "absolute" && `
+        position: absolute;
+    `}
+    
+    ${(props) =>
     props.sticky &&
     `
           background-color: rgba(255,255,255,0.75);

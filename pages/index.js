@@ -51,7 +51,7 @@ const Home = () => {
         />
         <meta name="viewport" content={meta.viewport} />
       </Head>
-      <Navigation />
+      <Navigation color="white" position="absolute" />
 
       <div
         className="relative w-full h-[75vh] bg-cover bg-no-repeat bg-center flex justify-center items-center flex-col"

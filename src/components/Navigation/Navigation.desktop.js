@@ -1,8 +1,8 @@
-import React, { Fragment } from "react";
+import React from "react";
 import DesktopNavigation from "./default";
 
-const Navigation = () => {
-  return <DesktopNavigation id="nav" />;
+const Navigation = ({ color, position }) => {
+  return <DesktopNavigation id="nav" color={color} position={position} />;
 };
 
 export default Navigation;
