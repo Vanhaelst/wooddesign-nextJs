@@ -3,7 +3,7 @@ import Heading from "@/components/Heading";
 
 const Breadcrumbs = ({ title, children }) => {
   return (
-    <div className="container max-w-5xl mx-auto px-4 text-center py-10 mt-10 lg:mt-32">
+    <div className="container max-w-5xl mx-auto px-4 text-center py-10 mt-10 lg:mt-20">
       <Heading level={3} textTransform="uppercase">
         {title}
       </Heading>

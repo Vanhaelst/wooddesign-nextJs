@@ -15,7 +15,7 @@ const Navbar = styled(Grid)`
     
     position: relative;
     top: 37px;
-    z-index: 10000;
+    z-index: 9950;
     width: 100%;
 
   ${(props) =>
