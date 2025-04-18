@@ -55,7 +55,7 @@ const Home = () => {
 
       <div
         className="relative w-full h-[75vh] bg-cover bg-no-repeat bg-center flex justify-center items-center flex-col"
-        style={{ backgroundImage: `url('images/hero.jpg')` }}
+        style={{ backgroundImage: `url('images/bram-kaat-low-18.jpg')` }}
       >
         <div className="absolute top-90 left-0 w-full h-full bg-black/50" />
         <span className="text-xl uppercase text-white">Welkom bij </span>
