@@ -79,16 +79,16 @@ const Services = ({ realisations, pagination }) => {
       </Head>
 
       <Navigation />
-      <Breadcrumbs title="Parket">
+      <Breadcrumbs title="PARKET, tijdloze elegantie en natuurlijke warmte">
         <Paragraph className="mb-3">
-          Bij ons vindt u een uitgebreide selectie van hoogwaardige
-          parketvloeren die uw interieur een tijdloze en warme uitstraling
-          geven. Of u nu op zoek bent naar een klassieke eiken vloer, een
-          moderne visgraatvloer of een unieke houtsoort, wij bieden de perfecte
-          oplossing voor iedere smaak en ruimte. Met jarenlange ervaring in de
-          vloerenbranche staan wij garant voor vakmanschap, duurzaamheid en
-          persoonlijk advies.
+          Voor wie waarde hecht aan een warme, sfeervolle uitstraling, is parket
+          de ideale keuze. Deze vloeren combineren duurzaamheid met tijdloze
+          klasse en worden niet alleen nieuw geplaatst, maar ook vaak
+          gerenoveerd. Door ze te schuren, behandelen of op te frissen, blijft
+          uw parketvloer jarenlang in topconditie en behoudt ze haar authentieke
+          charme.
         </Paragraph>
+        {/*
         <Paragraph className="mb-3">
           Verken onze collectie, ontdek de mogelijkheden voor uw woning of
           project, en laat u inspireren door de schoonheid van parketvloeren.
@@ -97,6 +97,7 @@ const Services = ({ realisations, pagination }) => {
           Wij helpen u graag verder bij het maken van de juiste keuze in onze
           toonzaal te Kontich
         </Paragraph>
+        */}
       </Breadcrumbs>
 
       <ContentWrapper>

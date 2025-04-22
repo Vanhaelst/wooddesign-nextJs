@@ -79,25 +79,14 @@ const Terras = ({ realisations, pagination }) => {
         />
       </Head>
       <Navigation />
-      <Breadcrumbs title="Terras">
+      <Breadcrumbs title="Een terras is meer dan een buitenruimte, het is een verlengstuk van je woning">
         <Paragraph className="mb-3">
-          Of u nu een gezellige zithoek, een stijlvolle loungeplek of een
-          functionele buitenruimte wilt creëren, wij bieden de ideale
-          oplossingen voor uw terras. Met een breed assortiment aan houten
-          planken, bamboe , composiet materialen en andere hoogwaardige
-          afwerkingen, helpen wij u de perfecte basis te leggen voor uw
-          buitenbeleving.
+          Een mooi terras vergroot uw wooncomfort en creëert een plek om tot
+          rust te komen – op het dak, in de tuin of rond het zwembad.
         </Paragraph>
         <Paragraph className="mb-3">
-          Een goed terras is meer dan alleen een vloer; het is de plek waar u
-          ontspant, geniet van het buitenleven en samenkomt met vrienden en
-          familie. Wij adviseren u graag over de materialen die het beste bij uw
-          wensen en de specifieke eisen van uw buitenruimte passen.
-        </Paragraph>
-        <Paragraph className="mb-3">
-          Laat u inspireren door onze stijlvolle en duurzame terrasopties in
-          onze toonzaal te Kontich en geef uw buitenruimte de uitstraling die
-          het verdient!
+          We werken met duurzame en weersbestendige materialen die mooi
+          verouderen en jarenlang meegaan – met minimale onderhoudsbehoefte.
         </Paragraph>
       </Breadcrumbs>
       <ContentWrapper>

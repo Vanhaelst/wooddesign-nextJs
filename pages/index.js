@@ -89,13 +89,13 @@ const Home = () => {
             </Row>
             <Row isEven={true} image="images/toonzaal.jpeg">
               <Paragraph mb={6}>
-                Breng een bezoek aan onze toonzaal en ontdek ons uitgebreide
-                assortiment van&nbsp;natuurlijke houtsoorten tot moderne
-                materialen zoals Aluminium, Bamboe, Trespa, Equitone, Rockpanel,
-                ...
+                <strong>Bezoek onze toonzaal</strong> en laat je inspireren door
+                ons uitgebreid aanbod aan houtsoorten en duurzame materialen
+                voor gevelbekleding, terrassen en parketvloeren.
               </Paragraph>
               <Paragraph mb={6}>
-                Bij Wooddesign werken we samen om uw project te realiseren.
+                Bij <strong>Wooddesign</strong> zetten we samen met jou de stap
+                van idee naar realisatie. Jouw project, onze passie!
               </Paragraph>
               <Button outline as={Link} href="/contact" block={isMobile}>
                 Maak een afspraak

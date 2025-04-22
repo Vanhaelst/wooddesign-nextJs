@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e60b890b-4f27-4856-9b6a-d695cbaf5a90" name="Changes" comment="Update hero">
+    <list default="true" id="e60b890b-4f27-4856-9b6a-d695cbaf5a90" name="Changes" comment="update hero image">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/gevel.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/gevel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Navigation/MenuItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Navigation/MenuItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/default.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/default.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/parket.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/parket.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/terras.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/terras.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,18 +34,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Vanhaelst"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Vanhaelst&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:Vanhaelst/wooddesign-nextJs.git",
-    "accountId": "efc77f1e-fc4a-4504-958b-3dadb82993b4"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:Vanhaelst/wooddesign-nextJs.git&quot;,
+    &quot;accountId&quot;: &quot;efc77f1e-fc4a-4504-958b-3dadb82993b4&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -57,25 +58,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/indyvanhaelst/sites/studio94/wooddesign",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "prettierjs.PrettierConfiguration.Package": "/Users/indyvanhaelst/sites/studio94/wooddesign-nextJs/node_modules/prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "ts.external.directory.path": "/Users/indyvanhaelst/Applications/IntelliJ IDEA Ultimate.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Node.js.default.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/indyvanhaelst/sites/studio94/wooddesign&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/indyvanhaelst/sites/studio94/wooddesign-nextJs/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/indyvanhaelst/Applications/IntelliJ IDEA Ultimate.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components" />
@@ -83,8 +85,8 @@
       <recent name="$PROJECT_DIR$/pages" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/public/images" />
+      <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/public/images/gevel" />
       <recent name="$PROJECT_DIR$/public/images/vinylvloer" />
     </key>
@@ -133,7 +135,11 @@
       <workItem from="1738597627142" duration="7053000" />
       <workItem from="1740154278896" duration="1080000" />
       <workItem from="1742225859660" duration="3048000" />
-      <workItem from="1742830193612" duration="1082000" />
+      <workItem from="1742830193612" duration="1120000" />
+      <workItem from="1744872534882" duration="919000" />
+      <workItem from="1744883093838" duration="171000" />
+      <workItem from="1744960713595" duration="66000" />
+      <workItem from="1745304877987" duration="242000" />
     </task>
     <task id="LOCAL-00001" summary="add alu gevels">
       <created>1667918235049</created>
@@ -310,7 +316,39 @@
       <option name="project" value="LOCAL" />
       <updated>1742228857389</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Update navigation">
+      <option name="closed" value="true" />
+      <created>1742831499197</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1742831499197</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Update navigation position and color">
+      <option name="closed" value="true" />
+      <created>1744873450027</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1744873450027</updated>
+    </task>
+    <task id="LOCAL-00026" summary="update feedback">
+      <option name="closed" value="true" />
+      <created>1744883262083</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1744883262083</updated>
+    </task>
+    <task id="LOCAL-00027" summary="update hero image">
+      <option name="closed" value="true" />
+      <created>1744960775126</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1744960775126</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,8 +386,29 @@
     <MESSAGE value="Update topbar" />
     <MESSAGE value="Update topbar - shop" />
     <MESSAGE value="fix rebase" />
-    <MESSAGE value="Update navigation" />
     <MESSAGE value="Update hero" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update hero" />
+    <MESSAGE value="Update navigation" />
+    <MESSAGE value="Update navigation position and color" />
+    <MESSAGE value="update feedback" />
+    <MESSAGE value="update hero image" />
+    <option name="LAST_COMMIT_MESSAGE" value="update hero image" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/pages/index.js</url>
+          <line>89</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/pages/parket.js</url>
+          <line>91</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

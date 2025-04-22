@@ -77,17 +77,15 @@ const Gevel = ({ realisations, pagination }) => {
         />
       </Head>
       <Navigation />
-      <Breadcrumbs title="Gevel">
+      <Breadcrumbs title="Een onderhoudsvriendelijke, duurzame gevel met karakter">
         <Paragraph className="mb-3">
-          Bij ons vindt u de perfecte oplossing om de buitenkant van uw woning
-          of project te verfraaien en te beschermen. Gevelbekleding speelt niet
-          alleen een cruciale rol in de uitstraling van uw gebouw, maar biedt
-          ook bescherming tegen weersinvloeden en bevordert de
-          energie-efficiëntie. Of u nu kiest voor houten, aluminium, zinken,
-          kunststof of innovatieve gevelsystemen, wij bieden een breed scala aan
-          materialen en stijlen die aansluiten bij uw wensen en het karakter van
-          uw woning.
+          Een gevel van Wooddesign combineert esthetiek met energie-efficiëntie.
+          Afgewerkt in hoogwaardige houtsoorten of duurzame materialen is uw
+          gevel bestand tegen alle weersomstandigheden. We besteden bijzondere
+          aandacht aan de isolatie, zodat uw woning niet alleen mooi oogt, maar
+          ook optimaal presteert op vlak van energieverbruik.
         </Paragraph>
+        {/*
         <Paragraph className="mb-3">
           Met onze jarenlange ervaring in gevelbekleding staan wij voor
           kwaliteit, duurzaamheid en maatwerk. Wij adviseren u graag over de
@@ -98,6 +96,7 @@ const Gevel = ({ realisations, pagination }) => {
           Ontdek de diverse mogelijkheden in onze toonzaal te Kontich en geef uw
           gevel de uitstraling die het verdient!
         </Paragraph>
+        */}
       </Breadcrumbs>
 
       <ContentWrapper>
