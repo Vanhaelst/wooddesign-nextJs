@@ -69,9 +69,6 @@ const Home = () => {
         <Section as={Box}>
           <Grid container>
             <Row isEven={false} image="images/intro2.jpeg">
-              <Heading level={2} textTransform="uppercase" mb={4}>
-                Wooddesign
-              </Heading>
               <Paragraph mb={2}>
                 Wat meer dan 25 jaar geleden begon als eenmanszaak in
                 parketvloeren en terrassen, is ondertussen uitgegroeid tot een
