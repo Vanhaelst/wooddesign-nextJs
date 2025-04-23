@@ -73,18 +73,24 @@ const Home = () => {
                 Wooddesign
               </Heading>
               <Paragraph mb={2}>
-                Al meer dan 25 jaar is Wooddesign een toonaangevend bedrijf in
-                de levering en plaatsing van parketvloeren, gevelbekleding en
-                terrassen. Wat begon als een eenmanszaak in 1997, is uitgegroeid
-                tot een bloeiend bedrijf met een team van ervaren vakmensen.
+                Wat meer dan 25 jaar geleden begon als eenmanszaak in
+                parketvloeren en terrassen, is ondertussen uitgegroeid tot een
+                toonaangevend bedrijf gespecialiseerd in zowel parket, terras en
+                gevel.
               </Paragraph>
               <Paragraph mb={6}>
-                Onze kracht ligt in de combinatie van jarenlange expertise,
-                diepgaande materiaalkennis en het gebruik van
+                In tegenstelling tot wat onze naam doet vermoeden, plaatsen we
+                niet enkel houtproducten, maar zijn we in de loop van de tijd
+                geëvolueerd door de plaatsing van duurzame materialen zoals
+                aluminium, volkern, vezelcement en composiet
+              </Paragraph>
+              <Paragraph mb={6}>
+                Onze kracht ligt dan ook in de combinatie van jarenlange
+                expertise, diepgaande materiaalkennis en het gebruik van
                 kwaliteitsproducten. Of het nu gaat om een stijlvolle
                 parketvloer, duurzame gevelbekleding of een prachtig terras, wij
                 staan garant voor een hoog afwerkingsniveau en een service die
-                verder reikt dan de plaatsing.
+                verder reikt dan de plaatsing door eigen vakmensen.
               </Paragraph>
             </Row>
             <Row isEven={true} image="images/toonzaal.jpeg">
