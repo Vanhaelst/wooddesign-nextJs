@@ -115,6 +115,9 @@ const Home = () => {
                 <Heading level={3} color="#464646">
                   {service.title}
                 </Heading>
+                <Paragraph mt={2} mb={2} fontWeight="bold">
+                  {service.subtitle}
+                </Paragraph>
                 <Paragraph mb={6}>{service.description}</Paragraph>
                 <Button outline as={Link} href={service.slug} block={isMobile}>
                   Meer info

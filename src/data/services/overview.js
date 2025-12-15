@@ -1,22 +1,26 @@
 export const services = [
   {
     title: "Parket",
+    subtitle: "Tijdloze elegantie en natuurlijke warmte",
     description:
-      "Als u van een warme, gezellige uitstraling houd, kiest u voor een parketvloer. Aangezien deze vloeren steeds duurzaam, tijdloos en elegant zijn, worden deze niet enkel nieuw gelegd, maar ook vaak gerenoveerd, opgeschuurd of opnieuw behandeld. Zo ziet uw vloer er steeds weer als nieuw uit.",
+      "Voor wie houdt van een warme, sfeervolle uitstraling, is parket de perfecte keuze.",
     image: "images/services/parketvloeren.jpg",
     slug: "/parket",
   },
   {
     title: "Gevel",
+    subtitle: "Een strakke, duurzame gevel met karakter",
     description:
-      "Een mooie vlakke en energiezuinige gevel van Wooddesign, afgewerkt in Hout of Plaatmateriaal (Eternit, Trespa, Rockpanel) bestand tegen alle weersomstandigheden. Er wordt extra aandacht gegeven aan de uitvoering van de isolatie.",
+      "Onze geveloplossingen combineren esthetiek met functionele kwaliteit – op maat van uw wensen.",
     image: "images/services/gevelbekleding.jpg",
     slug: "/gevel",
   },
   {
     title: "Terras",
+    subtitle: "Een terras dat uitnodigt om te genieten",
+
     description:
-      "Een houten terras is een absolute meerwaarde voor uw (dak)terras of tuin.  Onze houten terrassen worden steeds op een hardhouten onderconstructie geplaatst, en naargelang de ondergrond met regelbare PVC terrasdragers of hardhouten paaltjes in beton.",
+      "Een mooi terras vergroot uw wooncomfort en creëert een plek om tot rust te komen – op het dak, in de tuin of rond het zwembad.",
     image: "images/services/terrassen.jpg",
     slug: "/terras",
   },
