@@ -43,6 +43,9 @@ const faqItems = [
       "Vanuit onze showroom in Kontich plaatsen we vinylvloeren in de hele regio, onder andere in Antwerpen, Mechelen, Lier en Edegem, voor zowel particulieren als bouwprojecten.",
   },
 ];
+import { canonicalUrl } from "../src/utils/seo";
+import { CallToAction } from "../src/components/CallToAction";
+import useInfiniteScroll from "../src/hooks/useInfiniteScroll";
 
 
 const graphcms = new GraphQLClient(API_SLUG);
