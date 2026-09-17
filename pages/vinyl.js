@@ -197,10 +197,23 @@ const Services = ({ realisations, pagination }) => {
       </ContentWrapper>
 
       <CallToAction
-        title="Graag een offerte voor uw vinyl?"
+        title="Graag een offerte voor uw vinylvloer?"
         description="Benieuwd naar de mogelijkheden voor jouw project? Vraag vandaag nog een vrijblijvende offerte aan en ontdek hoe wij jou kunnen helpen."
         button={{ cta: "Ik wil een offerte", href: "/contact" }}
       />
+
+      <ContentWrapper>
+        <Grid container>
+          <Grid row>
+            <Grid item xs={12}>
+              <Faq
+                title="Veelgestelde vragen over vinylvloeren"
+                items={faqItems}
+              />
+            </Grid>
+          </Grid>
+        </Grid>
+      </ContentWrapper>
 
       <Footer />
     </div>
