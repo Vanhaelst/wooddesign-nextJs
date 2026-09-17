@@ -11,13 +11,20 @@ import Box from "@/components/Box";
 import CookieBanner from "@/components/Card";
 import UnorderedList from "@/components/List/UnorderedList";
 import ListItem from "@/components/List/ListItem";
+import { canonicalUrl } from "../src/utils/seo";
 
 const cookieStatement = () => {
   return (
     <div>
       <Head>
-        <title>{meta.title}</title>
+        <title>Verkoopsvoorwaarden | Wooddesign</title>
+        <meta
+          name="description"
+          content="Lees de verkoopsvoorwaarden en het privacybeleid van Wooddesign, gevestigd in Kontich."
+        />
+        <meta name="robots" content="noindex, follow" />
         <meta name="viewport" content={meta.viewport} />
+        <link rel="canonical" href={canonicalUrl("/verkoops-voorwaarden")} />
       </Head>
       <Navigation />
       <ContentWrapper>
@@ -40,7 +47,7 @@ const cookieStatement = () => {
                   textTransform="uppercase"
                   show={{ xs: false, sm: true }}
                 >
-                  VErkoopsvoorwaarden
+                  Verkoopsvoorwaarden
                 </Heading>
                 <Paragraph mb={8}>
                   PRIVACYBELEID

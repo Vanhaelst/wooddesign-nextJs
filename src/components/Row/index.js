@@ -35,12 +35,18 @@ const RowEven = styled.div`
   }
 `;
 
-export const Row = ({ image, isEven, children }) => {
+export const Row = ({ image, alt, isEven, children }) => {
   if (isEven) {
     return (
       <RowEven as={Grid} row>
         <Grid item xs={12} sm={6} lg={{ width: 6 }}>
-          <Image src={image} objectFit height="100%" className="rounded-3xl" />
+          <Image
+            src={image}
+            alt={alt}
+            objectFit
+            height="100%"
+            className="rounded-3xl"
+          />
         </Grid>
         <Grid
           item
@@ -71,7 +77,7 @@ export const Row = ({ image, isEven, children }) => {
         {children}
       </Grid>
       <Grid item xs={12} sm={6} lg={{ width: 6 }}>
-        <Image src={image} objectFit height="100%" />
+        <Image src={image} alt={alt} objectFit height="100%" />
       </Grid>
     </RowOdd>
   );

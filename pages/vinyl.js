@@ -12,6 +12,7 @@ import { Paragraph } from "../publipirates-react";
 import Masonry from "../src/components/Masonry";
 import Button from "@/components/Button";
 import { API_SLUG } from "../src/data/api";
+import { canonicalUrl } from "../src/utils/seo";
 
 const graphcms = new GraphQLClient(API_SLUG);
 const category = ["vinyl"];
@@ -65,16 +66,22 @@ const Services = ({ realisations, pagination }) => {
   return (
     <div>
       <Head>
-        <title>{companyData.companyName} - Parket</title>
+        <title>Vinylvloeren Antwerpen & Kontich | Wooddesign</title>
         <meta
           name="description"
-          content={`${companyData.companyName} - Vinylvloer`}
+          content="Vinylvloer laten plaatsen in Antwerpen, Kontich en omstreken? Wooddesign biedt waterbestendige, onderhoudsvriendelijke vinylvloeren in hout- en steeneffecten."
         />
+        <link rel="canonical" href={canonicalUrl("/vinyl")} />
         <meta
           property="og:title"
-          content="Wooddesign - Diensten - Vinylvloer"
+          content="Vinylvloeren Antwerpen & Kontich | Wooddesign"
           key="title"
         />
+        <meta
+          property="og:description"
+          content="Vinylvloer laten plaatsen in Antwerpen, Kontich en omstreken? Wooddesign biedt waterbestendige, onderhoudsvriendelijke vinylvloeren in hout- en steeneffecten."
+        />
+        <meta property="og:url" content={canonicalUrl("/vinyl")} />
       </Head>
 
       <Navigation />

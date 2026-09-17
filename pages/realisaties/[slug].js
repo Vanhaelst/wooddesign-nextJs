@@ -15,8 +15,9 @@ import ChevronLeft from "@/icons/ChevronLeft";
 import { RichText } from "../../src/components/richtext/richtext.organism";
 import ListItem from "@/components/List/ListItem";
 import Text from "@/components/Text";
+import { canonicalUrl, richTextToPlainText } from "../../src/utils/seo";
 
-const Realisations = ({ realisation }) => {
+const Realisations = ({ realisation, slug }) => {
   const options = {
     buttons: {
       backgroundColor: "rgba(30,30,36,0.9)",
@@ -48,16 +49,32 @@ const Realisations = ({ realisation }) => {
 
   const router = useRouter();
 
-  console.log("description", realisation?.description);
+  const rawDescriptionText = (realisation?.description || [])
+    .map((descr) => richTextToPlainText(descr?.raw, 1000))
+    .join(" ")
+    .trim();
+
+  const metaDescription = rawDescriptionText
+    ? rawDescriptionText.length > 155
+      ? `${rawDescriptionText.slice(0, 155).replace(/\s+\S*$/, "")}…`
+      : rawDescriptionText
+    : `${realisation?.title} — bekijk dit gerealiseerde project van Wooddesign, specialist in parket, gevelbekleding en terrassen.`;
+
+  const pagePath = `/realisaties/${slug}`;
+
   return (
     <div>
       <Head>
         <title>Wooddesign - Realisaties - {realisation.title} </title>
+        <meta name="description" content={metaDescription} />
+        <link rel="canonical" href={canonicalUrl(pagePath)} />
         <meta
           property="og:title"
           content={`Wooddesign - Realisaties - ${realisation.title}`}
           key="title"
         />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:url" content={canonicalUrl(pagePath)} />
         <meta
           name="keywords"
           content={`${realisation?.details?.houtsoort} - ${realisation?.details?.type} - ${meta.keywords}`}
@@ -186,6 +203,7 @@ export async function getServerSideProps(context) {
   return {
     props: {
       realisation: realisation || "No realisations",
+      slug: context.params.slug,
     },
   };
 }

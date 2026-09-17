@@ -15,11 +15,11 @@ import Navigation from "src/components/Navigation";
 import ContentWrapper from "src/components/ContentWrapper";
 import { services } from "../src/data/services/overview";
 import useGlobalContext from "../src/context/hooks/useGlobalContext";
-import companyData from "../src/data/companyData";
 
 import { API_SLUG } from "../src/data/api";
 import { Row } from "../src/components/Row";
 import { CallToAction } from "../src/components/CallToAction";
+import { canonicalUrl } from "../src/utils/seo";
 
 const graphcms = new GraphQLClient(API_SLUG);
 
@@ -44,12 +44,25 @@ const Home = () => {
   return (
     <div>
       <Head>
-        <title>{companyData.companyName} - Home</title>
+        <title>
+          Wooddesign - Specialist Parket, Gevelbekleding & Terrassen Antwerpen
+        </title>
         <meta
           name="description"
-          content={`${companyData.companyName} - Parket vloeren, plaatsing en onderhoud`}
+          content="Wooddesign is dé specialist in parketvloeren, gevelbekleding en houten terrassen in Kontich, Antwerpen en omstreken. 25+ jaar ervaring, één aannemer voor uw volledige project. Vraag een offerte aan."
         />
         <meta name="viewport" content={meta.viewport} />
+        <link rel="canonical" href={canonicalUrl("/")} />
+        <meta
+          property="og:title"
+          content="Wooddesign - Specialist Parket, Gevelbekleding & Terrassen"
+          key="title"
+        />
+        <meta
+          property="og:description"
+          content="Dé specialist in parketvloeren, gevelbekleding en houten terrassen in Kontich, Antwerpen en omstreken. 25+ jaar ervaring, één aannemer voor uw volledige project."
+        />
+        <meta property="og:url" content={canonicalUrl("/")} />
       </Head>
       <Navigation color="white" position="absolute" />
 
@@ -58,8 +71,14 @@ const Home = () => {
         style={{ backgroundImage: `url('images/bram-kaat-low-18.jpg')` }}
       >
         <div className="absolute top-90 left-0 w-full h-full bg-black/50" />
-        <span className="text-xl uppercase text-white">Welkom bij </span>
-        <h1 className="text-7xl uppercase text-white">Wooddesign </h1>
+        <span className="text-xl uppercase text-white">Welkom bij</span>
+        <h1 className="text-6xl md:text-7xl uppercase text-white text-center leading-tight px-4">
+          Wooddesign
+          <span className="block text-lg md:text-2xl normal-case tracking-normal mt-3">
+            Specialist in parket, gevelbekleding &amp; terrassen in Antwerpen,
+            Kontich en omgeving
+          </span>
+        </h1>
       </div>
 
       <ContentWrapper>
@@ -68,7 +87,11 @@ const Home = () => {
         {/* Intro */}
         <Section as={Box}>
           <Grid container>
-            <Row isEven={false} image="images/intro2.jpeg">
+            <Row
+              isEven={false}
+              image="images/intro2.jpeg"
+              alt="Interieur met parketvloer geplaatst door Wooddesign"
+            >
               <Paragraph mb={2}>
                 Wat meer dan 25 jaar geleden begon als eenmanszaak in
                 parketvloeren en terrassen, is ondertussen uitgegroeid tot een
@@ -79,7 +102,9 @@ const Home = () => {
                 In tegenstelling tot wat onze naam doet vermoeden, plaatsen we
                 niet enkel houtproducten, maar zijn we in de loop van de tijd
                 geëvolueerd door de plaatsing van duurzame materialen zoals
-                aluminium, volkern, vezelcement en composiet
+                aluminium, volkern, vezelcement en composiet. Zo werken we met
+                houtsoorten als eik, ipé, padoek, bangkirai en afzelia, naast
+                duurzame alternatieven voor gevel en terras.
               </Paragraph>
               <Paragraph mb={6}>
                 Onze kracht ligt dan ook in de combinatie van jarenlange
@@ -87,14 +112,21 @@ const Home = () => {
                 kwaliteitsproducten. Of het nu gaat om een stijlvolle
                 parketvloer, duurzame gevelbekleding of een prachtig terras, wij
                 staan garant voor een hoog afwerkingsniveau en een service die
-                verder reikt dan de plaatsing door eigen vakmensen.
+                verder reikt dan de plaatsing door eigen vakmensen. En omdat we
+                parket, gevel én terras zelf in huis hebben, bent u voor uw
+                volledige project aan één specialist verbonden.
               </Paragraph>
             </Row>
-            <Row isEven={true} image="images/toonzaal.jpeg">
+            <Row
+              isEven={true}
+              image="images/toonzaal.jpeg"
+              alt="Toonzaal van Wooddesign in Kontich met houtsoorten en materialen"
+            >
               <Paragraph mb={6}>
-                <strong>Bezoek onze toonzaal</strong> en laat je inspireren door
-                ons uitgebreid aanbod aan houtsoorten en duurzame materialen
-                voor gevelbekleding, terrassen en parketvloeren.
+                <strong>Bezoek onze toonzaal in Kontich</strong> en laat je
+                inspireren door ons uitgebreid aanbod aan houtsoorten en
+                duurzame materialen voor gevelbekleding, terrassen en
+                parketvloeren.
               </Paragraph>
               <Paragraph mb={6}>
                 Bij <strong>Wooddesign</strong> zetten we samen met jou de stap
@@ -111,7 +143,12 @@ const Home = () => {
         <Section as={Box} backgroundColor="#fafafa">
           <Grid container>
             {services.map((service, index) => (
-              <Row isEven={index % 2 !== 0} image={service.image}>
+              <Row
+                isEven={index % 2 !== 0}
+                image={service.image}
+                alt={service.alt}
+                key={service.slug}
+              >
                 <Heading level={3} color="#464646">
                   {service.title}
                 </Heading>
@@ -120,17 +157,53 @@ const Home = () => {
                 </Paragraph>
                 <Paragraph mb={6}>{service.description}</Paragraph>
                 <Button outline as={Link} href={service.slug} block={isMobile}>
-                  Meer info
+                  {service.cta}
                 </Button>
               </Row>
             ))}
           </Grid>
         </Section>
 
+        {/* Werkgebied */}
+        {/*
+        <Section as={Box}>
+          <Grid container>
+            <Grid row>
+              <Grid item xs={12} md={10}>
+                <Heading level={3} color="#464646" mb={4}>
+                  Actief in Antwerpen, Kontich en de hele regio
+                </Heading>
+                <Paragraph mb={4}>
+                  Vanuit onze showroom in Kontich plaatsen we parketvloeren,
+                  gevelbekleding en terrassen voor particulieren en
+                  bouwprojecten in de hele provincie Antwerpen, onder andere
+                  in:
+                </Paragraph>
+                <Paragraph mb={2}>
+                  {regions.map((region, index) => (
+                    <React.Fragment key={region.slug}>
+                      <Link href={`/regio/${region.slug}`} type="hidden">
+                        {region.name}
+                      </Link>
+                      {index < regions.length - 1 && (
+                        <span className="mx-2">|</span>
+                      )}
+                    </React.Fragment>
+                  ))}
+                </Paragraph>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Section>*/}
+
         {/* WEBSHOP */}
         <Section as={Box}>
           <Grid container>
-            <Row isEven={true} image="images/webshop.png">
+            <Row
+              isEven={true}
+              image="images/webshop.png"
+              alt="Wooddesign webshop met onderhoudsproducten voor parket, gevel en terras"
+            >
               <Heading
                 level={3}
                 textTransform=""

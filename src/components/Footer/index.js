@@ -11,6 +11,8 @@ import Pinterest from "@/icons/Pinterest";
 import Box from "@/components/Box";
 import companyData from "../../data/companyData";
 import useGlobalContext from "../../context/hooks/useGlobalContext";
+import regions from "../../data/regions";
+import guides from "../../data/guides";
 
 const Wrapper = styled(Grid)`
   background-color: #1a1a1a;
@@ -106,6 +108,50 @@ const Footer = () => {
                   </Link>
                 </Box>
               </Box>
+            </Grid>
+          </Grid>
+
+          <Grid row pt={8}>
+            <Grid item xs={12} sm={6} pb={8}>
+              <Heading mb={4} level={5} color="white">
+                Werkgebied
+              </Heading>
+              <Paragraph color="white">
+                {regions.map((region, index) => (
+                  <React.Fragment key={region.slug}>
+                    <Link
+                      href={`/regio/${region.slug}`}
+                      color="white"
+                      type="hidden"
+                    >
+                      {region.name}
+                    </Link>
+                    {index < regions.length - 1 && (
+                      <span className="mx-2">-</span>
+                    )}
+                  </React.Fragment>
+                ))}
+              </Paragraph>
+            </Grid>
+
+            <Grid item xs={12} sm={6}>
+              <Heading mb={4} level={5} color="white">
+                Kennisbank
+              </Heading>
+              <Paragraph color="white">
+                {guides.map((guide, index) => (
+                  <React.Fragment key={guide.slug}>
+                    <Link
+                      href={`/gids/${guide.slug}`}
+                      color="white"
+                      type="hidden"
+                    >
+                      {guide.title}
+                    </Link>
+                    {index < guides.length - 1 && <br />}
+                  </React.Fragment>
+                ))}
+              </Paragraph>
             </Grid>
           </Grid>
         </Grid>

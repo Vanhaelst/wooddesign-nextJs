@@ -12,6 +12,7 @@ import ContentWrapper from "../../src/components/ContentWrapper";
 import Button from "@/components/Button";
 import Link from "@/components/Link";
 import Box from "@/components/Box";
+import { canonicalUrl } from "../../src/utils/seo";
 
 const graphcms = new GraphQLClient(API_SLUG);
 const enums = {
@@ -87,19 +88,25 @@ const Realisations = ({ realisations, __type }) => {
   return (
     <div>
       <Head>
-        <title>Wooddesign - Realisaties</title>
+        <title>Realisaties Parket, Gevel & Terras | Wooddesign</title>
+        <meta
+          name="description"
+          content="Ontdek gerealiseerde parketvloeren, gevelbekleding en terrassen van Wooddesign in Antwerpen, Kontich en omstreken. Laat u inspireren door onze projecten."
+        />
+        <link rel="canonical" href={canonicalUrl("/realisaties")} />
         <meta
           property="og:title"
-          content="Wooddesign - Realisaties"
+          content="Realisaties Parket, Gevel & Terras | Wooddesign"
           key="title"
         />
+        <meta
+          property="og:description"
+          content="Ontdek gerealiseerde parketvloeren, gevelbekleding en terrassen van Wooddesign in Antwerpen, Kontich en omstreken. Laat u inspireren door onze projecten."
+        />
+        <meta property="og:url" content={canonicalUrl("/realisaties")} />
       </Head>
       <Navigation />
-      <Breadcrumbs
-        page="Realisaties"
-        variant={1}
-        image={"images/hero-realisaties.jpeg"}
-      />
+      <Breadcrumbs title="Realisaties" />
       <ContentWrapper>
         <Grid container>
           <Grid row mb={5}>

@@ -11,8 +11,34 @@ import companyData from "../src/data/companyData";
 import { Paragraph } from "../publipirates-react";
 import Masonry from "../src/components/Masonry";
 import Button from "@/components/Button";
+import Link from "@/components/Link";
 import { API_SLUG } from "../src/data/api";
 import { CallToAction } from "../src/components/CallToAction";
+import Faq from "../src/components/Faq";
+import { canonicalUrl, faqJsonLd } from "../src/utils/seo";
+
+const faqItems = [
+  {
+    question: "Wat is het verschil tussen massief en meerlaags parket?",
+    answer:
+      "Massief parket bestaat volledig uit hout en kan meerdere keren geschuurd worden, wat het extra duurzaam maakt. Meerlaags parket heeft een houten toplaag op een stabiele onderconstructie, waardoor het minder werkt bij temperatuur- en vochtschommelingen. Welke keuze het beste past, hangt af van uw ondervloer, ruimte en wensen. We adviseren u hier graag over.",
+  },
+  {
+    question: "Kan een bestaande parketvloer geschuurd en behandeld worden?",
+    answer:
+      "In de meeste gevallen wel. Een versleten of beschadigde parketvloer kan vaak worden opgeschuurd en opnieuw behandeld met olie of vernis, waardoor ze er weer als nieuw uitziet zonder dat u de volledige vloer moet vervangen. We bekijken dit graag ter plaatse.",
+  },
+  {
+    question: "In welke regio plaatst Wooddesign parketvloeren?",
+    answer:
+      "Vanuit onze showroom in Kontich plaatsen we parketvloeren in de hele regio, onder andere in Antwerpen, Mechelen, Lier en Edegem, voor zowel particulieren als bouwprojecten.",
+  },
+  {
+    question: "Hoe vraag ik een offerte aan voor mijn parketvloer?",
+    answer:
+      "Via ons contactformulier of telefonisch. We bespreken uw project, komen indien nodig ter plaatse langs en bezorgen u een vrijblijvende offerte op maat.",
+  },
+];
 
 const graphcms = new GraphQLClient(API_SLUG);
 const category = ["Parket"];
@@ -66,15 +92,27 @@ const Services = ({ realisations, pagination }) => {
   return (
     <div>
       <Head>
-        <title>{companyData.companyName} - Parket</title>
+        <title>Parketvloeren Antwerpen & Kontich | Wooddesign</title>
         <meta
           name="description"
-          content={`${companyData.companyName} - Parket`}
+          content="Parketvloer laten leggen, schuren of renoveren in Antwerpen, Kontich en omstreken? Wooddesign is uw parketteur voor massief en meerlaags parket, visgraat en hongaarse punt."
         />
+        <link rel="canonical" href={canonicalUrl("/parket")} />
         <meta
           property="og:title"
-          content="Wooddesign - Diensten - Parket"
+          content="Parketvloeren Antwerpen & Kontich | Wooddesign"
           key="title"
+        />
+        <meta
+          property="og:description"
+          content="Parketvloer laten leggen, schuren of renoveren in Antwerpen, Kontich en omstreken? Wooddesign is uw parketteur voor massief en meerlaags parket, visgraat en hongaarse punt."
+        />
+        <meta property="og:url" content={canonicalUrl("/parket")} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(faqJsonLd(faqItems)),
+          }}
         />
       </Head>
 
@@ -88,16 +126,17 @@ const Services = ({ realisations, pagination }) => {
           uw parketvloer jarenlang in topconditie en behoudt ze haar authentieke
           charme.
         </Paragraph>
-        {/*
         <Paragraph className="mb-3">
-          Verken onze collectie, ontdek de mogelijkheden voor uw woning of
-          project, en laat u inspireren door de schoonheid van parketvloeren.
+          Als parketteur in Antwerpen, Kontich en omstreken leggen we zowel
+          massief als meerlaags parket, van klassieke stroken tot visgraat en
+          hongaarse punt in eik en andere houtsoorten.
         </Paragraph>
         <Paragraph>
+          Verken onze collectie, ontdek de mogelijkheden voor uw woning of
+          project, en laat u inspireren door de schoonheid van parketvloeren.
           Wij helpen u graag verder bij het maken van de juiste keuze in onze
-          toonzaal te Kontich
+          toonzaal te Kontich.
         </Paragraph>
-        */}
       </Breadcrumbs>
 
       <ContentWrapper>
@@ -113,6 +152,33 @@ const Services = ({ realisations, pagination }) => {
                 </Button>
               </Grid>
             )}
+          </Grid>
+
+          <Grid row mb={9}>
+            <Grid item xs={12} md={10}>
+              <Paragraph>
+                Naast parket plaatsen we ook{" "}
+                <Link href="/gevel" type="hidden">
+                  duurzame gevelbekleding
+                </Link>{" "}
+                en{" "}
+                <Link href="/terras" type="hidden">
+                  houten terrassen
+                </Link>
+                . Zo bent u voor uw volledige project aan één specialist
+                verbonden.
+              </Paragraph>
+            </Grid>
+          </Grid>
+        </Grid>
+      </ContentWrapper>
+
+      <ContentWrapper>
+        <Grid container>
+          <Grid row>
+            <Grid item xs={12}>
+              <Faq title="Veelgestelde vragen over parketvloeren" items={faqItems} />
+            </Grid>
           </Grid>
         </Grid>
       </ContentWrapper>
