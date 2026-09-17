@@ -5,16 +5,13 @@ import Navigation from "src/components/Navigation";
 import Heading from "@/components/Heading";
 import Grid from "@/components/Grid";
 import Footer from "../src/components/Footer";
-import UnorderedList from "@/components/List/UnorderedList";
-import ListItem from "@/components/List/ListItem";
-import Text from "@/components/Text";
-import Link from "@/components/Link";
-import ContentWrapper from "../src/components/ContentWrapper";
 import ValidateForm from "../src/utils/ValidateForm";
 import { sendContactMail } from "../src/utils/sendMail-contact";
 import ContactForm from "../src/components/ContactForm";
 import companyData from "../src/data/companyData";
 import { canonicalUrl } from "../src/utils/seo";
+
+const mapsUrl = "https://www.google.com/maps?q=51.14379097947675,4.432205851657122";
 
 const Contact = () => {
   const [mailState, setMailState] = useState(undefined);
@@ -109,104 +106,124 @@ const Contact = () => {
       </Head>
       <Navigation />
 
-      <ContentWrapper>
+      <div className="mt-24">
         <Grid container>
-          <Grid row>
-            <Grid item xs={12} lg={6}>
-              <Grid row mb={6}>
-                <Grid item xs={12} md={10}>
-                  <Heading level={2}>Contact</Heading>
-                </Grid>
-              </Grid>
-              <Grid row>
-                <Grid item xs={12} md={10}>
-                  <UnorderedList>
-                    {showHolidayOpenings && (
-                      <ListItem>
-                        <Text fontWeight="bold" style={{ display: "block" }}>
-                          Openingstijden eindejaarsperiode:
-                        </Text>
-                        Tijdens de eindejaarsvakantie zijn wij gesloten van
-                        24/12 t.e.m. 8/01/2023. Alle contactaanvragen worden
-                        behandeld vanaf 9/01/2023.
-                      </ListItem>
-                    )}
-                    <ListItem>
-                      <Text
-                        as="p"
-                        fontWeight="bold"
-                        style={{ display: "block" }}
-                      >
-                        Telefoon:
-                      </Text>
-                      <Link
-                        href={`tel:${companyData.phone.unformatted}`}
-                        fontFamily="secondary"
-                        type="hidden"
-                      >
-                        {companyData.phone.formatted}
-                      </Link>
-                    </ListItem>
-                    <ListItem>
-                      <Text
-                        as="p"
-                        fontWeight="bold"
-                        style={{ display: "block" }}
-                      >
-                        E-mail:
-                      </Text>
-                      <Link
-                        href={`mailto:${companyData.email}`}
-                        fontFamily="secondary"
-                        type="hidden"
-                      >
-                        {companyData.email}
-                      </Link>
-                    </ListItem>
-                    <ListItem>
-                      <Text
-                        as="p"
-                        fontWeight="bold"
-                        style={{ display: "block" }}
-                      >
-                        Adres:&nbsp;
-                      </Text>
-                      <Text fontFamily="secondary">
-                        {companyData.address.street}{" "}
-                        {companyData.address.number}
-                        {companyData.address.bus}, {companyData.address.zip}{" "}
-                        {companyData.address.city}.
-                        <br />
-                        {companyData.address.extra} -{" "}
-                        {companyData.address.extra2}
-                      </Text>
-                    </ListItem>
-                    <ListItem>
-                      <Text
-                        as="p"
-                        fontWeight="bold"
-                        style={{ display: "block" }}
-                      >
-                        Toonzaal / magazijn:
-                      </Text>
-                      <Text as="p" fontFamily="secondary">
-                        Op afspraak te bezoeken.
-                      </Text>
-                      <Text as="p" fontFamily="secondary">
-                        Dinsdag tem zaterdag van 11u tot 16u.
-                      </Text>
-                    </ListItem>
-                    <ListItem>
-                      <Text fontFamily="secondary">
-                        Gelieve steeds vooraf te contacteren voor afwijkende
-                        openingsuren of afspraken op andere tijdstippen.
-                      </Text>
-                    </ListItem>
-                  </UnorderedList>
-                </Grid>
-              </Grid>
+          <Grid row mb={6}>
+            <Grid item xs={12} md={10}>
+              <Heading level={2}>Contact</Heading>
             </Grid>
-            <Grid item xs={12} lg={6}>
+          </Grid>
+
+          <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 ">
+            <div>
+              <div className="mb-8">
+                <span className="text-xs font-semibold uppercase tracking-[0.15em] text-[#3a3733]">
+                  Contactgegevens
+                </span>
+                <span
+                  className="mt-3 block h-[2px] w-10"
+                  style={{ backgroundColor: "#8dc63f" }}
+                />
+              </div>
+
+              {showHolidayOpenings && (
+                <div className="mb-6">
+                  <p className="font-semibold text-[#3a3733]">
+                    Openingstijden eindejaarsperiode:
+                  </p>
+                  <p className="text-[#6b6862]">
+                    Tijdens de eindejaarsvakantie zijn wij gesloten van 24/12
+                    t.e.m. 8/01/2023. Alle contactaanvragen worden behandeld
+                    vanaf 9/01/2023.
+                  </p>
+                </div>
+              )}
+
+              <div className="mb-6">
+                <p className="font-semibold text-[#3a3733]">Telefoon:</p>
+                <a
+                  href={`tel:${companyData.phone.unformatted}`}
+                  className="text-[#3a3733] underline underline-offset-2 hover:text-[#72a230]"
+                >
+                  {companyData.phone.formatted}
+                </a>
+              </div>
+
+              <div className="mb-6">
+                <p className="font-semibold text-[#3a3733]">E-mail:</p>
+                <a
+                  href={`mailto:${companyData.email}`}
+                  className="text-[#3a3733] underline underline-offset-2 hover:text-[#72a230]"
+                >
+                  {companyData.email}
+                </a>
+              </div>
+
+              <div className="mb-6">
+                <p className="font-semibold text-[#3a3733]">Adres:</p>
+                <p className="text-[#6b6862]">
+                  {companyData.address.street} {companyData.address.number}
+                  {companyData.address.bus}, {companyData.address.zip}{" "}
+                  {companyData.address.city}.
+                  <br />
+                  {companyData.address.extra} - {companyData.address.extra2}
+                </p>
+                <a
+                  href={mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#3a3733] underline underline-offset-2 hover:text-[#72a230]"
+                >
+                  Vind ons op Google Maps
+                </a>
+              </div>
+
+              <div className="mb-6">
+                <p className="font-semibold text-[#3a3733]">
+                  Toonzaal / magazijn:
+                </p>
+                <p className="text-[#6b6862]">Op afspraak te bezoeken.</p>
+                <p className="text-[#6b6862]">
+                  Dinsdag tem zaterdag van 11u tot 16u.
+                </p>
+              </div>
+
+              <p className="text-[#6b6862]">
+                Gelieve steeds vooraf te contacteren voor afwijkende
+                openingsuren of afspraken op andere tijdstippen.
+              </p>
+            </div>
+
+            <div className="relative min-h-[320px] overflow-hidden rounded-2xl lg:min-h-full">
+              <img
+                src="/images/toonzaal.jpeg"
+                alt="Toonzaal van Wooddesign in Kontich"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 flex items-center justify-center bg-black/10">
+                <a
+                  href={mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white px-6 py-3 text-xs font-semibold uppercase tracking-widest text-[#3a3733] shadow-sm transition-colors hover:bg-gray-100"
+                >
+                  Route via Google Maps
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <Grid row mt={10}>
+            <Grid item xs={12} md={12}>
+              <div className="mb-6 mt-10">
+                <span className="text-xs font-semibold uppercase tracking-[0.15em] text-[#3a3733]">
+                  Stel je vraag
+                </span>
+                <span
+                  className="mt-3 block h-[2px] w-10"
+                  style={{ backgroundColor: "#8dc63f" }}
+                />
+              </div>
               <ContactForm
                 mailState={mailState}
                 errors={errors}
@@ -217,7 +234,7 @@ const Contact = () => {
             </Grid>
           </Grid>
         </Grid>
-      </ContentWrapper>
+      </div>
 
       <iframe
         style={{ border: 0, marginTop: "50px" }}

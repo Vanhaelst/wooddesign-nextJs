@@ -6,6 +6,28 @@ import NavBar from "@/components/Navigation/NavBar";
 import { navigation } from "./navigation";
 import Logo from "src/theme/logo/Logo";
 import Link from "next/link";
+import Cart from "@/icons/cart";
+import PromoBar from "./PromoBar";
+
+const ShopLink = ({ color, sticky }) => (
+  <Link
+    href="http://shop.wooddesign.be"
+    target="_blank"
+    className="flex items-center ml-6 gap-2 shrink-0"
+    aria-label="Naar de Wooddesign webshop"
+  >
+    <Cart
+      className="w-5 h-5"
+      stroke={sticky ? "#464646" : color === "white" ? "white" : "#464646"}
+    />
+    <span
+      className="text-sm uppercase tracking-wide font-medium"
+      style={{ color: sticky ? "#464646" : color === "white" ? "white" : "#464646" }}
+    >
+      Shop
+    </span>
+  </Link>
+);
 
 const DesktopNavigation = ({ color, position }) => {
   const router = useRouter();
@@ -26,7 +48,8 @@ const DesktopNavigation = ({ color, position }) => {
   }, []);
 
   return (
-    <>
+    <div style={{ position: "relative" }}>
+      <PromoBar />
       <div id="top" />
 
       <NavBar position={position}>
@@ -48,6 +71,7 @@ const DesktopNavigation = ({ color, position }) => {
               </MenuItem>
             );
           })}
+          <ShopLink color={color} />
         </Menu>
       </NavBar>
 
@@ -70,9 +94,10 @@ const DesktopNavigation = ({ color, position }) => {
               </MenuItem>
             );
           })}
+          <ShopLink sticky />
         </Menu>
       </NavBar>
-    </>
+    </div>
   );
 };
 

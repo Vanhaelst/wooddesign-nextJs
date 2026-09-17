@@ -21,7 +21,9 @@ const StyledButton = styled.a`
   font-size: ${style.fontSize};
   color: #ffffff;
   font-family: ${(props) => props.theme.font.family.secondary};
-  font-weight: 200;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
   line-height: calc(${style.fontSize} + ${style.paddingX} + ${style.paddingX});
   padding-bottom: ${style.paddingX};
   padding-left: ${style.paddingY};
@@ -31,7 +33,7 @@ const StyledButton = styled.a`
   border-width: 2px;
   border-style: solid;
   border-color: transparent;
-  white-space: nowrap;
+  white-space: ${(props) => (props.block ? "normal" : "nowrap")};
   transition: all 0.25s;
   &:hover {
     transition: all 0.25s;
@@ -86,19 +88,12 @@ const StyledButton = styled.a`
     `
         background-color: transparent;
         border-style: solid;
-        border-color: ${props.theme.colors.grey[50]};
-        color: ${props.theme.colors.grey[50]};
+        border-color: ${props.theme.colors.primary.main};
+        color: ${props.theme.colors.primary.main};
         &:hover{
-            border-color: ${props.theme.colors.primary.main};
-            background-color: transparent;
-            color: ${props.theme.colors.primary.main};
-        }
-        ${
-          props.appearance === "primary" &&
-          `
-            border-color: ${props.theme.colors.primary.main};
-            color: ${props.theme.colors.primary.main};
-        `
+            border-color: ${props.theme.colors.primary.dark};
+            background-color: ${props.theme.colors.primary.main};
+            color: #ffffff;
         }
     `};
      ${(props) =>

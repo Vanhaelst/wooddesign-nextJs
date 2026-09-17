@@ -1,13 +1,13 @@
 import React from "react";
 
-const Cart = ({ className }) => {
+const Cart = ({ className, stroke = "white" }) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth="1.5"
-            stroke="white"
+            stroke={stroke}
             aria-hidden="true"
             className={`${className} flex-shrink-0 text-gray-400 group-hover:text-gray-500`}>
             <path

@@ -10,9 +10,10 @@ import ContentWrapper from "../src/components/ContentWrapper";
 import companyData from "../src/data/companyData";
 import { Paragraph } from "../publipirates-react";
 import Masonry from "../src/components/Masonry";
-import Button from "@/components/Button";
 import { API_SLUG } from "../src/data/api";
 import { canonicalUrl } from "../src/utils/seo";
+import { CallToAction } from "../src/components/CallToAction";
+import useInfiniteScroll from "../src/hooks/useInfiniteScroll";
 
 const graphcms = new GraphQLClient(API_SLUG);
 const category = ["vinyl"];
@@ -54,7 +55,7 @@ const Services = ({ realisations, pagination }) => {
       }
     }`);
 
-    data.then((data) => {
+    return data.then((data) => {
       setPaginatedRealisations((prevState) => [
         ...prevState,
         ...data.realisations,
@@ -62,6 +63,8 @@ const Services = ({ realisations, pagination }) => {
       setNextPage(() => data?.realisationsConnection?.pageInfo?.hasNextPage);
     });
   };
+
+  const loadMoreRef = useInfiniteScroll(handleLoadMore, hasNextPage);
 
   return (
     <div>
@@ -131,19 +134,25 @@ const Services = ({ realisations, pagination }) => {
       <ContentWrapper>
         <Grid container>
           <Grid row mb={5}>
-            <Grid item xs={12}>
-              <Masonry items={paginatedRealisations} />
-            </Grid>
+            {paginatedRealisations?.length === 0 && (
+              <Grid item xs={12}>
+                <Masonry items={paginatedRealisations} />
+              </Grid>
+            )}
             {hasNextPage && (
               <Grid item xs={12}>
-                <Button appearance="primary" onClick={handleLoadMore}>
-                  Load more
-                </Button>
+                <div ref={loadMoreRef} />
               </Grid>
             )}
           </Grid>
         </Grid>
       </ContentWrapper>
+
+      <CallToAction
+        title="Graag een offerte voor uw vinyl?"
+        description="Benieuwd naar de mogelijkheden voor jouw project? Vraag vandaag nog een vrijblijvende offerte aan en ontdek hoe wij jou kunnen helpen."
+        button={{ cta: "Ik wil een offerte", href: "/contact" }}
+      />
 
       <Footer />
     </div>
