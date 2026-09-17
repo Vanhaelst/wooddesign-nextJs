@@ -16,6 +16,7 @@ import { API_SLUG } from "../src/data/api";
 import { canonicalUrl, faqJsonLd } from "../src/utils/seo";
 import { CallToAction } from "../src/components/CallToAction";
 import Faq from "../src/components/Faq";
+import useInfiniteScroll from "../src/hooks/useInfiniteScroll";
 
 const faqItems = [
   {
@@ -172,6 +173,12 @@ const Services = ({ realisations, pagination }) => {
         </Grid>
       </ContentWrapper>
 
+      <CallToAction
+        title="Graag een offerte voor uw vinyl?"
+        description="Benieuwd naar de mogelijkheden voor jouw project? Vraag vandaag nog een vrijblijvende offerte aan en ontdek hoe wij jou kunnen helpen."
+        button={{ cta: "Ik wil een offerte", href: "/contact" }}
+      />
+
       <ContentWrapper>
         <Grid container>
           <Grid row>
@@ -184,12 +191,6 @@ const Services = ({ realisations, pagination }) => {
           </Grid>
         </Grid>
       </ContentWrapper>
-
-      <CallToAction
-        title="Graag een offerte voor uw vinyl?"
-        description="Benieuwd naar de mogelijkheden voor jouw project? Vraag vandaag nog een vrijblijvende offerte aan en ontdek hoe wij jou kunnen helpen."
-        button={{ cta: "Ik wil een offerte", href: "/contact" }}
-      />
 
       <Footer />
     </div>
