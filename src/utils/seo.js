@@ -87,6 +87,14 @@ export const localBusinessJsonLd = () => ({
         url: `${SITE_URL}/terras`,
       },
     },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Vinylvloeren laten leggen",
+        url: `${SITE_URL}/vinyl`,
+      },
+    },
   ],
 });
 

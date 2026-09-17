@@ -1,21 +1,21 @@
 const meta = {
   brand: "Wooddesign",
-  tagline: "Parket, Gevels, Wanden & Terrassen",
+  tagline: "Parket, Gevelbekleding, Terrassen & Vinyl",
   description:
-    "Voor particulieren of bouwprojecten, wij brengen hout op een innovatieve manier in elk project. Aanleg parketvloeren, houten terrassen en houten gevels.",
+    "Wooddesign is dé specialist in parketvloeren, gevelbekleding, houten terrassen en vinylvloeren in Kontich, Antwerpen en omstreken.",
   url: "https://www.wooddesign.be/",
   keywords:
-    "houten vloeren, parket, laminaat vloeren, vinyl vloeren , gevelbekledingen, wandbekledingen, houten terrassen",
+    "parket, parketvloeren, gevelbekleding, houten terrassen, vinylvloeren",
   domain_verify_code: "",
   viewport:
     "width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no",
   msapplicationTileColor: "#ffffff",
   themeColor: "#333333",
   og: {
-    title: "Wooddesign - Parket, Gevels, Wanden &amp; Terrassen",
+    title: "Wooddesign",
     url: "https://www.wooddesign.be/",
     description:
-      "Voor particulieren of bouwprojecten, wij brengen hout op een innovatieve manier in elk project. Aanleg parketvloeren, houten terrassen en houten gevels.",
+      "Wooddesign is dé specialist in parketvloeren, gevelbekleding, houten terrassen en vinylvloeren in Kontich, Antwerpen en omstreken.",
     site_name: "Wooddesign",
     email: "info@wooddesign.be",
     phone_number: "+32 (0)477 20 84 84",

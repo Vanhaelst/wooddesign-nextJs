@@ -127,9 +127,11 @@ const Services = ({ realisations, pagination }) => {
           charme.
         </Paragraph>
         <Paragraph className="mb-3">
-          Als parketteur in Antwerpen, Kontich en omstreken leggen we zowel
-          massief als meerlaags parket, van klassieke stroken tot visgraat en
-          hongaarse punt in eik en andere houtsoorten.
+          Als parketteur in Antwerpen, Kontich en omstreken laten we u zowel
+          massief als meerlaags parket plaatsen, van klassieke stroken tot
+          visgraat en hongaarse punt in eik en andere houtsoorten. Wilt u uw
+          parketvloer laten leggen of een bestaande vloer laten renoveren?
+          Bij ons kan het allebei.
         </Paragraph>
         <Paragraph>
           Verken onze collectie, ontdek de mogelijkheden voor uw woning of
