@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Grid from "@/components/Grid";
-import { navigation, topbar } from "./navigation";
+import { navigation } from "./navigation";
 import { useRouter } from "next/router";
 import Paragraph from "@/components/Paragraph";
 import Text from "@/components/Text";
