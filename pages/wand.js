@@ -9,10 +9,10 @@ import Breadcrumbs from "../src/components/Breadcrumbs";
 import companyData from "../src/data/companyData";
 import { Paragraph } from "../publipirates-react";
 import Masonry from "../src/components/Masonry";
-import Button from "@/components/Button";
 import { API_SLUG } from "../src/data/api";
 import ContentWrapper from "../src/components/ContentWrapper";
 import { canonicalUrl } from "../src/utils/seo";
+import useInfiniteScroll from "../src/hooks/useInfiniteScroll";
 
 const graphcms = new GraphQLClient(API_SLUG);
 const category = ["wand"];
@@ -54,7 +54,7 @@ const Wand = ({ realisations, pagination }) => {
       }
     }`);
 
-    data.then((data) => {
+    return data.then((data) => {
       setPaginatedRealisations((prevState) => [
         ...prevState,
         ...data.realisations,
@@ -62,6 +62,8 @@ const Wand = ({ realisations, pagination }) => {
       setNextPage(() => data?.realisationsConnection?.pageInfo?.hasNextPage);
     });
   };
+
+  const loadMoreRef = useInfiniteScroll(handleLoadMore, hasNextPage);
 
   return (
     <div>
@@ -120,9 +122,7 @@ const Wand = ({ realisations, pagination }) => {
             </Grid>
             {hasNextPage && (
               <Grid item xs={12}>
-                <Button appearance="primary" onClick={handleLoadMore}>
-                  Load more
-                </Button>
+                <div ref={loadMoreRef} />
               </Grid>
             )}
           </Grid>

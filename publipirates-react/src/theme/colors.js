@@ -14,14 +14,18 @@ const colors = {
     100: "rgb(28, 28, 28)",
   },
   primary: {
-    main: "#56a3c2",
-    light: "#7bb7d0",
-    dark: "#3d89a8",
+    // Wooddesign's brand green (matches the webshop, favicon mask icon and
+    // richtext link color). #8dc63f itself is too light for AA text/border
+    // contrast on white, so `main`/`dark` are darkened working shades of the
+    // same hue and `light` keeps the bright brand lime for banners/badges.
+    main: "#4a7322",
+    light: "#8dc63f",
+    dark: "#375719",
     text: "#fff",
   },
   link: {
-    main: "#0280c6",
-    dark: "#2da2e3",
+    main: "#4a7322",
+    dark: "#375719",
   },
   error: "#F84F31",
 };

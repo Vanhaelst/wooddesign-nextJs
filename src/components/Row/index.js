@@ -77,7 +77,13 @@ export const Row = ({ image, alt, isEven, children }) => {
         {children}
       </Grid>
       <Grid item xs={12} sm={6} lg={{ width: 6 }}>
-        <Image src={image} alt={alt} objectFit height="100%" />
+        <Image
+          src={image}
+          alt={alt}
+          objectFit
+          height="100%"
+          className="rounded-3xl"
+        />
       </Grid>
     </RowOdd>
   );
