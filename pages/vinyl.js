@@ -39,9 +39,6 @@ const faqItems = [
       "Vanuit onze showroom in Kontich plaatsen we vinylvloeren in de hele regio, onder andere in Antwerpen, Mechelen, Lier en Edegem, voor zowel particulieren als bouwprojecten.",
   },
 ];
-import { canonicalUrl } from "../src/utils/seo";
-import { CallToAction } from "../src/components/CallToAction";
-import useInfiniteScroll from "../src/hooks/useInfiniteScroll";
 
 const graphcms = new GraphQLClient(API_SLUG);
 const category = ["vinyl"];
@@ -125,21 +122,21 @@ const Services = ({ realisations, pagination }) => {
       <Breadcrumbs title="Vinylvloer laten leggen, stijlvol en onderhoudsvriendelijk">
         <Paragraph className="mb-3">
           Op zoek naar een vloer die zowel stijlvol als praktisch is? Wij
-          plaatsen vinylvloeren die de perfecte combinatie bieden van
-          esthetiek en functionaliteit voor elke ruimte. Of u nu een moderne,
+          plaatsen vinylvloeren die de perfecte combinatie bieden van esthetiek
+          en functionaliteit voor elke ruimte. Of u nu een moderne,
           onderhoudsvriendelijke vloer zoekt voor uw woonkamer, keuken of
-          badkamer, een vinylvloer laten leggen is de ideale keuze.
-          Verkrijgbaar in verschillende stijlen, kleuren en patronen, van
-          hout- en steeneffecten tot strakke, moderne designs.
+          badkamer, een vinylvloer laten leggen is de ideale keuze. Verkrijgbaar
+          in verschillende stijlen, kleuren en patronen, van hout- en
+          steeneffecten tot strakke, moderne designs.
         </Paragraph>
         <Paragraph className="mb-3">
           Met de voordelen van waterbestendigheid, eenvoudige installatie en
           langdurige duurzaamheid, is vinyl een uitstekende oplossing voor
           iedere woning of commercieel project. Ontdek onze uitgebreide
           collectie, laat u inspireren door talloze mogelijkheden en vind de
-          vinylvloer die perfect past bij uw interieur. Wij staan klaar om u
-          te helpen met advies, levering en installatie in Antwerpen, Kontich
-          en omstreken.
+          vinylvloer die perfect past bij uw interieur. Wij staan klaar om u te
+          helpen met advies, levering en installatie in Antwerpen, Kontich en
+          omstreken.
         </Paragraph>
         <Paragraph>
           Naast vinyl plaatsen we ook{" "}
@@ -171,6 +168,19 @@ const Services = ({ realisations, pagination }) => {
                 <div ref={loadMoreRef} />
               </Grid>
             )}
+          </Grid>
+        </Grid>
+      </ContentWrapper>
+
+      <ContentWrapper>
+        <Grid container>
+          <Grid row>
+            <Grid item xs={12}>
+              <Faq
+                title="Veelgestelde vragen over vinylvloeren"
+                items={faqItems}
+              />
+            </Grid>
           </Grid>
         </Grid>
       </ContentWrapper>
