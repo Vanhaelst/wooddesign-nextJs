@@ -17,6 +17,9 @@ import { canonicalUrl, faqJsonLd } from "../src/utils/seo";
 import { CallToAction } from "../src/components/CallToAction";
 import Faq from "../src/components/Faq";
 import useInfiniteScroll from "../src/hooks/useInfiniteScroll";
+import { canonicalUrl } from "../src/utils/seo";
+import { CallToAction } from "../src/components/CallToAction";
+import useInfiniteScroll from "../src/hooks/useInfiniteScroll";
 
 const faqItems = [
   {
@@ -40,6 +43,7 @@ const faqItems = [
       "Vanuit onze showroom in Kontich plaatsen we vinylvloeren in de hele regio, onder andere in Antwerpen, Mechelen, Lier en Edegem, voor zowel particulieren als bouwprojecten.",
   },
 ];
+
 
 const graphcms = new GraphQLClient(API_SLUG);
 const category = ["vinyl"];
@@ -191,6 +195,12 @@ const Services = ({ realisations, pagination }) => {
           </Grid>
         </Grid>
       </ContentWrapper>
+
+      <CallToAction
+        title="Graag een offerte voor uw vinyl?"
+        description="Benieuwd naar de mogelijkheden voor jouw project? Vraag vandaag nog een vrijblijvende offerte aan en ontdek hoe wij jou kunnen helpen."
+        button={{ cta: "Ik wil een offerte", href: "/contact" }}
+      />
 
       <Footer />
     </div>
