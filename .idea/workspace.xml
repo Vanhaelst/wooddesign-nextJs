@@ -5,9 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e60b890b-4f27-4856-9b6a-d695cbaf5a90" name="Changes" comment="ass seo files">
+      <change afterPath="$PROJECT_DIR$/src/components/Navigation/PromoBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SectionHeading/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/jsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/gevel.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/gevel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/parket.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/parket.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/realisaties/[slug].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/realisaties/[slug].js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/terras.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/terras.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/vinyl.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/vinyl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/wand.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/wand.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Button/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Button/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Image/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Image/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Navigation/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Navigation/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publipirates-react/src/icons/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/icons/cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publipirates-react/src/theme/colors.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/theme/colors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CallToAction/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CallToAction/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Faq/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Faq/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Navigation.mobile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.mobile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/default.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/default.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Row/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Row/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +51,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/redesign-2024" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,61 +77,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="2.6242174774659155" />
-      <entry key="MS500" value="5.140850042816592" />
-      <entry key="S2" value="7.64142398711753" />
-      <entry key="S5" value="9.7875071310389" />
-      <entry key="S10" value="11.10608886790111" />
-      <entry key="S30" value="12.28859277476678" />
-      <entry key="S60" value="12.633050237139763" />
-      <entry key="M2" value="12.813611226228398" />
-      <entry key="M5" value="12.93774091364284" />
-      <entry key="M10" value="14.153791689823775" />
-      <entry key="M15" value="18.3884028785357" />
-      <entry key="M30" value="37.675679081014195" />
-      <entry key="H1" value="65.78833027320026" />
-      <entry key="H2" value="90.22679761001874" />
-      <entry key="H4" value="106.4141625927877" />
-      <entry key="D1" value="122.47106260047586" />
-      <entry key="W1" value="125.48897574762397" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0000147363202767" />
+      <entry key="S5" value="1.0235139888285765" />
+      <entry key="S10" value="1.3034171905750573" />
+      <entry key="S30" value="2.930590190682045" />
+      <entry key="S60" value="4.497453798248887" />
+      <entry key="M2" value="6.203351837746064" />
+      <entry key="M5" value="8.932786084316273" />
+      <entry key="M10" value="14.214246917169348" />
+      <entry key="M15" value="20.327071112370014" />
+      <entry key="M30" value="40.0881321808986" />
+      <entry key="H1" value="75.18127320687458" />
+      <entry key="H2" value="115.79748369050569" />
+      <entry key="H4" value="148.3600219152842" />
+      <entry key="D1" value="185.26547795477077" />
+      <entry key="W1" value="192.72115604951637" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="0.0" />
-      <entry key="S10" value="0.0" />
-      <entry key="S30" value="0.0" />
-      <entry key="S60" value="0.0" />
-      <entry key="M2" value="0.0" />
-      <entry key="M5" value="0.0" />
-      <entry key="M10" value="0.0" />
-      <entry key="M15" value="0.0" />
-      <entry key="M30" value="0.0" />
-      <entry key="H1" value="0.0" />
-      <entry key="H2" value="0.0" />
-      <entry key="H4" value="0.0" />
-      <entry key="D1" value="0.0" />
-      <entry key="W1" value="0.0" />
+      <entry key="MS100" value="1.4095430843472446E-122" />
+      <entry key="MS500" value="4.263985027317176E-25" />
+      <entry key="S2" value="8.080791806660815E-7" />
+      <entry key="S5" value="0.0036557927488766" />
+      <entry key="S10" value="0.06046315199256984" />
+      <entry key="S30" value="0.39249150479704475" />
+      <entry key="S60" value="0.6264919198283696" />
+      <entry key="M2" value="0.792520746336671" />
+      <entry key="M5" value="1.026455581393369" />
+      <entry key="M10" value="1.5946056886081073" />
+      <entry key="M15" value="2.1881049532258037" />
+      <entry key="M30" value="3.515317752727686" />
+      <entry key="H1" value="4.814884887673273" />
+      <entry key="H2" value="5.76114853925214" />
+      <entry key="H4" value="6.338174958276566" />
+      <entry key="D1" value="6.883230121775256" />
+      <entry key="W1" value="6.983152089307445" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="2.5318099912338594" />
-      <entry key="MS500" value="5.0995193377923025" />
-      <entry key="S2" value="7.6198783049202845" />
-      <entry key="S5" value="9.774871445711016" />
-      <entry key="S10" value="11.098652094558503" />
-      <entry key="S30" value="12.285796775929324" />
-      <entry key="S60" value="12.631607301296741" />
-      <entry key="M2" value="12.812878079981708" />
-      <entry key="M5" value="12.937444566868837" />
-      <entry key="M10" value="14.153632082815099" />
-      <entry key="M15" value="18.388269433151805" />
-      <entry key="M30" value="37.675549323552154" />
-      <entry key="H1" value="65.78821871759456" />
-      <entry key="H2" value="90.22672136915818" />
-      <entry key="H4" value="106.41411766508205" />
-      <entry key="D1" value="122.4710539839744" />
-      <entry key="W1" value="125.48897448634908" />
+      <entry key="MS100" value="5.462799505175612E-5" />
+      <entry key="MS500" value="0.1404374878789556" />
+      <entry key="S2" value="0.6121810522468272" />
+      <entry key="S5" value="0.8467360608607164" />
+      <entry key="S10" value="1.2549610723448295" />
+      <entry key="S30" value="3.2569315422208374" />
+      <entry key="S60" value="5.07783089109141" />
+      <entry key="M2" value="6.966141323773507" />
+      <entry key="M5" value="9.941578761898992" />
+      <entry key="M10" value="15.793143653937602" />
+      <entry key="M15" value="22.500231778475634" />
+      <entry key="M30" value="43.59119951811856" />
+      <entry key="H1" value="79.98773338528238" />
+      <entry key="H2" value="121.55357879127935" />
+      <entry key="H4" value="154.69541142833424" />
+      <entry key="D1" value="192.14820274896462" />
+      <entry key="W1" value="199.70423486711675" />
     </decayedShown>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/opt/homebrew/Cellar/php/8.5.2/bin/php" />
@@ -137,7 +157,7 @@
     "WebServerToolWindowFactoryState": "false",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "seo/technical-and-content-fixes",
+    "git-widget-placeholder": "design/webshop-parity",
     "js.debugger.nextJs.config.created.client": "true",
     "js.debugger.nextJs.config.created.server": "true",
     "junie.onboarding.icon.badge.shown": "true",
@@ -460,7 +480,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="seo/technical-and-content-fixes" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -499,12 +531,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/pages/index.js</url>
-          <line>116</line>
+          <line>227</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/pages/parket.js</url>
-          <line>128</line>
+          <line>130</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

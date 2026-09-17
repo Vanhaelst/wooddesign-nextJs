@@ -15,11 +15,11 @@ import regions from "../../data/regions";
 import guides from "../../data/guides";
 
 const Wrapper = styled(Grid)`
-  background-color: #1a1a1a;
+  background-color: #3a3733;
 `;
 
 const BottomBar = styled(Grid)`
-  background-color: #0d0d0d;
+  background-color: #2a2825;
   padding: 15px 0;
 `;
 
@@ -27,7 +27,7 @@ const Footer = () => {
   const { isMobile } = useGlobalContext();
 
   return (
-    <div className="bg-[#1a1a1a]">
+    <div className="bg-[#3a3733]">
       <Wrapper pt={11} pb={8}>
         <Grid container>
           <Grid row>

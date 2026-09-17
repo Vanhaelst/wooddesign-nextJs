@@ -5,12 +5,13 @@ import { GlobalContextProvider } from "src/context/GlobalContextProvider";
 import Head from "next/head";
 import meta from "../src/data/meta";
 import "./globals.css";
-import { Cabin } from "next/font/google";
+import { Lato } from "next/font/google";
 
-const cabin = Cabin({
+const cabin = Lato({
   subsets: ["latin"],
   variable: "--font-cabin",
   display: "swap",
+  weight: ["100", "300","400", "700"],
 });
 
 const MyApp = ({ Component, pageProps }) => {

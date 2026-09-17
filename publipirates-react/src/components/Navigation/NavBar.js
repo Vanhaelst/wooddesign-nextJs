@@ -14,13 +14,14 @@ const Navbar = styled(Grid)`
     transition-duration: 300ms;
     
     position: relative;
-    top: 37px;
+    top: 0px;
     z-index: 9950;
     width: 100%;
 
   ${(props) =>
     props.position === "absolute" && `
         position: absolute;
+        top: 37px;
     `}
     
     ${(props) =>

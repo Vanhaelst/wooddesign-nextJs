@@ -12,11 +12,11 @@ import terrassen from "../src/data/services/terrassen";
 import companyData from "../src/data/companyData";
 import { API_SLUG } from "../src/data/api";
 import Masonry from "../src/components/Masonry";
-import Button from "@/components/Button";
 import Link from "@/components/Link";
 import { Paragraph } from "../publipirates-react";
 import { CallToAction } from "../src/components/CallToAction";
 import Faq from "../src/components/Faq";
+import useInfiniteScroll from "../src/hooks/useInfiniteScroll";
 import { canonicalUrl, faqJsonLd } from "../src/utils/seo";
 
 const faqItems = [
@@ -84,7 +84,7 @@ const Terras = ({ realisations, pagination }) => {
       }
     }`);
 
-    data.then((data) => {
+    return data.then((data) => {
       setPaginatedRealisations((prevState) => [
         ...prevState,
         ...data.realisations,
@@ -92,6 +92,8 @@ const Terras = ({ realisations, pagination }) => {
       setNextPage(() => data?.realisationsConnection?.pageInfo?.hasNextPage);
     });
   };
+
+  const loadMoreRef = useInfiniteScroll(handleLoadMore, hasNextPage);
 
   return (
     <div>
@@ -133,6 +135,17 @@ const Terras = ({ realisations, pagination }) => {
           laten aanleggen in Antwerpen, Kontich en omstreken bent u bij ons
           aan het juiste adres.
         </Paragraph>
+        <Paragraph>
+          Naast terrassen plaatsen we ook{" "}
+          <Link href="/parket" type="hidden">
+            parketvloeren
+          </Link>{" "}
+          en{" "}
+          <Link href="/gevel" type="hidden">
+            gevelbekleding
+          </Link>
+          . Zo bent u voor uw volledige project aan één specialist verbonden.
+        </Paragraph>
       </Breadcrumbs>
       <ContentWrapper>
         <Grid container>
@@ -142,31 +155,18 @@ const Terras = ({ realisations, pagination }) => {
             </Grid>
             {hasNextPage && (
               <Grid item xs={12}>
-                <Button appearance="primary" onClick={handleLoadMore}>
-                  Load more
-                </Button>
+                <div ref={loadMoreRef} />
               </Grid>
             )}
           </Grid>
-
-          <Grid row mb={9}>
-            <Grid item xs={12} md={10}>
-              <Paragraph>
-                Naast terrassen plaatsen we ook{" "}
-                <Link href="/parket" type="hidden">
-                  parketvloeren
-                </Link>{" "}
-                en{" "}
-                <Link href="/gevel" type="hidden">
-                  gevelbekleding
-                </Link>
-                . Zo bent u voor uw volledige project aan één specialist
-                verbonden.
-              </Paragraph>
-            </Grid>
-          </Grid>
         </Grid>
       </ContentWrapper>
+
+      <CallToAction
+        title="Graag een offerte voor uw terras?"
+        description="Benieuwd naar de mogelijkheden voor jouw project? Vraag vandaag nog een vrijblijvende offerte aan en ontdek hoe wij jou kunnen helpen."
+        button={{ cta: "Ik wil een offerte", href: "/contact" }}
+      />
 
       <ContentWrapper>
         <Grid container>
@@ -180,12 +180,6 @@ const Terras = ({ realisations, pagination }) => {
           </Grid>
         </Grid>
       </ContentWrapper>
-
-      <CallToAction
-        title="Graag een offerte voor uw terras?"
-        description="Benieuwd naar de mogelijkheden voor jouw project? Vraag vandaag nog een vrijblijvende offerte aan en ontdek hoe wij jou kunnen helpen."
-        button={{ cta: "Ik wil een offerte", href: "/contact" }}
-      />
 
       <Footer />
     </div>

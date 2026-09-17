@@ -36,13 +36,14 @@ const Img = styled.img.withConfig({
     `}
 `;
 
-const Image = ({ src, alt, objectFit, height, hover }) => (
+const Image = ({ src, alt, objectFit, height, hover, className }) => (
   <Img
     src={src}
     alt={alt}
     objectFit={objectFit}
     height={height}
     hover={hover}
+    className={className}
   />
 );
 

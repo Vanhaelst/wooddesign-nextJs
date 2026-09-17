@@ -11,7 +11,9 @@ import Logo from "../../theme/logo/Logo";
 import Facebook from "@/icons/Facebook";
 import Pinterest from "@/icons/Pinterest";
 import Instagram from "@/icons/Instagram";
+import Cart from "@/icons/cart";
 import Link from "next/link";
+import PromoBar from "./PromoBar";
 
 const Wrapper = styled("div").withConfig({
   shouldForwardProp: (prop) => ["children"].includes(prop),
@@ -133,6 +135,7 @@ const Navigation = () => {
   };
   return (
     <Wrapper as={Grid}>
+      <PromoBar />
       <Navbar as={Grid} isMobile={true} container isOpen={isOpen}>
         <Link href="/">
           <Logo height="24px" fill="#464646" />
@@ -157,10 +160,12 @@ const Navigation = () => {
         <Line />
         <Link
           href="http://shop.wooddesign.be"
-          className="text-s hover:underline text-[#676b6d] mx-[12px] my-[10px] font-[200] uppercase"
+          className="flex items-center gap-2 mx-[12px] my-[10px] font-medium uppercase tracking-wide"
+          style={{ color: "#4a7322" }}
           target="_blank"
         >
-          Shop
+          <Cart className="w-5 h-5" stroke="#4a7322" />
+          Bezoek onze webshop
         </Link>
         <Line />
         <div className="mx-[12px]">

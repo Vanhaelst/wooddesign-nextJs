@@ -14,12 +14,98 @@ import meta from "src/data/meta";
 import Navigation from "src/components/Navigation";
 import ContentWrapper from "src/components/ContentWrapper";
 import { services } from "../src/data/services/overview";
+
+const homeServices = [
+  ...services,
+  {
+    title: "Vinyl",
+    image: "images/vinylvloer/vinylvloer.jpg",
+    slug: "/vinyl",
+  },
+  {
+    title: "Onderhoud",
+    image: "images/webshop.png",
+    slug: "https://shop.wooddesign.be",
+    target: "_blank",
+  },
+];
 import useGlobalContext from "../src/context/hooks/useGlobalContext";
 
 import { API_SLUG } from "../src/data/api";
 import { Row } from "../src/components/Row";
 import { CallToAction } from "../src/components/CallToAction";
 import { canonicalUrl } from "../src/utils/seo";
+import SectionHeading from "../src/components/SectionHeading";
+
+const Tile = styled(Link)`
+  position: relative;
+  display: block;
+  height: 320px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-image: url(${(props) => props.$image});
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.55) 0%,
+      rgba(0, 0, 0, 0) 45%
+    );
+  }
+
+  &:hover img,
+  &:hover {
+    opacity: 0.92;
+  }
+`;
+
+const TileLabel = styled.span`
+  position: absolute;
+  left: 20px;
+  bottom: 18px;
+  z-index: 1;
+  color: #fff;
+  font-family: ${(props) => props.theme.font.family.secondary};
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 16px;
+`;
+
+const trustPoints = [
+  {
+    title: "25+ jaar ervaring",
+    description: "Van eenmanszaak tot specialist in parket, gevel en terras.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="#4a7322" strokeWidth="1.5" className="w-8 h-8 mx-auto">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Eigen vakmensen",
+    description: "Plaatsing door ons eigen team, geen onderaannemers.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="#4a7322" strokeWidth="1.5" className="w-8 h-8 mx-auto">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L1.5 3l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75" />
+      </svg>
+    ),
+  },
+  {
+    title: "Gratis offerte",
+    description: "Vrijblijvend advies en een offerte op maat van uw project.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="#4a7322" strokeWidth="1.5" className="w-8 h-8 mx-auto">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75M3.75 4.5h16.5a.75.75 0 01.75.75v13.5a.75.75 0 01-.75.75H3.75a.75.75 0 01-.75-.75V5.25a.75.75 0 01.75-.75z" />
+      </svg>
+    ),
+  },
+];
 
 const graphcms = new GraphQLClient(API_SLUG);
 
@@ -81,6 +167,33 @@ const Home = () => {
         </h1>
       </div>
 
+      {/* Collecties-style quick nav */}
+      <Section as={Box}>
+        <Grid container>
+          <SectionHeading>Onze diensten</SectionHeading>
+        </Grid>
+        <div className="relative max-w-[1800px] w-full px-4 mx-auto overflow-hidden ">
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r from-white to-transparent sm:w-24" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-gradient-to-l from-white to-transparent sm:w-24" />
+          <div className="overflow-x-auto px-10 pb-4 sm:px-24 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <div className="flex gap-4 sm:gap-6">
+              {homeServices.map((service) => (
+                <Tile
+                  key={service.slug}
+                  href={service.slug}
+                  $image={service.image}
+                  target={service.target}
+                  rel={service.target ? "noopener noreferrer" : undefined}
+                  className="w-[78%] shrink-0 sm:w-[55%] md:w-[38%] lg:w-[calc((100%-3*1.5rem)/3.5)]"
+                >
+                  <TileLabel>{service.title}</TileLabel>
+                </Tile>
+              ))}{" "}
+            </div>
+          </div>
+        </div>
+      </Section>
+
       <ContentWrapper>
         <CookieBanner />
 
@@ -140,7 +253,7 @@ const Home = () => {
         </Section>
 
         {/* Diensten */}
-        <Section as={Box} backgroundColor="#fafafa">
+        {/* <Section as={Box} backgroundColor="#fafafa">
           <Grid container>
             {services.map((service, index) => (
               <Row
@@ -162,17 +275,43 @@ const Home = () => {
               </Row>
             ))}
           </Grid>
+        </Section>*/}
+
+        {/* Trust row */}
+        <Section as={Box} backgroundColor="#fafafa">
+          <Grid container>
+            <Grid row>
+              {trustPoints.map((point) => (
+                <Grid item xs={12} sm={4} mb={6} key={point.title}>
+                  <div className="text-center">
+                    {point.icon}
+                    <Paragraph
+                      mt={3}
+                      mb={1}
+                      fontWeight="bold"
+                      className="uppercase tracking-wide"
+                    >
+                      {point.title}
+                    </Paragraph>
+                    <Paragraph fontFamily="secondary">
+                      {point.description}
+                    </Paragraph>
+                  </div>
+                </Grid>
+              ))}
+            </Grid>
+          </Grid>
         </Section>
 
         {/* Werkgebied */}
         {/*
         <Section as={Box}>
           <Grid container>
+            <SectionHeading>
+              Actief in Antwerpen, Kontich en de hele regio
+            </SectionHeading>
             <Grid row>
-              <Grid item xs={12} md={10}>
-                <Heading level={3} color="#464646" mb={4}>
-                  Actief in Antwerpen, Kontich en de hele regio
-                </Heading>
+              <Grid item xs={12} className="text-center">
                 <Paragraph mb={4}>
                   Vanuit onze showroom in Kontich plaatsen we parketvloeren,
                   gevelbekleding en terrassen voor particulieren en
@@ -195,40 +334,6 @@ const Home = () => {
             </Grid>
           </Grid>
         </Section>*/}
-
-        {/* WEBSHOP */}
-        <Section as={Box}>
-          <Grid container>
-            <Row
-              isEven={true}
-              image="images/webshop.png"
-              alt="Wooddesign webshop met onderhoudsproducten voor parket, gevel en terras"
-            >
-              <Heading
-                level={3}
-                textTransform=""
-                show={{ xs: false, sm: true }}
-              >
-                Webshop
-              </Heading>
-              <Paragraph mb={6}>
-                Begin 2020 hebben we een webshop opgestart als extra service
-                naar zowel bestaande als nieuwe klanten. Hier vind je diverse{" "}
-                <strong style={{ fontWeight: 500 }}>merkproducten</strong> voor
-                zowel plaatsing als het onderhoud van parket, gevel en terras.
-              </Paragraph>
-              <Button
-                outline
-                as={Link}
-                href="http://shop.wooddesign.be"
-                target="_blank"
-                block={isMobile}
-              >
-                Bekijk onze webshop
-              </Button>
-            </Row>
-          </Grid>
-        </Section>
 
         <CallToAction
           title="Ontdek onze webshop."

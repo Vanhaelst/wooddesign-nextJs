@@ -10,11 +10,11 @@ import ContentWrapper from "../src/components/ContentWrapper";
 import companyData from "../src/data/companyData";
 import { Paragraph } from "../publipirates-react";
 import Masonry from "../src/components/Masonry";
-import Button from "@/components/Button";
 import Link from "@/components/Link";
 import { API_SLUG } from "../src/data/api";
 import { CallToAction } from "../src/components/CallToAction";
 import Faq from "../src/components/Faq";
+import useInfiniteScroll from "../src/hooks/useInfiniteScroll";
 import { canonicalUrl, faqJsonLd } from "../src/utils/seo";
 
 const faqItems = [
@@ -80,7 +80,7 @@ const Services = ({ realisations, pagination }) => {
       }
     }`);
 
-    data.then((data) => {
+    return data.then((data) => {
       setPaginatedRealisations((prevState) => [
         ...prevState,
         ...data.realisations,
@@ -88,6 +88,8 @@ const Services = ({ realisations, pagination }) => {
       setNextPage(() => data?.realisationsConnection?.pageInfo?.hasNextPage);
     });
   };
+
+  const loadMoreRef = useInfiniteScroll(handleLoadMore, hasNextPage);
 
   return (
     <div>
@@ -133,11 +135,22 @@ const Services = ({ realisations, pagination }) => {
           parketvloer laten leggen of een bestaande vloer laten renoveren?
           Bij ons kan het allebei.
         </Paragraph>
-        <Paragraph>
+        <Paragraph className="mb-6">
           Verken onze collectie, ontdek de mogelijkheden voor uw woning of
           project, en laat u inspireren door de schoonheid van parketvloeren.
           Wij helpen u graag verder bij het maken van de juiste keuze in onze
           toonzaal te Kontich.
+        </Paragraph>
+        <Paragraph>
+          Naast parket plaatsen we ook{" "}
+          <Link href="/gevel" type="hidden">
+            duurzame gevelbekleding
+          </Link>{" "}
+          en{" "}
+          <Link href="/terras" type="hidden">
+            houten terrassen
+          </Link>
+          . Zo bent u voor uw volledige project aan één specialist verbonden.
         </Paragraph>
       </Breadcrumbs>
 
@@ -149,47 +162,31 @@ const Services = ({ realisations, pagination }) => {
             </Grid>
             {hasNextPage && (
               <Grid item xs={12}>
-                <Button appearance="primary" onClick={handleLoadMore}>
-                  Load more
-                </Button>
+                <div ref={loadMoreRef} />
               </Grid>
             )}
-          </Grid>
-
-          <Grid row mb={9}>
-            <Grid item xs={12} md={10}>
-              <Paragraph>
-                Naast parket plaatsen we ook{" "}
-                <Link href="/gevel" type="hidden">
-                  duurzame gevelbekleding
-                </Link>{" "}
-                en{" "}
-                <Link href="/terras" type="hidden">
-                  houten terrassen
-                </Link>
-                . Zo bent u voor uw volledige project aan één specialist
-                verbonden.
-              </Paragraph>
-            </Grid>
-          </Grid>
-        </Grid>
-      </ContentWrapper>
-
-      <ContentWrapper>
-        <Grid container>
-          <Grid row>
-            <Grid item xs={12}>
-              <Faq title="Veelgestelde vragen over parketvloeren" items={faqItems} />
-            </Grid>
           </Grid>
         </Grid>
       </ContentWrapper>
 
       <CallToAction
-        title="Graag een offerte?"
+        title="Graag een offerte voor uw parket?"
         description="Benieuwd naar de mogelijkheden voor jouw project? Vraag vandaag nog een vrijblijvende offerte aan en ontdek hoe wij jou kunnen helpen."
         button={{ cta: "Ik wil een offerte", href: "/contact" }}
       />
+
+      <ContentWrapper>
+        <Grid container>
+          <Grid row>
+            <Grid item xs={12}>
+              <Faq
+                title="Veelgestelde vragen over parketvloeren"
+                items={faqItems}
+              />
+            </Grid>
+          </Grid>
+        </Grid>
+      </ContentWrapper>
 
       <Footer />
     </div>
