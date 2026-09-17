@@ -14,6 +14,7 @@ import ValidateForm from "../src/utils/ValidateForm";
 import { sendContactMail } from "../src/utils/sendMail-contact";
 import ContactForm from "../src/components/ContactForm";
 import companyData from "../src/data/companyData";
+import { canonicalUrl } from "../src/utils/seo";
 
 const Contact = () => {
   const [mailState, setMailState] = useState(undefined);
@@ -93,11 +94,18 @@ const Contact = () => {
   return (
     <div>
       <Head>
-        <title>{companyData.companyName} - Contact</title>
+        <title>Contact | Wooddesign Kontich</title>
         <meta
           name="description"
-          content={`${companyData.companyName} - Contact`}
+          content="Contacteer Wooddesign voor parket, gevelbekleding of een houten terras. Vraag een vrijblijvende offerte aan of bezoek onze toonzaal in Kontich, op afspraak."
         />
+        <link rel="canonical" href={canonicalUrl("/contact")} />
+        <meta property="og:title" content="Contact | Wooddesign Kontich" key="title" />
+        <meta
+          property="og:description"
+          content="Contacteer Wooddesign voor parket, gevelbekleding of een houten terras. Vraag een vrijblijvende offerte aan of bezoek onze toonzaal in Kontich, op afspraak."
+        />
+        <meta property="og:url" content={canonicalUrl("/contact")} />
       </Head>
       <Navigation />
 

@@ -12,6 +12,7 @@ import Masonry from "../src/components/Masonry";
 import Button from "@/components/Button";
 import { API_SLUG } from "../src/data/api";
 import ContentWrapper from "../src/components/ContentWrapper";
+import { canonicalUrl } from "../src/utils/seo";
 
 const graphcms = new GraphQLClient(API_SLUG);
 const category = ["wand"];
@@ -65,16 +66,22 @@ const Wand = ({ realisations, pagination }) => {
   return (
     <div>
       <Head>
-        <title>{companyData.companyName} - Wand</title>
+        <title>Akoestische Wandbekleding | Wooddesign</title>
         <meta
           name="description"
-          content={`${companyData.companyName} - Wand`}
+          content="Akoestische wandbekleding op maat van Wooddesign: geluidsdemping en stijl gecombineerd voor kantoren, thuisbioscopen en woonruimtes in Antwerpen en Kontich."
         />
+        <link rel="canonical" href={canonicalUrl("/wand")} />
         <meta
           property="og:title"
-          content="Wooddesign - Diensten - Wand"
+          content="Akoestische Wandbekleding | Wooddesign"
           key="title"
         />
+        <meta
+          property="og:description"
+          content="Akoestische wandbekleding op maat van Wooddesign: geluidsdemping en stijl gecombineerd voor kantoren, thuisbioscopen en woonruimtes in Antwerpen en Kontich."
+        />
+        <meta property="og:url" content={canonicalUrl("/wand")} />
       </Head>
       <Navigation />
       <Breadcrumbs title="Wand" variant={1}>

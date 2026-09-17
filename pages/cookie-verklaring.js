@@ -12,13 +12,20 @@ import Box from "@/components/Box";
 import CookieBanner from "@/components/Card";
 import UnorderedList from "@/components/List/UnorderedList";
 import ListItem from "@/components/List/ListItem";
+import { canonicalUrl } from "../src/utils/seo";
 
 const cookieStatement = () => {
   return (
     <div>
       <Head>
-        <title>{meta.title}</title>
+        <title>Cookieverklaring | Wooddesign</title>
+        <meta
+          name="description"
+          content="Lees hoe Wooddesign cookies en persoonsgegevens verwerkt op www.wooddesign.be."
+        />
+        <meta name="robots" content="noindex, follow" />
         <meta name="viewport" content={meta.viewport} />
+        <link rel="canonical" href={canonicalUrl("/cookie-verklaring")} />
       </Head>
       <Navigation />
       <ContentWrapper>

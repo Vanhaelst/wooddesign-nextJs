@@ -2,6 +2,7 @@ import React from "react";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 import meta from "src/data/meta";
+import { localBusinessJsonLd } from "src/utils/seo";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -34,11 +35,21 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <meta name="description" content={meta.description} />
+          {/*
+            No sitewide <meta name="description"> here on purpose: every page
+            sets its own unique, keyword-targeted description via next/head.
+            A shared default here previously made pages fall back to (or, on
+            some Next.js versions, keep) the same generic description.
+          */}
           <meta name="keywords" content={meta.keywords} />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
           <meta name="p:domain_verify" content={meta.domain_verify_code} />
-          <meta name="robots" content="index, follow" />
+          {/*
+            No sitewide robots meta here either: "index, follow" is the
+            default when the tag is absent, and keeping it here produced a
+            second, conflicting <meta name="robots"> on pages (like the
+            legal pages) that set their own "noindex".
+          */}
           <link
             rel="icon"
             type="image/png"
@@ -85,10 +96,13 @@ export default class MyDocument extends Document {
             content="/images/theme/app-icons/mstile-150x150.png"
           />
           <meta name="theme-color" content={meta.themeColor} />
-          {/* OPEN GRAPH VOOR FACEBOOK */}
-          <meta property="og:title" content={meta.og.title} />
-          <meta property="og:url" content={meta.og.url} />
-          <meta property="og:description" content={meta.og.description} />
+          {/*
+            OPEN GRAPH VOOR FACEBOOK. og:title, og:description and og:url are
+            NOT set here on purpose (they used to be, hardcoded to the
+            homepage) - every page sets its own via next/head so shares of
+            /parket, /gevel, etc. show the right title/URL instead of the
+            homepage's.
+          */}
           <meta property="og:site_name" content={meta.og.site_name} />
           <meta property="og:type" content="Website" />
           <meta property="og:locale" content="nl_NL" />
@@ -105,20 +119,25 @@ export default class MyDocument extends Document {
           {/*<script src="https://connect.facebook.net/signals/config/326302681241847?v=2.9.33&amp;r=stable" async=""/>
                     {/*<script async="" src="https://connect.facebook.net/en_US/fbevents.js"/>*/}
           {/*<script async="" src={`https://www.googletagmanager.com/gtm.js?id=${meta.GoogleTagManagerCode}`} />*/}
-          <link rel="canonical" href={meta.url} />
+          {/*
+            No sitewide canonical link here either: it used to hardcode the
+            homepage URL on every page (meta.url), which told Google every
+            subpage was a duplicate of the homepage and should be dropped
+            from the index. Each page now sets its own self-referencing
+            canonical via next/head.
+          */}
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@200;400;600;700&display=swap"
             rel="stylesheet"
           />
-          <meta name="author" content="Indy Vanhaelst, info@publipirates.be" />
-          <meta name="designer" content="PubliPirates" />
-          <meta
-            name="keywords"
-            content="traditioneel parket, tapis, visgraat, bourgogne, stroken, weense punt, hongaarse punt, houtsoorten, vele, ambacht, vloer, vloeren, harde vloerbedekking, vloerbedekking, kwaliteit, top, specialist, advies, beste, interieur, sfeer, nieuw, ervaring, deskundig,"
-          />
-          <link name="robots" href="index,follow" />
           <link rel="icon" href="/favicon.ico" />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(localBusinessJsonLd()),
+            }}
+          />
           <script
             type="text/javascript"
             src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
