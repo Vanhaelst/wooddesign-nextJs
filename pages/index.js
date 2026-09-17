@@ -15,12 +15,10 @@ import Navigation from "src/components/Navigation";
 import ContentWrapper from "src/components/ContentWrapper";
 import { services } from "../src/data/services/overview";
 import useGlobalContext from "../src/context/hooks/useGlobalContext";
-import companyData from "../src/data/companyData";
 
 import { API_SLUG } from "../src/data/api";
 import { Row } from "../src/components/Row";
 import { CallToAction } from "../src/components/CallToAction";
-import regions from "../src/data/regions";
 import { canonicalUrl } from "../src/utils/seo";
 
 const graphcms = new GraphQLClient(API_SLUG);
@@ -167,6 +165,7 @@ const Home = () => {
         </Section>
 
         {/* Werkgebied */}
+        {/*
         <Section as={Box}>
           <Grid container>
             <Grid row>
@@ -195,7 +194,7 @@ const Home = () => {
               </Grid>
             </Grid>
           </Grid>
-        </Section>
+        </Section>*/}
 
         {/* WEBSHOP */}
         <Section as={Box}>

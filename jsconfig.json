@@ -6,6 +6,7 @@
       "@/utils/*": ["publipirates-react/src/utils/*"],
       "@/icons/*": ["publipirates-react/src/icons/*"],
       "@/theme/*": ["publipirates-react/src/theme/*"]
-    }
+    },
+    "jsx": "react"
   }
 }
