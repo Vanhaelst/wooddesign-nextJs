@@ -21,7 +21,13 @@ const faqItems = [
   {
     question: "Welke materialen gebruikt Wooddesign voor gevelbekleding?",
     answer:
-      "Naast hout plaatsen we ook duurzame materialen zoals aluminium, volkern, vezelcement en composiet. Welk materiaal het beste past, hangt af van het gewenste uitzicht, onderhoud en budget. We adviseren u hier graag over in onze toonzaal.",
+      "Naast hout plaatsen we ook duurzame materialen zoals composiet, thermowood, trespa, aluminium, volkern en vezelcement. Welk materiaal het beste past, hangt af van het gewenste uitzicht, onderhoud en budget. We adviseren u hier graag over in onze toonzaal.",
+  },
+  {
+    question:
+      "Wat is het verschil tussen composiet, thermowood en trespa gevelbekleding?",
+    answer:
+      "Composiet gevelbekleding is een onderhoudsarm mengsel van hout en kunststof dat niet vergrijst of rot. Thermowood is hittebehandeld hout dat daardoor extra stabiel en duurzaam wordt zonder chemische verduurzaming. Trespa (HPL) is een hoogwaardige plaat die bestand is tegen weersinvloeden en verkrijgbaar in veel kleuren. We bespreken de voor- en nadelen van elke soort graag tijdens het adviesgesprek.",
   },
   {
     question: "Is houten gevelbekleding onderhoudsvriendelijk?",
@@ -97,7 +103,7 @@ const Gevel = ({ realisations, pagination }) => {
         <title>Gevelbekleding Antwerpen & Kontich | Wooddesign</title>
         <meta
           name="description"
-          content="Duurzame gevelbekleding in hout, aluminium, vezelcement of composiet, geplaatst in Antwerpen, Kontich en omstreken. Wooddesign combineert esthetiek met isolatie op maat."
+          content="Gevelbekleding in composiet, thermowood, trespa, hout of aluminium, geplaatst in Antwerpen, Kontich en omstreken. Wooddesign combineert esthetiek met isolatie op maat."
         />
         <link rel="canonical" href={canonicalUrl("/gevel")} />
         <meta
@@ -107,7 +113,7 @@ const Gevel = ({ realisations, pagination }) => {
         />
         <meta
           property="og:description"
-          content="Duurzame gevelbekleding in hout, aluminium, vezelcement of composiet, geplaatst in Antwerpen, Kontich en omstreken. Wooddesign combineert esthetiek met isolatie op maat."
+          content="Gevelbekleding in composiet, thermowood, trespa, hout of aluminium, geplaatst in Antwerpen, Kontich en omstreken. Wooddesign combineert esthetiek met isolatie op maat."
         />
         <meta property="og:url" content={canonicalUrl("/gevel")} />
         <script
@@ -118,12 +124,13 @@ const Gevel = ({ realisations, pagination }) => {
         />
       </Head>
       <Navigation />
-      <Breadcrumbs title="Een onderhoudsvriendelijke, duurzame gevel met karakter">
+      <Breadcrumbs title="Gevelbekleding: een duurzame, onderhoudsvriendelijke gevel met karakter">
         <Paragraph className="mb-3">
-          Een gevel van Wooddesign combineert esthetiek met energie-efficiëntie.
-          Afgewerkt in hoogwaardige houtsoorten of duurzame materialen zoals
-          aluminium, vezelcement, composiet en volkern is uw gevel bestand tegen
-          alle weersomstandigheden. We besteden bijzondere aandacht aan de
+          Gevelbekleding van Wooddesign combineert esthetiek met
+          energie-efficiëntie. Afgewerkt in hoogwaardige houtsoorten of
+          duurzame materialen zoals composiet, thermowood, trespa, aluminium,
+          vezelcement en volkern is uw gevel bestand tegen alle
+          weersomstandigheden. We besteden bijzondere aandacht aan de
           isolatie, zodat uw woning niet alleen mooi oogt, maar ook optimaal
           presteert op vlak van energieverbruik.
         </Paragraph>

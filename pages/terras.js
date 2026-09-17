@@ -122,16 +122,18 @@ const Terras = ({ realisations, pagination }) => {
         />
       </Head>
       <Navigation />
-      <Breadcrumbs title="Een terras is meer dan een buitenruimte, het is een verlengstuk van je woning">
+      <Breadcrumbs title="Terras aanleggen: meer dan een buitenruimte, een verlengstuk van je woning">
         <Paragraph className="mb-3">
           Een mooi terras vergroot uw wooncomfort en creëert een plek om tot
           rust te komen – op het dak, in de tuin of rond het zwembad.
         </Paragraph>
-        <Paragraph className="mb-6">
-          We werken met duurzame en weersbestendige hardhoutsoorten zoals ipé,
-          padoek, bangkirai en afzelia, die mooi verouderen en jarenlang meegaan
-          – met minimale onderhoudsbehoefte. Voor terrassen in Antwerpen,
-          Kontich en omstreken bent u bij ons aan het juiste adres.
+        <Paragraph className="mb-3">
+          We plaatsen zowel duurzame en weersbestendige hardhoutsoorten zoals
+          ipé, padoek, bangkirai en afzelia, als onderhoudsarme composiet
+          terrassen. Elke optie veroudert mooi en gaat jarenlang mee – met
+          minimale onderhoudsbehoefte. Voor een houten of composiet terras
+          laten aanleggen in Antwerpen, Kontich en omstreken bent u bij ons
+          aan het juiste adres.
         </Paragraph>
         <Paragraph>
           Naast terrassen plaatsen we ook{" "}

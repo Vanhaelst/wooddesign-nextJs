@@ -130,22 +130,22 @@ const Home = () => {
     <div>
       <Head>
         <title>
-          Wooddesign - Specialist Parket, Gevelbekleding & Terrassen Antwerpen
+          Wooddesign - Parket, Gevelbekleding, Terrassen & Vinyl Antwerpen
         </title>
         <meta
           name="description"
-          content="Wooddesign is dé specialist in parketvloeren, gevelbekleding en houten terrassen in Kontich, Antwerpen en omstreken. 25+ jaar ervaring, één aannemer voor uw volledige project. Vraag een offerte aan."
+          content="Wooddesign is dé specialist in parketvloeren, gevelbekleding, houten terrassen en vinylvloeren in Kontich, Antwerpen en omstreken. 25+ jaar ervaring, één aannemer voor uw volledige project. Vraag een offerte aan."
         />
         <meta name="viewport" content={meta.viewport} />
         <link rel="canonical" href={canonicalUrl("/")} />
         <meta
           property="og:title"
-          content="Wooddesign - Specialist Parket, Gevelbekleding & Terrassen"
+          content="Wooddesign - Specialist Parket, Gevelbekleding, Terrassen & Vinyl"
           key="title"
         />
         <meta
           property="og:description"
-          content="Dé specialist in parketvloeren, gevelbekleding en houten terrassen in Kontich, Antwerpen en omstreken. 25+ jaar ervaring, één aannemer voor uw volledige project."
+          content="Dé specialist in parketvloeren, gevelbekleding, houten terrassen en vinylvloeren in Kontich, Antwerpen en omstreken. 25+ jaar ervaring, één aannemer voor uw volledige project."
         />
         <meta property="og:url" content={canonicalUrl("/")} />
       </Head>
@@ -159,9 +159,9 @@ const Home = () => {
         <span className="text-xl uppercase text-white">Welkom bij</span>
         <h1 className="text-6xl md:text-7xl uppercase text-white text-center leading-tight px-4">
           Wooddesign
-          <span className="block text-lg md:text-2xl normal-case tracking-normal mt-3 font-light`">
-            Specialist in parket, gevelbekleding &amp; terrassen in Antwerpen,
-            Kontich en omgeving
+          <span className="block text-lg md:text-2xl normal-case tracking-normal mt-3">
+            Specialist in parket, gevelbekleding, terrassen &amp; vinyl in
+            Antwerpen, Kontich en omgeving
           </span>
         </h1>
       </div>

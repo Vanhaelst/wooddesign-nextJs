@@ -10,10 +10,40 @@ import ContentWrapper from "../src/components/ContentWrapper";
 import companyData from "../src/data/companyData";
 import { Paragraph } from "../publipirates-react";
 import Masonry from "../src/components/Masonry";
+import Button from "@/components/Button";
+import Link from "@/components/Link";
 import { API_SLUG } from "../src/data/api";
+import { canonicalUrl, faqJsonLd } from "../src/utils/seo";
+import { CallToAction } from "../src/components/CallToAction";
+import Faq from "../src/components/Faq";
+import useInfiniteScroll from "../src/hooks/useInfiniteScroll";
 import { canonicalUrl } from "../src/utils/seo";
 import { CallToAction } from "../src/components/CallToAction";
 import useInfiniteScroll from "../src/hooks/useInfiniteScroll";
+
+const faqItems = [
+  {
+    question: "Wat kost een vinylvloer laten leggen?",
+    answer:
+      "De prijs hangt af van het gekozen type vinyl, de afwerking en de oppervlakte. We bezorgen u graag een vrijblijvende offerte op maat na een kort adviesgesprek of bezoek aan onze toonzaal.",
+  },
+  {
+    question: "Kan een vinylvloer op een bestaande vloer geplaatst worden?",
+    answer:
+      "In de meeste gevallen wel. Vinyl wordt zwevend geplaatst op een vlakke, stabiele ondervloer, waardoor het vaak over bestaand tegelwerk of een andere harde vloer kan worden gelegd. We bekijken dit graag ter plaatse.",
+  },
+  {
+    question: "Is een vinylvloer geschikt voor de badkamer of keuken?",
+    answer:
+      "Ja. Vinyl is waterbestendig en daardoor uitermate geschikt voor vochtige ruimtes zoals badkamer, keuken of wasplaats, naast woonkamer en slaapkamer.",
+  },
+  {
+    question: "In welke regio plaatst Wooddesign vinylvloeren?",
+    answer:
+      "Vanuit onze showroom in Kontich plaatsen we vinylvloeren in de hele regio, onder andere in Antwerpen, Mechelen, Lier en Edegem, voor zowel particulieren als bouwprojecten.",
+  },
+];
+
 
 const graphcms = new GraphQLClient(API_SLUG);
 const category = ["vinyl"];
@@ -69,66 +99,65 @@ const Services = ({ realisations, pagination }) => {
   return (
     <div>
       <Head>
-        <title>Vinylvloeren Antwerpen & Kontich | Wooddesign</title>
+        <title>Vinylvloer Laten Leggen Antwerpen & Kontich | Wooddesign</title>
         <meta
           name="description"
-          content="Vinylvloer laten plaatsen in Antwerpen, Kontich en omstreken? Wooddesign biedt waterbestendige, onderhoudsvriendelijke vinylvloeren in hout- en steeneffecten."
+          content="Vinylvloer laten leggen in Antwerpen, Kontich en omstreken? Wooddesign plaatst waterbestendige, onderhoudsvriendelijke vinylvloeren in hout- en steeneffecten."
         />
         <link rel="canonical" href={canonicalUrl("/vinyl")} />
         <meta
           property="og:title"
-          content="Vinylvloeren Antwerpen & Kontich | Wooddesign"
+          content="Vinylvloer Laten Leggen Antwerpen & Kontich | Wooddesign"
           key="title"
         />
         <meta
           property="og:description"
-          content="Vinylvloer laten plaatsen in Antwerpen, Kontich en omstreken? Wooddesign biedt waterbestendige, onderhoudsvriendelijke vinylvloeren in hout- en steeneffecten."
+          content="Vinylvloer laten leggen in Antwerpen, Kontich en omstreken? Wooddesign plaatst waterbestendige, onderhoudsvriendelijke vinylvloeren in hout- en steeneffecten."
         />
         <meta property="og:url" content={canonicalUrl("/vinyl")} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(faqJsonLd(faqItems)),
+          }}
+        />
       </Head>
 
       <Navigation />
-      <Breadcrumbs title="Vinyl">
+      <Breadcrumbs title="Vinylvloer laten leggen, stijlvol en onderhoudsvriendelijk">
         <Paragraph className="mb-3">
-          Op zoek naar een vloer die zowel stijlvol als praktisch is?
-          Vinylvloeren bieden de perfecte combinatie van esthetiek en
-          functionaliteit voor elke ruimte. Of u nu een moderne,
+          Op zoek naar een vloer die zowel stijlvol als praktisch is? Wij
+          plaatsen vinylvloeren die de perfecte combinatie bieden van esthetiek
+          en functionaliteit voor elke ruimte. Of u nu een moderne,
           onderhoudsvriendelijke vloer zoekt voor uw woonkamer, keuken of
-          badkamer, onze vinylvloeren zijn de ideale keuze. Ze zijn verkrijgbaar
+          badkamer, een vinylvloer laten leggen is de ideale keuze. Verkrijgbaar
           in verschillende stijlen, kleuren en patronen, van hout- en
           steeneffecten tot strakke, moderne designs.
         </Paragraph>
         <Paragraph className="mb-3">
           Met de voordelen van waterbestendigheid, eenvoudige installatie en
-          langdurige duurzaamheid, bieden onze vinylvloeren een uitstekende
-          oplossing voor iedere woning of commercieel project. Ontdek onze
-          uitgebreide collectie, laat u inspireren door talloze mogelijkheden en
-          vind de vinylvloer die perfect past bij uw interieur. Wij staan klaar
-          om u te helpen met advies, levering en installatie.
+          langdurige duurzaamheid, is vinyl een uitstekende oplossing voor
+          iedere woning of commercieel project. Ontdek onze uitgebreide
+          collectie, laat u inspireren door talloze mogelijkheden en vind de
+          vinylvloer die perfect past bij uw interieur. Wij staan klaar om u te
+          helpen met advies, levering en installatie in Antwerpen, Kontich en
+          omstreken.
         </Paragraph>
-        <Paragraph className="mb-3">
-          Geef uw vloer een nieuwe look met de veelzijdigheid van vinyl!
-        </Paragraph>
-
-        {/*
         <Paragraph>
-          <Link
-            href="https://coretecfloors.com/nl-nl"
-            isExternal
-            color={"#000000"}
-          >
-            Coretec Floors <ExternalLinkIcon mx="2px" />
+          Naast vinyl plaatsen we ook{" "}
+          <Link href="/parket" type="hidden">
+            parketvloeren
           </Link>
-          <span className="mx-4">|</span>
-          <Link
-            href="https://parquetvinyl.be/nl/vinylvloeren"
-            isExternal
-            color={"#000000"}
-          >
-            Parquetvinyl <ExternalLinkIcon mx="2px" />
+          ,{" "}
+          <Link href="/gevel" type="hidden">
+            gevelbekleding
+          </Link>{" "}
+          en{" "}
+          <Link href="/terras" type="hidden">
+            houten terrassen
           </Link>
+          . Zo bent u voor uw volledige project aan één specialist verbonden.
         </Paragraph>
-       */}
       </Breadcrumbs>
 
       <ContentWrapper>
@@ -153,6 +182,57 @@ const Services = ({ realisations, pagination }) => {
         description="Benieuwd naar de mogelijkheden voor jouw project? Vraag vandaag nog een vrijblijvende offerte aan en ontdek hoe wij jou kunnen helpen."
         button={{ cta: "Ik wil een offerte", href: "/contact" }}
       />
+
+      <ContentWrapper>
+        <Grid container>
+          <Grid row>
+            <Grid item xs={12}>
+              <Faq
+                title="Veelgestelde vragen over vinylvloeren"
+                items={faqItems}
+              />
+            </Grid>
+          </Grid>
+        </Grid>
+      </ContentWrapper>
+
+      <CallToAction
+        title="Graag een offerte voor uw vinyl?"
+        description="Benieuwd naar de mogelijkheden voor jouw project? Vraag vandaag nog een vrijblijvende offerte aan en ontdek hoe wij jou kunnen helpen."
+        button={{ cta: "Ik wil een offerte", href: "/contact" }}
+      />
+
+      <ContentWrapper>
+        <Grid container>
+          <Grid row>
+            <Grid item xs={12}>
+              <Faq
+                title="Veelgestelde vragen over vinylvloeren"
+                items={faqItems}
+              />
+            </Grid>
+          </Grid>
+        </Grid>
+      </ContentWrapper>
+
+      <CallToAction
+        title="Graag een offerte voor uw vinylvloer?"
+        description="Benieuwd naar de mogelijkheden voor jouw project? Vraag vandaag nog een vrijblijvende offerte aan en ontdek hoe wij jou kunnen helpen."
+        button={{ cta: "Ik wil een offerte", href: "/contact" }}
+      />
+
+      <ContentWrapper>
+        <Grid container>
+          <Grid row>
+            <Grid item xs={12}>
+              <Faq
+                title="Veelgestelde vragen over vinylvloeren"
+                items={faqItems}
+              />
+            </Grid>
+          </Grid>
+        </Grid>
+      </ContentWrapper>
 
       <Footer />
     </div>
