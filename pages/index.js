@@ -2,7 +2,6 @@ import React from "react";
 import Head from "next/head";
 import { GraphQLClient } from "graphql-request";
 import styled from "styled-components";
-import Heading from "@/components/Heading";
 import Grid from "@/components/Grid";
 import Paragraph from "@/components/Paragraph";
 import Footer from "src/components/Footer";

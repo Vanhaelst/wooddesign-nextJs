@@ -5,7 +5,6 @@ import Navigation from "src/components/Navigation";
 import Heading from "@/components/Heading";
 import Grid from "@/components/Grid";
 import Footer from "../src/components/Footer";
-import ContentWrapper from "../src/components/ContentWrapper";
 import ValidateForm from "../src/utils/ValidateForm";
 import { sendContactMail } from "../src/utils/sendMail-contact";
 import ContactForm from "../src/components/ContactForm";
