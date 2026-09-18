@@ -54,7 +54,7 @@ const DesktopNavigation = ({ color, position }) => {
 
       <NavBar position={position}>
         <Link href="/">
-          <Logo fill={color || "BLACK"} height="40px" />
+          <Logo fill={color || "BLACK"} height="32px" />
         </Link>
         <Menu>
           {navigation.map((item) => {

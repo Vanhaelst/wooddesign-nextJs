@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import Grid from "@/components/Grid";
+import { cx } from "@/utils/cx";
 import { navigation } from "./navigation";
 import { useRouter } from "next/router";
 import Paragraph from "@/components/Paragraph";
@@ -15,116 +15,12 @@ import Cart from "@/icons/cart";
 import Link from "next/link";
 import PromoBar from "./PromoBar";
 
-const Wrapper = styled("div").withConfig({
-  shouldForwardProp: (prop) => ["children"].includes(prop),
-})`
-  width: 100%;
-  display: block;
-`;
+const menuItemClasses =
+  "relative text-left font-secondary font-extralight uppercase tracking-[2px] text-[#676b6d] no-underline p-[12px_10px] hover:bg-primary hover:text-white";
 
-const Navbar = styled("div").withConfig({
-  shouldForwardProp: (prop) => ["children"].includes(prop),
-})`
-  margin-top: 8px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  ${(props) =>
-    !props.isOpen &&
-    `
-        // box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 4px;
-    `}
-  background-color: white;
-  z-index: 500;
-  position: relative;
-  padding: 8px 24px;
-`;
-
-const Backdrop = styled("div").withConfig({
-  shouldForwardProp: (prop) => ["children"].includes(prop),
-})`
-  ${(props) => (props.isOpen ? `display: block;` : `display: none;`)}
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 500;
-`;
-
-const Menu = styled("div").withConfig({
-  shouldForwardProp: (prop) => ["children"].includes(prop),
-})`
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  z-index: 10000;
-  display: flex;
-  flex-direction: column;
-  transition: all 0.5s;
-  padding: 64px 16px 32px 16px;
-
-  @media screen and (min-width: ${(props) =>
-      props.theme.grid.breakpointSmall}px) {
-    width: 350px;
-  }
-
-  ${(props) => (props.isOpen ? `right: 0;` : ` right: -110vw;`)}
-`;
-
-const MenuItem = styled.a`
-  font-family: ${(props) => props.theme.font.family.secondary};
-  text-decoration: none;
-  color: #676b6d;
-  font-weight: ${(props) => props.theme.font.weight.light};
-  letter-spacing: 2px;
-  padding: 12px 10px;
-  position: relative !important;
-  text-align: left;
-  text-transform: uppercase;
-
-  &:hover {
-    background-color: ${(props) => props.theme.colors.primary.main};
-    color: white;
-  }
-  ${(props) =>
-    props.active &&
-    `
-      color: ${props.theme.colors.primary.main} !important;
-   `}
-`;
-
-const CloseWrapper = styled.div`
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  z-index: 10000;
-`;
-
-const SocialWrapper = styled.div`
-  position: absolute;
-  bottom: 24px;
-  width: calc(100% - 32px);
-  z-index: 10000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  svg {
-    margin: 8px;
-  }
-`;
-
-const Line = styled.div`
-  width: 100%;
-  border-bottom: 1px solid ${(props) => props.theme.colors.grey[30]};
-  padding-top: ${(props) => props.theme.spaces[5]};
-  margin-bottom: ${(props) => props.theme.spaces[5]};
-`;
+const Line = () => (
+  <div className="mb-4 w-full border-b border-solid border-[rgb(215,215,215)] pt-4" />
+);
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -134,27 +30,47 @@ const Navigation = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <Wrapper as={Grid}>
+    <div className="block w-full">
       <PromoBar />
-      <Navbar as={Grid} isMobile={true} container isOpen={isOpen}>
+      <Grid
+        container
+        className="relative z-[500] mt-2 flex items-center justify-between bg-white px-6 py-2"
+      >
         <Link href="/">
           <Logo height="24px" fill="#464646" />
         </Link>
         <div onClick={handleClick}>
           <MenuIcon size="24px" />
         </div>
-      </Navbar>
-      <Backdrop isOpen={isOpen} />
-      <Menu isMobile={true} isOpen={isOpen}>
-        <CloseWrapper onClick={handleClick}>
+      </Grid>
+      <div
+        className={cx(
+          "fixed left-0 top-0 z-[500] h-full w-full bg-black/50",
+          isOpen ? "block" : "hidden",
+        )}
+      />
+      <div
+        className={cx(
+          "fixed bottom-0 top-0 z-[10000] flex h-full w-full flex-col bg-white pb-8 pl-4 pr-4 pt-16 transition-all duration-500 xs:w-[350px]",
+          isOpen ? "right-0" : "right-[-110vw]",
+        )}
+      >
+        <div
+          className="absolute right-6 top-6 z-[10000]"
+          onClick={handleClick}
+        >
           <CloseIcon size="20px" />
-        </CloseWrapper>
+        </div>
         {navigation.map((item) => {
           const active = router.pathname === item.href;
           return (
-            <MenuItem key={item.href} href={item.href} active={active}>
+            <a
+              key={item.href}
+              href={item.href}
+              className={cx(menuItemClasses, active && "!text-primary")}
+            >
               {item.title}
-            </MenuItem>
+            </a>
           );
         })}
         <Line />
@@ -187,13 +103,13 @@ const Navigation = () => {
           </Paragraph>
         </div>
 
-        <SocialWrapper>
+        <div className="absolute bottom-6 z-[10000] flex w-[calc(100%-32px)] items-center justify-center [&_svg]:m-2">
           <Facebook size="20px" />
           <Instagram size="20px" />
           <Pinterest size="20px" />
-        </SocialWrapper>
-      </Menu>
-    </Wrapper>
+        </div>
+      </div>
+    </div>
   );
 };
 

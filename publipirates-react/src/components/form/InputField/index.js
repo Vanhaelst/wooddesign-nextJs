@@ -1,79 +1,31 @@
 import React from "react";
-import styled from "styled-components";
 import Label from "@/components/form/Label";
 import Text from "@/components/Text";
-import theme from "../../../../../src/theme";
+import { cx } from "../../../utils/cx";
 
-const FormInput = styled.input`
-  box-sizing: border-box;
-  font-family: ${(props) => props.theme.font.family.secondary};
-  width: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  outline: none;
-  border-radius: 4px;
-  font-size: 16px;
-  padding: 12px 16px;
-  width: 100%;
-  height: 48px;
-  &:focus {
-    border-color: ${(props) => props.theme.colors.primary.main};
-  }
-
-  ${(props) =>
-    props.variant === "light" &&
-    `
-        height: 24px;
-        background-color: transparent;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-        border-radius: 0;
-        color: white;
-        padding-left: 0;
-        font-weight: 300;
-        opacity: 1;
-        &:focus {
-            border-color: transparent;
-            border-bottom-color: ${props.theme.colors.primary.main};
-        }
-    `}
-
-  ${(props) =>
-    !props.error &&
-    `
-        margin-bottom: 24px;
-    `}
-    
-    ${(props) =>
-    props.error &&
-    `
-        border-color: ${theme.colors.error} !important;
-    `}
-`;
-
-const InputField = (
-  { label, variant, placeholder, onChange, name, error, value, optional },
-  props
-) => {
-  return (
-    <div>
-      <Label>
-        {label} {variant !== "light" && <sup>*</sup>}
-      </Label>
-      <FormInput
-        variant={variant}
-        placeholder={placeholder}
-        onChange={onChange}
-        name={name}
-        error={error}
-        value={value}
-        {...props}
-      />
-      {error && (
-        <Text fontFamily="secondary" size="Caption2" color={theme.colors.error}>
-          {error}
-        </Text>
+const InputField = ({ label, placeholder, onChange, name, error, value }) => (
+  <div>
+    <Label>
+      {label} <sup>*</sup>
+    </Label>
+    <input
+      className={cx(
+        "box-border h-12 w-full rounded border border-solid px-4 py-3 font-secondary text-[16px] outline-none",
+        error
+          ? "border-error"
+          : "mb-6 border-black/20 focus:border-primary",
       )}
-    </div>
-  );
-};
+      placeholder={placeholder}
+      onChange={onChange}
+      name={name}
+      value={value}
+    />
+    {error && (
+      <Text fontFamily="secondary" size="Caption2" color="#F84F31">
+        {error}
+      </Text>
+    )}
+  </div>
+);
 
 export default InputField;

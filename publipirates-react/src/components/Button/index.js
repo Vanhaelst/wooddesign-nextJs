@@ -1,142 +1,60 @@
 import React from "react";
-import styled from "styled-components";
-import PropTypes from "prop-types";
+import { cx } from "../../utils/cx";
 
-const style = {
-  paddingX: "6px",
-  paddingY: "2em",
-  fontSize: "16px",
+const BASE =
+  "inline-block cursor-pointer border-2 border-solid px-8 py-[6px] text-center font-secondary text-[16px] font-medium uppercase leading-[28px] tracking-[0.06em] no-underline transition-all duration-[250ms]";
+
+const APPEARANCE = {
+  primary:
+    "border-primary bg-primary text-white hover:border-primary-dark hover:bg-primary-dark hover:text-white",
+  outline:
+    "border-primary bg-transparent text-primary hover:border-primary-dark hover:bg-primary hover:text-white",
+  link: "border-transparent bg-transparent text-primary hover:border-transparent hover:bg-transparent hover:underline",
+  disabled:
+    "border-[rgb(215,215,215)] bg-[rgb(215,215,215)] text-white hover:border-[rgb(215,215,215)] hover:bg-[rgb(215,215,215)]",
 };
 
-const StyledButton = styled.a`
-  ${(props) => props.display && `display: ${props.display};`}
-  text-decoration: none;
-  background-color: white;
-  border-color: #dbdbdb;
-  border-width: 1px;
-  color: ${(props) => props.theme.colors.black};
-  cursor: pointer;
-  -webkit-box-pack: center;
-  justify-content: center;
-  font-size: ${style.fontSize};
-  color: #ffffff;
-  font-family: ${(props) => props.theme.font.family.secondary};
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  line-height: calc(${style.fontSize} + ${style.paddingX} + ${style.paddingX});
-  padding-bottom: ${style.paddingX};
-  padding-left: ${style.paddingY};
-  padding-right: ${style.paddingY};
-  padding-top: ${style.paddingX};
-  text-align: center;
-  border-width: 2px;
-  border-style: solid;
-  border-color: transparent;
-  white-space: ${(props) => (props.block ? "normal" : "nowrap")};
-  transition: all 0.25s;
-  &:hover {
-    transition: all 0.25s;
-  }
-
-  background-color: ${(props) => props.theme.colors.primary.main};
-  border-color: ${(props) => props.theme.colors.primary.main};
-  color: ${(props) => props.theme.colors.primary.text};
-  &:hover {
-    background-color: ${(props) => props.theme.colors.primary.dark};
-    border-color: ${(props) => props.theme.colors.primary.dark};
-    color: ${(props) => props.theme.colors.primary.text};
-  }
-
-  ${(props) =>
-    props.appearance === "disabled" ||
-    (props.disabled &&
-      `
-        background-color: ${props.theme.colors.grey[30]};
-        border-color: ${props.theme.colors.grey[30]};
-        color: ${props.theme.colors.primary.text};
-        &:hover{
-            background-color: ${props.theme.colors.grey[30]};
-            border-color: ${props.theme.colors.grey[30]};
-            color: ${props.theme.colors.primary.text};
-        }
-    `)}
-
-  ${(props) =>
-    props.appearance === "link" &&
-    `
-        background-color: transparent;
-        border-color: transparent;
-        color: ${props.theme.colors.primary.main};
-        &:hover{
-            background-color: transparent;
-            border-color: transparent;
-            color: ${props.theme.colors.primary.main};
-            text-decoration: underline;
-        }
-    `}
-   
-   
-    ${(props) =>
-    props.rounded &&
-    `
-        border-radius: 290486px;
-    `};
-
-  ${(props) =>
-    props.outline &&
-    `
-        background-color: transparent;
-        border-style: solid;
-        border-color: ${props.theme.colors.primary.main};
-        color: ${props.theme.colors.primary.main};
-        &:hover{
-            border-color: ${props.theme.colors.primary.dark};
-            background-color: ${props.theme.colors.primary.main};
-            color: #ffffff;
-        }
-    `};
-     ${(props) =>
-    props.block ? `width: 100%;` : `width: fit-content;`};
-`;
-
+// Renders an <a> when given an `href`, otherwise a <button>.
 const Button = ({
   appearance,
-  children,
-  display,
-  href,
   outline,
-  rounded,
-  onClick,
-  target,
-  block
+  block,
+  disabled,
+  href,
+  className,
+  children,
+  as: _as, // eslint-disable-line no-unused-vars
+  type: _type, // eslint-disable-line no-unused-vars
+  ...rest
 }) => {
-  return (
-    <StyledButton
-      href={href}
-      appearance={appearance}
-      display={display}
-      rounded={rounded}
-      outline={outline}
-      onClick={onClick}
-      target={target}
-      block={block}
-    >
-      {children}
-    </StyledButton>
+  const variant = disabled
+    ? "disabled"
+    : appearance === "link"
+      ? "link"
+      : outline
+        ? "outline"
+        : "primary";
+
+  const classes = cx(
+    BASE,
+    APPEARANCE[variant],
+    block ? "w-full whitespace-normal" : "w-fit whitespace-nowrap",
+    className,
   );
-};
 
-Button.propTypes = {
-  appearance: PropTypes.oneOf(["primary"]),
-  display: PropTypes.oneOf(["inline", "block", "inline-block"]),
-  rounded: PropTypes.bool,
-  outline: PropTypes.bool,
-  block: PropTypes.bool,
-};
+  if (href) {
+    return (
+      <a href={href} className={classes} {...rest}>
+        {children}
+      </a>
+    );
+  }
 
-Button.defaultProps = {
-  display: "inline-block",
+  return (
+    <button type="button" className={classes} disabled={disabled} {...rest}>
+      {children}
+    </button>
+  );
 };
 
 export default Button;

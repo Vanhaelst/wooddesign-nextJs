@@ -1,12 +1,12 @@
 import React from "react";
 import Head from "next/head";
 import { GraphQLClient } from "graphql-request";
-import styled from "styled-components";
 import Grid from "@/components/Grid";
 import Paragraph from "@/components/Paragraph";
 import Footer from "src/components/Footer";
 import Box from "@/components/Box";
 import Link from "@/components/Link";
+import { cx } from "@/utils/cx";
 import Button from "@/components/Button";
 import CookieBanner from "@/components/Card";
 import meta from "src/data/meta";
@@ -36,45 +36,8 @@ import { CallToAction } from "../src/components/CallToAction";
 import { canonicalUrl } from "../src/utils/seo";
 import SectionHeading from "../src/components/SectionHeading";
 
-const Tile = styled(Link)`
-  position: relative;
-  display: block;
-  height: 320px;
-  border-radius: 4px;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center;
-  background-image: url(${(props) => props.$image});
-
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.55) 0%,
-      rgba(0, 0, 0, 0) 45%
-    );
-  }
-
-  &:hover img,
-  &:hover {
-    opacity: 0.92;
-  }
-`;
-
-const TileLabel = styled.span`
-  position: absolute;
-  left: 20px;
-  bottom: 18px;
-  z-index: 1;
-  color: #fff;
-  font-family: ${(props) => props.theme.font.family.secondary};
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 16px;
-`;
+const tileClasses =
+  "relative block h-[320px] overflow-hidden rounded-[4px] bg-cover bg-center after:absolute after:inset-0 after:bg-gradient-to-t after:from-black/55 after:to-transparent after:to-45% after:content-[''] hover:opacity-[.92]";
 
 const trustPoints = [
   {
@@ -108,20 +71,9 @@ const trustPoints = [
 
 const graphcms = new GraphQLClient(API_SLUG);
 
-const Section = styled.div`
-  padding-top: 48px;
-  padding-bottom: 48px;
-  @media screen and (min-width: 768px) {
-    padding-top: 96px;
-    padding-bottom: 96px;
-  }
-
-  ${(props) =>
-    props.backgroundColor &&
-    `
-        background-color: ${props.backgroundColor};
-    `}
-`;
+const Section = ({ className, ...props }) => (
+  <Box className={cx("py-12 md:py-24", className)} {...props} />
+);
 
 const Home = () => {
   const { isMobile } = useGlobalContext();
@@ -167,7 +119,7 @@ const Home = () => {
       </div>
 
       {/* Collecties-style quick nav */}
-      <Section as={Box}>
+      <Section>
         <Grid container>
           <SectionHeading>Onze diensten</SectionHeading>
         </Grid>
@@ -177,16 +129,21 @@ const Home = () => {
           <div className="overflow-x-auto px-10 pb-4 sm:px-24 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             <div className="flex gap-4 sm:gap-6">
               {homeServices.map((service) => (
-                <Tile
+                <Link
                   key={service.slug}
                   href={service.slug}
-                  $image={service.image}
                   target={service.target}
                   rel={service.target ? "noopener noreferrer" : undefined}
-                  className="w-[78%] shrink-0 sm:w-[55%] md:w-[38%] lg:w-[calc((100%-3*1.5rem)/3.5)]"
+                  className={cx(
+                    tileClasses,
+                    "w-[78%] shrink-0 sm:w-[55%] md:w-[38%] lg:w-[calc((100%-3*1.5rem)/3.5)]",
+                  )}
+                  style={{ backgroundImage: `url(${service.image})` }}
                 >
-                  <TileLabel>{service.title}</TileLabel>
-                </Tile>
+                  <span className="absolute bottom-[18px] left-5 z-[1] font-secondary text-[16px] font-medium uppercase tracking-[0.08em] text-white">
+                    {service.title}
+                  </span>
+                </Link>
               ))}{" "}
             </div>
           </div>
@@ -197,7 +154,7 @@ const Home = () => {
         <CookieBanner />
 
         {/* Intro */}
-        <Section as={Box}>
+        <Section>
           <Grid container>
             <Row
               isEven={false}
@@ -252,7 +209,7 @@ const Home = () => {
         </Section>
 
         {/* Diensten */}
-        {/* <Section as={Box} backgroundColor="#fafafa">
+        {/* <Section backgroundColor="#fafafa">
           <Grid container>
             {services.map((service, index) => (
               <Row
@@ -277,7 +234,7 @@ const Home = () => {
         </Section>*/}
 
         {/* Trust row */}
-        <Section as={Box} backgroundColor="#fafafa">
+        <Section backgroundColor="#fafafa">
           <Grid container>
             <Grid row>
               {trustPoints.map((point) => (
@@ -304,7 +261,7 @@ const Home = () => {
 
         {/* Werkgebied */}
         {/*
-        <Section as={Box}>
+        <Section>
           <Grid container>
             <SectionHeading>
               Actief in Antwerpen, Kontich en de hele regio

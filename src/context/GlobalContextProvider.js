@@ -1,5 +1,8 @@
 import React, { useState, useCallback, useEffect } from "react";
-import theme from "../theme";
+
+// Widths (px) that split mobile / tablet / desktop.
+const BREAKPOINT_SMALL = 480;
+const BREAKPOINT_LARGE = 1010;
 
 const GlobalContext = React.createContext({});
 
@@ -17,8 +20,8 @@ const GlobalContextProvider = ({ children }) => {
 
   useEffect(() => {
       const screenWidth = typeof window !== "undefined" && window.innerWidth
-      const mobileScreen = screenWidth <= theme.grid.breakpointSmall
-      const tabletScreen = screenWidth > theme.grid.breakpointSmall && screenWidth <= theme.grid.breakpointLarge
+      const mobileScreen = screenWidth <= BREAKPOINT_SMALL
+      const tabletScreen = screenWidth > BREAKPOINT_SMALL && screenWidth <= BREAKPOINT_LARGE
 
       setGlobalState({
         screenSize: screenWidth,

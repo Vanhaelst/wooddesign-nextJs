@@ -1,35 +1,18 @@
-import styled from "styled-components";
+import React from "react";
+import { cx } from "../../utils/cx";
 
-const MenuItem = styled('a').withConfig({
-    shouldForwardProp: (prop) =>
-        ['children', 'href', "target"].includes(prop),
-})`
-  margin: 0 24px;
-  font-size: 16px;
-  font-weight: 300;
-  color: black;
-  font-family: ${(props) => props.theme.font.family.secondary};
-  text-decoration: none;
-  &:hover {
-    color: ${(props) => props.theme.colors.primary.main};
-  }
-  ${(props) =>
-    props.sticky &&
-    `
-      color: black;
-   `}
-  
-  ${(props) =>
-    props.color === "white" &&
-    `
-      color: white;
-   `}
-  
-  ${(props) =>
-    props.active &&
-    `
-      color: ${props.theme.colors.primary.main} !important;
-   `}
-`;
+const MenuItem = ({ active, color, children, href, target }) => (
+  <a
+    href={href}
+    target={target}
+    className={cx(
+      "mx-6 font-secondary text-[16px] font-light no-underline hover:text-primary",
+      color === "white" ? "text-white" : "text-black",
+      active && "!text-primary",
+    )}
+  >
+    {children}
+  </a>
+);
 
 export default MenuItem;

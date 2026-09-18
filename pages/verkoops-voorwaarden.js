@@ -45,7 +45,7 @@ const cookieStatement = () => {
                 <Heading
                   level={2}
                   textTransform="uppercase"
-                  show={{ xs: false, sm: true }}
+                  className="hidden xs:block"
                 >
                   Verkoopsvoorwaarden
                 </Heading>

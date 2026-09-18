@@ -1,17 +1,10 @@
 import React from "react";
-import styled from "styled-components";
 import Text from "@/components/Text";
 
-const Li = styled(Text)`
-  margin-bottom: 8px;
-`;
-
-const ListItem = ({ children }) => {
-  return (
-    <Li as="li">
-      <Text fontFamily="secondary">{children}</Text>
-    </Li>
-  );
-};
+const ListItem = ({ children }) => (
+  <Text as="li" className="mb-2">
+    <Text fontFamily="secondary">{children}</Text>
+  </Text>
+);
 
 export default ListItem;
