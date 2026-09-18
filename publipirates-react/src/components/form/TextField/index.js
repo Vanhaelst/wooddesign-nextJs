@@ -1,52 +1,26 @@
 import React from "react";
-import styled from "styled-components";
 import Label from "@/components/form/Label";
 import Text from "@/components/Text";
-import theme from "../../../../../src/theme";
+import { cx } from "../../../utils/cx";
 
-const TextField = styled.textarea`
-  box-sizing: border-box;
-  font-family: ${(props) => props.theme.font.family.secondary};
-  width: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  outline: none;
-  border-radius: 4px;
-  font-size: 16px;
-  padding: 12px 16px;
-  width: 100%;
-  height: 100px;
-  resize: vertical;
-  &:focus {
-    border-color: ${(props) => props.theme.colors.primary.main};
-  }
-
-  ${(props) =>
-    !props.error &&
-    `
-        margin-bottom: 24px;
-    `}
-
-  ${(props) =>
-    props.error &&
-    `
-        border-color: ${theme.colors.error} !important;
-    `}
-`;
-
-const TextArea = ({ label, onChange, name, error, value }, props) => (
+const TextArea = ({ label, onChange, name, error, value }) => (
   <div>
     <Label>
       {label} <sup>*</sup>
     </Label>
-    <TextField
+    <textarea
+      className={cx(
+        "box-border h-[100px] w-full resize-y rounded border border-solid px-4 py-3 font-secondary text-[16px] outline-none",
+        error
+          ? "border-error"
+          : "mb-6 border-black/20 focus:border-primary",
+      )}
       onChange={onChange}
       name={name}
-      error={error}
       value={value}
-      {...props}
     />
     {error && (
-      <Text fontFamily="secondary" size="Caption2" color={theme.colors.error}>
+      <Text fontFamily="secondary" size="Caption2" color="#F84F31">
         {error}
       </Text>
     )}

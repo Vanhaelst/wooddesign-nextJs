@@ -1,107 +1,79 @@
-import styled from "styled-components";
-import PropTypes from "prop-types";
-import fontWeight from "../../utils/fontWeight";
-import color from "../../utils/color";
-import textDecoration from "../../utils/textDecoration";
-import fontFamily from "../../utils/fontFamily";
-import fontStyle from "../../utils/fontStyle";
-import textAlign from "../../utils/textAlign";
-import textTransform from "../../utils/textTransform";
-import level from "../../utils/level";
-import size from "../../utils/size";
-import getMargin from "../../utils/margin";
-import getPadding from "../../utils/padding";
-import show from "@/utils/show";
+import React from "react";
+import { cx } from "../../utils/cx";
+import { spacingProps } from "../../utils/spacing";
+import {
+  COLOR,
+  FONT_FAMILY,
+  FONT_STYLE,
+  FONT_WEIGHT,
+  TEXT_ALIGN,
+  TEXT_DECORATION,
+  TEXT_TRANSFORM,
+} from "../../utils/typography";
 
-const Text = styled('span').withConfig({
-  shouldForwardProp: (prop) =>
-      ['children'].includes(prop),
-})`
-  position: relative;
-  ${(props) => props.display && `display: ${props.display};`}
-  ${color}
-  ${fontFamily}
-  ${fontStyle}
-  ${fontWeight}
-  ${level}
-  ${size}
-  ${textAlign}
-  ${textDecoration}
-  ${textTransform}
-  ${getMargin}
-  ${getPadding}
-  line-height: 150%;
-  ${show}
-`;
-
-Text.propTypes = {
-  /** Change the rendered HTML tag e.g. span, p, h1 */
-  as: PropTypes.node,
-
-  /** Content for component *required */
-  children: PropTypes.node.isRequired,
-
-  /** Extend classNames. */
-  className: PropTypes.string,
-
-  /** Changes the Paragraph's color, choose one of the tokens. */
-  color: PropTypes.string,
-
-  /** Changes the Caption's text-decoration. */
-  decoration: PropTypes.oneOf(["inherit", "none", "underline", "line-through"]),
-
-  /** display setting for element. */
-  display: PropTypes.string,
-
-  /** FontFamily of font-system */
-  fontFamily: PropTypes.oneOf(["inherit", "primary", "secondary", "system"]),
-
-  /** Sets the css font-style property. */
-  fontStyle: PropTypes.oneOf(["inherit", "normal", "italic", "oblique"]),
-
-  /** Sets the css font-weight property. */
-  fontWeight: PropTypes.oneOf([
-    "inherit",
-    "light",
-    "regular",
-    "medium",
-    "bold",
-  ]),
-
-  /** Size on the scale */
-  size: PropTypes.oneOf([
-    "Heading1",
-    "Heading2",
-    "Heading3",
-    "Heading4",
-    "Heading5",
-    "Heading6",
-    "Paragraph",
-    "Caption1",
-    "Caption2",
-  ]),
-
-  /** Extend style */
-  style: PropTypes.shape({}),
-
-  /** textAlign css property. */
-  textAlign: PropTypes.oneOf(["inherit", "left", "right", "center", "justify"]),
-
-  /** textTransform css property. */
-  textTransform: PropTypes.oneOf([
-    "inherit",
-    "none",
-    "capitalize",
-    "uppercase",
-    "lowercase",
-  ]),
+// font-size / line-height scale. The base line-height is always 1.5; the
+// larger heading sizes switch to a fixed line-height from 480px (xs) up.
+const SIZE = {
+  Heading1: "text-[28px] xs:text-[40px] xs:leading-[44px]",
+  Heading2: "text-[24px] xs:text-[32px] xs:leading-[40px]",
+  Heading3: "text-[22px] xs:text-[24px] xs:leading-[32px]",
+  Heading4: "",
+  Heading5: "text-[18px]",
+  Heading6: "",
+  Paragraph: "text-[16px]",
+  Caption1: "text-[14px]",
+  Caption2: "text-[12px]",
 };
 
-Text.defaultProps = {
-  as: "span",
-  size: "Heading6",
-  color: "#464646",
-  fontWeight: "light",
+const DISPLAY = {
+  block: "block",
+  inline: "inline",
+  "inline-block": "inline-block",
+  flex: "flex",
+  none: "hidden",
+};
+
+const Text = ({
+  as: Tag = "span",
+  size = "Heading6",
+  color = "#464646",
+  fontWeight = "light",
+  fontFamily,
+  fontStyle,
+  textAlign,
+  textDecoration,
+  textTransform,
+  display,
+  className,
+  style,
+  children,
+  ...props
+}) => {
+  const [spacing, rest] = spacingProps(props);
+  const colorClass = COLOR[color];
+
+  return (
+    <Tag
+      className={cx(
+        "relative leading-normal",
+        colorClass,
+        FONT_FAMILY[fontFamily],
+        FONT_STYLE[fontStyle],
+        FONT_WEIGHT[fontWeight],
+        SIZE[size],
+        TEXT_ALIGN[textAlign],
+        TEXT_DECORATION[textDecoration],
+        TEXT_TRANSFORM[textTransform],
+        DISPLAY[display],
+        spacing,
+        className,
+      )}
+      style={colorClass ? style : { color, ...style }}
+      {...rest}
+    >
+      {children}
+    </Tag>
+  );
 };
 
 export default Text;

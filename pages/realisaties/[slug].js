@@ -2,7 +2,6 @@ import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { GraphQLClient } from "graphql-request";
-import styled from "styled-components";
 import meta from "src/data/meta";
 import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox";
 import Navigation from "src/components/Navigation";
@@ -19,22 +18,8 @@ import ChevronLeft from "@/icons/ChevronLeft";
 import { RichText } from "../../src/components/richtext/richtext.organism";
 import { canonicalUrl, richTextToPlainText, breadcrumbJsonLd } from "../../src/utils/seo";
 
-const FactRow = styled.div`
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  padding: 16px 0;
-  border-bottom: 1px solid ${(props) => props.theme.colors.grey[20]};
-
-  &:first-child {
-    border-top: 1px solid ${(props) => props.theme.colors.grey[20]};
-  }
-
-  svg {
-    flex-shrink: 0;
-    margin-top: 2px;
-  }
-`;
+const factRowClasses =
+  "flex items-start gap-3 border-b border-solid border-[rgb(237,237,237)] py-4 first:border-t [&_svg]:mt-0.5 [&_svg]:shrink-0";
 
 const categoryToService = {
   Parket: { title: "parket", href: "/parket" },
@@ -203,12 +188,12 @@ const Realisations = ({ realisation, slug }) => {
                 {facts.length > 0 && (
                   <Box mt={4} mb={6}>
                     {facts.map((fact) => (
-                      <FactRow key={fact.label}>
+                      <div key={fact.label} className={factRowClasses}>
                         {factIcon}
                         <Paragraph>
                           <strong>{fact.label}:</strong> {fact.value}
                         </Paragraph>
-                      </FactRow>
+                      </div>
                     ))}
                   </Box>
                 )}

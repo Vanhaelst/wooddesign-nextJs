@@ -2,7 +2,6 @@ import React from "react";
 import Head from "next/head";
 import meta from "src/data/meta";
 import Navigation from "src/components/Navigation";
-import Hero from "@/components/Hero";
 import Heading from "@/components/Heading";
 import Grid from "@/components/Grid";
 import Paragraph from "@/components/Paragraph";
@@ -46,7 +45,7 @@ const cookieStatement = () => {
                 <Heading
                   level={2}
                   textTransform="uppercase"
-                  show={{ xs: false, sm: true }}
+                  className="hidden xs:block"
                 >
                   Cookie verklaring
                 </Heading>

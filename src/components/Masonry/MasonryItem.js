@@ -1,100 +1,70 @@
 import React from "react";
 import { handleViewport } from "react-in-viewport";
-import styled from "styled-components";
 import Link from "@/components/Link";
 import Heading from "@/components/Heading";
-import { TransitionSlide } from "../../transitions";
-import { Paragraph } from "../../../publipirates-react";
+import { cx } from "@/utils/cx";
 
-const SubTitle = styled(Heading)`
-  margin: 0;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-size: 12px;
-`;
-
-const Image = styled.div.withConfig({
-  shouldForwardProp: (prop) => ["src", "alt", "children"].includes(prop),
-})`
-  background-image: url("${(props) => props.src}");
-  background-size: cover;
-  width: 100%;
-  height: 400px;
-`;
-
-const Line = styled.div`
-  border-left: 1px solid white;
-  padding-left: 25px;
-`;
-
-const ImageOverlay = styled.div`
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.75);
-  padding: 50px;
-
-  opacity: 0;
-  transition: all 0.5s;
-
-  &:hover {
-    opacity: 1;
-  }
-`;
-
-const Block = ({ item, enterCount, forwardedRef }) => {
-  return (
-    <TransitionSlide
-      transition={enterCount}
-      ref={forwardedRef}
-      slideTo="up"
-      fade
-    >
-      <div className="item" key={item.title}>
-        <div className="content">
-          <div>
-            <Link
-              href={`/realisaties/${encodeURIComponent(item.slug)}`}
-              type="hidden"
+// Slides up and fades in the first time the card scrolls into view.
+const Block = ({ item, enterCount, forwardedRef }) => (
+  <div
+    ref={forwardedRef}
+    className={cx(
+      "relative transition-all delay-[250ms] duration-500 lg:duration-1000",
+      enterCount
+        ? "top-0 opacity-100"
+        : "top-[100px] opacity-0 lg:top-[300px]",
+    )}
+  >
+    <div className="item" key={item.title}>
+      <div className="content">
+        <div>
+          <Link
+            href={`/realisaties/${encodeURIComponent(item.slug)}`}
+            type="hidden"
+          >
+            <div
+              className="h-[400px] w-full bg-cover rounded-lg"
+              style={{ backgroundImage: `url("${item.images[0]?.url}")` }}
             >
-              <Image src={item.images[0]?.url} alt={item.title}>
-                <ImageOverlay>
-                  <Line>
-                    {item.title && (
-                      <Heading level={3} color="#ffffff">
-                        {item.title}
+              <div className="h-full w-full bg-black/75 p-[50px] opacity-0 transition-all duration-500 hover:opacity-100">
+                <div className="border-l border-solid border-white pl-[25px]">
+                  {item.title && (
+                    <Heading level={3} color="#ffffff">
+                      {item.title}
+                    </Heading>
+                  )}
+                  {item.customer && (
+                    <>
+                      <Heading
+                        level={4}
+                        fontFamily="secondary"
+                        fontWeight="regular"
+                        color="#ffffff"
+                        pt={7}
+                      >
+                        Klant
                       </Heading>
-                    )}
-                    {item.customer && (
-                      <>
-                        <Heading
-                          level={4}
-                          fontFamily="secondary"
-                          fontWeight="regular"
-                          color="#ffffff"
-                          pt={7}
-                        >
-                          Klant
-                        </Heading>
-                        <SubTitle
-                          level={4}
-                          fontFamily="secondary"
-                          fontWeight="light"
-                          color="#ffffff"
-                        >
-                          {item.customer}
-                        </SubTitle>
-                      </>
-                    )}
-                  </Line>
-                </ImageOverlay>
-              </Image>
-            </Link>
-          </div>
+                      <Heading
+                        level={4}
+                        fontFamily="secondary"
+                        fontWeight="light"
+                        textTransform="uppercase"
+                        color="#ffffff"
+                        className="m-0 text-[12px] tracking-[2px]"
+                      >
+                        {item.customer}
+                      </Heading>
+                    </>
+                  )}
+                </div>
+              </div>
+            </div>
+          </Link>
         </div>
       </div>
-    </TransitionSlide>
-  );
-};
+    </div>
+  </div>
+);
 
 const ViewportBlock = handleViewport(Block /** options: {}, config: {} **/);
 

@@ -1,70 +1,42 @@
-import styled from "styled-components";
+import React from "react";
 import Image from "@/components/Image";
 import Grid from "@/components/Grid";
 
-const RowOdd = styled.div`
-  margin-bottom: 60px;
-  align-items: center;
-  img {
-    margin-bottom: 24px;
-  }
-  @media screen and (min-width: ${(props) =>
-      props.theme.grid.breakpointSmall}px) {
-    flex-direction: row;
-    img {
-      margin-bottom: 0;
-      min-height: 400px;
-    }
-  }
-`;
+const Picture = ({ image, alt }) => (
+  <Grid item xs={12} sm={6} lg={6}>
+    <Image
+      src={image}
+      alt={alt}
+      objectFit
+      height="100%"
+      className="rounded-lg xs:mb-0 xs:min-h-[400px]"
+    />
+  </Grid>
+);
 
-const RowEven = styled.div`
-  margin-bottom: 60px;
-  align-items: center;
-  flex-direction: column-reverse;
-  img {
-    margin-bottom: 24px;
-  }
-  @media screen and (min-width: ${(props) =>
-      props.theme.grid.breakpointSmall}px) {
-    flex-direction: row;
-    img {
-      margin-bottom: 0;
-      min-height: 400px;
-    }
-  }
-`;
-
+// Text next to an image. `isEven` puts the image first (and on top on mobile).
 export const Row = ({ image, alt, isEven, children }) => {
   if (isEven) {
     return (
-      <RowEven as={Grid} row>
-        <Grid item xs={12} sm={6} lg={{ width: 6 }}>
-          <Image
-            src={image}
-            alt={alt}
-            objectFit
-            height="100%"
-            className="rounded-3xl"
-          />
-        </Grid>
+      <Grid row className="mb-[60px] flex-col-reverse items-center xs:flex-row">
+        <Picture image={image} alt={alt} />
         <Grid
           item
           xs={12}
           sm={6}
-          lg={{ width: 6 }}
+          lg={6}
           flex
           justifyContent="flex-end"
           flexDirection="column"
         >
           {children}
         </Grid>
-      </RowEven>
+      </Grid>
     );
   }
 
   return (
-    <RowOdd as={Grid} row>
+    <Grid row className="mb-[60px] items-center">
       <Grid
         item
         xs={12}
@@ -76,15 +48,7 @@ export const Row = ({ image, alt, isEven, children }) => {
       >
         {children}
       </Grid>
-      <Grid item xs={12} sm={6} lg={{ width: 6 }}>
-        <Image
-          src={image}
-          alt={alt}
-          objectFit
-          height="100%"
-          className="rounded-3xl"
-        />
-      </Grid>
-    </RowOdd>
+      <Picture image={image} alt={alt} />
+    </Grid>
   );
 };

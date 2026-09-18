@@ -1,52 +1,7 @@
 import React, { useEffect, useState } from "react";
-import styled from "styled-components";
-import Box from "@/components/Box";
-import Text from "@/components/Text";
+import { cx } from "../../utils/cx";
 import Button from "@/components/Button";
-
-const Card = styled.div`
-  position: fixed !important;
-  z-index: 99999;
-  border-radius: 10px;
-  box-shadow: rgb(0 0 0 / 40%) 0px 0px 20px;
-  transition: all 0.5s;
-  transition-timing-function: ease-in-out;
-  max-width: 100%;
-
-  
- 
-  padding: 24px;
-  bottom: -500px;
-
-  @media screen and (max-width: ${props => props.theme.grid.breakpointSmall}px){
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-  
-  @media screen and (min-width: ${props => props.theme.grid.breakpointSmall}px){
-    right: -500px;
-    bottom: 24px;
-    padding: 48px;
-  }
-  @media screen and (min-width: ${props => props.theme.grid.breakpointMedium}px){
-    bottom: 48px;
-    padding: 48px;
-  }
-
-  
-  ${(props) =>
-    props.show &&
-    `
-      bottom: 0px;
-      @media screen and (min-width: ${props.theme.grid.breakpointSmall}px){
-        right: 0;
-        right: 24px;
-      }
-      @media screen and (min-width: ${props.theme.grid.breakpointLarge}px){
-        right: 48px;
-      }
-    `}
-`;
+import Text from "@/components/Text";
 
 const GOOGLE_ANALYTICS = "UA-69842182-2";
 const setCookies = () => {
@@ -71,7 +26,6 @@ const setCookies = () => {
   // you can add facebook-pixel and other cookies here
 };
 
-
 const CookieBanner = () => {
   const [show, setShow] = useState(false);
   const [isCookieSet, setIsCookieSet] = useState(false);
@@ -84,19 +38,17 @@ const CookieBanner = () => {
         setShow(true);
       }, 2500);
     }
-
   }, [show]);
 
   useEffect(() => {
-    if (!isCookieSet){
+    if (!isCookieSet) {
       const acceptedCookies = localStorage.getItem("acceptedCookies");
-      if (acceptedCookies){
-        setCookies()
-        setIsCookieSet(true)
-
+      if (acceptedCookies) {
+        setCookies();
+        setIsCookieSet(true);
       }
     }
-  }, [show])
+  }, [show]);
 
   const handleClick = () => {
     localStorage.setItem("acceptedCookies", "true");
@@ -104,20 +56,30 @@ const CookieBanner = () => {
   };
 
   return (
-    <Card as={Box} backgroundColor="#191919" width="450px" show={show}>
+    <div
+      className={cx(
+        // Slides up from the bottom on mobile, in from the right on larger screens.
+        "fixed z-[99999] flex w-[450px] max-w-full flex-col rounded-[10px] bg-[#191919] p-6 shadow-[0_0_20px_rgb(0_0_0/40%)] transition-all duration-500 ease-in-out max-xs:rounded-b-none xs:p-12 md:bottom-12",
+        show
+          ? "bottom-0 xs:bottom-6 xs:right-6 lg:right-12"
+          : "bottom-[-500px] xs:bottom-6 xs:right-[-500px]",
+      )}
+    >
       <Text fontFamily="secondary" mb={6} color="white">
         Wij gebruiken cookies. Door verder te surfen of deze banner te sluiten,
         ga je akkoord met onze cookie policy.
       </Text>
-      <Box flexDirection="row" alignItems="center">
-        <Box mr={3}>
+      <div className="flex flex-row items-center">
+        <div className="mr-2 flex flex-col">
           <Button onClick={handleClick}>Aanvaarden</Button>
-        </Box>
-        <Box>
-            <Button appearance="link" href="/cookie-verklaring">Meer informatie</Button>
-        </Box>
-      </Box>
-    </Card>
+        </div>
+        <div className="flex flex-col">
+          <Button appearance="link" href="/cookie-verklaring">
+            Meer informatie
+          </Button>
+        </div>
+      </div>
+    </div>
   );
 };
 

@@ -1,65 +1,60 @@
-import styled from "styled-components";
-import PropTypes from "prop-types";
-import color from "../../utils/color";
-import fontWeight from "../../utils/fontWeight";
-import textDecoration from "../../utils/textDecoration";
-import textTransform from "../../utils/textTransform";
-import fontFamily from "../../utils/fontFamily";
+import React from "react";
+import { cx } from "../../utils/cx";
+import {
+  COLOR,
+  FONT_FAMILY,
+  FONT_WEIGHT,
+  TEXT_DECORATION,
+  TEXT_TRANSFORM,
+} from "../../utils/typography";
 
-const Link = styled.a`
-  font-size: inherit;
-  font-weight: inherit;
+const BASE_COLOR = {
+  branded: "text-primary",
+  hidden: "text-inherit",
+  disabled: "text-[#d7d7d7]",
+};
 
-  color: ${(props) => props.theme.colors.link.main};
-  &:hover {
-    color: ${(props) => props.theme.colors.link.dark};
-    background-color: transparent;
-    cursor: pointer;
-    svg path{
-      fill: ${(props) => props.theme.colors.primary.dark};
-    }
-  }
+const HOVER_COLOR = {
+  branded: "hover:text-primary-dark",
+  hidden: "hover:text-primary-dark",
+  disabled: "hover:text-[#d7d7d7]",
+};
 
-  ${(props) =>
-    props.type === "branded" &&
-    `
-        color: ${props.theme.colors.primary.main};
-        &:hover {
-            color: ${props.theme.colors.primary.dark};
-            background-color: transparent;
-        }
-    `}
+// `type`: "branded" | "hidden" (inherits the surrounding colour, no underline)
+// | "disabled". `color` overrides the resting colour.
+const Link = ({
+  type,
+  color,
+  fontFamily,
+  fontWeight,
+  textDecoration,
+  textTransform,
+  className,
+  style,
+  children,
+  ...rest
+}) => {
+  const colorClass = COLOR[color];
 
-  ${(props) =>
-    props.type === "hidden" &&
-    `
-        color: inherit;
-        text-decoration: none;
-        &:hover {
-            color: ${props.theme.colors.primary.dark};
-            background-color: transparent;
-        }
-    `}
-    
-    ${(props) =>
-    props.type === "disabled" &&
-    `
-        color:  ${props.theme.colors.grey[30]};
-        &:hover {
-            color: ${props.theme.colors.grey[30]};
-            background-color: transparent;
-        }
-    `}
-    
-    ${color}
-    ${fontWeight}
-    ${fontFamily}
-    ${textDecoration}
-    ${textTransform}
-`;
-
-Link.propTypes = {
-  type: PropTypes.oneOf(["branded", "hidden", "disabled"]),
+  return (
+    <a
+      className={cx(
+        "cursor-pointer hover:bg-transparent hover:[&_svg_path]:fill-primary-dark",
+        colorClass || BASE_COLOR[type] || "text-[#4a7322]",
+        HOVER_COLOR[type] || "hover:text-[#375719]",
+        type === "hidden" && "no-underline",
+        FONT_FAMILY[fontFamily],
+        FONT_WEIGHT[fontWeight],
+        TEXT_DECORATION[textDecoration],
+        TEXT_TRANSFORM[textTransform],
+        className,
+      )}
+      style={color && !colorClass ? { color, ...style } : style}
+      {...rest}
+    >
+      {children}
+    </a>
+  );
 };
 
 export default Link;

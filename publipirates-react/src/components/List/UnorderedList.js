@@ -1,21 +1,10 @@
 import React from "react";
-import styled from "styled-components";
+import { cx } from "../../utils/cx";
 
-const Ul = styled.ul.withConfig({
-  shouldForwardProp: (prop) =>
-      ['children'].includes(prop),
-})`
-  list-style-type: ${(props) => props.listStyleType};
-  padding-left: 24px;
-  ${(props) =>
-    props.listStyleType === "none" &&
-    `
-        padding-left: 0;
-    `}
-`;
-
-const UnorderedList = ({ children, listStyleType = "none" }) => {
-  return <Ul listStyleType={listStyleType}>{children}</Ul>;
-};
+const UnorderedList = ({ children, listStyleType = "none" }) => (
+  <ul className={cx(listStyleType === "none" ? "list-none" : "list-disc pl-6")}>
+    {children}
+  </ul>
+);
 
 export default UnorderedList;

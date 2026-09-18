@@ -1,18 +1,7 @@
 import React from "react";
-import styled from "styled-components";
 
-const Menu = styled.div`
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-  padding-left: 0;
-  align-items: center;
+const Menu = ({ children }) => (
+  <div className="flex list-none flex-row items-center pl-0">{children}</div>
+);
 
-  ${(props) =>
-    props.isMobile &&
-    `
-      display: flex;
-      flex-direction: column;
-   `}
-`;
 export default Menu;

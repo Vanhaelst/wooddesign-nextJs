@@ -1,24 +1,11 @@
 import React from "react";
-import styled from 'styled-components';
 import Grid from "@/components/Grid";
 import Input from "@/components/form/input";
 import TextArea from "@/components/form/TextField";
 import Button from "@/components/Button";
 
-const FormElement = styled.form`
-
-    @keyframes fade-in {
-      0%   { opacity: 0; }
-      100% { opacity: 1; }
-    }
-
-    animation: fade-in 1s;
- `;
-
-
-
-const Form = ({ errors, data, handleChangeData, handleSend, mailState }) => (
-  <FormElement mailState={mailState}>
+const Form = ({ errors, data, handleChangeData, handleSend }) => (
+  <form className="animate-fade-in">
     <Grid row>
       <Grid item xs={12} sm={6}>
         <Input
@@ -86,17 +73,13 @@ const Form = ({ errors, data, handleChangeData, handleSend, mailState }) => (
       </Grid>
     </Grid>
     <Grid row>
-      <Grid
-        item
-        xs={12}
-        style={{ display: "flex", justifyContent: "flex-end" }}
-      >
+      <Grid item xs={12}>
         <Button type="submit" appearance="primary" onClick={handleSend}>
           Verzenden
         </Button>
       </Grid>
     </Grid>
-  </FormElement>
+  </form>
 );
 
 export default Form;

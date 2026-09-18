@@ -1,46 +1,21 @@
-import styled from "styled-components";
-import Grid from "../Grid";
+import React from "react";
+import { cx } from "../../utils/cx";
 
-const Navbar = styled(Grid)`
-  
-  background-color: rgba(255,255,255,0);
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 0 auto;
-  padding: 32px;
-  display: flex;
-    
-    transition: all;
-    transition-duration: 300ms;
-    
-    position: relative;
-    top: 0px;
-    z-index: 9950;
-    width: 100%;
+// Top bar: `position="absolute"` overlays the page (hero), `sticky` is the
+// compact bar that slides in from the top once `shown` is true.
+const NavBar = ({ position, sticky, shown, children }) => (
+  <div
+    className={cx(
+      "z-[9950] mx-auto flex w-full flex-row justify-between transition-all duration-300",
+      sticky
+        ? "fixed left-0 right-0 bg-white/75 p-3 shadow-[0_2px_4px_rgb(0_0_0/12%)]"
+        : "bg-white/0 p-8",
+      sticky ? (shown ? "top-0" : "top-[-200px]") : null,
+      !sticky && (position === "absolute" ? "absolute top-[37px]" : "relative top-0"),
+    )}
+  >
+    {children}
+  </div>
+);
 
-  ${(props) =>
-    props.position === "absolute" && `
-        position: absolute;
-        top: 37px;
-    `}
-    
-    ${(props) =>
-    props.sticky &&
-    `
-          background-color: rgba(255,255,255,0.75);
-          box-shadow: rgb(0 0 0 / 12%) 0px 2px 4px;
-        position: fixed;
-        top: -200px;
-        left: 0;
-        right: 0;
-        padding: 12px;
-        ${
-          props.shown &&
-          `
-            top: 0;
-        `
-        }
-    `}
-`;
-
-export default Navbar;
+export default NavBar;

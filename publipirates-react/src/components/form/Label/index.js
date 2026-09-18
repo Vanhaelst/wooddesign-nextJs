@@ -1,21 +1,19 @@
 import React from "react";
-import styled from "styled-components";
 import Text from "@/components/Text";
+import { cx } from "../../../utils/cx";
 
-const FormLabel = styled(Text)`
-  display: inline-block;
-  padding: 0 10px;
-  background-color: white;
-  margin-left: 8px;
-  transform: translateY(50%);
-`;
-
-const Label = (props) => (
-  <FormLabel fontWeight="regular" size="Caption1" {...props} />
+// Floating label that sits on the top border of the input below it.
+const Label = ({ className, ...props }) => (
+  <Text
+    fontWeight="regular"
+    size="Caption1"
+    fontFamily="secondary"
+    className={cx(
+      "ml-2 inline-block translate-y-1/2 bg-white px-[10px]",
+      className,
+    )}
+    {...props}
+  />
 );
-
-Label.defaultProps = {
-  fontFamily: "secondary",
-};
 
 export default Label;

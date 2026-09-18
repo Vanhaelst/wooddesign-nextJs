@@ -1,57 +1,20 @@
 import React from "react";
-import styled from "styled-components";
-import PropTypes from "prop-types";
+import { cx } from "../../utils/cx";
 
-const Img = styled.img.withConfig({
-    shouldForwardProp: (prop) =>
-        ['src', 'alt'].includes(prop),
-})`
-  overflow: hidden;
-  max-width: 100%;
-  &:hover {
-    transition: all 0.5s;
-    ${props => props.hover}
-  }
-  ${(props) =>
-    props.objectFit &&
-    `
-        width: 100%;
-        
-        height: calc(${props.height});
-        @media screen and (min-width: ${props.theme.grid.breakpointSmall}px){
-            height: calc(${props.height} / 1.5 );
-        }
-        @media screen and (min-width: ${props.theme.grid.breakpointMedium}px){
-            height: ${props.height};
-        }
-        
-        
-        object-fit: cover;
-        margin-bottom: 24px;
-        transition: all 0.5s;
-        &:hover{
-            transition: all 0.5s;
-            ${props.hover}
-        }
-    `}
-`;
-
-const Image = ({ src, alt, objectFit, height, hover, className }) => (
-  <Img
+// With `objectFit` the image fills its column and crops to cover; `height`
+// only supports the "100%" used by the two-column Row.
+const Image = ({ src, alt, objectFit, height, className }) => (
+  <img
     src={src}
     alt={alt}
-    objectFit={objectFit}
-    height={height}
-    hover={hover}
-    className={className}
+    className={cx(
+      "max-w-full overflow-hidden",
+      objectFit &&
+        "mb-6 w-full object-cover transition-all duration-500 h-full xs:h-[calc(100%/1.5)] md:h-full",
+      className,
+    )}
+    style={objectFit && height && height !== "100%" ? { height } : undefined}
   />
 );
-
-Image.propTypes = {
-  objectFit: PropTypes.bool,
-  height: PropTypes.string,
-  hover: PropTypes.string,
-    className: PropTypes.string,
-};
 
 export default Image;

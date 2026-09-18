@@ -7,8 +7,6 @@ import Grid from "@/components/Grid";
 import Footer from "../src/components/Footer";
 import Breadcrumbs from "../src/components/Breadcrumbs";
 import ContentWrapper from "../src/components/ContentWrapper";
-import { ServiceDetail } from "../src/components/Service/Detail";
-import terrassen from "../src/data/services/terrassen";
 import companyData from "../src/data/companyData";
 import { API_SLUG } from "../src/data/api";
 import Masonry from "../src/components/Masonry";

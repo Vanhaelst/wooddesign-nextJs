@@ -195,7 +195,7 @@ const Contact = () => {
               </p>
             </div>
 
-            <div className="relative min-h-[320px] overflow-hidden rounded-2xl lg:min-h-full">
+            <div className="relative min-h-[320px] overflow-hidden rounded-lg lg:min-h-full">
               <img
                 src="/images/toonzaal.jpeg"
                 alt="Toonzaal van Wooddesign in Kontich"

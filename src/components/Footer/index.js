@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
 import Grid from "@/components/Grid";
@@ -14,21 +13,12 @@ import useGlobalContext from "../../context/hooks/useGlobalContext";
 import regions from "../../data/regions";
 import guides from "../../data/guides";
 
-const Wrapper = styled(Grid)`
-  background-color: #3a3733;
-`;
-
-const BottomBar = styled(Grid)`
-  background-color: #2a2825;
-  padding: 15px 0;
-`;
-
 const Footer = () => {
   const { isMobile } = useGlobalContext();
 
   return (
     <div className="bg-[#3a3733]">
-      <Wrapper pt={11} pb={8}>
+      <Grid className="bg-[#3a3733]" pt={11} pb={8}>
         <Grid container>
           <Grid row>
             <Grid item xs={12} sm={4} pb={8}>
@@ -83,7 +73,7 @@ const Footer = () => {
                 <Box mr={5}>
                   <Link
                     href={companyData.social.instagram}
-                    als="Instagram"
+                    aria-label="Instagram"
                     target="_blank"
                   >
                     <Instagram size="22px" fill="white" />
@@ -92,7 +82,7 @@ const Footer = () => {
                 <Box mr={5}>
                   <Link
                     href={companyData.social.facebook}
-                    als="Facebook"
+                    aria-label="Facebook"
                     target="_blank"
                   >
                     <Facebook size="22px" fill="white" />
@@ -101,7 +91,7 @@ const Footer = () => {
                 <Box mr={5}>
                   <Link
                     href={companyData.social.pinterest}
-                    als="Pinterest"
+                    aria-label="Pinterest"
                     target="_blank"
                   >
                     <Pinterest size="22px" fill="white" />
@@ -155,9 +145,9 @@ const Footer = () => {
             </Grid>
           </Grid>
         </Grid>
-      </Wrapper>
+      </Grid>
 
-      <BottomBar>
+      <Grid className="bg-[#2a2825] py-[15px]">
         <Grid container>
           <Grid row>
             <Grid item xs={12} sm={6}>
@@ -183,7 +173,7 @@ const Footer = () => {
             </Grid>
           </Grid>
         </Grid>
-      </BottomBar>
+      </Grid>
     </div>
   );
 };
