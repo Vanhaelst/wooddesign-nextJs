@@ -13,12 +13,9 @@ import Masonry from "../src/components/Masonry";
 import Button from "@/components/Button";
 import Link from "@/components/Link";
 import { API_SLUG } from "../src/data/api";
-import { canonicalUrl, faqJsonLd } from "../src/utils/seo";
+import {faqJsonLd } from "../src/utils/seo";
 import { CallToAction } from "../src/components/CallToAction";
 import Faq from "../src/components/Faq";
-import useInfiniteScroll from "../src/hooks/useInfiniteScroll";
-import { canonicalUrl } from "../src/utils/seo";
-import { CallToAction } from "../src/components/CallToAction";
 import useInfiniteScroll from "../src/hooks/useInfiniteScroll";
 
 const faqItems = [
