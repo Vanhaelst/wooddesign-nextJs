@@ -6,6 +6,8 @@
 .env.build
 .env.local
 .idea
+.idea/*
+.idea*
 # Dependency directories
 node_modules/
 # Logs
