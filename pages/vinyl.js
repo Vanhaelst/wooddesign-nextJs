@@ -11,10 +11,10 @@ import { Paragraph } from "../publipirates-react";
 import Masonry from "../src/components/Masonry";
 import Link from "@/components/Link";
 import { API_SLUG } from "../src/data/api";
-import {faqJsonLd } from "../src/utils/seo";
 import { CallToAction } from "../src/components/CallToAction";
 import Faq from "../src/components/Faq";
 import useInfiniteScroll from "../src/hooks/useInfiniteScroll";
+import { canonicalUrl, faqJsonLd } from "../src/utils/seo";
 
 const faqItems = [
   {

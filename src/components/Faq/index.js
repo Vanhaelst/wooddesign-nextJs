@@ -8,7 +8,7 @@ const ChevronIcon = ({ open }) => (
   <svg
     viewBox="0 0 24 24"
     fill="none"
-    stroke="#3a3733"
+    stroke="#8c867b"
     strokeWidth="1.5"
     className={`h-5 w-5 shrink-0 transition-transform duration-200 ${
       open ? "rotate-180" : ""
@@ -31,18 +31,18 @@ const Faq = ({ title = "Veelgestelde vragen", items = [] }) => {
             <Heading level={3} mb={6}>
               {title}
             </Heading>
-            <div className="border-t border-[#e5e3dd]">
+            <div className="border-t border-line">
               {items.map(({ question, answer }, index) => {
                 const open = openIndex === index;
                 return (
-                  <div key={question} className="border-b border-[#e5e3dd]">
+                  <div key={question} className="border-b border-line">
                     <button
                       type="button"
                       onClick={() => setOpenIndex(open ? null : index)}
                       aria-expanded={open}
-                      className="flex w-full items-center justify-between gap-4 py-5 text-left"
+                      className="flex w-full items-center justify-between gap-4 py-6 text-left"
                     >
-                      <span className="font-semibold text-[#3a3733]">
+                      <span className="font-display text-[22px] font-medium leading-snug text-ink">
                         {question}
                       </span>
                       <ChevronIcon open={open} />

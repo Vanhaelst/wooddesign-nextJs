@@ -54,7 +54,7 @@ const DesktopNavigation = ({ color, position }) => {
 
       <NavBar position={position}>
         <Link href="/">
-          <Logo fill={color || "BLACK"} height="32px" />
+          <Logo fill={color || "BLACK"} height="24px" />
         </Link>
         <Menu>
           {navigation.map((item) => {
@@ -77,7 +77,7 @@ const DesktopNavigation = ({ color, position }) => {
 
       <NavBar shown={shown} sticky={true}>
         <Link href="/">
-          <Logo fill={"black"} height="32px" />
+          <Logo fill={"black"} height="24px" />
         </Link>
         <Menu>
           {navigation.map((item) => {

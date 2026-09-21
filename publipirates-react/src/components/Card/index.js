@@ -59,7 +59,7 @@ const CookieBanner = () => {
     <div
       className={cx(
         // Slides up from the bottom on mobile, in from the right on larger screens.
-        "fixed z-[99999] flex w-[450px] max-w-full flex-col rounded-[10px] bg-[#191919] p-6 shadow-[0_0_20px_rgb(0_0_0/40%)] transition-all duration-500 ease-in-out max-xs:rounded-b-none xs:p-12 md:bottom-12",
+        "fixed z-[99999] flex w-[450px] max-w-full flex-col rounded-[2px] bg-charcoal p-6 shadow-[0_10px_40px_rgb(0_0_0/30%)] transition-all duration-500 ease-in-out max-xs:rounded-b-none xs:p-12 md:bottom-12",
         show
           ? "bottom-0 xs:bottom-6 xs:right-6 lg:right-12"
           : "bottom-[-500px] xs:bottom-6 xs:right-[-500px]",
@@ -74,7 +74,11 @@ const CookieBanner = () => {
           <Button onClick={handleClick}>Aanvaarden</Button>
         </div>
         <div className="flex flex-col">
-          <Button appearance="link" href="/cookie-verklaring">
+          <Button
+            appearance="link"
+            href="/cookie-verklaring"
+            className="!text-brass"
+          >
             Meer informatie
           </Button>
         </div>

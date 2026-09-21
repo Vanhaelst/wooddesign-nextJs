@@ -4,83 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e60b890b-4f27-4856-9b6a-d695cbaf5a90" name="Changes" comment="ass seo files">
+    <list default="true" id="e60b890b-4f27-4856-9b6a-d695cbaf5a90" name="Changes" comment="updates mobile">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/jsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/_document.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_document.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/cookie-verklaring.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cookie-verklaring.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/parket.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/parket.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/realisaties/[slug].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/realisaties/[slug].js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/terras.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/terras.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/verkoops-voorwaarden.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/verkoops-voorwaarden.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Box/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Box/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/vinyl.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/vinyl.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Button/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Button/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Card/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Card/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Component/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Flex/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Grid/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Grid/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Heading/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Heading/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Hero/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Image/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Image/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Link/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Link/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/List/ListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/List/ListItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/List/UnorderedList.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/List/UnorderedList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/List/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Navigation/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Navigation/Menu.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Navigation/MenuItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Navigation/MenuItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Navigation/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Navigation/NavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Navigation/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Paragraph/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Paragraph/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Text/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Text/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/form/InputField/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/form/InputField/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/form/Label/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/form/Label/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/form/TextField/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/form/TextField/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/theme/borders.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/theme/colors.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/theme/font.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/theme/grid.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/theme/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/theme/shadows.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/theme/spaces.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/utils/border.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/utils/color.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/utils/flex.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/utils/flex.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/utils/fontFamily.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/utils/fontStyle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/utils/fontWeight.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/utils/getFirstMatchingValue.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/utils/level.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/utils/margin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/utils/padding.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/utils/position.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/utils/show.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/utils/size.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/utils/textAlign.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/utils/textDecoration.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/utils/textTransform.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Organism/service.service.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ContactForm/ContactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactForm/ContactForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ContactForm/Success.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactForm/Success.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publipirates-react/src/icons/Close.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/icons/Close.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publipirates-react/src/icons/Facebook.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/icons/Facebook.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publipirates-react/src/icons/Instagram.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/icons/Instagram.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publipirates-react/src/icons/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/icons/Menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publipirates-react/src/icons/Pinterest.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/icons/Pinterest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publipirates-react/src/icons/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/icons/cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publipirates-react/src/utils/typography.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/utils/typography.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Breadcrumbs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Breadcrumbs/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CallToAction/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CallToAction/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ContentWrapper/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContentWrapper/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DefaultPage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DefaultPage/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Faq/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Faq/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Footer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Mailchimp/signupForm.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Masonry/MasonryItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Masonry/MasonryItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Masonry/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Masonry/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navigation/Navigation.mobile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.mobile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/PromoBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/PromoBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navigation/default.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/default.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Row/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Row/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Service/Detail.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/GlobalContextProvider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/GlobalContextProvider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/services/vinylvloer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transitions/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SectionHeading/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SectionHeading/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/richtext/richtext.organism.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/richtext/richtext.organism.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/companyData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/companyData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +57,7 @@
     <execution />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="203" />
+    <option name="cachedIndexableFilesCount" value="189" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -130,61 +96,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0000000004576381" />
-      <entry key="S5" value="1.000216937368615" />
-      <entry key="S10" value="1.0200592730976896" />
-      <entry key="S30" value="1.6002292092354928" />
-      <entry key="S60" value="2.9393255193211814" />
-      <entry key="M2" value="5.761642247374264" />
-      <entry key="M5" value="11.968465596905146" />
-      <entry key="M10" value="19.18733417935126" />
-      <entry key="M15" value="25.915673393546637" />
-      <entry key="M30" value="46.18878981090772" />
-      <entry key="H1" value="81.84911551597581" />
-      <entry key="H2" value="123.74186083577217" />
-      <entry key="H4" value="157.77145305048376" />
-      <entry key="D1" value="196.7275845920963" />
-      <entry key="W1" value="204.64123287849682" />
+      <entry key="MS100" value="2.2870638831279038E-7" />
+      <entry key="MS500" value="0.04714585333649059" />
+      <entry key="S2" value="0.6340641584409683" />
+      <entry key="S5" value="1.8472045848758378" />
+      <entry key="S10" value="3.157608511745101" />
+      <entry key="S30" value="4.80795309817077" />
+      <entry key="S60" value="5.654037602738125" />
+      <entry key="M2" value="7.106865211376084" />
+      <entry key="M5" value="9.906600416331164" />
+      <entry key="M10" value="13.629819195220207" />
+      <entry key="M15" value="18.895809588055297" />
+      <entry key="M30" value="38.69254320240596" />
+      <entry key="H1" value="77.53774696868327" />
+      <entry key="H2" value="128.84736989463573" />
+      <entry key="H4" value="174.63651622024994" />
+      <entry key="D1" value="231.01271385746654" />
+      <entry key="W1" value="242.93730017296997" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="6.041750643738933E-70" />
-      <entry key="S2" value="4.957819362484308E-18" />
-      <entry key="S5" value="1.1970609941947162E-7" />
-      <entry key="S10" value="3.4598569427442207E-4" />
-      <entry key="S30" value="0.07032343006294209" />
-      <entry key="S60" value="0.2759534212553861" />
-      <entry key="M2" value="0.6197349256531297" />
-      <entry key="M5" value="1.2240189129605694" />
-      <entry key="M10" value="1.9399742606889252" />
-      <entry key="M15" value="2.586437839852064" />
-      <entry key="M30" value="4.028837679639108" />
-      <entry key="H1" value="5.479266832372507" />
-      <entry key="H2" value="6.559289741210025" />
-      <entry key="H4" value="7.226788488097777" />
-      <entry key="D1" value="7.863011490843712" />
-      <entry key="W1" value="7.980220277546446" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0" />
+      <entry key="S60" value="1.0000000000000107" />
+      <entry key="M2" value="1.0000001218349608" />
+      <entry key="M5" value="1.0025422280768799" />
+      <entry key="M10" value="1.0884115814548354" />
+      <entry key="M15" value="1.3299976442380004" />
+      <entry key="M30" value="2.4390774477124313" />
+      <entry key="H1" value="4.274723595096004" />
+      <entry key="H2" value="6.070875110500596" />
+      <entry key="H4" value="7.354163619635754" />
+      <entry key="D1" value="8.696165860021885" />
+      <entry key="W1" value="8.955806974711154" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.5904963307147653" />
-      <entry key="MS500" value="0.9000019297935121" />
-      <entry key="S2" value="0.974004268790205" />
-      <entry key="S5" value="0.9896796042490075" />
-      <entry key="S10" value="1.011689599364341" />
-      <entry key="S30" value="1.6275334411759734" />
-      <entry key="S60" value="3.154094731878675" />
-      <entry key="M2" value="6.322305322158637" />
-      <entry key="M5" value="13.151152232407947" />
-      <entry key="M10" value="21.09731690899302" />
-      <entry key="M15" value="28.476983492878" />
-      <entry key="M30" value="50.19968238890331" />
-      <entry key="H1" value="87.31678597005151" />
-      <entry key="H2" value="130.29437824897602" />
-      <entry key="H4" value="164.99455287755552" />
-      <entry key="D1" value="204.58993295789355" />
-      <entry key="W1" value="212.62135714611017" />
+      <entry key="MS100" value="0.002093310742421689" />
+      <entry key="MS500" value="0.3113447175870629" />
+      <entry key="S2" value="1.2712697573855714" />
+      <entry key="S5" value="2.6315879588588835" />
+      <entry key="S10" value="4.013124843395785" />
+      <entry key="S30" value="5.743491648793822" />
+      <entry key="S60" value="6.616734153119162" />
+      <entry key="M2" value="8.08371098018721" />
+      <entry key="M5" value="10.896832635931034" />
+      <entry key="M10" value="14.709811420185297" />
+      <entry key="M15" value="20.217565386402494" />
+      <entry key="M30" value="41.12242717501838" />
+      <entry key="H1" value="81.80404384236779" />
+      <entry key="H2" value="134.91222744470062" />
+      <entry key="H4" value="181.98703580683" />
+      <entry key="D1" value="239.70816238267184" />
+      <entry key="W1" value="251.89300163892207" />
     </decayedShown>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/opt/homebrew/Cellar/php/8.5.2/bin/php" />
@@ -210,7 +176,7 @@
     "WebServerToolWindowFactoryState": "false",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "refactor/tailwind-only",
+    "git-widget-placeholder": "design/premium-motion-details",
     "js.debugger.nextJs.config.created.client": "true",
     "js.debugger.nextJs.config.created.server": "true",
     "junie.onboarding.icon.badge.shown": "true",
@@ -306,6 +272,8 @@
       <workItem from="1744960713595" duration="66000" />
       <workItem from="1745304877987" duration="242000" />
       <workItem from="1789632707408" duration="3321000" />
+      <workItem from="1789899470665" duration="304000" />
+      <workItem from="1789970293096" duration="690000" />
     </task>
     <task id="LOCAL-00001" summary="add alu gevels">
       <created>1667918235049</created>
@@ -522,7 +490,31 @@
       <option name="project" value="LOCAL" />
       <updated>1789633369397</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="gitignore">
+      <option name="closed" value="true" />
+      <created>1789886290354</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1789886290354</updated>
+    </task>
+    <task id="LOCAL-00030" summary="fix vinyl page">
+      <option name="closed" value="true" />
+      <created>1789886904283</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1789886904283</updated>
+    </task>
+    <task id="LOCAL-00031" summary="updates mobile">
+      <option name="closed" value="true" />
+      <created>1789971051938</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1789971051938</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -552,9 +544,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add vinyl floors" />
-    <MESSAGE value="add mato installer logo" />
-    <MESSAGE value="update react version" />
     <MESSAGE value="update react dom version" />
     <MESSAGE value="Add holiday opening hours" />
     <MESSAGE value="Realisations orderBy: createdAt_DESC" />
@@ -577,14 +566,17 @@
     <MESSAGE value="update feedback" />
     <MESSAGE value="update hero image" />
     <MESSAGE value="ass seo files" />
-    <option name="LAST_COMMIT_MESSAGE" value="ass seo files" />
+    <MESSAGE value="gitignore" />
+    <MESSAGE value="fix vinyl page" />
+    <MESSAGE value="updates mobile" />
+    <option name="LAST_COMMIT_MESSAGE" value="updates mobile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/pages/index.js</url>
-          <line>184</line>
+          <line>226</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">

@@ -7,7 +7,6 @@ import Grid from "@/components/Grid";
 import Footer from "../src/components/Footer";
 import Breadcrumbs from "../src/components/Breadcrumbs";
 import ContentWrapper from "../src/components/ContentWrapper";
-import companyData from "../src/data/companyData";
 import { Paragraph } from "../publipirates-react";
 import Masonry from "../src/components/Masonry";
 import Link from "@/components/Link";
@@ -119,7 +118,7 @@ const Services = ({ realisations, pagination }) => {
       </Head>
 
       <Navigation />
-      <Breadcrumbs title="PARKET, tijdloze elegantie en natuurlijke warmte">
+      <Breadcrumbs title="Parket, tijdloze elegantie en natuurlijke warmte">
         <Paragraph className="mb-3">
           Voor wie waarde hecht aan een warme, sfeervolle uitstraling, is parket
           de ideale keuze. Deze vloeren combineren duurzaamheid met tijdloze

@@ -1,12 +1,12 @@
 import React from "react";
-import { cx } from "../../utils/cx";
+import { cx } from "@/utils/cx";
 import {
   COLOR,
   FONT_FAMILY,
   FONT_WEIGHT,
   TEXT_DECORATION,
   TEXT_TRANSFORM,
-} from "../../utils/typography";
+} from "@/utils/typography";
 
 const BASE_COLOR = {
   branded: "text-primary",
@@ -40,8 +40,8 @@ const Link = ({
     <a
       className={cx(
         "cursor-pointer hover:bg-transparent hover:[&_svg_path]:fill-primary-dark",
-        colorClass || BASE_COLOR[type] || "text-[#4a7322]",
-        HOVER_COLOR[type] || "hover:text-[#375719]",
+        colorClass || BASE_COLOR[type] || "text-primary",
+        HOVER_COLOR[type] || "hover:text-primary-dark",
         type === "hidden" && "no-underline",
         FONT_FAMILY[fontFamily],
         FONT_WEIGHT[fontWeight],

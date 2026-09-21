@@ -5,10 +5,10 @@ const PromoBar = () => (
   <Link
     href="http://shop.wooddesign.be"
     target="_blank"
-    className="relative z-[9960] block w-full py-2 text-center text-xs md:text-sm  uppercase tracking-wide text-white hover:opacity-90 font-light"
-    style={{ backgroundColor: "#8dc63f" }}
+    className="relative z-[9960] block w-full bg-charcoal px-4 py-2.5 text-center text-[11px] font-light uppercase tracking-[0.18em] text-ivory transition-colors hover:text-brass md:text-xs"
   >
-    Nieuw: bekijk onze webshop voor onderhoudsproducten &amp; accessoires &rarr;
+    Nieuw: bekijk onze webshop voor onderhoudsproducten &amp; accessoires
+    &rarr;
   </Link>
 );
 
