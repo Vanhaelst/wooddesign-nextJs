@@ -28,6 +28,7 @@ export const Row = ({ image, alt, isEven, children }) => {
           flex
           justifyContent="flex-end"
           flexDirection="column"
+          className="mb-6 xs:mb-0"
         >
           {children}
         </Grid>
@@ -45,6 +46,7 @@ export const Row = ({ image, alt, isEven, children }) => {
         flex
         justifyContent="flex-start"
         flexDirection="column"
+        className="mb-6 xs:mb-0"
       >
         {children}
       </Grid>

@@ -69,7 +69,7 @@ const CookieBanner = () => {
         Wij gebruiken cookies. Door verder te surfen of deze banner te sluiten,
         ga je akkoord met onze cookie policy.
       </Text>
-      <div className="flex flex-row items-center">
+      <div className="flex flex-row flex-wrap items-center gap-y-2 xs:flex-nowrap">
         <div className="mr-2 flex flex-col">
           <Button onClick={handleClick}>Aanvaarden</Button>
         </div>

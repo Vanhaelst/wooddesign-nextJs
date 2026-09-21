@@ -55,7 +55,7 @@ const Text = ({
   return (
     <Tag
       className={cx(
-        "relative leading-normal",
+        "relative break-words leading-normal",
         colorClass,
         FONT_FAMILY[fontFamily],
         FONT_STYLE[fontStyle],

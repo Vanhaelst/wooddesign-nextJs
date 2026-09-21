@@ -109,7 +109,7 @@ const Home = () => {
       >
         <div className="absolute top-90 left-0 w-full h-full bg-black/50" />
         <span className="text-xl uppercase text-white">Welkom bij</span>
-        <h1 className="text-6xl md:text-7xl uppercase text-white text-center leading-tight px-4">
+        <h1 className="text-[clamp(32px,11.5vw,60px)] md:text-7xl uppercase text-white text-center leading-tight px-4">
           Wooddesign
           <span className="block text-lg md:text-2xl normal-case tracking-normal mt-3">
             Specialist in parket, gevelbekleding, terrassen &amp; vinyl in
@@ -126,7 +126,7 @@ const Home = () => {
         <div className="relative max-w-[1800px] w-full px-4 mx-auto overflow-hidden ">
           <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r from-white to-transparent sm:w-24" />
           <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-gradient-to-l from-white to-transparent sm:w-24" />
-          <div className="overflow-x-auto px-10 pb-4 sm:px-24 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="overflow-x-auto md:px-10 pb-4 sm:px-24 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             <div className="flex gap-4 sm:gap-6">
               {homeServices.map((service) => (
                 <Link

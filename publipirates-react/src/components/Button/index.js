@@ -38,7 +38,9 @@ const Button = ({
   const classes = cx(
     BASE,
     APPEARANCE[variant],
-    block ? "w-full whitespace-normal" : "w-fit whitespace-nowrap",
+    block
+      ? "w-full whitespace-normal"
+      : "w-fit max-w-full whitespace-normal xs:whitespace-nowrap",
     className,
   );
 
