@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { cx } from "../../utils/cx";
+import { cx } from "@/utils/cx";
 import Button from "@/components/Button";
 import Text from "@/components/Text";
 
@@ -77,7 +77,7 @@ const CookieBanner = () => {
           <Button
             appearance="link"
             href="/cookie-verklaring"
-            className="!text-brass"
+            className="text-white"
           >
             Meer informatie
           </Button>
