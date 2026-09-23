@@ -4,10 +4,10 @@ import Instagram from "@/icons/Instagram";
 import Facebook from "@/icons/Facebook";
 import Pinterest from "@/icons/Pinterest";
 import Reveal from "../Reveal";
-import Wordmark from "../Wordmark";
 import companyData from "../../data/companyData";
 import regions from "../../data/regions";
 import guides from "../../data/guides";
+import Logo from "../../theme/logo/Logo";
 
 const Eyebrow = ({ children }) => (
   <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.25em] text-brass">
@@ -25,7 +25,7 @@ const socials = [
 ];
 
 // `visit` shows the showroom-visit call to action above the columns.
-const Footer = ({ visit = true }) => (
+const Footer = ({ visit = false }) => (
   <footer className="bg-charcoal text-ivory">
     {visit && (
       <div className="border-b border-white/10 px-4 py-20 text-center md:py-28">
@@ -63,7 +63,10 @@ const Footer = ({ visit = true }) => (
 
     <div className="mx-auto grid w-[calc(100%-32px)] max-w-[1200px] gap-12 py-16 md:grid-cols-2 md:py-24 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
       <div>
-        <Wordmark tone="light" />
+        <Logo fill={"white"} height="24px" />
+        <span className="mt-2 text-[8px] font-semibold uppercase tracking-[0.34em] opacity-90">
+          Parket · Gevel · Terras · Vinyl
+        </span>
         <p className="mt-8 max-w-xs text-[15px] font-light leading-[1.8] text-ivory/70">
           Parket, gevelbekleding, terrassen en vinyl, geplaatst door eigen
           vakmensen in Antwerpen, Kontich en omstreken.
@@ -149,11 +152,19 @@ const Footer = ({ visit = true }) => (
     <div className="border-t border-white/10 py-6">
       <div className="mx-auto flex w-[calc(100%-32px)] max-w-[1200px] flex-col items-center justify-between gap-2 text-[12px] font-light text-ivory/50 sm:flex-row">
         <p>
-          <Link href="/cookie-verklaring" type="hidden" className="hover:text-white">
+          <Link
+            href="/cookie-verklaring"
+            type="hidden"
+            className="hover:text-white"
+          >
             Cookieverklaring
           </Link>
           &nbsp;·&nbsp;
-          <Link href="/verkoops-voorwaarden" type="hidden" className="hover:text-white">
+          <Link
+            href="/verkoops-voorwaarden"
+            type="hidden"
+            className="hover:text-white"
+          >
             Verkoopsvoorwaarden
           </Link>
           &nbsp;·&nbsp;
@@ -161,7 +172,11 @@ const Footer = ({ visit = true }) => (
         </p>
         <p>
           Site by{" "}
-          <Link href="http://www.studio94.be" type="hidden" className="hover:text-white">
+          <Link
+            href="http://www.studio94.be"
+            type="hidden"
+            className="hover:text-white"
+          >
             Studio94
           </Link>
         </p>
