@@ -4,49 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e60b890b-4f27-4856-9b6a-d695cbaf5a90" name="Changes" comment="updates mobile">
+    <list default="true" id="e60b890b-4f27-4856-9b6a-d695cbaf5a90" name="Changes" comment="update footer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_document.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_document.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/parket.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/parket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/realisaties/[slug].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/realisaties/[slug].js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/vinyl.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/vinyl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Button/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Button/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Card/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Card/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Heading/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Heading/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Image/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Image/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Link/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Link/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Navigation/MenuItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Navigation/MenuItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Navigation/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Navigation/NavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/Text/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/Text/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/form/InputField/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/form/InputField/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/form/Label/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/form/Label/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/components/form/TextField/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/components/form/TextField/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/icons/Close.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/icons/Close.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/icons/Facebook.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/icons/Facebook.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/icons/Instagram.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/icons/Instagram.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/icons/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/icons/Menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/icons/Pinterest.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/icons/Pinterest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/icons/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/icons/cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publipirates-react/src/utils/typography.js" beforeDir="false" afterPath="$PROJECT_DIR$/publipirates-react/src/utils/typography.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Breadcrumbs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Breadcrumbs/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CallToAction/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CallToAction/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ContentWrapper/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContentWrapper/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Faq/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Faq/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Masonry/MasonryItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Masonry/MasonryItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Masonry/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Masonry/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Navigation.mobile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.mobile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/PromoBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/PromoBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/default.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/default.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Row/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Row/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SectionHeading/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SectionHeading/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/richtext/richtext.organism.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/richtext/richtext.organism.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/companyData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/companyData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +16,7 @@
     <execution />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="189" />
+    <option name="cachedIndexableFilesCount" value="192" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -96,64 +55,67 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="2.2870638831279038E-7" />
-      <entry key="MS500" value="0.04714585333649059" />
-      <entry key="S2" value="0.6340641584409683" />
-      <entry key="S5" value="1.8472045848758378" />
-      <entry key="S10" value="3.157608511745101" />
-      <entry key="S30" value="4.80795309817077" />
-      <entry key="S60" value="5.654037602738125" />
-      <entry key="M2" value="7.106865211376084" />
-      <entry key="M5" value="9.906600416331164" />
-      <entry key="M10" value="13.629819195220207" />
-      <entry key="M15" value="18.895809588055297" />
-      <entry key="M30" value="38.69254320240596" />
-      <entry key="H1" value="77.53774696868327" />
-      <entry key="H2" value="128.84736989463573" />
-      <entry key="H4" value="174.63651622024994" />
-      <entry key="D1" value="231.01271385746654" />
-      <entry key="W1" value="242.93730017296997" />
+      <entry key="MS100" value="1.0217329884593938" />
+      <entry key="MS500" value="1.9388394436382645" />
+      <entry key="S2" value="3.217166778934262" />
+      <entry key="S5" value="3.6556937889743746" />
+      <entry key="S10" value="3.8433254213597197" />
+      <entry key="S30" value="4.888029402140821" />
+      <entry key="S60" value="6.966522660676717" />
+      <entry key="M2" value="11.271494978402373" />
+      <entry key="M5" value="21.72247123109431" />
+      <entry key="M10" value="31.878172618475624" />
+      <entry key="M15" value="39.5067267252109" />
+      <entry key="M30" value="61.162231631323614" />
+      <entry key="H1" value="101.12229776028485" />
+      <entry key="H2" value="154.69839672694698" />
+      <entry key="H4" value="203.50861034776767" />
+      <entry key="D1" value="264.6696277974357" />
+      <entry key="W1" value="277.7356568169654" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0" />
-      <entry key="S30" value="1.0" />
-      <entry key="S60" value="1.0000000000000107" />
-      <entry key="M2" value="1.0000001218349608" />
-      <entry key="M5" value="1.0025422280768799" />
-      <entry key="M10" value="1.0884115814548354" />
-      <entry key="M15" value="1.3299976442380004" />
-      <entry key="M30" value="2.4390774477124313" />
-      <entry key="H1" value="4.274723595096004" />
-      <entry key="H2" value="6.070875110500596" />
-      <entry key="H4" value="7.354163619635754" />
-      <entry key="D1" value="8.696165860021885" />
-      <entry key="W1" value="8.955806974711154" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="1.4400249153162543E-103" />
+      <entry key="S5" value="7.300422627756198E-42" />
+      <entry key="S10" value="2.7019294268644757E-21" />
+      <entry key="S30" value="1.392808260224685E-7" />
+      <entry key="S60" value="3.7320346464424887E-4" />
+      <entry key="M2" value="0.01931847705132859" />
+      <entry key="M5" value="0.2067720378455394" />
+      <entry key="M10" value="0.49429671133658687" />
+      <entry key="M15" value="0.7858034228046403" />
+      <entry key="M30" value="1.8748093590789743" />
+      <entry key="H1" value="3.747777499266059" />
+      <entry key="H2" value="5.684394090133151" />
+      <entry key="H4" value="7.116225938047867" />
+      <entry key="D1" value="8.64862807364338" />
+      <entry key="W1" value="8.948796659489906" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.002093310742421689" />
-      <entry key="MS500" value="0.3113447175870629" />
-      <entry key="S2" value="1.2712697573855714" />
-      <entry key="S5" value="2.6315879588588835" />
-      <entry key="S10" value="4.013124843395785" />
-      <entry key="S30" value="5.743491648793822" />
-      <entry key="S60" value="6.616734153119162" />
-      <entry key="M2" value="8.08371098018721" />
-      <entry key="M5" value="10.896832635931034" />
-      <entry key="M10" value="14.709811420185297" />
-      <entry key="M15" value="20.217565386402494" />
-      <entry key="M30" value="41.12242717501838" />
-      <entry key="H1" value="81.80404384236779" />
-      <entry key="H2" value="134.91222744470062" />
-      <entry key="H4" value="181.98703580683" />
-      <entry key="D1" value="239.70816238267184" />
-      <entry key="W1" value="251.89300163892207" />
+      <entry key="MS100" value="0.9938099139778686" />
+      <entry key="MS500" value="1.9285309942866418" />
+      <entry key="S2" value="3.2129659762822227" />
+      <entry key="S5" value="3.6537898719419992" />
+      <entry key="S10" value="3.842298279849464" />
+      <entry key="S30" value="4.886979724518616" />
+      <entry key="S60" value="6.965042017678168" />
+      <entry key="M2" value="11.287617623227433" />
+      <entry key="M5" value="21.92377910726982" />
+      <entry key="M10" value="32.3664616330495" />
+      <entry key="M15" value="40.28598169760799" />
+      <entry key="M30" value="63.029002239291216" />
+      <entry key="H1" value="104.86216338825609" />
+      <entry key="H2" value="160.3768842724764" />
+      <entry key="H4" value="210.6211715018117" />
+      <entry key="D1" value="273.3175189784117" />
+      <entry key="W1" value="286.68434468693687" />
     </decayedShown>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/opt/homebrew/Cellar/php/8.5.2/bin/php" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 0
@@ -163,37 +125,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Node.js.default.js.executor": "Run",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "design/premium-motion-details",
-    "js.debugger.nextJs.config.created.client": "true",
-    "js.debugger.nextJs.config.created.server": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/indyvanhaelst/sites/studio94/wooddesign",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "prettierjs.PrettierConfiguration.Package": "/Users/indyvanhaelst/sites/studio94/wooddesign-nextJs/node_modules/prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "/Users/indyvanhaelst/Applications/IntelliJ IDEA Ultimate.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Node.js.default.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;design/premium-motion-details&quot;,
+    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/indyvanhaelst/sites/studio94/wooddesign&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/indyvanhaelst/sites/studio94/wooddesign-nextJs/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/indyvanhaelst/Applications/IntelliJ IDEA Ultimate.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components" />
@@ -274,6 +236,7 @@
       <workItem from="1789632707408" duration="3321000" />
       <workItem from="1789899470665" duration="304000" />
       <workItem from="1789970293096" duration="690000" />
+      <workItem from="1790148336636" duration="856000" />
     </task>
     <task id="LOCAL-00001" summary="add alu gevels">
       <created>1667918235049</created>
@@ -514,7 +477,31 @@
       <option name="project" value="LOCAL" />
       <updated>1789971051938</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="premium design">
+      <option name="closed" value="true" />
+      <created>1789973802402</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1789973802402</updated>
+    </task>
+    <task id="LOCAL-00033" summary="update tyet color cookies">
+      <option name="closed" value="true" />
+      <created>1790148555303</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1790148555304</updated>
+    </task>
+    <task id="LOCAL-00034" summary="update footer">
+      <option name="closed" value="true" />
+      <created>1790148793128</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1790148793128</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -544,9 +531,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update react dom version" />
-    <MESSAGE value="Add holiday opening hours" />
-    <MESSAGE value="Realisations orderBy: createdAt_DESC" />
     <MESSAGE value="update instagram page link" />
     <MESSAGE value="update order realisations" />
     <MESSAGE value="update chakra - emotion - prettier - masonery" />
@@ -569,7 +553,10 @@
     <MESSAGE value="gitignore" />
     <MESSAGE value="fix vinyl page" />
     <MESSAGE value="updates mobile" />
-    <option name="LAST_COMMIT_MESSAGE" value="updates mobile" />
+    <MESSAGE value="premium design" />
+    <MESSAGE value="update tyet color cookies" />
+    <MESSAGE value="update footer" />
+    <option name="LAST_COMMIT_MESSAGE" value="update footer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -581,7 +568,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/pages/parket.js</url>
-          <line>130</line>
+          <line>129</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
