@@ -1,6 +1,6 @@
 import React from "react";
-import { cx } from "../../utils/cx";
-import { spacingProps } from "../../utils/spacing";
+import { cx } from "@/utils/cx";
+import { spacingProps } from "@/utils/spacing";
 import {
   COLOR,
   FONT_FAMILY,
@@ -9,20 +9,21 @@ import {
   TEXT_ALIGN,
   TEXT_DECORATION,
   TEXT_TRANSFORM,
-} from "../../utils/typography";
+} from "@/utils/typography";
 
-// font-size / line-height scale. The base line-height is always 1.5; the
-// larger heading sizes switch to a fixed line-height from 480px (xs) up.
+// Serif display scale for headings (h4 and below are sub-headings) and a
+// relaxed sans scale for running text. Every entry carries its own
+// line-height so no separate `leading-*` class is needed.
 const SIZE = {
-  Heading1: "text-[28px] xs:text-[40px] xs:leading-[44px]",
-  Heading2: "text-[24px] xs:text-[32px] xs:leading-[40px]",
-  Heading3: "text-[22px] xs:text-[24px] xs:leading-[32px]",
-  Heading4: "",
-  Heading5: "text-[18px]",
-  Heading6: "",
-  Paragraph: "text-[16px]",
-  Caption1: "text-[14px]",
-  Caption2: "text-[12px]",
+  Heading1: "text-[44px] leading-[1.05] md:text-[68px]",
+  Heading2: "text-[36px] leading-[1.1] md:text-[52px]",
+  Heading3: "text-[30px] leading-[1.15] md:text-[38px]",
+  Heading4: "text-[24px] leading-[1.25]",
+  Heading5: "text-[20px] leading-[1.3]",
+  Heading6: "leading-[1.75]",
+  Paragraph: "text-[16px] leading-[1.75]",
+  Caption1: "text-[14px] leading-[1.6]",
+  Caption2: "text-[12px] leading-[1.6]",
 };
 
 const DISPLAY = {
@@ -36,7 +37,7 @@ const DISPLAY = {
 const Text = ({
   as: Tag = "span",
   size = "Heading6",
-  color = "#464646",
+  color = "body",
   fontWeight = "light",
   fontFamily,
   fontStyle,
@@ -55,7 +56,7 @@ const Text = ({
   return (
     <Tag
       className={cx(
-        "relative break-words leading-normal",
+        "relative break-words",
         colorClass,
         FONT_FAMILY[fontFamily],
         FONT_STYLE[fontStyle],

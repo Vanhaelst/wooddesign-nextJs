@@ -14,6 +14,9 @@ export default class MyDocument extends Document {
             A shared default here previously made pages fall back to (or, on
             some Next.js versions, keep) the same generic description.
           */}
+          <noscript>
+            <style>{`[data-reveal]{opacity:1!important;transform:none!important}[data-reveal] img{transform:none!important}`}</style>
+          </noscript>
           <meta name="keywords" content={meta.keywords} />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
           <meta name="p:domain_verify" content={meta.domain_verify_code} />
@@ -58,7 +61,7 @@ export default class MyDocument extends Document {
           <link
             rel="mask-icon"
             href="/images/theme/app-icons/safari-pinned-tab.svg"
-            color="#8dc63f"
+            color="#61993b"
           />
           <meta
             name="msapplication-TileColor"
@@ -99,11 +102,6 @@ export default class MyDocument extends Document {
             from the index. Each page now sets its own self-referencing
             canonical via next/head.
           */}
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@200;400;600;700&display=swap"
-            rel="stylesheet"
-          />
           <link rel="icon" href="/favicon.ico" />
           <script
             type="application/ld+json"

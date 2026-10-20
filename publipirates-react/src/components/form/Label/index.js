@@ -1,6 +1,6 @@
 import React from "react";
 import Text from "@/components/Text";
-import { cx } from "../../../utils/cx";
+import { cx } from "@/utils/cx";
 
 // Floating label that sits on the top border of the input below it.
 const Label = ({ className, ...props }) => (
@@ -9,7 +9,7 @@ const Label = ({ className, ...props }) => (
     size="Caption1"
     fontFamily="secondary"
     className={cx(
-      "ml-2 inline-block translate-y-1/2 bg-white px-[10px]",
+      "ml-2 inline-block translate-y-1/2 bg-ivory px-[10px]",
       className,
     )}
     {...props}

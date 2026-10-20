@@ -9,7 +9,7 @@ export const FONT_FAMILY = {
 
 export const FONT_WEIGHT = {
   inherit: "[font-weight:inherit]",
-  light: "font-extralight",
+  light: "font-light",
   regular: "font-normal",
   medium: "font-medium",
   bold: "font-medium",
@@ -46,11 +46,14 @@ export const COLOR = {
   white: "text-white",
   "#ffffff": "text-white",
   "#fff": "text-white",
-  "#464646": "text-[#464646]",
-  "#676b6d": "text-[#676b6d]",
+  ink: "text-ink",
+  body: "text-body",
+  muted: "text-muted",
+  brass: "text-brass",
+  "#464646": "text-ink",
+  "#676b6d": "text-muted",
   "#000000": "text-black",
   primary: "text-primary",
-  "#8dc63f": "text-primary",
   "#F84F31": "text-error",
   inherit: "text-inherit",
 };

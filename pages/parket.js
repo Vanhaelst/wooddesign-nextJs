@@ -7,7 +7,6 @@ import Grid from "@/components/Grid";
 import Footer from "../src/components/Footer";
 import Breadcrumbs from "../src/components/Breadcrumbs";
 import ContentWrapper from "../src/components/ContentWrapper";
-import companyData from "../src/data/companyData";
 import { Paragraph } from "../publipirates-react";
 import Masonry from "../src/components/Masonry";
 import Link from "@/components/Link";
@@ -119,27 +118,28 @@ const Services = ({ realisations, pagination }) => {
       </Head>
 
       <Navigation />
-      <Breadcrumbs title="PARKET, tijdloze elegantie en natuurlijke warmte">
+      <Breadcrumbs title="Parket, tijdloze elegantie en natuurlijke warmte">
         <Paragraph className="mb-3">
-          Voor wie waarde hecht aan een warme, sfeervolle uitstraling, is parket
-          de ideale keuze. Deze vloeren combineren duurzaamheid met tijdloze
-          klasse en worden niet alleen nieuw geplaatst, maar ook vaak
-          gerenoveerd. Door ze te schuren, behandelen of op te frissen, blijft
-          uw parketvloer jarenlang in topconditie en behoudt ze haar authentieke
-          charme.
+          Voor wie houdt van een warme, sfeervolle uitstraling, is parket de
+          perfecte keuze.
         </Paragraph>
         <Paragraph className="mb-3">
-          Als parketteur in Antwerpen, Kontich en omstreken laten we u zowel
-          massief als meerlaags parket plaatsen, van klassieke stroken tot
-          visgraat en hongaarse punt in eik en andere houtsoorten. Wilt u uw
-          parketvloer laten leggen of een bestaande vloer laten renoveren?
-          Bij ons kan het allebei.
+          Als parketteur in Antwerpen, Mechelen, Kontich en omstreken, plaatsen
+          we zowel massief als meerlaags parket, van klassieke stroken tot
+          visgraat en hongaarse punt in eik en andere houtsoorten.
+        </Paragraph>
+        <Paragraph className="mb-3">
+          Wenst u een bestaande parketvloer te laten renoveren? Door ze te
+          schuren, behandelen of op te frissen, blijft uw parketvloer jarenlang
+          in topconditie en behoudt ze haar authentieke charme.
         </Paragraph>
         <Paragraph className="mb-6">
-          Verken onze collectie, ontdek de mogelijkheden voor uw woning of
-          project, en laat u inspireren door de schoonheid van parketvloeren.
-          Wij helpen u graag verder bij het maken van de juiste keuze in onze
-          toonzaal te Kontich.
+          Ook als zelfplaatser kan u bij ons terecht voor de aankoop van uw
+          meerlaags parket of vinylvloer, inclusief lijm en onderhoudsproducten.
+        </Paragraph>
+        <Paragraph className="mb-6">
+          Ontdek onze collectie in de toonzaal te Kontich en laat u begeleiden
+          door experts.
         </Paragraph>
         <Paragraph>
           Naast parket plaatsen we ook{" "}

@@ -5,13 +5,21 @@ import { GlobalContextProvider } from "src/context/GlobalContextProvider";
 import Head from "next/head";
 import meta from "../src/data/meta";
 import "./globals.css";
-import { Lato } from "next/font/google";
+import { Cormorant_Garamond, Inter } from "next/font/google";
 
-const cabin = Lato({
+const display = Cormorant_Garamond({
   subsets: ["latin"],
-  variable: "--font-cabin",
+  variable: "--font-display",
   display: "swap",
-  weight: ["100", "300","400", "700"],
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
+});
+
+const sans = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+  weight: ["300", "400", "500"],
 });
 
 const MyApp = ({ Component, pageProps }) => {
@@ -24,7 +32,9 @@ const MyApp = ({ Component, pageProps }) => {
         <meta name="viewport" content={meta.viewport} />
       </Head>
       <GlobalContextProvider>
-        <main className={cabin.variable}>
+        <main
+          className={`${display.variable} ${sans.variable} min-h-screen bg-ivory font-sans text-body antialiased`}
+        >
           <DefaultPage>
             <Component {...pageProps} />
           </DefaultPage>

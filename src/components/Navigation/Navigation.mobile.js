@@ -7,7 +7,7 @@ import Paragraph from "@/components/Paragraph";
 import Text from "@/components/Text";
 import CloseIcon from "@/icons/Close";
 import MenuIcon from "@/icons/Menu";
-import Logo from "../../theme/logo/Logo";
+import Wordmark from "../Wordmark";
 import Facebook from "@/icons/Facebook";
 import Pinterest from "@/icons/Pinterest";
 import Instagram from "@/icons/Instagram";
@@ -16,7 +16,7 @@ import Link from "next/link";
 import PromoBar from "./PromoBar";
 
 const menuItemClasses =
-  "relative text-left font-secondary font-extralight uppercase tracking-[2px] text-[#676b6d] no-underline p-[12px_10px] hover:bg-primary hover:text-white";
+  "relative text-left font-secondary font-extralight uppercase tracking-[2px] text-muted no-underline p-[12px_10px] hover:bg-primary hover:text-white";
 
 const Line = () => (
   <div className="mb-4 w-full border-b border-solid border-[rgb(215,215,215)] pt-4" />
@@ -34,10 +34,10 @@ const Navigation = () => {
       <PromoBar />
       <Grid
         container
-        className="relative z-[500] mt-2 flex items-center justify-between bg-white px-6 py-2"
+        className="relative z-[500] mt-2 flex items-center justify-between bg-ivory px-6 py-2"
       >
         <Link href="/">
-          <Logo height="24px" fill="#464646" />
+          <Wordmark tone="dark" compact />
         </Link>
         <div onClick={handleClick}>
           <MenuIcon size="24px" />
@@ -55,10 +55,7 @@ const Navigation = () => {
           isOpen ? "right-0" : "right-[-110vw]",
         )}
       >
-        <div
-          className="absolute right-6 top-6 z-[10000]"
-          onClick={handleClick}
-        >
+        <div className="absolute right-6 top-6 z-[10000]" onClick={handleClick}>
           <CloseIcon size="20px" />
         </div>
         {navigation.map((item) => {
@@ -77,10 +74,10 @@ const Navigation = () => {
         <Link
           href="http://shop.wooddesign.be"
           className="flex items-center gap-2 mx-[12px] my-[10px] font-medium uppercase tracking-wide"
-          style={{ color: "#4a7322" }}
+          style={{ color: "#61993b" }}
           target="_blank"
         >
-          <Cart className="w-5 h-5" stroke="#4a7322" />
+          <Cart className="w-5 h-5" stroke="#61993b" />
           Bezoek onze webshop
         </Link>
         <Line />

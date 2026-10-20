@@ -1,7 +1,7 @@
 import React from "react";
 import Label from "@/components/form/Label";
 import Text from "@/components/Text";
-import { cx } from "../../../utils/cx";
+import { cx } from "@/utils/cx";
 
 const InputField = ({ label, placeholder, onChange, name, error, value }) => (
   <div>
@@ -10,10 +10,10 @@ const InputField = ({ label, placeholder, onChange, name, error, value }) => (
     </Label>
     <input
       className={cx(
-        "box-border h-12 w-full rounded border border-solid px-4 py-3 font-secondary text-[16px] outline-none",
+        "box-border h-12 w-full rounded-[2px] border border-solid bg-white px-4 py-3 font-secondary text-[16px] outline-none",
         error
           ? "border-error"
-          : "mb-6 border-black/20 focus:border-primary",
+          : "mb-6 border-stone focus:border-primary",
       )}
       placeholder={placeholder}
       onChange={onChange}

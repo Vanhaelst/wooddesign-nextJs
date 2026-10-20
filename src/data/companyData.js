@@ -10,6 +10,7 @@ const companyData = {
     extra: "Car-Wash XL oprijden",
     extra2: "signalisatie KMO-Park XL volgen."
   },
+  mapsUrl: "https://www.google.com/maps?q=51.14379097947675,4.432205851657122",
   email: "info@wooddesign.be",
   phone: {
     formatted: "+32(0) 477.20.84.84",

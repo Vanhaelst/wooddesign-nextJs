@@ -17,16 +17,36 @@ module.exports = {
     },
     extend: {
       colors: {
+        // Warm, muted palette: ivory canvas, charcoal ink, forest green as
+        // the action colour and brass for small decorative accents.
+        ivory: "#faf8f5",
+        sand: "#f2eee7",
+        ink: "#1c1a17",
+        body: "#57534d",
+        muted: "#8c867b",
+        line: "#e6e1d8",
+        stone: "#d6d0c5",
+        charcoal: "#1f1d1a",
+        brass: "#a98a5a",
         primary: {
-          DEFAULT: "#8dc63f",
-          light: "#a4d266",
-          dark: "#72a230",
+          DEFAULT: "#61993b",
+          light: "#6b8a5f",
+          dark: "#2f4630",
         },
         error: "#F84F31",
       },
+      // `--font-display` / `--font-sans` are set by next/font in pages/_app.js.
       fontFamily: {
-        primary: [
-          "'Open Sans'",
+        display: [
+          "var(--font-display)",
+          "'Cormorant Garamond'",
+          "Georgia",
+          "'Times New Roman'",
+          "serif",
+        ],
+        sans: [
+          "var(--font-sans)",
+          "Inter",
           "-apple-system",
           "system-ui",
           "BlinkMacSystemFont",
@@ -36,29 +56,36 @@ module.exports = {
           "Arial",
           "sans-serif",
         ],
+        primary: [
+          "var(--font-display)",
+          "'Cormorant Garamond'",
+          "Georgia",
+          "serif",
+        ],
         secondary: [
-          "'Open Sans'",
+          "var(--font-sans)",
+          "Inter",
           "-apple-system",
           "system-ui",
-          "BlinkMacSystemFont",
-          "'Segoe UI'",
-          "Roboto",
-          "Helvetica",
-          "Arial",
           "sans-serif",
         ],
         system: [
+          "var(--font-sans)",
+          "Inter",
           "-apple-system",
           "system-ui",
-          "BlinkMacSystemFont",
-          "'Segoe UI'",
-          "Roboto",
-          "Helvetica",
-          "Arial",
           "sans-serif",
         ],
       },
       keyframes: {
+        "fade-up": {
+          "0%": { opacity: "0", transform: "translateY(24px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "hero-zoom": {
+          "0%": { transform: "scale(1.08)" },
+          "100%": { transform: "scale(1)" },
+        },
         "fade-in": {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
@@ -76,6 +103,8 @@ module.exports = {
         },
       },
       animation: {
+        "fade-up": "fade-up 1s cubic-bezier(0.22, 0.61, 0.36, 1) both",
+        "hero-zoom": "hero-zoom 2.6s cubic-bezier(0.22, 0.61, 0.36, 1) both",
         "fade-in": "fade-in 1s",
         reveal: "reveal 1s 1s forwards",
         moveupwards: "moveupwards 1s 1s forwards",

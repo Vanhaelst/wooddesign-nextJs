@@ -5,16 +5,16 @@
 const guides = [
   {
     slug: "prijs-houten-terras",
-    metaTitle: "Wat bepaalt de prijs van een houten terras? | Wooddesign",
+    metaTitle: "Wat bepaalt de prijs van een terras? | Wooddesign",
     metaDescription:
-      "Benieuwd wat een houten terras kost? Ontdek welke factoren de prijs bepalen: houtsoort, oppervlakte, ondergrond en afwerking. Vraag een offerte op maat aan.",
-    title: "Wat bepaalt de prijs van een houten terras?",
+      "De prijs van een terras hangt af van verschillende factoren. Een exacte richtprijs geven zonder uw project te kennen is niet eerlijk – daarom zetten we hieronder op een rij waar de kostprijs van afhangt, zodat u goed voorbereid een offerte kunt aanvragen.",
+    title: "Wat bepaalt de prijs van een terras?",
     intro:
-      "De prijs van een houten terras hangt af van verschillende factoren. Een exacte richtprijs geven zonder uw project te kennen is niet eerlijk – daarom zetten we hieronder op een rij waar de kostprijs van afhangt, zodat u goed voorbereid een offerte kunt aanvragen.",
+      "De prijs van een terras hangt af van verschillende factoren. Een exacte richtprijs geven zonder uw project te kennen is niet eerlijk – daarom zetten we hieronder op een rij waar de kostprijs van afhangt, zodat u goed voorbereid een offerte kunt aanvragen.",
     sections: [
       {
-        heading: "Houtsoort",
-        body: "Hardhoutsoorten zoals ipé, padoek, bangkirai en afzelia verschillen in prijs, hardheid en uitstraling. Duurzame alternatieven zoals composiet vragen dan weer minder onderhoud, maar hebben een ander uitzicht en prijskaartje. De keuze van houtsoort is meestal de grootste kostenpost.",
+        heading: "Type",
+        body: "Er zijn tegenwoordig vele types van terrassen zoals hardhout, bamboe of composiet, welke op verschillende wijzen gemonteerd worden zoals blind of geschroefd.  Deze keuze is meestal de grootste kostenpost.",
       },
       {
         heading: "Oppervlakte en vorm",
@@ -22,15 +22,16 @@ const guides = [
       },
       {
         heading: "Voorbereiding van de ondergrond",
-        body: "Een bestaande, stabiele en waterpasse ondergrond is goedkoper om op te bouwen dan een terrein dat eerst uitgegraven, genivelleerd of gedraineerd moet worden.",
+        body: "Een vaste stabiele en vlakke ondergrond zoals chape of dakbedekking is goedkoper om op te starten dan een onverhard terrein dat eerst uitgegraven wordt en waarna we verder werken met chapewerken, hardhouten paaltjes of funderingsschroeven.",
       },
       {
         heading: "Onderconstructie",
-        body: "Een terras op maaiveld heeft een andere (en meestal goedkopere) onderconstructie nodig dan een verhoogd terras, een dakterras of een terras rond een zwembad.",
+        body: "De onderconstructie bestaat meestal uit hardhouten balken of een aluminium onderregels met blind systeem.",
       },
       {
         heading: "Afwerking",
-        body: "Onbehandeld hardhout vergrijst vanzelf en vraagt weinig onderhoud. Wilt u de originele kleur behouden, dan komt daar een oliebehandeling bij, wat de prijs licht verhoogt maar het onderhoud op lange termijn vraagt.",
+        body:
+          "Onbehandeld hardhout of bamboe vergrijst vanzelf en vraagt weinig onderhoud. Wilt u de originele kleur behouden, dan komt daar een oliebehandeling bij, wat de prijs licht verhoogt maar het onderhoud op lange termijn vraagt. Composietplanken behouden hun kleur.",
       },
     ],
     relatedService: { title: "Terras", href: "/terras" },

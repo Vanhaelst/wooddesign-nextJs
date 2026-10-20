@@ -6,10 +6,10 @@ const Cart = ({ className, stroke = "white" }) => {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            strokeWidth="1.5"
+            strokeWidth="1.25"
             stroke={stroke}
             aria-hidden="true"
-            className={`${className} flex-shrink-0 text-gray-400 group-hover:text-gray-500`}>
+            className={`${className}`}>
             <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
