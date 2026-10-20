@@ -115,20 +115,7 @@ const Footer = ({ visit = false }) => (
       </div>
 
       <div>
-        <Eyebrow>Werkgebied</Eyebrow>
-        <ul>
-          {regions.map((region) => (
-            <li key={region.slug}>
-              <Link
-                href={`/regio/${region.slug}`}
-                type="hidden"
-                className={linkClasses}
-              >
-                {region.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
+      
       </div>
 
       <div>
