@@ -10,3 +10,8 @@ h5,
 h6 {
   font-family: var(--font-cabin), serif !important;
 }
+
+/* The badge is hidden; the required notice sits under the contact form. */
+.grecaptcha-badge {
+  visibility: hidden;
+}

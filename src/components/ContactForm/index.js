@@ -11,6 +11,8 @@ const ContactForm = ({
   data,
   handleChangeData,
   handleSend,
+  honeypot,
+  setHoneypot,
 }) => {
   const { isMobile, isTablet } = useGlobalContext();
   const renderTitle = isMobile || isTablet;
@@ -30,6 +32,8 @@ const ContactForm = ({
                 data={data}
                 handleChangeData={handleChangeData}
                 handleSend={handleSend}
+                honeypot={honeypot}
+                setHoneypot={setHoneypot}
               />
               </>
   );

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Head from "next/head";
 import meta from "src/data/meta";
 import Navigation from "src/components/Navigation";
@@ -8,6 +8,7 @@ import Footer from "../src/components/Footer";
 import ContentWrapper from "../src/components/ContentWrapper";
 import ValidateForm from "../src/utils/ValidateForm";
 import { sendContactMail } from "../src/utils/sendMail-contact";
+import { loadRecaptcha } from "../src/utils/recaptcha";
 import ContactForm from "../src/components/ContactForm";
 import companyData from "../src/data/companyData";
 import { canonicalUrl } from "../src/utils/seo";
@@ -16,6 +17,10 @@ const mapsUrl = "https://www.google.com/maps?q=51.14379097947675,4.4322058516571
 
 const Contact = () => {
   const [mailState, setMailState] = useState(undefined);
+  const [honeypot, setHoneypot] = useState("");
+  // Set when the visitor first touches the form; the server rejects
+  // submissions that arrive implausibly fast.
+  const startedAt = useRef(null);
   const [data, setData] = useState({
     firstName: "",
     lastName: "",
@@ -57,7 +62,8 @@ const Contact = () => {
       .then((response) => {
         if (!response.hasError) {
           sendContactMail({
-            data,
+            data: { ...data, website: honeypot },
+            startedAt: startedAt.current,
             onSuccess: () => {
               setMailState("success");
               setData({
@@ -77,6 +83,10 @@ const Contact = () => {
       .catch(() => setMailState("error"));
   };
   const handleChangeData = (event) => {
+    if (!startedAt.current) {
+      startedAt.current = Date.now();
+      loadRecaptcha();
+    }
     setErrors({ ...errors, [event.target.name]: "" });
     setData({
       ...data,
@@ -231,6 +241,8 @@ const Contact = () => {
                 data={data}
                 handleChangeData={handleChangeData}
                 handleSend={handleSend}
+                honeypot={honeypot}
+                setHoneypot={setHoneypot}
               />
             </Grid>
           </Grid>
