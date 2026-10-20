@@ -3,6 +3,7 @@
 # dotenv environment variables file (build for Zeit Now)
 .env
 .env*
+!.env.example
 .env.build
 .env.local
 .idea
