@@ -10,10 +10,10 @@ const TextArea = ({ label, onChange, name, error, value }) => (
     </Label>
     <textarea
       className={cx(
-        "box-border h-[100px] w-full resize-y rounded border border-solid px-4 py-3 font-secondary text-[16px] outline-none",
+        "box-border h-[100px] w-full resize-y rounded-[2px] border border-solid bg-white px-4 py-3 font-secondary text-[16px] outline-none",
         error
           ? "border-error"
-          : "mb-6 border-black/20 focus:border-primary",
+          : "mb-6 border-stone focus:border-primary",
       )}
       onChange={onChange}
       name={name}

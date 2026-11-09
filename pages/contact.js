@@ -14,8 +14,7 @@ import { canonicalUrl } from "../src/utils/seo";
 
 // Link to the Google Business listing so the route ends at the actual entrance,
 // not at raw coordinates (which land in the woods behind the site).
-const mapsUrl =
-  "http://google.com/maps/place/Wooddesign+bv/@51.1437568,4.4315791,17z/data=!4m10!1m2!2m1!1sWooddesign,+Prins+Boudewijnlaan+21,+2550+Kontich!3m6!1s0x47c3f08c2692a52f:0x60a198079ef00dda!8m2!3d51.1435394!4d4.4343747!15sCjBXb29kZGVzaWduLCBQcmlucyBCb3VkZXdpam5sYWFuIDIxLCAyNTUwIEtvbnRpY2haMCIud29vZGRlc2lnbiBwcmlucyBib3VkZXdpam5sYWFuIDIxIDI1NTAga29udGljaJIBI3dvb2RfYW5kX2xhbWluYXRlX2Zsb29yaW5nX3N1cHBsaWVymgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVU5VZDNOaFoxZG5FQUXgAQD6AQQIABAe!16s%2Fg%2F1pv2k5nt0?entry=ttu&g_ep=EgoyMDI2MTEwMy4wIKXMDSoASAFQAw%3D%3D";
+const { mapsUrl } = companyData;
 
 const Contact = () => {
   const [mailState, setMailState] = useState(undefined);
@@ -55,8 +54,7 @@ const Contact = () => {
     *
     ========================= */
   async function validate() {
-    const validation = await ValidateForm({ setErrors, data }); // wait until the promise resolves (*)
-    return validation;
+    return await ValidateForm({ setErrors, data }); // wait until the promise resolves (*)
   }
 
   const handleSend = () => {
@@ -130,21 +128,18 @@ const Contact = () => {
           <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 ">
             <div>
               <div className="mb-8">
-                <span className="text-xs font-semibold uppercase tracking-[0.15em] text-[#3a3733]">
+                <span className="text-xs font-semibold uppercase tracking-[0.15em] text-ink">
                   Contactgegevens
                 </span>
-                <span
-                  className="mt-3 block h-[2px] w-10"
-                  style={{ backgroundColor: "#8dc63f" }}
-                />
+                <span className="mt-3 block h-px w-10 bg-brass" />
               </div>
 
               {showHolidayOpenings && (
                 <div className="mb-6">
-                  <p className="font-semibold text-[#3a3733]">
+                  <p className="font-semibold text-ink">
                     Openingstijden eindejaarsperiode:
                   </p>
-                  <p className="text-[#6b6862]">
+                  <p className="text-body">
                     Tijdens de eindejaarsvakantie zijn wij gesloten van 24/12
                     t.e.m. 8/01/2023. Alle contactaanvragen worden behandeld
                     vanaf 9/01/2023.
@@ -153,28 +148,28 @@ const Contact = () => {
               )}
 
               <div className="mb-6">
-                <p className="font-semibold text-[#3a3733]">Telefoon:</p>
+                <p className="font-semibold text-ink">Telefoon:</p>
                 <a
                   href={`tel:${companyData.phone.unformatted}`}
-                  className="text-[#3a3733] underline underline-offset-2 hover:text-[#72a230]"
+                  className="text-ink underline underline-offset-2 hover:text-primary"
                 >
                   {companyData.phone.formatted}
                 </a>
               </div>
 
               <div className="mb-6">
-                <p className="font-semibold text-[#3a3733]">E-mail:</p>
+                <p className="font-semibold text-ink">E-mail:</p>
                 <a
                   href={`mailto:${companyData.email}`}
-                  className="text-[#3a3733] underline underline-offset-2 hover:text-[#72a230]"
+                  className="text-ink underline underline-offset-2 hover:text-primary"
                 >
                   {companyData.email}
                 </a>
               </div>
 
               <div className="mb-6">
-                <p className="font-semibold text-[#3a3733]">Adres:</p>
-                <p className="text-[#6b6862]">
+                <p className="font-semibold text-ink">Adres:</p>
+                <p className="text-body">
                   {companyData.address.street} {companyData.address.number}
                   {companyData.address.bus}, {companyData.address.zip}{" "}
                   {companyData.address.city}.
@@ -185,14 +180,14 @@ const Contact = () => {
                   href={mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#3a3733] underline underline-offset-2 hover:text-[#72a230]"
+                  className="text-ink underline underline-offset-2 hover:text-primary"
                 >
                   Vind ons op Google Maps
                 </a>
               </div>
 
               <div className="mb-6">
-                <p className="font-semibold text-[#3a3733]">
+                <p className="font-semibold text-ink">
                   Toonzaal / magazijn:
                 </p>
                 <p className="text-[#6b6862]">
@@ -201,7 +196,7 @@ const Contact = () => {
                 </p>
               </div>
 
-              <p className="text-[#6b6862]">
+              <p className="text-body">
                 Gelieve steeds vooraf te contacteren voor afwijkende
                 openingsuren of afspraken op andere tijdstippen via{" "}
                 <a
@@ -221,7 +216,7 @@ const Contact = () => {
               </p>
             </div>
 
-            <div className="relative min-h-[320px] overflow-hidden rounded-lg lg:min-h-full">
+            <div className="relative min-h-[320px] overflow-hidden rounded-sm lg:min-h-full">
               <img
                 src="/images/toonzaal.jpeg"
                 alt="Toonzaal van Wooddesign in Kontich"
@@ -232,7 +227,7 @@ const Contact = () => {
                   href={mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white px-6 py-3 text-xs font-semibold uppercase tracking-widest text-[#3a3733] shadow-sm transition-colors hover:bg-gray-100"
+                  className="bg-ivory px-9 py-4 text-xs font-medium uppercase tracking-[0.2em] text-ink transition-colors duration-300 hover:bg-white"
                 >
                   Route via Google Maps
                 </a>
@@ -243,13 +238,10 @@ const Contact = () => {
           <Grid row mt={10}>
             <Grid item xs={12} md={12}>
               <div className="mb-6 mt-10">
-                <span className="text-xs font-semibold uppercase tracking-[0.15em] text-[#3a3733]">
+                <span className="text-xs font-semibold uppercase tracking-[0.15em] text-ink">
                   Stel je vraag
                 </span>
-                <span
-                  className="mt-3 block h-[2px] w-10"
-                  style={{ backgroundColor: "#8dc63f" }}
-                />
+                <span className="mt-3 block h-px w-10 bg-brass" />
               </div>
               <ContactForm
                 mailState={mailState}
@@ -275,7 +267,7 @@ const Contact = () => {
         aria-hidden="false"
         tabIndex="0"
       />
-      <Footer />
+      <Footer visit={false} />
     </div>
   );
 };

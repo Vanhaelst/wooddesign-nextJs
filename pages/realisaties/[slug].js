@@ -28,7 +28,7 @@ const categoryToService = {
 };
 
 const factIcon = (
-  <svg viewBox="0 0 24 24" fill="none" stroke="#4a7322" strokeWidth="1.5" width="20" height="20">
+  <svg viewBox="0 0 24 24" fill="none" stroke="#61993b" strokeWidth="1.5" width="20" height="20">
     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
   </svg>
 );
@@ -149,7 +149,7 @@ const Realisations = ({ realisation, slug }) => {
                         alt={heroImage.alt || realisation.title}
                         objectFit
                         height="480px"
-                        className="rounded-md"
+                        className="rounded-sm"
                       />
                     </a>
                   )}
@@ -163,7 +163,7 @@ const Realisations = ({ realisation, slug }) => {
                               alt={image.alt || realisation.title}
                               objectFit
                               height="120px"
-                              className="rounded-md"
+                              className="rounded-sm"
                             />
                           </a>
                         </Grid>
@@ -177,7 +177,7 @@ const Realisations = ({ realisation, slug }) => {
             {/* Info panel */}
             <Grid item xs={12} lg={5}>
               <Box className="pt-6 lg:pt-0 lg:pl-10">
-                <Heading level={2} as="h1" textTransform="uppercase" mb={3}>
+                <Heading level={2} as="h1" mb={3}>
                   {realisation.title}
                 </Heading>
 
@@ -203,7 +203,7 @@ const Realisations = ({ realisation, slug }) => {
                 </Button>
 
                 {relatedService && (
-                  <Box mt={9} className="border border-solid" style={{ borderColor: "#e0e0e0", borderRadius: "4px", padding: "20px" }}>
+                  <Box mt={9} className="border border-solid border-line p-6">
                     <Paragraph fontWeight="bold" mb={2} className="uppercase tracking-wide">
                       Ook interessant
                     </Paragraph>

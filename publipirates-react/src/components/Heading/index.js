@@ -6,6 +6,7 @@ const Heading = ({
   level = 1,
   fontFamily = "primary",
   fontWeight = "bold",
+  color = "ink",
   textTransform = "none",
   children,
   ...rest
@@ -15,6 +16,7 @@ const Heading = ({
     size={`Heading${level}`}
     fontFamily={fontFamily}
     fontWeight={fontWeight}
+    color={color}
     textTransform={textTransform}
     {...rest}
   >

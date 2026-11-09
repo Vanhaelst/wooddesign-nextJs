@@ -8,7 +8,7 @@ const Image = ({ src, alt, objectFit, height, className }) => (
     src={src}
     alt={alt}
     className={cx(
-      "max-w-full overflow-hidden",
+      "photo-grade max-w-full overflow-hidden",
       objectFit &&
         "mb-6 w-full object-cover transition-all duration-500 h-full xs:h-[calc(100%/1.5)] md:h-full",
       className,

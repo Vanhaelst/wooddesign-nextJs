@@ -124,25 +124,30 @@ const Gevel = ({ realisations, pagination }) => {
         />
       </Head>
       <Navigation />
-      <Breadcrumbs title="Gevelbekleding: een duurzame, onderhoudsvriendelijke gevel met karakter">
+      <Breadcrumbs title="Gevelbekleding: Een duurzame, onderhoudsvriendelijke gevel met karakter">
         <Paragraph className="mb-3">
           Gevelbekleding van Wooddesign combineert esthetiek met
-          energie-efficiëntie. Afgewerkt in hoogwaardige houtsoorten of
-          duurzame materialen zoals composiet, thermowood, trespa, aluminium,
-          vezelcement en volkern is uw gevel bestand tegen alle
-          weersomstandigheden. We besteden bijzondere aandacht aan de
-          isolatie, zodat uw woning niet alleen mooi oogt, maar ook optimaal
-          presteert op vlak van energieverbruik.
+          energie-efficiëntie.
         </Paragraph>
         <Paragraph className="mb-3">
-          Met onze jarenlange ervaring in gevelbekleding in Antwerpen, Kontich
-          en omstreken staan wij voor kwaliteit, duurzaamheid en maatwerk. Wij
-          adviseren u graag over de beste keuze voor uw gevel, zodat deze zowel
-          esthetisch als functioneel optimaal presteert.
+          We werken enkel met hoogwaardige houtsoorten en composietmaterialen,
+          of een duurzaam plaatmateriaal zoals aluminium, volkern of
+          vezelcement.
         </Paragraph>
-        <Paragraph>
-          Ontdek de diverse mogelijkheden in onze toonzaal te Kontich en geef uw
-          gevel de uitstraling die het verdient!
+        <Paragraph className="mb-3">
+          We besteden bijzondere aandacht aan ventilatie en isolatie, zodat uw
+          woning niet alleen mooi oogt, maar ook optimaal presteert op vlak van
+          energieverbruik.
+        </Paragraph>
+        <Paragraph className="mb-3">
+          Met onze jarenlange ervaring in gevelbekleding te Antwerpen, Mechelen,
+          Kontich en omstreken, staan wij voor kwaliteit, duurzaamheid en
+          maatwerk. Wij adviseren u graag over de beste keuze voor uw gevel,
+          zodat deze zowel esthetisch als functioneel optimaal presteert.
+        </Paragraph>
+        <Paragraph className="mb-3">
+          Kom langs in onze toonzaal te Kontich en geef uw gevel de uitstraling
+          die het verdient!
         </Paragraph>
         <Paragraph className="mb-6">
           Naast gevelbekleding plaatsen we ook{" "}

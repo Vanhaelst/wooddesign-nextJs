@@ -6,9 +6,9 @@ const MenuItem = ({ active, color, children, href, target }) => (
     href={href}
     target={target}
     className={cx(
-      "mx-6 font-secondary text-[16px] font-light no-underline hover:text-primary",
-      color === "white" ? "text-white" : "text-black",
-      active && "!text-primary",
+      "relative mx-6 font-secondary text-[15px] font-light tracking-[0.04em] no-underline transition-colors duration-300 after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all after:duration-500 hover:text-brass hover:after:w-full",
+      color === "white" ? "text-white" : "text-ink",
+      active && "!text-primary after:w-full",
     )}
   >
     {children}

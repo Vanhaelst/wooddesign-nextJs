@@ -1,19 +1,18 @@
 import React from "react";
 import Heading from "@/components/Heading";
 
-const Breadcrumbs = ({ title, children }) => {
-  return (
-    <div className="container max-w-5xl mx-auto px-4 text-center py-10 mt-10 lg:mt-20">
-      {/* Rendered as a real <h1>: this is the main (and only) heading on
-          every page that uses Breadcrumbs. `level={3}` is kept so the
-          visual size doesn't change. */}
-      <Heading level={3} as="h1" textTransform="uppercase">
+// Page intro: a serif page title (the page's <h1>) and a narrow column of
+// introductory copy, kept to a comfortable reading width. Eases in on load.
+const Breadcrumbs = ({ title, children }) => (
+  <div className="container mx-auto max-w-5xl px-4 pb-6 pt-16 text-center md:pt-24 lg:pt-32 [&_p]:mx-auto [&_p]:max-w-3xl [&_p]:text-[17px]">
+    <div className="animate-fade-up">
+      <Heading level={2} as="h1" className="text-balance">
         {title}
       </Heading>
-      <div className="border-b-2 my-4 border-solid border-gray-300" />
-      {children}
+      <span className="mx-auto my-8 block h-px w-12 bg-brass" />
     </div>
-  );
-};
+    <div className="animate-fade-up [animation-delay:250ms]">{children}</div>
+  </div>
+);
 
 export default Breadcrumbs;

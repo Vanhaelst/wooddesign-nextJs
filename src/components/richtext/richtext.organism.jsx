@@ -67,9 +67,9 @@ export const RichText = ({ content, classnames }) => {
             return (
               <a
                 href={href}
-                className="hover:underline text-[#8dc63f]"
+                className="hover:underline text-primary"
                 style={{
-                  color: "#8dc63f",
+                  color: "#61993b",
                   textDecoration: "underline",
                 }}
                 target={openInNewTab ? "_blank" : "_self"}

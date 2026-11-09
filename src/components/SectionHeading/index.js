@@ -1,16 +1,21 @@
 import React from "react";
 import Heading from "@/components/Heading";
+import Reveal from "../Reveal";
 
-const SectionHeading = ({ children, level = 3, as }) => (
-  <div className="text-center mb-10">
-    <Heading level={level} as={as} textTransform="uppercase" color="#464646">
+// Centered section title: brass hairline, optional small-caps eyebrow, then a
+// serif heading in sentence case.
+const SectionHeading = ({ children, eyebrow, level = 2, as }) => (
+  <Reveal className="mb-12 text-center md:mb-16">
+    <span className="mx-auto mb-6 block h-px w-12 bg-brass" />
+    {eyebrow && (
+      <span className="mb-4 block text-[11px] font-medium uppercase tracking-[0.25em] text-muted">
+        {eyebrow}
+      </span>
+    )}
+    <Heading level={level} as={as}>
       {children}
     </Heading>
-    <span
-      className="inline-block w-10 h-[2px] mt-4"
-      style={{ backgroundColor: "#8dc63f" }}
-    />
-  </div>
+  </Reveal>
 );
 
 export default SectionHeading;
