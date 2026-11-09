@@ -12,6 +12,8 @@ import ContactForm from "../src/components/ContactForm";
 import companyData from "../src/data/companyData";
 import { canonicalUrl } from "../src/utils/seo";
 
+// Link to the Google Business listing so the route ends at the actual entrance,
+// not at raw coordinates (which land in the woods behind the site).
 const { mapsUrl } = companyData;
 
 const Contact = () => {
@@ -188,15 +190,29 @@ const Contact = () => {
                 <p className="font-semibold text-ink">
                   Toonzaal / magazijn:
                 </p>
-                <p className="text-body">Op afspraak te bezoeken.</p>
-                <p className="text-body">
-                  Dinsdag tem zaterdag van 11u tot 16u.
+                <p className="text-[#6b6862]">
+                  Op afspraak te bezoeken tijdens weekdagen van 10-16u en op
+                  zaterdag van 11-15u.
                 </p>
               </div>
 
               <p className="text-body">
                 Gelieve steeds vooraf te contacteren voor afwijkende
-                openingsuren of afspraken op andere tijdstippen.
+                openingsuren of afspraken op andere tijdstippen via{" "}
+                <a
+                  href={`tel:${companyData.phone.unformatted}`}
+                  className="underline underline-offset-2 hover:text-[#72a230]"
+                >
+                  {companyData.phone.formatted}
+                </a>{" "}
+                of{" "}
+                <a
+                  href={`mailto:${companyData.email}`}
+                  className="underline underline-offset-2 hover:text-[#72a230]"
+                >
+                  {companyData.email}
+                </a>
+                .
               </p>
             </div>
 
@@ -243,7 +259,7 @@ const Contact = () => {
 
       <iframe
         style={{ border: 0, marginTop: "50px" }}
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2503.084601596891!2d4.432205851657122!3d51.14379097947675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f08c663734e1%3A0x3eb1b6f5fbed88e7!2sWOODDESIGN%20bvba%2C%202550%20Kontich!5e0!3m2!1sen!2sbe!4v1611580402327!5m2!1sen!2sbe"
+        src="https://www.google.com/maps?q=Wooddesign%2C+Prins+Boudewijnlaan+21%2C+2550+Kontich&output=embed"
         width="100%"
         height="450"
         frameBorder="0"

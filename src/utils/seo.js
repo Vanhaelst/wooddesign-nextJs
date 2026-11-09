@@ -43,9 +43,16 @@ export const localBusinessJsonLd = () => ({
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      opens: "11:00",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "10:00",
       closes: "16:00",
+      description: "Toonzaal en magazijn, uitsluitend op afspraak.",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Saturday",
+      opens: "11:00",
+      closes: "15:00",
       description: "Toonzaal en magazijn, uitsluitend op afspraak.",
     },
   ],
