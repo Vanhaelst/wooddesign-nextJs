@@ -14,8 +14,8 @@ import { canonicalUrl } from "../src/utils/seo";
 
 // Link to the Google Business listing so the route ends at the actual entrance,
 // not at raw coordinates (which land in the woods behind the site).
-const mapsUrl = "https://www.google.com/maps?cid=4517593068839209191";
-const whatsappUrl = `https://wa.me/${companyData.phone.unformatted.replace("+", "")}`;
+const mapsUrl =
+  "http://google.com/maps/place/Wooddesign+bv/@51.1437568,4.4315791,17z/data=!4m10!1m2!2m1!1sWooddesign,+Prins+Boudewijnlaan+21,+2550+Kontich!3m6!1s0x47c3f08c2692a52f:0x60a198079ef00dda!8m2!3d51.1435394!4d4.4343747!15sCjBXb29kZGVzaWduLCBQcmlucyBCb3VkZXdpam5sYWFuIDIxLCAyNTUwIEtvbnRpY2haMCIud29vZGRlc2lnbiBwcmlucyBib3VkZXdpam5sYWFuIDIxIDI1NTAga29udGljaJIBI3dvb2RfYW5kX2xhbWluYXRlX2Zsb29yaW5nX3N1cHBsaWVymgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVU5VZDNOaFoxZG5FQUXgAQD6AQQIABAe!16s%2Fg%2F1pv2k5nt0?entry=ttu&g_ep=EgoyMDI2MTEwMy4wIKXMDSoASAFQAw%3D%3D";
 
 const Contact = () => {
   const [mailState, setMailState] = useState(undefined);
@@ -202,29 +202,20 @@ const Contact = () => {
               </div>
 
               <p className="text-[#6b6862]">
-                Graag een afspraak op een ander tijdstip? Contacteer ons gerust
-                via{" "}
-                <a
-                  href={`mailto:${companyData.email}`}
-                  className="underline underline-offset-2 hover:text-[#72a230]"
-                >
-                  mail
-                </a>
-                ,{" "}
+                Gelieve steeds vooraf te contacteren voor afwijkende
+                openingsuren of afspraken op andere tijdstippen via{" "}
                 <a
                   href={`tel:${companyData.phone.unformatted}`}
                   className="underline underline-offset-2 hover:text-[#72a230]"
                 >
-                  telefoon
+                  {companyData.phone.formatted}
                 </a>{" "}
                 of{" "}
                 <a
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={`mailto:${companyData.email}`}
                   className="underline underline-offset-2 hover:text-[#72a230]"
                 >
-                  WhatsApp
+                  {companyData.email}
                 </a>
                 .
               </p>
